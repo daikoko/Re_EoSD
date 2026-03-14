@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://bcjhmn1n57xbm"]
+
+[ext_resource type="AudioStream" uid="uid://dy8lok2dbmbmt" path="res://Game/Entities/Boss/BossResources/Sakuya/Audio/TH06_12.ogg" id="1_s7t81"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_yx8fu"]
+
+[resource]
+script = ExtResource("1_yx8fu")
+id = 12
+name = ""
+music = ExtResource("1_s7t81")
+flag = "Passed_Stage5"

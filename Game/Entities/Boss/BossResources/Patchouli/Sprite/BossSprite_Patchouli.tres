@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=4 format=3 uid="uid://bssjhro1ois70"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_ibyif"]
+[ext_resource type="SpriteFrames" uid="uid://ri2ojn66t0ug" path="res://Game/Entities/Boss/BossResources/Patchouli/Sprite/SpriteFrames_Patchouli.tres" id="2_hodpo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ws0lb"]
+radius = 48.0
+
+[resource]
+script = ExtResource("1_ibyif")
+sprite_frames = ExtResource("2_hodpo")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_ws0lb")

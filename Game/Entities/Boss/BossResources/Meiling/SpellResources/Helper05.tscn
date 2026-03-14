@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwlxjsepj3k3c"]
+
+[ext_resource type="Texture2D" uid="uid://dvcqfgjbnynon" path="res://Game/Entities/Boss/BossResources/Meiling/SpellResources/MeilingFollower.png" id="1_itul1"]
+
+[node name="SpellD_Helper3" type="PathFollow2D"]
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_itul1")

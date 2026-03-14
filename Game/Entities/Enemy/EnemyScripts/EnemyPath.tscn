@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5k6er6hy1j5t"]
+
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyScripts/EnemyPath.gd" id="1_c1vno"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="2_0cebd"]
+[ext_resource type="AudioStream" uid="uid://bckv1ge5msd8a" path="res://Game/Entities/Enemy/EnemyResources/_General/Enemy_Hit01.wav" id="3_tqa8a"]
+[ext_resource type="AudioStream" uid="uid://en2ly2xyk2jk" path="res://Game/Entities/Enemy/EnemyResources/_General/Enemy_Death01.wav" id="4_0rb3y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3fdy"]
+
+[node name="EnemyPath" type="PathFollow2D"]
+z_as_relative = false
+rotates = false
+loop = false
+script = ExtResource("1_c1vno")
+
+[node name="Enemy" parent="." instance=ExtResource("2_0cebd")]
+unique_name_in_owner = true
+collision_layer = 4
+identity = "Enemy"
+shape = SubResource("CircleShape2D_x3fdy")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+rect = Rect2(-50, -50, 100, 100)
+
+[node name="Sound_Hit" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_tqa8a")
+
+[node name="Sound_Death" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_0rb3y")
+
+[connection signal="collider_entered" from="Enemy" to="." method="_on_Enemy_collider_entered"]
+[connection signal="collider_hit" from="Enemy" to="." method="_on_Enemy_collider_hit"]
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]

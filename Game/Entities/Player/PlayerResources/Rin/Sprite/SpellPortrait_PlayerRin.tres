@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://dcqvojj60qqea"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_ei4q2"]
+[ext_resource type="Texture2D" uid="uid://cx5qdrtvvua21" path="res://Game/Entities/Player/PlayerResources/Rin/Sprite/SpellPortrait_PlayerRin.png" id="2_srh5b"]
+
+[resource]
+script = ExtResource("1_ei4q2")
+texture = ExtResource("2_srh5b")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 0

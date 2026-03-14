@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://bc0sn2qt0wn13"]
+
+[ext_resource type="AudioStream" uid="uid://dqndxdmbntd8x" path="res://Game/World/Stage/StageResources/StagePhantasm/Audio/TH06_21.ogg" id="1_autw2"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_e15g5"]
+
+[resource]
+script = ExtResource("1_e15g5")
+id = 21
+name = ""
+music = ExtResource("1_autw2")
+flag = "Passed_StagePhantasm"

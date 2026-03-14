@@ -1,0 +1,50 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "patch",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli06",
+		"name":          "Patchouli",
+		"text":          "So you actually arrived."
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Didn't want to bother, but I felt compelled to
+			see what was down here."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli06",
+		"name":          "Patchouli",
+		"text":          
+			"Funny how fate works doesn't it."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli10",
+		"name":          "Patchouli",
+		"text":          
+			"Lucky for you, you get to have a taste
+			of my full magic."
+	},
+}

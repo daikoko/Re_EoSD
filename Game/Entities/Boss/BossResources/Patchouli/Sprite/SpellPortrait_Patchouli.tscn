@@ -1,0 +1,92 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1qh4llkehjl2"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/Sprite/SpellPortrait_Patchouli.gd" id="1_n8kmu"]
+[ext_resource type="Texture2D" uid="uid://dnxd8xi4seopq" path="res://Game/Entities/Boss/BossResources/Patchouli/Sprite/SpellPortrait_BossPatchouli_Extra.png" id="2_ls14w"]
+[ext_resource type="Texture2D" uid="uid://c3yj4t08ji6qd" path="res://Game/Entities/Boss/BossResources/Patchouli/Sprite/SpellPortrait_BossPatchouli_MagicBlue.png" id="3_ejyw8"]
+
+[sub_resource type="Animation" id="Animation_jlep5"]
+resource_name = "Left"
+length = 1.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(680, 420), Vector2(380, 420), Vector2(180, 420), Vector2(-180, 420)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_drcdo"]
+resource_name = "Right"
+length = 1.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 420), Vector2(300, 420), Vector2(500, 420), Vector2(860, 420)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_au0s6"]
+_data = {
+"Left": SubResource("Animation_jlep5"),
+"Right": SubResource("Animation_drcdo")
+}
+
+[node name="SpellPortraitPatchouli" type="Node2D"]
+script = ExtResource("1_n8kmu")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(680, 420)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("2_ls14w")
+
+[node name="Decor" type="Sprite2D" parent="Sprite"]
+unique_name_in_owner = true
+position = Vector2(147.692, -6.15385)
+texture = ExtResource("3_ejyw8")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_au0s6")
+}
+
+[connection signal="animation_finished" from="Animator" to="." method="_on_Animator_animation_finished"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://da6s6epam6511"]
+
+[ext_resource type="AudioStream" uid="uid://ccnpi76tf017r" path="res://Game/Entities/Boss/BossResources/Cirno/Audio/TH06_06.ogg" id="1_j7is6"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="2_0tev6"]
+
+[resource]
+script = ExtResource("2_0tev6")
+id = 6
+name = ""
+music = ExtResource("1_j7is6")
+flag = "Passed_Stage2"

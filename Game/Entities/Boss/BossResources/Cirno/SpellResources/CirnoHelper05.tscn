@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgvdfoishuyx4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper05.gd" id="1_dykwd"]
+
+[node name="CirnoHelper05" type="Node2D"]
+script = ExtResource("1_dykwd")
+
+[node name="SpawningTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="SpawningTimer" to="." method="_on_SpawningTimer_timeout"]

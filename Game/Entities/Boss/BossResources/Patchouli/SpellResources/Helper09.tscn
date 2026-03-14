@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://djfag5ob8fiqj"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper09.gd" id="1_f3i3t"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_dxeip"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_bcjh6"]
+[ext_resource type="Resource" uid="uid://brx75h24c8wwq" path="res://Game/Objects/Bullets/BulletList/Bullet_BrightCyan.tres" id="4_m20a3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1n54q"]
+resource_local_to_scene = true
+shader = ExtResource("3_bcjh6")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="Helper09" type="Node2D"]
+script = ExtResource("1_f3i3t")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_dxeip")]
+unique_name_in_owner = true
+z_index = 0
+material = SubResource("ShaderMaterial_1n54q")
+data = ExtResource("4_m20a3")
+hit_immunity = true
+bomb_immunity = true
+clear_immunity = true
+visibility_immunity = true
+flash_scale = 1.0
+flash_time = 0.4
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

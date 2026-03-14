@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EndingData" load_steps=7 format=3 uid="uid://cufn5ijcxjbki"]
+
+[ext_resource type="Texture2D" uid="uid://k1cnmc033ifb" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa01.png" id="1_s0fv2"]
+[ext_resource type="Texture2D" uid="uid://c78bo4l2h16x5" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa02.png" id="2_7fjfk"]
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/EndingData.gd" id="3_1qrba"]
+[ext_resource type="Texture2D" uid="uid://c3cmfyq7sgvgr" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa03.png" id="3_52cmg"]
+[ext_resource type="Texture2D" uid="uid://cfu0gt4cdygja" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa04.png" id="4_djjyf"]
+[ext_resource type="Texture2D" uid="uid://b86vmqiqnrsou" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa05.png" id="5_pbjoy"]
+
+[resource]
+script = ExtResource("3_1qrba")
+scenes = Array[Texture]([ExtResource("1_s0fv2"), ExtResource("2_7fjfk"), ExtResource("3_52cmg"), ExtResource("4_djjyf"), ExtResource("5_pbjoy")])
+dialogue = "res://Game/Main/Ending/EndingResources/Marisa/Ending_MarisaBad.json"

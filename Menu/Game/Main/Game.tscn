@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://dkfbu7x00kdu1"]
+
+[ext_resource type="Script" path="res://Menu/Game/Main/Game.gd" id="1_4juf2"]
+[ext_resource type="PackedScene" uid="uid://m0yyeteojs6a" path="res://Menu/Game/SelectMode/SelectMode.tscn" id="2_jmp7h"]
+[ext_resource type="PackedScene" uid="uid://tvncgygkibet" path="res://Menu/Game/SelectDifficulty/SelectDifficulty.tscn" id="2_sow72"]
+[ext_resource type="PackedScene" uid="uid://40qg0cxoiej5" path="res://Menu/Game/SelectPlayer/SelectPlayer.tscn" id="3_qeraw"]
+[ext_resource type="PackedScene" uid="uid://bkwh1wy11f8b6" path="res://Menu/Game/SelectShot/SelectShot.tscn" id="4_madpi"]
+[ext_resource type="PackedScene" uid="uid://bcdlbiusfflxq" path="res://Menu/Game/SelectPractice/SelectPractice.tscn" id="6_0sd6c"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4juf2")
+
+[node name="SelectMode" parent="." instance=ExtResource("2_jmp7h")]
+unique_name_in_owner = true
+layout_mode = 0
+
+[node name="SelectDifficulty" parent="." instance=ExtResource("2_sow72")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="SelectPlayer" parent="." instance=ExtResource("3_qeraw")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="SelectShot" parent="." instance=ExtResource("4_madpi")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="SelectPractice" parent="." instance=ExtResource("6_0sd6c")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[connection signal="back" from="SelectMode" to="." method="_on_SelectMode_back"]
+[connection signal="selected" from="SelectMode" to="." method="_on_SelectMode_selected"]
+[connection signal="back" from="SelectDifficulty" to="." method="_on_SelectDifficulty_back"]
+[connection signal="selected" from="SelectDifficulty" to="." method="_on_SelectDifficulty_selected"]
+[connection signal="back" from="SelectPlayer" to="." method="_on_SelectPlayer_back"]
+[connection signal="selected" from="SelectPlayer" to="." method="_on_SelectPlayer_selected"]
+[connection signal="back" from="SelectShot" to="." method="_on_SelectShot_back"]
+[connection signal="selected" from="SelectShot" to="." method="_on_SelectShot_selected"]
+[connection signal="back" from="SelectPractice" to="." method="_on_SelectPractice_back"]
+[connection signal="selected" from="SelectPractice" to="." method="_on_SelectPractice_selected"]

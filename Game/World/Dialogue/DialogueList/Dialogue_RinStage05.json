@@ -1,0 +1,136 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Another strange place."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Does it ever end?"
+	},
+	
+	
+	"004": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          "Then it will be the end of the line for you."
+	},
+	"005": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"006": {
+		"type":          "enter",
+		"identity":      "saku",
+		"configuration": "right",
+	},
+	"007": {
+		"type":          "title",
+		"name":          "Sakuya Izayoi",
+		"text":          "Perfect Servant"
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"No visitors are permitted at this time. Turn back."
+	},
+	
+	
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"May I see the mistress please?"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          
+			"I just said you can't."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Perhaps she can come outside?"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"She will not."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"..."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"What if we meet on Zoom?"
+	},
+	
+	
+	"015": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"You will not be meeting the mistress."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"And I am tired of dealing with fools like you."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          
+			"So prepare yourself."
+	},
+}

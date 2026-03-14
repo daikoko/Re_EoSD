@@ -1,0 +1,74 @@
+[gd_scene load_steps=12 format=3 uid="uid://bgxpe3nasu1wu"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/ParticleBullet.gd" id="1_o0g60"]
+[ext_resource type="Texture2D" uid="uid://biv72v111bo7g" path="res://Game/Objects/Bullets/ParticleResources/Particle_BulletBomb.png" id="2_ui3a8"]
+[ext_resource type="Texture2D" uid="uid://rgexivht28rg" path="res://Game/Objects/Bullets/ParticleResources/Particle_BulletClear.png" id="3_n8mad"]
+
+[sub_resource type="Curve" id="Curve_ktgra"]
+_data = [Vector2(0, 0.494737), 0.0, 0.0, 0, 0, Vector2(0.495627, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_47ec5"]
+curve = SubResource("Curve_ktgra")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_c66xp"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 10.0
+emission_ring_inner_radius = 8.0
+spread = 180.0
+initial_velocity_min = 300.0
+initial_velocity_max = 360.0
+orbit_velocity_min = 2.2
+orbit_velocity_max = 2.4
+gravity = Vector3(0, 0, 0)
+scale_min = 0.8
+scale_max = 0.8
+scale_curve = SubResource("CurveTexture_47ec5")
+
+[sub_resource type="Gradient" id="Gradient_wggyi"]
+offsets = PackedFloat32Array(0, 0.698718, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_8qnrs"]
+gradient = SubResource("Gradient_wggyi")
+
+[sub_resource type="Curve" id="Curve_ha32h"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_wcsng"]
+curve = SubResource("Curve_ha32h")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_y1q5u"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_min = 1.5
+scale_max = 1.5
+scale_curve = SubResource("CurveTexture_wcsng")
+color_ramp = SubResource("GradientTexture1D_8qnrs")
+
+[node name="ParticleBullet" type="Node2D"]
+z_index = 65
+z_as_relative = false
+script = ExtResource("1_o0g60")
+
+[node name="Bomb" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+emitting = false
+amount = 16
+process_material = SubResource("ParticleProcessMaterial_c66xp")
+texture = ExtResource("2_ui3a8")
+one_shot = true
+explosiveness = 0.6
+trail_enabled = true
+
+[node name="Clear" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+emitting = false
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_y1q5u")
+texture = ExtResource("3_n8mad")
+one_shot = true

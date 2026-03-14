@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5mig8goik0n3"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotB/Shot/Side_MarisaLaser.gd" id="1_bj01h"]
+[ext_resource type="Texture2D" uid="uid://bf8cnivbwv8eo" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Shot/Side_Marisa.png" id="2_d5sik"]
+[ext_resource type="Texture2D" uid="uid://bi81gri002c04" path="res://Game/Objects/Shooters/ShooterLaser/Laser_Point.png" id="2_p3d6l"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_h312n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xmc3"]
+size = Vector2(10, 1000)
+
+[node name="MarisaLaser" type="Node2D"]
+script = ExtResource("1_bj01h")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_d5sik")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+self_modulate = Color(1, 1, 1, 0.6)
+
+[node name="Origin" type="Sprite2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+modulate = Color(0, 1, 1, 1)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_p3d6l")
+
+[node name="Beam" type="Line2D" parent="CanvasGroup"]
+unique_name_in_owner = true
+points = PackedVector2Array(0, 0, 0, -1000)
+default_color = Color(0, 1, 1, 1)
+
+[node name="Collider" parent="CanvasGroup/Beam" instance=ExtResource("3_h312n")]
+unique_name_in_owner = true
+position = Vector2(0, -500)
+collision_layer = 0
+collision_mask = 4
+shape = SubResource("RectangleShape2D_3xmc3")
+
+[connection signal="collider_entered" from="CanvasGroup/Beam/Collider" to="." method="_on_Collider_collider_entered"]

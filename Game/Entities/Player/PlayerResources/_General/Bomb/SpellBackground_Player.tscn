@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqskcd6pktijy"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/_General/Bomb/SpellBackground_Player.gd" id="1_m0ttb"]
+
+[node name="PlayerBackground" type="CanvasLayer"]
+layer = -97
+script = ExtResource("1_m0ttb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(680, 780)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.8)

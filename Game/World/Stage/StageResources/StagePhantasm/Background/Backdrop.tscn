@@ -1,0 +1,52 @@
+[gd_scene load_steps=12 format=3 uid="uid://cgj003fd335n"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/Backdrop.gd" id="1_qtwm5"]
+[ext_resource type="Texture2D" uid="uid://xlfkall3r64d" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Background_Stage08D.png" id="2_mhnoj"]
+[ext_resource type="Texture2D" uid="uid://becbric387f7q" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Background_Stage08E.png" id="3_5cu8t"]
+[ext_resource type="Texture2D" uid="uid://dx3lt46322vbf" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Background_Stage08F.png" id="4_scw4f"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_acq4y"]
+panorama = ExtResource("2_mhnoj")
+
+[sub_resource type="Sky" id="Sky_yw4ar"]
+sky_material = SubResource("PanoramaSkyMaterial_acq4y")
+
+[sub_resource type="Environment" id="Environment_7ydpt"]
+background_mode = 2
+sky = SubResource("Sky_yw4ar")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vd20v"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("3_5cu8t")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_x20o0"]
+material = SubResource("StandardMaterial3D_vd20v")
+size = Vector2(4, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o1fsu"]
+transparency = 1
+albedo_texture = ExtResource("4_scw4f")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_csrsc"]
+material = SubResource("StandardMaterial3D_o1fsu")
+size = Vector2(2, 4)
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_qtwm5")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7ydpt")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, -0.0511893, -2.332)
+mesh = SubResource("PlaneMesh_x20o0")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -1.65193, 0.60405, -4.38722)
+mesh = SubResource("PlaneMesh_csrsc")

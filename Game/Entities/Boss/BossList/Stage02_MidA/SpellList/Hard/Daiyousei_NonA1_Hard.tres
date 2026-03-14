@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://55xywxofjerg"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_b4tab"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_ualcx"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Daiyousei/SpellScripts/Daiyousei_NonA.gd" id="3_055ar"]
+
+[sub_resource type="Resource" id="Resource_vydsp"]
+script = ExtResource("2_ualcx")
+particles = ExtResource("1_b4tab")
+value = 200000
+point = 20
+power = 10
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_055ar")
+A_layout_spawner_count = 3
+A_fire_count = 8
+health = 8000.0
+Death = SubResource("Resource_vydsp")
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+difficulty = 2
+boss_id = 0

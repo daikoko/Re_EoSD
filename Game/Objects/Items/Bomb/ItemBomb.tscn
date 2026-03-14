@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0eprn1ui2w0k"]
+
+[ext_resource type="Script" path="res://Game/Objects/Items/Bomb/ItemBomb.gd" id="1_7egpy"]
+[ext_resource type="Texture2D" uid="uid://bc3mqbfsqw4jv" path="res://Game/Objects/Items/Bomb/Item_Bomb.png" id="1_rgniv"]
+
+[node name="ItemBomb" type="Sprite2D"]
+z_index = 53
+z_as_relative = false
+texture = ExtResource("1_rgniv")
+script = ExtResource("1_7egpy")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]

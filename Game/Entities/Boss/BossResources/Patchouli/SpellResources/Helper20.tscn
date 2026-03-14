@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://diucvtfs3v0dj"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper20.gd" id="1_l4mvh"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_7qqpr"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_bry04"]
+[ext_resource type="Texture2D" uid="uid://d0rqjaa30gkjd" path="res://Game/Objects/Bullets/BulletResources/Bullet_SpadeWhite.png" id="4_lvxj4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_owvp1"]
+resource_local_to_scene = true
+shader = ExtResource("3_bry04")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="Helper20" type="Node2D"]
+script = ExtResource("1_l4mvh")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.983333, 1, 0, 1)
+z_index = 65
+z_as_relative = false
+texture = ExtResource("4_lvxj4")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_7qqpr")]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+material = SubResource("ShaderMaterial_owvp1")
+texture = ExtResource("4_lvxj4")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

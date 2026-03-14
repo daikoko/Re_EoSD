@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=3 uid="uid://c2se7inw4vnxw"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/Reimu_Bomb.gd" id="1_xo1mb"]
+[ext_resource type="Texture2D" uid="uid://bqvs2rdxeabpg" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/Bomb_Reimu.png" id="2_upjfv"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_g1sku"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_u4yrm"]
+[ext_resource type="AudioStream" uid="uid://ba0gwwuovwxyv" path="res://Game/Entities/Player/PlayerResources/_General/Sound/Player_Spell01.wav" id="5_vuyf4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8k8ak"]
+radius = 68.0
+
+[sub_resource type="Animation" id="Animation_1h844"]
+resource_name = "Bomb"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"end_bomb"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_seew0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Main:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_snl3i"]
+_data = {
+"Bomb": SubResource("Animation_1h844"),
+"RESET": SubResource("Animation_seew0")
+}
+
+[node name="ReimuBomb" type="Node2D"]
+script = ExtResource("1_xo1mb")
+
+[node name="Main" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 39
+z_as_relative = false
+
+[node name="Sprite" type="Sprite2D" parent="Main"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("2_upjfv")
+
+[node name="Bomb" parent="Main" instance=ExtResource("3_g1sku")]
+unique_name_in_owner = true
+collision_mask = 0
+monitoring = false
+identity = "Bomb"
+shape = SubResource("CircleShape2D_8k8ak")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_snl3i")
+}
+
+[node name="Sound" parent="." instance=ExtResource("4_u4yrm")]
+unique_name_in_owner = true
+stream = ExtResource("5_vuyf4")

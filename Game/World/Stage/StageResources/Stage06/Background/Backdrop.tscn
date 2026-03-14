@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://bnct7dbbh4tqn"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage06/Background/Backdrop.gd" id="1_p4npk"]
+[ext_resource type="Texture2D" uid="uid://clm1dhic5ap1s" path="res://Game/World/Stage/StageResources/Stage06/Background/Background_Stage06F.png" id="2_8e3ra"]
+[ext_resource type="Texture2D" uid="uid://cphpngj6otna8" path="res://Game/World/Stage/StageResources/Stage06/Background/Background_Stage06D.png" id="2_uewfl"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_x6kew"]
+panorama = ExtResource("2_8e3ra")
+
+[sub_resource type="Sky" id="Sky_qm71f"]
+sky_material = SubResource("PanoramaSkyMaterial_x6kew")
+
+[sub_resource type="Environment" id="Environment_qu0k0"]
+background_mode = 2
+sky = SubResource("Sky_qm71f")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uijpq"]
+transparency = 1
+albedo_color = Color(1, 0.2, 0.2, 1)
+albedo_texture = ExtResource("2_uewfl")
+
+[sub_resource type="QuadMesh" id="QuadMesh_10idv"]
+material = SubResource("StandardMaterial3D_uijpq")
+size = Vector2(8, 8)
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_p4npk")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qu0k0")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 15, 12.6)
+mesh = SubResource("QuadMesh_10idv")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 11, 12)

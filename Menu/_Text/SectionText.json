@@ -1,0 +1,26 @@
+{
+	"mode": {
+		"casual":   "Casual",
+		"arcade":   "Arcade",
+		"practice": "Practice"
+	},
+	"section": {
+		"main":     "Main",
+		"extra":    "Extra",
+		"practice": "Practice"
+	},
+	"difficulty": {
+		"easy":     "Easy",
+		"normal":   "Normal",
+		"hard":     "Hard",
+		"lunatic":  "Lunatic",
+		"extra":    "Extra",
+		"phantasm": "Phantasm",
+		"practice": "Practice"
+	},
+	"stage": {
+		"stage":    "Stage",
+		"extra":    "Extra",
+		"phantasm": "Phantasm"
+	}
+}

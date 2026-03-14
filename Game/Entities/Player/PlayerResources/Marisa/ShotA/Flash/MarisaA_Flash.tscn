@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3ahk5idqbwic"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Flash/MarisaA_Flash.gd" id="1_gf17m"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_5s7k4"]
+[ext_resource type="AudioStream" uid="uid://b8hin3oa87sun" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/Player_Spell03.wav" id="3_cqrl0"]
+
+[node name="MarisaAFlash" type="Node2D"]
+script = ExtResource("1_gf17m")
+
+[node name="Marker01" type="Marker2D" parent="."]
+unique_name_in_owner = true
+rotation = -1.0472
+
+[node name="Marker02" type="Marker2D" parent="."]
+unique_name_in_owner = true
+rotation = -1.309
+
+[node name="Marker03" type="Marker2D" parent="."]
+unique_name_in_owner = true
+rotation = -1.5708
+
+[node name="Marker04" type="Marker2D" parent="."]
+unique_name_in_owner = true
+rotation = -1.8326
+
+[node name="Marker05" type="Marker2D" parent="."]
+unique_name_in_owner = true
+rotation = -2.0944
+
+[node name="Sound" parent="." instance=ExtResource("2_5s7k4")]
+unique_name_in_owner = true
+stream = ExtResource("3_cqrl0")

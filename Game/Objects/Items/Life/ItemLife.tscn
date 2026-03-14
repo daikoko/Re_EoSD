@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxvhpq4fflu2q"]
+
+[ext_resource type="Script" path="res://Game/Objects/Items/Life/ItemLife.gd" id="1_5hvqu"]
+[ext_resource type="Texture2D" uid="uid://dufig0xh36y2c" path="res://Game/Objects/Items/Life/Item_Life.png" id="1_uhdw8"]
+
+[node name="ItemLife" type="Sprite2D"]
+z_index = 52
+z_as_relative = false
+texture = ExtResource("1_uhdw8")
+script = ExtResource("1_5hvqu")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]

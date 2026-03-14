@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StageData" load_steps=5 format=3 uid="uid://dgug4a0sturcm"]
+
+[ext_resource type="PackedScene" uid="uid://cuf1bfr26xmd" path="res://Game/World/Stage/StageResources/Stage02/Background/Background_Stage02.tscn" id="1_e0wdq"]
+[ext_resource type="Script" path="res://Game/World/Stage/StageScripts/StageData.gd" id="1_i61x7"]
+[ext_resource type="Animation" uid="uid://37i3ukunjuga" path="res://Game/World/Stage/StageResources/Stage02/Events/Events_Stage02.res" id="2_fwrth"]
+[ext_resource type="Resource" uid="uid://myh3q4xvep2g" path="res://Game/World/Stage/StageResources/Stage02/Audio/Music_05.tres" id="3_b015r"]
+
+[resource]
+script = ExtResource("1_i61x7")
+id = 2
+background = ExtResource("1_e0wdq")
+music = ExtResource("3_b015r")
+events = ExtResource("2_fwrth")
+clear_bonus = 440000
+level_seed = -1

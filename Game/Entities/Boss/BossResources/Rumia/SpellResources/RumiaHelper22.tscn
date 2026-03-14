@@ -1,0 +1,73 @@
+[gd_scene load_steps=9 format=3 uid="uid://cm5ot4mifwuov"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper22.gd" id="1_v3xjj"]
+[ext_resource type="Texture2D" uid="uid://bp0yal4bh44ar" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaDarkGlow.png" id="2_ra5ka"]
+[ext_resource type="Texture2D" uid="uid://fve5a74pma54" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaDark.png" id="3_bec0v"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="4_h44il"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_35hm5"]
+radius = 200.0
+
+[sub_resource type="Animation" id="Animation_e5bip"]
+resource_name = "Blink"
+length = 0.7
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_td0yc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("WarningSprite:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xpt7k"]
+_data = {
+"Blink": SubResource("Animation_e5bip"),
+"RESET": SubResource("Animation_td0yc")
+}
+
+[node name="RumiaHelper22" type="Node2D"]
+script = ExtResource("1_v3xjj")
+
+[node name="WarningSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0.2)
+texture = ExtResource("2_ra5ka")
+
+[node name="MainSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("3_bec0v")
+
+[node name="Collider" parent="MainSprite" instance=ExtResource("4_h44il")]
+monitorable = false
+identity = "Obstacle"
+shape = SubResource("CircleShape2D_35hm5")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_xpt7k")
+}
+
+[connection signal="tree_exiting" from="." to="." method="_on_Self_tree_exiting"]
+[connection signal="collider_entered" from="MainSprite/Collider" to="." method="_on_Collider_collider_entered"]

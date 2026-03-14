@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://bcl3gik35ajtr"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage01/Background/World.gd" id="1_7s82k"]
+[ext_resource type="PackedScene" uid="uid://b44fbip1nclq8" path="res://Game/World/Background/3D_Background/WorldRepeater.tscn" id="1_fg3ne"]
+[ext_resource type="PackedScene" uid="uid://q5ffokgtbnna" path="res://Game/World/Stage/StageResources/Stage01/Background/WorldSliceA.tscn" id="2_7u5k8"]
+[ext_resource type="PackedScene" uid="uid://bosuy72heufwc" path="res://Game/World/Stage/StageResources/Stage01/Background/WorldSliceB.tscn" id="3_jgrt3"]
+[ext_resource type="PackedScene" uid="uid://uqahk8dkxf5g" path="res://Game/World/Stage/StageResources/Stage01/Background/WorldSliceC.tscn" id="4_w28ir"]
+
+[sub_resource type="Environment" id="Environment_7r5lt"]
+background_mode = 2
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.2
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.04
+
+[node name="World" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.93255, 0)
+script = ExtResource("1_7s82k")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7r5lt")
+
+[node name="WorldRepeaterA" parent="." instance=ExtResource("1_fg3ne")]
+world_slice = ExtResource("2_7u5k8")
+slice_range = Vector3(10, 10, 20)
+z_extent = Vector2(4, 1)
+
+[node name="WorldRepeaterB" parent="." instance=ExtResource("1_fg3ne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.2, 0)
+world_slice = ExtResource("3_jgrt3")
+speed_multiplier = 0.9
+slice_range = Vector3(10, 10, 20)
+z_extent = Vector2(4, 1)
+
+[node name="WorldRepeaterC" parent="." instance=ExtResource("1_fg3ne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+world_slice = ExtResource("4_w28ir")
+speed_multiplier = 0.8
+slice_range = Vector3(10, 10, 20)
+z_extent = Vector2(4, 1)
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.9675, 0.0632773, -0.244825, 0.0209478, 0.944801, 0.326975, 0.252001, -0.321477, 0.91277, 8.64707, 12.8449, 7.13245)
+light_energy = 0.1
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.91, 0)
+
+[connection signal="update_position" from="." to="WorldRepeaterA" method="_on_World_update_position"]
+[connection signal="update_position" from="." to="WorldRepeaterB" method="_on_World_update_position"]
+[connection signal="update_position" from="." to="WorldRepeaterC" method="_on_World_update_position"]

@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://by08eum7u7fqv"]
+
+[ext_resource type="FontFile" uid="uid://cw3pc1tkugp2m" path="res://Game/Themes/Fonts/KelvinchRoman.otf" id="1_sy87b"]
+[ext_resource type="FontFile" uid="uid://kwn73swahsvn" path="res://Game/Themes/Fonts/TexturaBelgica.ttf" id="2_1r2xl"]
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 6
+Label/font_sizes/font_size = 22
+Label/fonts/font = ExtResource("1_sy87b")
+Label_Difficulty/base_type = &"Label"
+Label_Difficulty/colors/font_color = Color(1, 1, 1, 1)
+Label_Difficulty/colors/font_outline_color = Color(0, 0, 0, 1)
+Label_Difficulty/constants/outline_size = 14
+Label_Difficulty/font_sizes/font_size = 62
+Label_Difficulty/fonts/font = ExtResource("2_1r2xl")

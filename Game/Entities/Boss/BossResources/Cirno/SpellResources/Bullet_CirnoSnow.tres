@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://cbp3ci8mkgbj2"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_pucty"]
+[ext_resource type="Texture2D" uid="uid://o7ht31uqmxn8" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/BulletCustom_CirnoSnow.png" id="2_rv1vw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_guety"]
+radius = 24.0
+
+[resource]
+script = ExtResource("1_pucty")
+texture = ExtResource("2_rv1vw")
+shape = SubResource("CircleShape2D_guety")
+color_option = 4
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-64, -64, 128, 128)

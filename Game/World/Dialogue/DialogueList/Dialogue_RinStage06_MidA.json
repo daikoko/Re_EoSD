@@ -1,0 +1,19 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "saku",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          "You people never give up do you?"
+	},
+}

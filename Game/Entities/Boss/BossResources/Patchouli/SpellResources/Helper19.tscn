@@ -1,0 +1,83 @@
+[gd_scene load_steps=14 format=3 uid="uid://by2u6bbkluckm"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper19.gd" id="1_is446"]
+[ext_resource type="Texture2D" uid="uid://dvpctoad286j6" path="res://Game/Entities/Player/PlayerResources/_General/Bomb/Bomb_General.png" id="2_q70di"]
+[ext_resource type="Texture2D" uid="uid://cnkviq5p5o64a" path="res://Game/Entities/Boss/BossResources/_General/Particles/Particle_Spell.png" id="3_5878d"]
+[ext_resource type="PackedScene" uid="uid://cs8wa14bd2vny" path="res://Game/Objects/Shadow/ShadowHandler.tscn" id="3_ci6rl"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="4_2wg7v"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="6_wpuji"]
+[ext_resource type="AudioStream" uid="uid://chtf44y7n8l5f" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire01.wav" id="7_gi82l"]
+
+[sub_resource type="Gradient" id="Gradient_x5ruy"]
+offsets = PackedFloat32Array(0.7, 0.813636, 0.918182, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 0, 0.698039, 1, 0, 0, 0.521569, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5ko0a"]
+gradient = SubResource("Gradient_x5ruy")
+
+[sub_resource type="Curve" id="Curve_l06ux"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.782258, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_sv8u7"]
+curve = SubResource("Curve_l06ux")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_w354q"]
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 183.08
+initial_velocity_max = 249.98
+gravity = Vector3(0, 0, 0)
+scale_min = 0.01
+scale_max = 0.02
+scale_curve = SubResource("CurveTexture_sv8u7")
+color_ramp = SubResource("GradientTexture1D_5ko0a")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n1ryi"]
+radius = 208.0
+
+[node name="Helper19" type="Node2D"]
+script = ExtResource("1_is446")
+
+[node name="Sun" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Sun"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 0.976471, 1)
+z_index = 80
+z_as_relative = false
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_q70di")
+
+[node name="ShadowHandler" parent="Sun/Sprite" instance=ExtResource("3_ci6rl")]
+unique_name_in_owner = true
+interval = 0.05
+duration = 0.2
+
+[node name="Particles" type="GPUParticles2D" parent="Sun"]
+unique_name_in_owner = true
+z_index = 79
+z_as_relative = false
+amount = 800
+process_material = SubResource("ParticleProcessMaterial_w354q")
+texture = ExtResource("3_5878d")
+lifetime = 1.4
+
+[node name="Collider" parent="Sun" instance=ExtResource("4_2wg7v")]
+unique_name_in_owner = true
+collision_layer = 0
+monitorable = false
+shape = SubResource("CircleShape2D_n1ryi")
+
+[node name="Shooter" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer" type="Timer" parent="Shooter"]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("6_wpuji")]
+unique_name_in_owner = true
+stream = ExtResource("7_gi82l")
+
+[connection signal="collider_entered" from="Sun/Collider" to="." method="_on_Collider_collider_entered"]

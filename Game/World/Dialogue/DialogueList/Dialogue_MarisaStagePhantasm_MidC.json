@@ -1,0 +1,58 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Hey miss rich lady!"
+	},
+	
+	"003": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "remi",
+		"configuration": "right",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia07",
+		"name":          "Remilia",
+		"text":          
+			"That's not my name, stupid!"
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"Well stupid isn't my name, stupid!"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia07",
+		"name":          "Remilia",
+		"text":          
+			"That's it!"
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia07",
+		"name":          "Remilia",
+		"text":          
+			"I'll beat you up for ransacking my house!"
+	}
+}

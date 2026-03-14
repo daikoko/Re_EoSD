@@ -1,0 +1,153 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Finally..."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"Feels like I've been walking around forever."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Now how do I get in this place."
+	},
+	
+	
+	"007": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"You won't be getting in."
+	},
+	"009": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"006": {
+		"type":          "enter",
+		"identity":      "meiling",
+		"configuration": "right",
+	},
+	"011": {
+		"type":          "title",
+		"name":          "Meiling",
+		"text":          "Chinese Gatekeeper"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling02",
+		"name":          "Meiling",
+		"text":          
+			"Not while I guard this gate."
+	},
+	
+	
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Have you seen whats going on outside? It's obvious that this
+			suspicious house is behind it."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"Not my issue."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"The sun is literally gone."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"The regime knows best."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Are you kidding me?!"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling03",
+		"name":          "Meiling",
+		"text":          
+			"Hey I'm just trying to get paid here.
+			No idea what's going on inside."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Well can you at least tell me who does know?"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"Probably the mistress and her spooky magician friend."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"Cool, can I go visit them then?"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling02",
+		"name":          "Meiling",
+		"text":          
+			"No."
+	},
+	"018": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	}
+}

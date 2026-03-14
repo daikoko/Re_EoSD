@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://74b265gao0pv"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper20.gd" id="1_7uyt0"]
+[ext_resource type="Texture2D" uid="uid://fve5a74pma54" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaDark.png" id="2_8t0hv"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_u7trq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hio2f"]
+radius = 200.0
+
+[node name="RumiaHelper20" type="Node2D"]
+script = ExtResource("1_7uyt0")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_8t0hv")
+
+[node name="Collider" parent="Sprite" instance=ExtResource("3_u7trq")]
+monitorable = false
+identity = "Obstacle"
+shape = SubResource("CircleShape2D_hio2f")
+
+[connection signal="collider_entered" from="Sprite/Collider" to="." method="_on_Collider_collider_entered"]

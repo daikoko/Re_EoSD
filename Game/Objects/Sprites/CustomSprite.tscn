@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://nq8ex68na37s"]
+
+[ext_resource type="Shader" path="res://Game/Objects/Sprites/Flash.gdshader" id="1_e3ou6"]
+[ext_resource type="SpriteFrames" uid="uid://1nyjwyfl3815" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/SpriteFrames_PlayerReimu.tres" id="1_elxjc"]
+[ext_resource type="Script" path="res://Game/Objects/Sprites/CustomSprite.gd" id="2_cecwr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pxxc6"]
+resource_local_to_scene = true
+shader = ExtResource("1_e3ou6")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="CustomSprite" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_pxxc6")
+sprite_frames = ExtResource("1_elxjc")
+animation = &"_Idle"
+script = ExtResource("2_cecwr")
+
+[node name="FlashTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[connection signal="animation_finished" from="." to="." method="_on_CustomSprite_animation_finished"]
+[connection signal="timeout" from="FlashTimer" to="." method="_on_FlashTimer_timeout"]

@@ -1,0 +1,54 @@
+{
+	"005": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Ah. Guess that's it then."
+	},
+	
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Can you finally give this up now?"
+	},
+	
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Well, the ritual would've burnt itself out anyway."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"But that vampire caused enough of a commotion to jumpstart it at least."
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Quit yapping while I get this seal set up."
+	}
+}

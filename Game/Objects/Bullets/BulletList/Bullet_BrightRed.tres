@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://dfw7kgyql6vtq"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_alqt8"]
+[ext_resource type="Texture2D" uid="uid://eg0eerlj7ni2" path="res://Game/Objects/Bullets/BulletResources/Bullet_BrightRed.png" id="2_81sm4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kpvjk"]
+
+[resource]
+script = ExtResource("1_alqt8")
+texture = ExtResource("2_81sm4")
+shape = SubResource("CircleShape2D_kpvjk")
+color_option = 1
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-12, -12, 24, 24)

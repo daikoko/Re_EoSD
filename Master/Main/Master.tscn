@@ -1,0 +1,61 @@
+[gd_scene load_steps=15 format=3 uid="uid://c5pff6peg7n86"]
+
+[ext_resource type="Script" path="res://Master/Main/Master.gd" id="1_3aqi1"]
+[ext_resource type="Script" path="res://Master/Series/SeriesData.gd" id="2_3c01v"]
+[ext_resource type="Script" path="res://Master/Main/LoadingScreen.gd" id="2_mhos3"]
+[ext_resource type="Script" path="res://Game/World/Stage/StageScripts/StageData.gd" id="3_i4frk"]
+[ext_resource type="Shader" path="res://Master/Main/LoadingAnimation.gdshader" id="3_n4726"]
+[ext_resource type="Texture2D" uid="uid://dg741ray5t56y" path="res://Master/Main/LoadingTexture.png" id="4_blxc3"]
+[ext_resource type="Texture2D" uid="uid://cak1ujymoqvi" path="res://Master/Main/Background_Main.png" id="5_j0omy"]
+[ext_resource type="Resource" uid="uid://bmjq5ee4jes5g" path="res://Game/World/Stage/StageList/Stage_Extra.tres" id="5_qv1d3"]
+[ext_resource type="Resource" uid="uid://cwm171j50b15s" path="res://Game/World/Stage/StageList/Stage_06.tres" id="9_ljms0"]
+[ext_resource type="Resource" uid="uid://cshyo3f20nbgu" path="res://Game/World/Stage/StageList/Stage_Phantasm.tres" id="11_bx8q4"]
+
+[sub_resource type="Resource" id="Resource_0jurv"]
+script = ExtResource("2_3c01v")
+stages = Array[ExtResource("3_i4frk")]([ExtResource("9_ljms0")])
+
+[sub_resource type="Resource" id="Resource_0dret"]
+script = ExtResource("2_3c01v")
+stages = Array[ExtResource("3_i4frk")]([ExtResource("5_qv1d3")])
+
+[sub_resource type="Resource" id="Resource_6xp6w"]
+script = ExtResource("2_3c01v")
+stages = Array[ExtResource("3_i4frk")]([ExtResource("11_bx8q4")])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wdk2n"]
+shader = ExtResource("3_n4726")
+shader_parameter/x_displacement = 0.0
+shader_parameter/y_step = 0.2
+shader_parameter/lag_value = 0.2
+
+[node name="Master" type="Node2D"]
+script = ExtResource("1_3aqi1")
+main = SubResource("Resource_0jurv")
+extra = SubResource("Resource_0dret")
+phantasm = SubResource("Resource_6xp6w")
+
+[node name="LoadingScreen" type="CanvasLayer" parent="."]
+layer = 100
+script = ExtResource("2_mhos3")
+
+[node name="LoadingStill" type="TextureRect" parent="LoadingScreen"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_blxc3")
+
+[node name="LoadingAnimation" type="TextureRect" parent="LoadingScreen"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_wdk2n")
+offset_right = 1280.0
+offset_bottom = 800.0
+texture = ExtResource("5_j0omy")
+
+[node name="Background" type="CanvasLayer" parent="."]
+layer = -100
+
+[node name="Background" type="TextureRect" parent="Background"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_j0omy")

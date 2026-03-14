@@ -1,0 +1,130 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"What a tense atmosphere..."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"I wonder whats going on here?"
+	},
+	
+	"004": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"005": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"You are just in time!"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"Something that will change the world forever is happening here."
+	},
+	
+	"008": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"I sense you are something dangerous after all..."
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"What's going on here?!"
+	},
+	
+	"010": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"This sealed form of mine has kept me grounded for too long."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"And now I'm about to regain my proper body."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Maybe you'd be interested in seeing it?"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"..."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"No!"
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"Stop what you are doing at once!"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"I see we got someone that likes resisting."
+	},
+	
+	"017": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	}
+}

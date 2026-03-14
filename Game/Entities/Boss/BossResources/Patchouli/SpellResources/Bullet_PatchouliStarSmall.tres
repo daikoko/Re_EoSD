@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://dhha6h6mudncx"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_3gn3x"]
+[ext_resource type="Texture2D" uid="uid://cguij7nhkkon8" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/BulletCustom_PatchouliStarSmall.png" id="2_1o78f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3o3te"]
+radius = 12.0
+
+[resource]
+script = ExtResource("1_3gn3x")
+texture = ExtResource("2_1o78f")
+shape = SubResource("CircleShape2D_3o3te")
+color_option = 5
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-20, -20, 40, 40)

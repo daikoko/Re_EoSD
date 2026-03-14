@@ -1,0 +1,109 @@
+[gd_scene load_steps=12 format=3 uid="uid://5ao6l8ty8ad1"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper12.gd" id="1_75h4o"]
+[ext_resource type="Texture2D" uid="uid://il2rpqjnf3nt" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_WarningWheel.png" id="2_0ttwn"]
+[ext_resource type="Texture2D" uid="uid://dagkic8xoyu7y" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaLaser.png" id="3_i2sjx"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_wxqab"]
+[ext_resource type="AudioStream" uid="uid://ibf3ilirvje2" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire07.wav" id="4_oljjb"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="4_q5um0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lge8w"]
+size = Vector2(840, 60)
+
+[sub_resource type="Curve2D" id="Curve2D_ep0t0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 160, 0, 0, 0, 0, 0, 1000, 0)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_we3s0"]
+resource_name = "Blink"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pointer/Warning:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_qqys3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pointer/Warning:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_na2sv"]
+_data = {
+"Blink": SubResource("Animation_we3s0"),
+"RESET": SubResource("Animation_qqys3")
+}
+
+[node name="RumiaHelper12" type="Node2D"]
+script = ExtResource("1_75h4o")
+
+[node name="Pointer" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Warning" type="TextureProgressBar" parent="Pointer"]
+unique_name_in_owner = true
+offset_left = -210.0
+offset_top = -210.0
+offset_right = 210.0
+offset_bottom = 210.0
+rotation = -0.0733038
+pivot_offset = Vector2(210, 210)
+value = 20.0
+fill_mode = 4
+texture_progress = ExtResource("2_0ttwn")
+
+[node name="Line" type="Node2D" parent="Pointer"]
+unique_name_in_owner = true
+
+[node name="Beam" type="Sprite2D" parent="Pointer/Line"]
+unique_name_in_owner = true
+position = Vector2(500, 0)
+texture = ExtResource("3_i2sjx")
+
+[node name="Collider" parent="Pointer/Line/Beam" instance=ExtResource("4_q5um0")]
+position = Vector2(80, 0)
+shape = SubResource("RectangleShape2D_lge8w")
+
+[node name="Path" type="Path2D" parent="Pointer/Line"]
+curve = SubResource("Curve2D_ep0t0")
+
+[node name="PathFollow" type="PathFollow2D" parent="Pointer/Line/Path"]
+unique_name_in_owner = true
+position = Vector2(160, 0)
+rotates = false
+
+[node name="FireTimer" type="Timer" parent="Pointer/Line"]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("3_wxqab")]
+unique_name_in_owner = true
+stream = ExtResource("4_oljjb")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_na2sv")
+}
+
+[connection signal="collider_entered" from="Pointer/Line/Beam/Collider" to="." method="_on_Collider_collider_entered"]
+[connection signal="timeout" from="Pointer/Line/FireTimer" to="." method="_on_FireTimer_timeout"]

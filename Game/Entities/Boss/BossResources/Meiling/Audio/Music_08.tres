@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://dq6lcc7a66t70"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_miy8c"]
+[ext_resource type="AudioStream" uid="uid://dbg81cilghqdn" path="res://Game/Entities/Boss/BossResources/Meiling/Audio/TH06_08.ogg" id="1_sfpfn"]
+
+[resource]
+script = ExtResource("1_miy8c")
+id = 8
+name = ""
+music = ExtResource("1_sfpfn")
+flag = "Passed_Stage3"

@@ -1,0 +1,259 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"Ah, finally here."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"I've always has a feeling that I reach the final enemy at this time."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"It's a forboding atmosphere too. 
+			The mastermind must truely be terrifying."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Oh, something is coming."
+	},
+	
+	
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "remi",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"Uh, hello there."
+	},
+	"009": {
+		"type":          "title",
+		"name":          "Remilia Scarlet",
+		"text":          "Eternal Scarlet Moon"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"*********************"
+	},
+	
+	
+	"011": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"What?"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"************************************"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"I, uh, don't understand you?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"************"
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"..."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"You can't speak the language here, can you?"
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"..."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"..."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"*******"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"You can't speak the language here, can you?"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"..."
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"I was able to speak with everyone else in
+			your house though..."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"*********************************"
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Ok, well, I'm here to stop whatever you are doing to the sky."
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"So please stop?"
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"**"
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"You are shaking your head so I assume that's a no."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"**"
+	},
+	"029": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Well I can't take no for an answer, so can you please stop?"
+	},
+	"030": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"**"
+	},
+	"031": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Alright, I'm fed up with this, prepare for an ass kicking."
+	},
+	"032": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia02",
+		"name":          "Remilia",
+		"text":          
+			"********"
+	},
+	
+	
+	"033": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	}
+}

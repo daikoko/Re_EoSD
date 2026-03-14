@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://dk3lpoqa02lrt"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_ifskw"]
+[ext_resource type="Texture2D" uid="uid://b7lerlo2v70gt" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Shot/CustomBullet_MarisaMain.png" id="2_padjs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2k4w4"]
+size = Vector2(32, 16)
+
+[resource]
+script = ExtResource("1_ifskw")
+texture = ExtResource("2_padjs")
+shape = SubResource("RectangleShape2D_2k4w4")
+color_option = 0
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-10, -10, 20, 20)

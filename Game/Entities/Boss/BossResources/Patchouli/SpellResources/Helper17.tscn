@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwjrsiuypimly"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper17.gd" id="1_xter0"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_713oj"]
+[ext_resource type="AudioStream" uid="uid://bvg5obbtcxw58" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire03.wav" id="3_hs8eb"]
+
+[node name="Helper17" type="Node2D"]
+script = ExtResource("1_xter0")
+
+[node name="Sound" parent="." instance=ExtResource("2_713oj")]
+unique_name_in_owner = true
+stream = ExtResource("3_hs8eb")

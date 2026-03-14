@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://cq616kcru3mhx"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_1deo5"]
+[ext_resource type="Texture2D" uid="uid://dj7vleitn3fua" path="res://Game/Objects/Bullets/BulletResources/Bullet_StoneRed.png" id="2_govkk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_678q8"]
+size = Vector2(20, 10)
+
+[resource]
+script = ExtResource("1_1deo5")
+texture = ExtResource("2_govkk")
+shape = SubResource("RectangleShape2D_678q8")
+color_option = 1
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-17, -8, 34, 16)

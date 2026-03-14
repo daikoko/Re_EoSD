@@ -1,0 +1,688 @@
+[gd_scene load_steps=262 format=3 uid="uid://cph6fadogj3vc"]
+
+[ext_resource type="PackedScene" uid="uid://bgg53kq22m40e" path="res://Menu/Title/Title.tscn" id="1_b8imx"]
+[ext_resource type="Script" path="res://Menu/Main/MainMenu.gd" id="1_g51gh"]
+[ext_resource type="PackedScene" uid="uid://dkfbu7x00kdu1" path="res://Menu/Game/Main/Game.tscn" id="3_b1dty"]
+[ext_resource type="PackedScene" uid="uid://d210a1nsk1bac" path="res://Menu/Settings/Settings.tscn" id="3_qt0u3"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/PlayerData.gd" id="4_4e5b5"]
+[ext_resource type="PackedScene" uid="uid://ccgwlstl0fqup" path="res://Master/Audio/Music.tscn" id="4_s6314"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_xopeo"]
+[ext_resource type="Resource" uid="uid://bipdaxn432rou" path="res://Game/Entities/Player/PlayerList/Player_Reimu.tres" id="5_4ymq0"]
+[ext_resource type="AudioStream" uid="uid://coslmwcathp0a" path="res://Menu/Main/Menu_Select01.wav" id="5_ial1h"]
+[ext_resource type="PackedScene" uid="uid://c5dtpqq0qlg7h" path="res://Menu/Records/Records.tscn" id="6_hy7pk"]
+[ext_resource type="Resource" uid="uid://c81s8obahoy34" path="res://Game/Entities/Player/PlayerList/Player_Marisa.tres" id="6_mkqqe"]
+[ext_resource type="Resource" uid="uid://bkq7s68bhbo2b" path="res://Game/Entities/Player/PlayerList/Player_Rin.tres" id="7_6ylus"]
+[ext_resource type="PackedScene" uid="uid://bo6kle0s4b3b5" path="res://Menu/Musics/Main/MusicRoom.tscn" id="7_iebtw"]
+[ext_resource type="Script" path="res://Menu/Game/SelectPractice/PracticePlayer.gd" id="8_6oliy"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="8_e5dp1"]
+[ext_resource type="Resource" uid="uid://cj30l1uhtogk3" path="res://Game/Entities/Player/ShotList/Shot_ReimuA.tres" id="9_iykwh"]
+[ext_resource type="AudioStream" uid="uid://dteeosi7mqbop" path="res://Menu/Main/Menu_Select03.wav" id="9_v4n47"]
+[ext_resource type="Resource" uid="uid://byvv2xpssglff" path="res://Game/Entities/Player/ShotList/Shot_ReimuB.tres" id="10_1yhgl"]
+[ext_resource type="Resource" uid="uid://c18kfpo72c04q" path="res://Menu/Main/Music_01.tres" id="10_7ej67"]
+[ext_resource type="Resource" uid="uid://cr0uurlfxk76v" path="res://Game/World/Stage/StageResources/Stage01/Audio/Music_02.tres" id="10_n8s6b"]
+[ext_resource type="Resource" uid="uid://c1sf06tr88muy" path="res://Game/Entities/Boss/BossResources/Rumia/Audio/Music_04.tres" id="11_ewcqw"]
+[ext_resource type="Resource" uid="uid://bl80uxmqk1xw" path="res://Game/Entities/Player/ShotList/Shot_MarisaA.tres" id="11_n1v25"]
+[ext_resource type="Resource" uid="uid://dgxgn2578y2ya" path="res://Game/Entities/Player/ShotList/Shot_MarisaB.tres" id="12_5lnsw"]
+[ext_resource type="Resource" uid="uid://myh3q4xvep2g" path="res://Game/World/Stage/StageResources/Stage02/Audio/Music_05.tres" id="12_k2j84"]
+[ext_resource type="Resource" uid="uid://da6s6epam6511" path="res://Game/Entities/Boss/BossResources/Cirno/Audio/Music_06.tres" id="13_58tx7"]
+[ext_resource type="Resource" uid="uid://ixnmb8pomcgp" path="res://Game/Entities/Player/ShotList/Shot_RinA.tres" id="13_idgxj"]
+[ext_resource type="Resource" uid="uid://7br3vgg6twjv" path="res://Game/World/Stage/StageResources/Stage01/Audio/Music_03.tres" id="13_wag8j"]
+[ext_resource type="Resource" uid="uid://deaktrebenh4p" path="res://Game/World/Stage/StageResources/Stage03/Audio/Music_07.tres" id="14_1hmhc"]
+[ext_resource type="Resource" uid="uid://bj822iqwd683f" path="res://Game/Entities/Player/ShotList/Shot_RinB.tres" id="14_sd3vw"]
+[ext_resource type="Resource" uid="uid://dq6lcc7a66t70" path="res://Game/Entities/Boss/BossResources/Meiling/Audio/Music_08.tres" id="15_bqscf"]
+[ext_resource type="Script" path="res://Menu/Game/SelectPractice/PracticeDifficulty.gd" id="15_con7h"]
+[ext_resource type="Script" path="res://Menu/Game/SelectPractice/PracticeBoss.gd" id="16_4iud3"]
+[ext_resource type="Resource" uid="uid://dctc6t6pm5wv6" path="res://Game/World/Stage/StageResources/Stage04/Audio/Music_09.tres" id="16_xwyq2"]
+[ext_resource type="Resource" uid="uid://dejyh72vftjsh" path="res://Game/Entities/Boss/BossResources/Patchouli/Audio/Music_10.tres" id="17_7wwed"]
+[ext_resource type="PackedScene" uid="uid://cy2opa6cfngmp" path="res://Game/Entities/Boss/BossResources/Rumia/Background/Background_BossRumia.tscn" id="17_jlpbn"]
+[ext_resource type="Resource" uid="uid://o8xs3e4rxh27" path="res://Game/World/Stage/StageResources/Stage05/Audio/Music_11.tres" id="18_741xt"]
+[ext_resource type="PackedScene" uid="uid://cb2it7117webl" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01.tscn" id="18_iksa7"]
+[ext_resource type="Resource" uid="uid://c3pmjv21g2jxi" path="res://Game/Entities/Boss/BossResources/Rumia/Sprite/BossSprite_Rumia.tres" id="18_r65p7"]
+[ext_resource type="Resource" uid="uid://bcjhmn1n57xbm" path="res://Game/Entities/Boss/BossResources/Sakuya/Audio/Music_12.tres" id="19_3dx62"]
+[ext_resource type="Resource" uid="uid://dmxqrdjwpclba" path="res://Game/World/Stage/StageResources/Stage06/Audio/Music_13.tres" id="20_8rq0x"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent_Spell.gd" id="20_lqmis"]
+[ext_resource type="Resource" uid="uid://bmo5mdfsvnkvy" path="res://Game/Entities/Boss/BossResources/Remilia/Audio/Music_14.tres" id="21_tk6jw"]
+[ext_resource type="Resource" uid="uid://3ecb3boevwpg" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Easy/Rumia_SpellB_Easy.tres" id="21_vm5ug"]
+[ext_resource type="Resource" uid="uid://dhw8v6c6ojwca" path="res://Game/Main/Record/Music_15.tres" id="22_2u1bn"]
+[ext_resource type="Resource" uid="uid://coeiqoqcjt6cb" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Easy/Rumia_SpellC_Easy.tres" id="22_a1t50"]
+[ext_resource type="PackedScene" uid="uid://cuf1bfr26xmd" path="res://Game/World/Stage/StageResources/Stage02/Background/Background_Stage02.tscn" id="24_6tnro"]
+[ext_resource type="Resource" uid="uid://dntgw7qqphpvv" path="res://Game/Main/Ending/EndingResources/_General/Music_16.tres" id="25_5jrh5"]
+[ext_resource type="Resource" uid="uid://bq0kcucioc30w" path="res://Game/Entities/Boss/BossResources/Daiyousei/Sprite/BossSprite_Daiyousei.tres" id="25_nbpf8"]
+[ext_resource type="Resource" uid="uid://0l70oykhq37v" path="res://Game/Main/Ending/EndingResources/_General/Music_17.tres" id="26_uy335"]
+[ext_resource type="Resource" uid="uid://bgbvmucwkbttm" path="res://Game/Main/Credits/Music_18.tres" id="27_d15vf"]
+[ext_resource type="PackedScene" uid="uid://b4fp0aut6cu2i" path="res://Game/Entities/Boss/BossResources/Cirno/Background/Background_BossCirno.tscn" id="27_lptlq"]
+[ext_resource type="Resource" uid="uid://8yaw4b6peii6" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_SpellA_Easy.tres" id="28_aun6a"]
+[ext_resource type="Resource" uid="uid://d3636pnqqe7mp" path="res://Game/World/Stage/StageResources/StageExtra/Audio/Music_19.tres" id="28_ma40h"]
+[ext_resource type="Resource" uid="uid://chjay7bpo25k8" path="res://Game/Entities/Boss/BossResources/Cirno/Sprite/BossSprite_Cirno.tres" id="28_mtqlt"]
+[ext_resource type="Resource" uid="uid://bbf7b57fcmkr" path="res://Game/Entities/Boss/BossResources/Flandre/Audio/Music_20.tres" id="29_645w0"]
+[ext_resource type="Resource" uid="uid://0dgeuq255ye3" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_SpellB_Easy.tres" id="29_ok857"]
+[ext_resource type="PackedScene" uid="uid://cmix71dikamn4" path="res://Game/Entities/Boss/BossResources/Meiling/Background/Background_BossMeiling.tscn" id="30_4ln12"]
+[ext_resource type="Resource" uid="uid://dgvoxkj1fovvh" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_SpellC_Easy.tres" id="30_vc34t"]
+[ext_resource type="Resource" uid="uid://d3clqc5h2kah8" path="res://Game/Entities/Boss/BossResources/Meiling/Sprite/BossSprite_Meiling.tres" id="31_fa05u"]
+[ext_resource type="PackedScene" uid="uid://lx3xhhj85ppl" path="res://Game/World/Stage/StageResources/Stage03/Background/Background_Stage03.tscn" id="32_t7tmm"]
+[ext_resource type="PackedScene" uid="uid://oc3jthkv7b04" path="res://Menu/Manual/Main/Manual.tscn" id="32_v4s6q"]
+[ext_resource type="Resource" uid="uid://bhu0fn1jtpo2m" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Easy/Meiling_SpellA_Easy.tres" id="35_6twef"]
+[ext_resource type="Resource" uid="uid://dknhsj0qd73tn" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_SpellB_Easy.tres" id="36_llvxy"]
+[ext_resource type="Resource" uid="uid://chtim467e61ai" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_SpellC_Easy.tres" id="37_ewbo4"]
+[ext_resource type="Resource" uid="uid://dodee2gv8n671" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_SpellD_Easy.tres" id="38_u3gfv"]
+[ext_resource type="PackedScene" uid="uid://dndrxgi8lyoyi" path="res://Game/Entities/Boss/BossResources/Patchouli/Background/Background_BossPatchouli.tscn" id="39_3xw56"]
+[ext_resource type="PackedScene" uid="uid://cdj6oi4rcthsq" path="res://Game/World/Stage/StageResources/Stage04/Background/Background_Stage04.tscn" id="40_t5tuy"]
+[ext_resource type="Resource" uid="uid://bssjhro1ois70" path="res://Game/Entities/Boss/BossResources/Patchouli/Sprite/BossSprite_Patchouli.tres" id="41_lnd23"]
+[ext_resource type="PackedScene" uid="uid://dke3no2se6od" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya.tscn" id="43_46ra6"]
+[ext_resource type="Resource" uid="uid://buehgmkfacapd" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Easy/Patchouli_SpellA_Easy.tres" id="43_hh1yh"]
+[ext_resource type="Resource" uid="uid://bcnvaudgast6i" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Easy/Patchouli_SpellB_Easy.tres" id="44_gbiob"]
+[ext_resource type="PackedScene" uid="uid://btihftnq36dal" path="res://Game/World/Stage/StageResources/Stage05/Background/Background_Stage05.tscn" id="44_sfxhw"]
+[ext_resource type="Resource" uid="uid://bwhxkgmcoco7t" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Easy/Patchouli_SpellC_Easy.tres" id="45_60ux5"]
+[ext_resource type="Resource" uid="uid://l4o3jbcmfgnf" path="res://Game/Entities/Boss/BossResources/Sakuya/Sprite/BossSprite_Sakuya.tres" id="45_sfjig"]
+[ext_resource type="Resource" uid="uid://b4t7rtl0bpijr" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Easy/Patchouli_SpellD_Easy.tres" id="46_8cjax"]
+[ext_resource type="PackedScene" uid="uid://bwrenxchrwp8y" path="res://Game/Entities/Boss/BossResources/Remilia/Background/Background_BossRemilia.tscn" id="47_8vhy4"]
+[ext_resource type="PackedScene" uid="uid://7uni17bnen8k" path="res://Game/World/Stage/StageResources/Stage06/Background/Background_Stage06.tscn" id="48_qs00l"]
+[ext_resource type="Resource" uid="uid://d1eyfs48u8sbt" path="res://Game/Entities/Boss/BossResources/Remilia/Sprite/BossSprite_Remilia.tres" id="49_nb5mx"]
+[ext_resource type="Resource" uid="uid://brjqk2ksufwis" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Easy/Sakuya_SpellB_Easy.tres" id="51_pof3p"]
+[ext_resource type="Resource" uid="uid://dogg2g0jt83l5" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Normal/Rumia_SpellB_Normal.tres" id="51_vciyv"]
+[ext_resource type="Resource" uid="uid://cffolkb44m83a" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Easy/Sakuya_SpellC_Easy.tres" id="52_3g0f1"]
+[ext_resource type="Resource" uid="uid://dnhgrkwcbnmmi" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Normal/Rumia_SpellC_Normal.tres" id="52_7xkgf"]
+[ext_resource type="Resource" uid="uid://cfga1my7l8862" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_SpellA_Normal.tres" id="53_3q068"]
+[ext_resource type="Resource" uid="uid://dk40j5deik3yq" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Easy/Sakuya_SpellD_Easy.tres" id="53_ha74f"]
+[ext_resource type="Resource" uid="uid://bx7gs6an4dq2j" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_SpellB_Normal.tres" id="54_8raff"]
+[ext_resource type="Resource" uid="uid://cppg4bfuc7oye" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Easy/Sakuya_SpellE_Easy.tres" id="54_fswsm"]
+[ext_resource type="Resource" uid="uid://ujv8evgiw1f4" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Easy/Sakuya_SpellF_Easy.tres" id="55_vv0rr"]
+[ext_resource type="Resource" uid="uid://dwto5rqjg588b" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_SpellC_Normal.tres" id="55_wkfm3"]
+[ext_resource type="Resource" uid="uid://c0inktvlhhel8" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Normal/Meiling_SpellA_Normal.tres" id="56_a60mq"]
+[ext_resource type="Resource" uid="uid://c4uvaotrxn78j" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_SpellB_Normal.tres" id="57_uak8n"]
+[ext_resource type="Resource" uid="uid://7sn0hc0mkqvj" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_SpellC_Normal.tres" id="58_lvjxr"]
+[ext_resource type="Resource" uid="uid://dvtp6wueigg7t" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_SpellD_Normal.tres" id="59_4ws0n"]
+[ext_resource type="Resource" uid="uid://dkacwuge5i5io" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Hard/Rumia_SpellA_Hard.tres" id="60_bjtma"]
+[ext_resource type="Resource" uid="uid://bxuqckdjx3t0h" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Easy/Remilia_SpellA_Easy.tres" id="60_oep3k"]
+[ext_resource type="Resource" uid="uid://d3mfa4nm6pigj" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Easy/Remilia_SpellB_Easy.tres" id="61_vg0rb"]
+[ext_resource type="Resource" uid="uid://c4tk0ucmkod80" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Hard/Rumia_SpellB_Hard.tres" id="61_x1mks"]
+[ext_resource type="Resource" uid="uid://chbfrfrhgdcxa" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Hard/Rumia_SpellC_Hard.tres" id="62_fel7p"]
+[ext_resource type="Resource" uid="uid://bxgphygbpl7uq" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Easy/Remilia_SpellC_Easy.tres" id="62_pyevn"]
+[ext_resource type="Resource" uid="uid://cym6adbh58tmy" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Easy/Remilia_SpellD_Easy.tres" id="63_b554h"]
+[ext_resource type="Resource" uid="uid://byykqyeg2vicp" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Easy/Remilia_SpellE_Easy.tres" id="64_73khk"]
+[ext_resource type="Resource" uid="uid://bip7rt5o310na" path="res://Game/Entities/Boss/BossList/Stage02_MidA/SpellList/Hard/Daiyousei_SpellA_Hard.tres" id="65_gx3cu"]
+[ext_resource type="Resource" uid="uid://de1uldxepvm8r" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Easy/Remilia_SpellF_Easy.tres" id="65_qqqgm"]
+[ext_resource type="Resource" uid="uid://hlelejk5533w" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_SpellA_Hard.tres" id="66_8u8qc"]
+[ext_resource type="Resource" uid="uid://b784wpe0b7usn" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_SpellB_Hard.tres" id="67_dmibn"]
+[ext_resource type="Resource" uid="uid://dyp0l0fq0j47x" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_SpellC_Hard.tres" id="68_egy52"]
+[ext_resource type="Resource" uid="uid://vw3g2x2erhnq" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Hard/Meiling_SpellA_Hard.tres" id="69_21rd4"]
+[ext_resource type="Resource" uid="uid://crhbfm5un8f36" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_SpellB_Hard.tres" id="70_kolmj"]
+[ext_resource type="Resource" uid="uid://dg3oarx6oud3j" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_SpellC_Hard.tres" id="71_rqjsu"]
+[ext_resource type="Resource" uid="uid://bpxa87378yyu4" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_SpellD_Hard.tres" id="72_ksvbq"]
+[ext_resource type="Resource" uid="uid://chvd7w02xxjan" path="res://Game/Entities/Boss/BossResources/Koakuma/Sprite/BossSprite_Koakuma.tres" id="73_mkv8j"]
+[ext_resource type="Resource" uid="uid://rqla3f4iqc3q" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Lunatic/Rumia_SpellA_Lunatic.tres" id="75_5j2oh"]
+[ext_resource type="Resource" uid="uid://bu7qqi4rnru2e" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Normal/Patchouli_SpellA_Normal.tres" id="75_b3wke"]
+[ext_resource type="Resource" uid="uid://bveu8upqy7nsy" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Lunatic/Rumia_SpellB_Lunatic.tres" id="76_6kpsv"]
+[ext_resource type="Resource" uid="uid://b0kiwm38d17oy" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Normal/Patchouli_SpellB_Normal.tres" id="76_vvi7n"]
+[ext_resource type="Resource" uid="uid://lhc3ckqjxnsv" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Lunatic/Rumia_SpellC_Lunatic.tres" id="77_v1u3v"]
+[ext_resource type="Resource" uid="uid://dqw2axmrun875" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Normal/Patchouli_SpellC_Normal.tres" id="77_vsdq6"]
+[ext_resource type="Resource" uid="uid://lecpvrcda7tv" path="res://Game/Entities/Boss/BossList/Stage01_Boss/SpellList/Lunatic/Rumia_SpellD_Lunatic.tres" id="78_0x2ft"]
+[ext_resource type="Resource" uid="uid://cey0yq1v2esv5" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Normal/Patchouli_SpellD_Normal.tres" id="78_iuw3n"]
+[ext_resource type="Resource" uid="uid://cpw772uugc05a" path="res://Game/Entities/Boss/BossList/Stage02_MidA/SpellList/Lunatic/Daiyousei_SpellA_Lunatic.tres" id="79_83hry"]
+[ext_resource type="Resource" uid="uid://b0fgnxfg1mogp" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Normal/Sakuya_SpellB_Normal.tres" id="79_afloy"]
+[ext_resource type="Resource" uid="uid://cel0rvigg8mj5" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellA_Lunatic.tres" id="80_2j5pe"]
+[ext_resource type="Resource" uid="uid://cjqc3emlcgx0" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Normal/Sakuya_SpellC_Normal.tres" id="80_wjrgd"]
+[ext_resource type="Resource" uid="uid://ry01he7srke8" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Normal/Sakuya_SpellD_Normal.tres" id="81_4lyog"]
+[ext_resource type="Resource" uid="uid://dbjxhjutnl2uk" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellB_Lunatic.tres" id="81_uhjl0"]
+[ext_resource type="Resource" uid="uid://c26wdd0oafhfy" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellC_Lunatic.tres" id="82_4meb8"]
+[ext_resource type="Resource" uid="uid://dsbhd78v6gyx3" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Normal/Sakuya_SpellE_Normal.tres" id="82_eaqii"]
+[ext_resource type="Resource" uid="uid://bncn3tpa066km" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellD_Lunatic.tres" id="83_d7x5h"]
+[ext_resource type="Resource" uid="uid://ovr283gi2yny" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Normal/Sakuya_SpellF_Normal.tres" id="83_xaxpy"]
+[ext_resource type="Resource" uid="uid://hxyd2avuhuhi" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Lunatic/Meiling_SpellA_Lunatic.tres" id="84_46wec"]
+[ext_resource type="Resource" uid="uid://ccnn6pqnn620g" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Normal/Remilia_SpellA_Normal.tres" id="84_fbu8y"]
+[ext_resource type="Resource" uid="uid://clu4byustskr0" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Normal/Remilia_SpellB_Normal.tres" id="85_hfl84"]
+[ext_resource type="Resource" uid="uid://sov4a8cbj1kd" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellB_Lunatic.tres" id="85_mslkc"]
+[ext_resource type="Resource" uid="uid://cfhtu2hhctopx" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellC_Lunatic.tres" id="86_nmoqv"]
+[ext_resource type="Resource" uid="uid://deor4lj3wkffn" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Normal/Remilia_SpellC_Normal.tres" id="86_q0igf"]
+[ext_resource type="Resource" uid="uid://bpnwprsyg4xon" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellD_Lunatic.tres" id="87_8o2je"]
+[ext_resource type="Resource" uid="uid://cppinucdvnvsw" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Normal/Remilia_SpellD_Normal.tres" id="87_a2wde"]
+[ext_resource type="Resource" uid="uid://jemqs1lydsbr" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Normal/Remilia_SpellE_Normal.tres" id="88_74c06"]
+[ext_resource type="Resource" uid="uid://cewn66ewvywl2" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellE_Lunatic.tres" id="88_aplit"]
+[ext_resource type="Resource" uid="uid://bu7g3xqgpww7m" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Normal/Remilia_SpellF_Normal.tres" id="89_tptte"]
+[ext_resource type="Resource" uid="uid://n3voff33d0np" path="res://Game/Entities/Boss/BossList/Stage04_MidA/SpellList/Hard/Koakuma_SpellA_Hard.tres" id="105_37ug5"]
+[ext_resource type="Resource" uid="uid://bxwem4oqudp42" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Hard/Patchouli_SpellA_Hard.tres" id="106_mhcjm"]
+[ext_resource type="Resource" uid="uid://c035x5rubrobr" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Hard/Patchouli_SpellB_Hard.tres" id="107_7tvue"]
+[ext_resource type="Resource" uid="uid://b8817k0f4ntay" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Hard/Patchouli_SpellC_Hard.tres" id="108_fyl47"]
+[ext_resource type="Resource" uid="uid://c4milfy31sipr" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Hard/Patchouli_SpellD_Hard.tres" id="109_nh6as"]
+[ext_resource type="Resource" uid="uid://de23tl68sdihp" path="res://Game/Entities/Boss/BossList/Stage05_MidA/SpellList/Hard/Sakuya_SpellA_Hard.tres" id="110_hews5"]
+[ext_resource type="Resource" uid="uid://cfxm4ka7bpmgc" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Hard/Sakuya_SpellB_Hard.tres" id="111_vhfly"]
+[ext_resource type="Resource" uid="uid://dy8bxuqfpku0v" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Hard/Sakuya_SpellC_Hard.tres" id="112_61k2r"]
+[ext_resource type="Resource" uid="uid://dsdy7umu3vg4h" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Hard/Sakuya_SpellD_Hard.tres" id="113_4app6"]
+[ext_resource type="Resource" uid="uid://dyj14pgw0gv2l" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Hard/Sakuya_SpellE_Hard.tres" id="114_u5at6"]
+[ext_resource type="Resource" uid="uid://ddabb4mcht8nw" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Hard/Sakuya_SpellF_Hard.tres" id="115_162qy"]
+[ext_resource type="Resource" uid="uid://biico5l1cls0q" path="res://Game/Entities/Boss/BossList/Stage06_MidA/SpellList/Hard/Sakuya_SpellH_Hard.tres" id="116_laa81"]
+[ext_resource type="Resource" uid="uid://c331bn3bkdxnf" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Hard/Remilia_SpellA_Hard.tres" id="117_ixuf6"]
+[ext_resource type="Resource" uid="uid://b20k26tk6ogc4" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Hard/Remilia_SpellB_Hard.tres" id="118_qlqdy"]
+[ext_resource type="Resource" uid="uid://1tdrelgpchpo" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Hard/Remilia_SpellC_Hard.tres" id="119_lchlw"]
+[ext_resource type="Resource" uid="uid://byn8yxbt2ouwp" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Hard/Remilia_SpellD_Hard.tres" id="120_5h1eo"]
+[ext_resource type="Resource" uid="uid://c40lpsklorqpr" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Hard/Remilia_SpellE_Hard.tres" id="121_g2e6d"]
+[ext_resource type="Resource" uid="uid://cppiv0prps527" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Hard/Remilia_SpellF_Hard.tres" id="122_xngyq"]
+[ext_resource type="Resource" uid="uid://eh3ws75pbxyu" path="res://Game/Entities/Boss/BossList/Stage04_MidA/SpellList/Lunatic/Koakuma_SpellA_Lunatic.tres" id="137_xk02s"]
+[ext_resource type="Resource" uid="uid://o6rc0f3bg7a0" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Lunatic/Patchouli_SpellA_Lunatic.tres" id="138_pti4y"]
+[ext_resource type="Resource" uid="uid://b345rhyxbomtm" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Lunatic/Patchouli_SpellB_Lunatic.tres" id="139_1y6um"]
+[ext_resource type="Resource" uid="uid://ceksa552rp0bg" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Lunatic/Patchouli_SpellC_Lunatic.tres" id="140_bcb80"]
+[ext_resource type="Resource" uid="uid://c5kg7gwhl0il" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Lunatic/Patchouli_SpellD_Lunatic.tres" id="141_mca52"]
+[ext_resource type="Resource" uid="uid://c1bd8ycw28h80" path="res://Game/Entities/Boss/BossList/Stage04_Boss/SpellList/Lunatic/Patchouli_SpellE_Lunatic.tres" id="142_vneuw"]
+[ext_resource type="Resource" uid="uid://cxxtpo8ixdcng" path="res://Game/Entities/Boss/BossList/Stage05_MidA/SpellList/Lunatic/Sakuya_SpellA_Lunatic.tres" id="143_qgejr"]
+[ext_resource type="Resource" uid="uid://b7og2lybgh1bl" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Lunatic/Sakuya_SpellB_Lunatic.tres" id="144_pirb7"]
+[ext_resource type="Resource" uid="uid://cpvnykstbjt3k" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Lunatic/Sakuya_SpellC_Lunatic.tres" id="145_sn7lm"]
+[ext_resource type="Resource" uid="uid://rohgpdue82qy" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Lunatic/Sakuya_SpellD_Lunatic.tres" id="146_5hj8m"]
+[ext_resource type="Resource" uid="uid://nhpbaj5jyqvg" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Lunatic/Sakuya_SpellE_Lunatic.tres" id="147_x5gic"]
+[ext_resource type="Resource" uid="uid://dv5mbr25x5coj" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Lunatic/Sakuya_SpellF_Lunatic.tres" id="148_5nhrb"]
+[ext_resource type="Resource" uid="uid://366io4oxav8i" path="res://Game/Entities/Boss/BossList/Stage05_Boss/SpellList/Lunatic/Sakuya_SpellG_Lunatic.tres" id="149_ueoj2"]
+[ext_resource type="Resource" uid="uid://derwkob2x77l6" path="res://Game/Entities/Boss/BossList/Stage06_MidA/SpellList/Lunatic/Sakuya_SpellH_Lunatic.tres" id="150_cdb51"]
+[ext_resource type="Resource" uid="uid://b3wdhplbqecxy" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellA_Lunatic.tres" id="151_ridx5"]
+[ext_resource type="Resource" uid="uid://dvnd1l8b3fcj5" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellB_Lunatic.tres" id="152_aqm4n"]
+[ext_resource type="Resource" uid="uid://ber2bvh02yb68" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellC_Lunatic.tres" id="153_q4rct"]
+[ext_resource type="Resource" uid="uid://1daqvo08gxuh" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellD_Lunatic.tres" id="154_ixcyy"]
+[ext_resource type="Resource" uid="uid://pn5fklw4su0p" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellE_Lunatic.tres" id="155_d71hd"]
+[ext_resource type="Resource" uid="uid://b6txm3ee65o1h" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellF_Lunatic.tres" id="156_vnm0v"]
+[ext_resource type="PackedScene" uid="uid://cv846bm638yba" path="res://Game/Entities/Boss/BossResources/Flandre/Background/Background_BossFlandre.tscn" id="157_f3n7x"]
+[ext_resource type="Resource" uid="uid://uxavvuk66man" path="res://Game/Entities/Boss/BossList/Stage06_Boss/SpellList/Lunatic/Remilia_SpellH_Lunatic.tres" id="157_isyec"]
+[ext_resource type="Resource" uid="uid://b34w14pyyxyte" path="res://Game/Entities/Boss/BossList/StageExtra_MidA/SpellList/Extra/Meiling_SpellF_Extra.tres" id="157_mn187"]
+[ext_resource type="Resource" uid="uid://ch1o0lugmmq6l" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/SpellList/Extra/Patchouli_SpellF_Extra.tres" id="158_6rdnx"]
+[ext_resource type="PackedScene" uid="uid://dy5eqqqhrofhd" path="res://Game/World/Stage/StageResources/StageExtra/Background/Background_StageExtra.tscn" id="158_cxoc0"]
+[ext_resource type="Resource" uid="uid://bdgq24ncy6hdb" path="res://Game/Entities/Boss/BossResources/Flandre/Sprite/BossSprite_Flandre.tres" id="159_3j6ua"]
+[ext_resource type="Resource" uid="uid://x3eklsjemfxl" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/SpellList/Extra/Patchouli_SpellG_Extra.tres" id="159_wwwcr"]
+[ext_resource type="Resource" uid="uid://cfhvq1qgq0nyo" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/SpellList/Extra/Patchouli_SpellH_Extra.tres" id="160_5k0m2"]
+[ext_resource type="Resource" uid="uid://b0x4nhdtt4oeg" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellA_Extra.tres" id="161_tw8mx"]
+[ext_resource type="Resource" uid="uid://43u2wjcr0gi4" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellB_Extra.tres" id="162_l3iw2"]
+[ext_resource type="Resource" uid="uid://bcrxik21tkv7e" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellC_Extra.tres" id="163_0f1dc"]
+[ext_resource type="Resource" uid="uid://cpa3r37esxkyr" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellD_Extra.tres" id="164_j8jiw"]
+[ext_resource type="Resource" uid="uid://b0288jl44msy8" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellE_Extra.tres" id="165_e4eo2"]
+[ext_resource type="Resource" uid="uid://dn5qhabomes3y" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellF_Extra.tres" id="166_kykmo"]
+[ext_resource type="Resource" uid="uid://c5gi2n4ccyh4x" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellG_Extra.tres" id="167_x62sg"]
+[ext_resource type="PackedScene" uid="uid://cce57fhxywcp8" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Background_StagePhantasm.tscn" id="168_1p2tu"]
+[ext_resource type="Resource" uid="uid://vxoax5hv0anr" path="res://Game/Entities/Boss/BossResources/Daiyousei/Sprite/BossSprite_DaiyouseiPhantasm.tres" id="169_1decl"]
+[ext_resource type="Resource" uid="uid://bc0sn2qt0wn13" path="res://Game/World/Stage/StageResources/StagePhantasm/Audio/Music_21.tres" id="170_kfld4"]
+[ext_resource type="Resource" uid="uid://blflfjmcphbfs" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidA/SpellList/Phantasm/Daiyousei_SpellB_Phantasm.tres" id="171_gx55a"]
+[ext_resource type="Resource" uid="uid://cet431uyetepd" path="res://Game/Entities/Boss/BossResources/Cirno/Sprite/BossSprite_CirnoPhantasm.tres" id="172_8caks"]
+[ext_resource type="Resource" uid="uid://bd3vrqi4hnxcu" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellH_Extra.tres" id="173_d2tby"]
+[ext_resource type="Resource" uid="uid://q87wuxlkn7p1" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidB/SpellList/Phantasm/Cirno_SpellE_Phantasm.tres" id="173_j6sjr"]
+[ext_resource type="Resource" uid="uid://h1yihuo8yhra" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellI_Extra.tres" id="174_6apbl"]
+[ext_resource type="Resource" uid="uid://bhaeqw60tr5vk" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_SpellH.tres" id="174_uddr2"]
+[ext_resource type="Resource" uid="uid://b3ty4740dqsi5" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_SpellI.tres" id="175_08ovp"]
+[ext_resource type="Resource" uid="uid://bm36i4wvr6ekf" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_SpellJ.tres" id="176_ok2b8"]
+[ext_resource type="Resource" uid="uid://tfph67srlmbb" path="res://Game/Entities/Boss/BossResources/Rumia/Audio/Music_22.tres" id="177_qnyg1"]
+[ext_resource type="Resource" uid="uid://bicsh6evag5yu" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellE_Phantasm.tres" id="178_4dynl"]
+[ext_resource type="Resource" uid="uid://n5jc2pv48441" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellF_Phantasm.tres" id="179_sylo0"]
+[ext_resource type="Resource" uid="uid://btkg8lglamttf" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellG_Phantasm.tres" id="180_y63xo"]
+[ext_resource type="Resource" uid="uid://dj20hhdt3bb4" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellH_Phantasm.tres" id="181_6yu75"]
+[ext_resource type="Resource" uid="uid://ddb3gnbooq01c" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellI_Phantasm.tres" id="182_xveyc"]
+[ext_resource type="Resource" uid="uid://crvoe5dn0x8tw" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellJ_Phantasm.tres" id="183_m2v1w"]
+[ext_resource type="Resource" uid="uid://b2ppor8flnk0" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellK_Phantasm.tres" id="184_hfs37"]
+[ext_resource type="Resource" uid="uid://cqsjt523uhkmq" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellL_Phantasm.tres" id="185_8r82l"]
+[ext_resource type="Resource" uid="uid://dr1xvk480ygdl" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellM_Phantasm.tres" id="186_ufl4n"]
+[ext_resource type="Resource" uid="uid://bk2bq34mytcht" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellN_Phantasm.tres" id="187_2pchd"]
+
+[sub_resource type="Resource" id="Resource_7d1i6"]
+script = ExtResource("8_6oliy")
+player_data = ExtResource("5_4ymq0")
+shot_data = ExtResource("9_iykwh")
+flag = ""
+
+[sub_resource type="Resource" id="Resource_037dn"]
+script = ExtResource("8_6oliy")
+player_data = ExtResource("5_4ymq0")
+shot_data = ExtResource("10_1yhgl")
+flag = ""
+
+[sub_resource type="Resource" id="Resource_3tnox"]
+script = ExtResource("8_6oliy")
+player_data = ExtResource("6_mkqqe")
+shot_data = ExtResource("11_n1v25")
+flag = ""
+
+[sub_resource type="Resource" id="Resource_uub50"]
+script = ExtResource("8_6oliy")
+player_data = ExtResource("6_mkqqe")
+shot_data = ExtResource("12_5lnsw")
+flag = ""
+
+[sub_resource type="Resource" id="Resource_xqp85"]
+script = ExtResource("8_6oliy")
+player_data = ExtResource("7_6ylus")
+shot_data = ExtResource("13_idgxj")
+flag = ""
+
+[sub_resource type="Resource" id="Resource_cdn8q"]
+script = ExtResource("8_6oliy")
+player_data = ExtResource("7_6ylus")
+shot_data = ExtResource("14_sd3vw")
+flag = ""
+
+[sub_resource type="Resource" id="Resource_ww0y7"]
+script = ExtResource("16_4iud3")
+boss_id = 1
+boss_sprite_data = ExtResource("18_r65p7")
+music_data = ExtResource("11_ewcqw")
+background_boss = ExtResource("17_jlpbn")
+background_stage = ExtResource("18_iksa7")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("21_vm5ug"), ExtResource("22_a1t50")])
+flag = "Passed_Stage1"
+
+[sub_resource type="Resource" id="Resource_xpomo"]
+script = ExtResource("16_4iud3")
+boss_id = 3
+boss_sprite_data = ExtResource("28_mtqlt")
+music_data = ExtResource("13_58tx7")
+background_boss = ExtResource("27_lptlq")
+background_stage = ExtResource("24_6tnro")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("28_aun6a"), ExtResource("29_ok857"), ExtResource("30_vc34t")])
+flag = "Passed_Stage2"
+
+[sub_resource type="Resource" id="Resource_pbm8m"]
+script = ExtResource("16_4iud3")
+boss_id = 4
+boss_sprite_data = ExtResource("31_fa05u")
+music_data = ExtResource("15_bqscf")
+background_boss = ExtResource("30_4ln12")
+background_stage = ExtResource("32_t7tmm")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("35_6twef"), ExtResource("36_llvxy"), ExtResource("37_ewbo4"), ExtResource("38_u3gfv")])
+flag = "Passed_Stage3"
+
+[sub_resource type="Resource" id="Resource_uylwh"]
+script = ExtResource("16_4iud3")
+boss_id = 6
+boss_sprite_data = ExtResource("41_lnd23")
+music_data = ExtResource("17_7wwed")
+background_boss = ExtResource("39_3xw56")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("43_hh1yh"), ExtResource("44_gbiob"), ExtResource("45_60ux5"), ExtResource("46_8cjax")])
+flag = "Passed_Stage4"
+
+[sub_resource type="Resource" id="Resource_iuj1x"]
+script = ExtResource("16_4iud3")
+boss_id = 7
+boss_sprite_data = ExtResource("45_sfjig")
+music_data = ExtResource("19_3dx62")
+background_boss = ExtResource("43_46ra6")
+background_stage = ExtResource("44_sfxhw")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("51_pof3p"), ExtResource("52_3g0f1"), ExtResource("53_ha74f"), ExtResource("54_fswsm"), ExtResource("55_vv0rr")])
+flag = "Passed_Stage5"
+
+[sub_resource type="Resource" id="Resource_s82ux"]
+script = ExtResource("16_4iud3")
+boss_id = 8
+boss_sprite_data = ExtResource("49_nb5mx")
+music_data = ExtResource("21_tk6jw")
+background_boss = ExtResource("47_8vhy4")
+background_stage = ExtResource("48_qs00l")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("60_oep3k"), ExtResource("61_vg0rb"), ExtResource("62_pyevn"), ExtResource("63_b554h"), ExtResource("64_73khk"), ExtResource("65_qqqgm")])
+flag = "Passed_Stage6"
+
+[sub_resource type="Resource" id="Resource_s1w63"]
+script = ExtResource("15_con7h")
+difficulty_id = 0
+boss_list = Array[ExtResource("16_4iud3")]([SubResource("Resource_ww0y7"), SubResource("Resource_xpomo"), SubResource("Resource_pbm8m"), SubResource("Resource_uylwh"), SubResource("Resource_iuj1x"), SubResource("Resource_s82ux")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_dijhh"]
+script = ExtResource("16_4iud3")
+boss_id = 1
+boss_sprite_data = ExtResource("18_r65p7")
+music_data = ExtResource("11_ewcqw")
+background_boss = ExtResource("17_jlpbn")
+background_stage = ExtResource("18_iksa7")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("51_vciyv"), ExtResource("52_7xkgf")])
+flag = "Passed_Stage1"
+
+[sub_resource type="Resource" id="Resource_30eqj"]
+script = ExtResource("16_4iud3")
+boss_id = 3
+boss_sprite_data = ExtResource("28_mtqlt")
+music_data = ExtResource("13_58tx7")
+background_boss = ExtResource("27_lptlq")
+background_stage = ExtResource("24_6tnro")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("53_3q068"), ExtResource("54_8raff"), ExtResource("55_wkfm3")])
+flag = "Passed_Stage2"
+
+[sub_resource type="Resource" id="Resource_uti8v"]
+script = ExtResource("16_4iud3")
+boss_id = 4
+boss_sprite_data = ExtResource("31_fa05u")
+music_data = ExtResource("15_bqscf")
+background_boss = ExtResource("30_4ln12")
+background_stage = ExtResource("32_t7tmm")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("56_a60mq"), ExtResource("57_uak8n"), ExtResource("58_lvjxr"), ExtResource("59_4ws0n")])
+flag = "Passed_Stage3"
+
+[sub_resource type="Resource" id="Resource_8q4j7"]
+script = ExtResource("16_4iud3")
+boss_id = 6
+boss_sprite_data = ExtResource("41_lnd23")
+music_data = ExtResource("17_7wwed")
+background_boss = ExtResource("39_3xw56")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("75_b3wke"), ExtResource("76_vvi7n"), ExtResource("77_vsdq6"), ExtResource("78_iuw3n")])
+flag = "Passed_Stage4"
+
+[sub_resource type="Resource" id="Resource_1wov4"]
+script = ExtResource("16_4iud3")
+boss_id = 7
+boss_sprite_data = ExtResource("45_sfjig")
+music_data = ExtResource("19_3dx62")
+background_boss = ExtResource("43_46ra6")
+background_stage = ExtResource("44_sfxhw")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("79_afloy"), ExtResource("80_wjrgd"), ExtResource("81_4lyog"), ExtResource("82_eaqii"), ExtResource("83_xaxpy")])
+flag = "Passed_Stage5"
+
+[sub_resource type="Resource" id="Resource_1l58p"]
+script = ExtResource("16_4iud3")
+boss_id = 8
+boss_sprite_data = ExtResource("49_nb5mx")
+music_data = ExtResource("21_tk6jw")
+background_boss = ExtResource("47_8vhy4")
+background_stage = ExtResource("48_qs00l")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("84_fbu8y"), ExtResource("85_hfl84"), ExtResource("86_q0igf"), ExtResource("87_a2wde"), ExtResource("88_74c06"), ExtResource("89_tptte")])
+flag = "Passed_Stage6"
+
+[sub_resource type="Resource" id="Resource_kbcbc"]
+script = ExtResource("15_con7h")
+difficulty_id = 1
+boss_list = Array[ExtResource("16_4iud3")]([SubResource("Resource_dijhh"), SubResource("Resource_30eqj"), SubResource("Resource_uti8v"), SubResource("Resource_8q4j7"), SubResource("Resource_1wov4"), SubResource("Resource_1l58p")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_p7hy5"]
+script = ExtResource("16_4iud3")
+boss_id = 1
+boss_sprite_data = ExtResource("18_r65p7")
+music_data = ExtResource("11_ewcqw")
+background_boss = ExtResource("17_jlpbn")
+background_stage = ExtResource("18_iksa7")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("60_bjtma"), ExtResource("61_x1mks"), ExtResource("62_fel7p")])
+flag = "Passed_Stage1"
+
+[sub_resource type="Resource" id="Resource_bpxjn"]
+script = ExtResource("16_4iud3")
+boss_id = 2
+boss_sprite_data = ExtResource("25_nbpf8")
+music_data = ExtResource("12_k2j84")
+background_stage = ExtResource("24_6tnro")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("65_gx3cu")])
+flag = "Passed_Stage2"
+
+[sub_resource type="Resource" id="Resource_402du"]
+script = ExtResource("16_4iud3")
+boss_id = 3
+boss_sprite_data = ExtResource("28_mtqlt")
+music_data = ExtResource("13_58tx7")
+background_boss = ExtResource("27_lptlq")
+background_stage = ExtResource("24_6tnro")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("66_8u8qc"), ExtResource("67_dmibn"), ExtResource("68_egy52")])
+flag = "Passed_Stage2"
+
+[sub_resource type="Resource" id="Resource_gxfdf"]
+script = ExtResource("16_4iud3")
+boss_id = 4
+boss_sprite_data = ExtResource("31_fa05u")
+music_data = ExtResource("15_bqscf")
+background_boss = ExtResource("30_4ln12")
+background_stage = ExtResource("32_t7tmm")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("69_21rd4"), ExtResource("70_kolmj"), ExtResource("71_rqjsu"), ExtResource("72_ksvbq")])
+flag = "Passed_Stage3"
+
+[sub_resource type="Resource" id="Resource_br2rs"]
+script = ExtResource("16_4iud3")
+boss_id = 5
+boss_sprite_data = ExtResource("73_mkv8j")
+music_data = ExtResource("16_xwyq2")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("105_37ug5")])
+flag = "Passed_Stage4"
+
+[sub_resource type="Resource" id="Resource_hdtbw"]
+script = ExtResource("16_4iud3")
+boss_id = 6
+boss_sprite_data = ExtResource("41_lnd23")
+music_data = ExtResource("17_7wwed")
+background_boss = ExtResource("39_3xw56")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("106_mhcjm"), ExtResource("107_7tvue"), ExtResource("108_fyl47"), ExtResource("109_nh6as")])
+flag = "Passed_Stage4"
+
+[sub_resource type="Resource" id="Resource_iw88j"]
+script = ExtResource("16_4iud3")
+boss_id = 7
+boss_sprite_data = ExtResource("45_sfjig")
+music_data = ExtResource("19_3dx62")
+background_boss = ExtResource("43_46ra6")
+background_stage = ExtResource("44_sfxhw")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("110_hews5"), ExtResource("111_vhfly"), ExtResource("112_61k2r"), ExtResource("113_4app6"), ExtResource("114_u5at6"), ExtResource("115_162qy"), ExtResource("116_laa81")])
+flag = "Passed_Stage5"
+
+[sub_resource type="Resource" id="Resource_q8o1a"]
+script = ExtResource("16_4iud3")
+boss_id = 8
+boss_sprite_data = ExtResource("49_nb5mx")
+music_data = ExtResource("21_tk6jw")
+background_boss = ExtResource("47_8vhy4")
+background_stage = ExtResource("48_qs00l")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("117_ixuf6"), ExtResource("118_qlqdy"), ExtResource("119_lchlw"), ExtResource("120_5h1eo"), ExtResource("121_g2e6d"), ExtResource("122_xngyq")])
+flag = "Passed_Stage6"
+
+[sub_resource type="Resource" id="Resource_qix3p"]
+script = ExtResource("15_con7h")
+difficulty_id = 2
+boss_list = Array[ExtResource("16_4iud3")]([SubResource("Resource_p7hy5"), SubResource("Resource_bpxjn"), SubResource("Resource_402du"), SubResource("Resource_gxfdf"), SubResource("Resource_br2rs"), SubResource("Resource_hdtbw"), SubResource("Resource_iw88j"), SubResource("Resource_q8o1a")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_iyxtr"]
+script = ExtResource("16_4iud3")
+boss_id = 1
+boss_sprite_data = ExtResource("18_r65p7")
+music_data = ExtResource("11_ewcqw")
+background_boss = ExtResource("17_jlpbn")
+background_stage = ExtResource("18_iksa7")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("75_5j2oh"), ExtResource("76_6kpsv"), ExtResource("77_v1u3v"), ExtResource("78_0x2ft")])
+flag = "Passed_Stage1"
+
+[sub_resource type="Resource" id="Resource_xfapj"]
+script = ExtResource("16_4iud3")
+boss_id = 2
+boss_sprite_data = ExtResource("25_nbpf8")
+music_data = ExtResource("12_k2j84")
+background_stage = ExtResource("24_6tnro")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("79_83hry")])
+flag = "Passed_Stage2"
+
+[sub_resource type="Resource" id="Resource_lgt20"]
+script = ExtResource("16_4iud3")
+boss_id = 3
+boss_sprite_data = ExtResource("28_mtqlt")
+music_data = ExtResource("13_58tx7")
+background_boss = ExtResource("27_lptlq")
+background_stage = ExtResource("24_6tnro")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("80_2j5pe"), ExtResource("81_uhjl0"), ExtResource("82_4meb8"), ExtResource("83_d7x5h")])
+flag = "Passed_Stage2"
+
+[sub_resource type="Resource" id="Resource_7x541"]
+script = ExtResource("16_4iud3")
+boss_id = 4
+boss_sprite_data = ExtResource("31_fa05u")
+music_data = ExtResource("15_bqscf")
+background_boss = ExtResource("30_4ln12")
+background_stage = ExtResource("32_t7tmm")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("84_46wec"), ExtResource("85_mslkc"), ExtResource("86_nmoqv"), ExtResource("87_8o2je"), ExtResource("88_aplit")])
+flag = "Passed_Stage3"
+
+[sub_resource type="Resource" id="Resource_ad4qy"]
+script = ExtResource("16_4iud3")
+boss_id = 5
+boss_sprite_data = ExtResource("73_mkv8j")
+music_data = ExtResource("16_xwyq2")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("137_xk02s")])
+flag = "Passed_Stage4"
+
+[sub_resource type="Resource" id="Resource_kob4p"]
+script = ExtResource("16_4iud3")
+boss_id = 6
+boss_sprite_data = ExtResource("41_lnd23")
+music_data = ExtResource("17_7wwed")
+background_boss = ExtResource("39_3xw56")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("138_pti4y"), ExtResource("139_1y6um"), ExtResource("140_bcb80"), ExtResource("141_mca52"), ExtResource("142_vneuw")])
+flag = "Passed_Stage4"
+
+[sub_resource type="Resource" id="Resource_kr4gd"]
+script = ExtResource("16_4iud3")
+boss_id = 7
+boss_sprite_data = ExtResource("45_sfjig")
+music_data = ExtResource("19_3dx62")
+background_boss = ExtResource("43_46ra6")
+background_stage = ExtResource("44_sfxhw")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("143_qgejr"), ExtResource("144_pirb7"), ExtResource("145_sn7lm"), ExtResource("146_5hj8m"), ExtResource("147_x5gic"), ExtResource("148_5nhrb"), ExtResource("149_ueoj2"), ExtResource("150_cdb51")])
+flag = "Passed_Stage5"
+
+[sub_resource type="Resource" id="Resource_b8or0"]
+script = ExtResource("16_4iud3")
+boss_id = 8
+boss_sprite_data = ExtResource("49_nb5mx")
+music_data = ExtResource("21_tk6jw")
+background_boss = ExtResource("47_8vhy4")
+background_stage = ExtResource("48_qs00l")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("151_ridx5"), ExtResource("152_aqm4n"), ExtResource("153_q4rct"), ExtResource("154_ixcyy"), ExtResource("155_d71hd"), ExtResource("156_vnm0v"), ExtResource("157_isyec")])
+flag = "Passed_Stage6"
+
+[sub_resource type="Resource" id="Resource_brb5u"]
+script = ExtResource("15_con7h")
+difficulty_id = 3
+boss_list = Array[ExtResource("16_4iud3")]([SubResource("Resource_iyxtr"), SubResource("Resource_xfapj"), SubResource("Resource_lgt20"), SubResource("Resource_7x541"), SubResource("Resource_ad4qy"), SubResource("Resource_kob4p"), SubResource("Resource_kr4gd"), SubResource("Resource_b8or0")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_v051q"]
+script = ExtResource("16_4iud3")
+boss_id = 4
+boss_sprite_data = ExtResource("31_fa05u")
+music_data = ExtResource("15_bqscf")
+background_boss = ExtResource("30_4ln12")
+background_stage = ExtResource("32_t7tmm")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("157_mn187")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_dr2l5"]
+script = ExtResource("16_4iud3")
+boss_id = 6
+boss_sprite_data = ExtResource("41_lnd23")
+music_data = ExtResource("17_7wwed")
+background_boss = ExtResource("39_3xw56")
+background_stage = ExtResource("40_t5tuy")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("158_6rdnx"), ExtResource("159_wwwcr"), ExtResource("160_5k0m2")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_ejqi4"]
+script = ExtResource("16_4iud3")
+boss_id = 9
+boss_sprite_data = ExtResource("159_3j6ua")
+music_data = ExtResource("29_645w0")
+background_boss = ExtResource("157_f3n7x")
+background_stage = ExtResource("158_cxoc0")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("161_tw8mx"), ExtResource("162_l3iw2"), ExtResource("163_0f1dc"), ExtResource("164_j8jiw"), ExtResource("165_e4eo2"), ExtResource("166_kykmo"), ExtResource("167_x62sg"), ExtResource("173_d2tby"), ExtResource("174_6apbl")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_8w766"]
+script = ExtResource("15_con7h")
+difficulty_id = 4
+boss_list = Array[ExtResource("16_4iud3")]([SubResource("Resource_v051q"), SubResource("Resource_dr2l5"), SubResource("Resource_ejqi4")])
+flag = "Passed_ExtraSeries"
+
+[sub_resource type="Resource" id="Resource_sltvg"]
+script = ExtResource("16_4iud3")
+boss_id = 2
+boss_sprite_data = ExtResource("169_1decl")
+music_data = ExtResource("170_kfld4")
+background_stage = ExtResource("168_1p2tu")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("171_gx55a")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_tuc3q"]
+script = ExtResource("16_4iud3")
+boss_id = 3
+boss_sprite_data = ExtResource("172_8caks")
+music_data = ExtResource("170_kfld4")
+background_boss = ExtResource("27_lptlq")
+background_stage = ExtResource("168_1p2tu")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("173_j6sjr")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_gb71j"]
+script = ExtResource("16_4iud3")
+boss_id = 8
+boss_sprite_data = ExtResource("49_nb5mx")
+music_data = ExtResource("170_kfld4")
+background_boss = ExtResource("47_8vhy4")
+background_stage = ExtResource("168_1p2tu")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("174_uddr2"), ExtResource("175_08ovp"), ExtResource("176_ok2b8")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_bqa2h"]
+script = ExtResource("16_4iud3")
+boss_id = 1
+boss_sprite_data = ExtResource("18_r65p7")
+music_data = ExtResource("177_qnyg1")
+background_boss = ExtResource("17_jlpbn")
+background_stage = ExtResource("168_1p2tu")
+spell_list = Array[ExtResource("20_lqmis")]([ExtResource("178_4dynl"), ExtResource("179_sylo0"), ExtResource("180_y63xo"), ExtResource("181_6yu75"), ExtResource("182_xveyc"), ExtResource("183_m2v1w"), ExtResource("184_hfs37"), ExtResource("185_8r82l"), ExtResource("186_ufl4n"), ExtResource("187_2pchd")])
+flag = ""
+
+[sub_resource type="Resource" id="Resource_4ujyk"]
+script = ExtResource("15_con7h")
+difficulty_id = 5
+boss_list = Array[ExtResource("16_4iud3")]([SubResource("Resource_sltvg"), SubResource("Resource_tuc3q"), SubResource("Resource_gb71j"), SubResource("Resource_bqa2h")])
+flag = "Passed_PhantasmSeries"
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_g51gh")
+
+[node name="Title" parent="." instance=ExtResource("1_b8imx")]
+unique_name_in_owner = true
+
+[node name="Game" parent="." instance=ExtResource("3_b1dty")]
+unique_name_in_owner = true
+players = Array[ExtResource("4_4e5b5")]([ExtResource("5_4ymq0"), ExtResource("6_mkqqe"), ExtResource("7_6ylus")])
+practice_players = Array[ExtResource("8_6oliy")]([SubResource("Resource_7d1i6"), SubResource("Resource_037dn"), SubResource("Resource_3tnox"), SubResource("Resource_uub50"), SubResource("Resource_xqp85"), SubResource("Resource_cdn8q")])
+practice_difficulties = Array[ExtResource("15_con7h")]([SubResource("Resource_s1w63"), SubResource("Resource_kbcbc"), SubResource("Resource_qix3p"), SubResource("Resource_brb5u"), SubResource("Resource_8w766"), SubResource("Resource_4ujyk")])
+
+[node name="Records" parent="." instance=ExtResource("6_hy7pk")]
+unique_name_in_owner = true
+
+[node name="MusicRoom" parent="." instance=ExtResource("7_iebtw")]
+unique_name_in_owner = true
+track_list = Array[ExtResource("8_e5dp1")]([ExtResource("10_7ej67"), ExtResource("10_n8s6b"), ExtResource("13_wag8j"), ExtResource("11_ewcqw"), ExtResource("12_k2j84"), ExtResource("13_58tx7"), ExtResource("14_1hmhc"), ExtResource("15_bqscf"), ExtResource("16_xwyq2"), ExtResource("17_7wwed"), ExtResource("18_741xt"), ExtResource("19_3dx62"), ExtResource("20_8rq0x"), ExtResource("21_tk6jw"), ExtResource("22_2u1bn"), ExtResource("25_5jrh5"), ExtResource("26_uy335"), ExtResource("27_d15vf"), ExtResource("28_ma40h"), ExtResource("29_645w0"), ExtResource("170_kfld4"), ExtResource("177_qnyg1")])
+
+[node name="Settings" parent="." instance=ExtResource("3_qt0u3")]
+unique_name_in_owner = true
+
+[node name="Manual" parent="." instance=ExtResource("32_v4s6q")]
+unique_name_in_owner = true
+
+[node name="Sound_Select01" parent="." instance=ExtResource("4_xopeo")]
+unique_name_in_owner = true
+stream = ExtResource("5_ial1h")
+
+[node name="Sound_Select03" parent="." instance=ExtResource("4_xopeo")]
+unique_name_in_owner = true
+stream = ExtResource("9_v4n47")
+
+[node name="Music_Main" parent="." instance=ExtResource("4_s6314")]
+unique_name_in_owner = true
+autoplay = true
+music = ExtResource("10_7ej67")
+
+[connection signal="selected_continue" from="Title" to="." method="_on_Title_selected_continue"]
+[connection signal="selected_extra" from="Title" to="." method="_on_Title_selected_extra"]
+[connection signal="selected_manual" from="Title" to="." method="_on_Title_selected_manual"]
+[connection signal="selected_musics" from="Title" to="." method="_on_Title_selected_musics"]
+[connection signal="selected_new_game" from="Title" to="." method="_on_Title_selected_new_game"]
+[connection signal="selected_practice" from="Title" to="." method="_on_Title_selected_practice"]
+[connection signal="selected_profiles" from="Title" to="." method="_on_Title_selected_profiles"]
+[connection signal="selected_quit" from="Title" to="." method="_on_Title_selected_quit"]
+[connection signal="selected_records" from="Title" to="." method="_on_Title_selected_records"]
+[connection signal="selected_settings" from="Title" to="." method="_on_Title_selected_settings"]
+[connection signal="back" from="Game" to="." method="_on_Game_back"]
+[connection signal="selection_finished" from="Game" to="." method="_on_Game_selection_finished"]
+[connection signal="back" from="Records" to="." method="_on_Records_back"]
+[connection signal="back" from="MusicRoom" to="." method="_on_MusicRoom_back"]
+[connection signal="back" from="Settings" to="." method="_on_Settings_back"]
+[connection signal="back" from="Manual" to="." method="_on_Manual_back"]

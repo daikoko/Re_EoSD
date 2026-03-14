@@ -1,0 +1,61 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Looks like you failed this quick time event."
+	},
+	"003": {
+		"type":          "enter",
+		"identity":      "flan",
+		"configuration": "right",
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"Was that your idea of a pun? Maybe you should also
+			get a book about telling better jokes."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Whatever kid, I'm just glad about not being vampire food."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"Lesson of the day, uhhhhhhh, get more exercise?"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "Flandre",
+		"text":          
+			"Still need to finish that round you interupted."
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"You know what? Good deal, I'm outta here."
+	},
+}

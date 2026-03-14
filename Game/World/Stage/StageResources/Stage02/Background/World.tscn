@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://xrcuthjplekb"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage02/Background/World.gd" id="1_4sk2l"]
+[ext_resource type="PackedScene" uid="uid://b44fbip1nclq8" path="res://Game/World/Background/3D_Background/WorldRepeater.tscn" id="2_4d423"]
+[ext_resource type="PackedScene" uid="uid://b1aw5x7www6ev" path="res://Game/World/Stage/StageResources/Stage02/Background/WorldSliceA.tscn" id="3_rye8b"]
+
+[sub_resource type="Sky" id="Sky_vnwbs"]
+
+[sub_resource type="Environment" id="Environment_qctcs"]
+background_mode = 2
+sky = SubResource("Sky_vnwbs")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+fog_enabled = true
+fog_light_color = Color(1, 1, 1, 1)
+fog_density = 0.16
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_4sk2l")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+unique_name_in_owner = true
+environment = SubResource("Environment_qctcs")
+
+[node name="Light" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.779338, 0.0785343, -0.621663, 0, 0.992115, 0.125333, 0.626604, 0.0976769, -0.773193, 1, 5.8, 0)
+light_energy = 2.0
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.863915, 0.0604109, -0.5, 0.0697564, 0.997564, 0, 0.498782, -0.0348782, -0.866025, -3.3, 0.59, -4.8)
+
+[node name="WorldRepeater" parent="." instance=ExtResource("2_4d423")]
+world_slice = ExtResource("3_rye8b")
+slice_range = Vector3(15, 15, 15)
+x_extent = Vector2(2, 2)
+z_extent = Vector2(2, 2)
+
+[connection signal="update_position" from="." to="WorldRepeater" method="_on_World_update_position"]

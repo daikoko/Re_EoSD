@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://d0os3niua53ul"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper16.gd" id="1_ers3o"]
+[ext_resource type="Texture2D" uid="uid://16xbj1rl5xf" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaLine.png" id="2_ggaiu"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_mhafm"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_0o142"]
+[ext_resource type="Texture2D" uid="uid://mdhsp45ipl22" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_WarningTriangle.png" id="4_1e7k8"]
+[ext_resource type="AudioStream" uid="uid://ibf3ilirvje2" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire07.wav" id="5_ckkeo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwwkw"]
+size = Vector2(100, 780)
+
+[sub_resource type="Animation" id="Animation_5rr2c"]
+resource_name = "Blink"
+length = 0.9
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Warning:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false, true, false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_m62na"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Warning:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mp21v"]
+_data = {
+"Blink": SubResource("Animation_5rr2c"),
+"RESET": SubResource("Animation_m62na")
+}
+
+[node name="RumiaHelper16" type="Node2D"]
+script = ExtResource("1_ers3o")
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+points = PackedVector2Array(0, 0, 0, 780)
+width = 2.0
+
+[node name="Beam" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 390)
+texture = ExtResource("2_ggaiu")
+
+[node name="Collider" parent="Beam" instance=ExtResource("3_mhafm")]
+unique_name_in_owner = true
+shape = SubResource("RectangleShape2D_xwwkw")
+
+[node name="Warning" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+position = Vector2(0, 720)
+texture = ExtResource("4_1e7k8")
+
+[node name="Shooters" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 820)
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_mp21v")
+}
+
+[node name="Sound" parent="." instance=ExtResource("4_0o142")]
+unique_name_in_owner = true
+stream = ExtResource("5_ckkeo")
+
+[connection signal="collider_entered" from="Beam/Collider" to="." method="_on_Collider_collider_entered"]

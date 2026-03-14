@@ -1,0 +1,235 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"I've never been this far out to see the lake before."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"Is it always this cold?"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"At least this fog is covering up that awful mist. It's kind of
+			refreshing (It's still hard to see though)."
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno02",
+		"name":          "???",
+		"text":          
+			"Does the human like the fog?"
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "cirno",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno04",
+		"name":          "???",
+		"text":          
+			"It's the work of us fairies! You better praise us!"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"A child this far out? Wait, you said you were a fairy?"
+	},
+	"010": {
+		"type":          "title",
+		"name":          "Cirno",
+		"text":          "Little Ice Fairy"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno01",
+		"name":          "Cirno",
+		"text":          
+			"That's correct Miss human lady."
+	},
+	
+	"012": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno01",
+		"name":          "Cirno",
+		"text":          
+			"Do you like fairies?"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Fairies are cute! I see them playing with the human
+			children at the schoolhouse sometime."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno05",
+		"name":          "Cirno",
+		"text":          
+			"..."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno05",
+		"name":          "Cirno",
+		"text":          
+			"School?"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"You know, it's the place where you learn things like math."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno05",
+		"name":          "Cirno",
+		"text":          
+			"Math?"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"Like 2 + 2."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno05",
+		"name":          "Cirno",
+		"text":          
+			"That's uhh..."
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno03",
+		"name":          "Cirno",
+		"text":          
+			"9?"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"..."
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno03",
+		"name":          "Cirno",
+		"text":          
+			"..."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"..."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno03",
+		"name":          "Cirno",
+		"text":          
+			"..."
+	},
+	
+	
+	"025": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno02",
+		"name":          "Cirno",
+		"text":          
+			"Cirno is very good at math!"
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Oh dear."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno02",
+		"name":          "Cirno",
+		"text":          
+			"I will defeat you to defeat school! 
+			Because I am the strongest!"
+	},
+	"029": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno02",
+		"name":          "Cirno",
+		"text":          
+			"So prepare yourself Miss human teacher school lady!"
+	},
+	"030": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"I'm not even the teacher though..."
+	},
+}

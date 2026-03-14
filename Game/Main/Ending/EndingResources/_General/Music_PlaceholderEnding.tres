@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://bd4rkqndgwrbr"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_6emww"]
+[ext_resource type="AudioStream" uid="uid://cs2be1jghvqrl" path="res://Game/Main/Ending/EndingResources/_General/PlaceholderMusic_Ending.ogg" id="1_qbltj"]
+
+[resource]
+script = ExtResource("1_6emww")
+id = 100
+name = ""
+music = ExtResource("1_qbltj")
+flag = ""

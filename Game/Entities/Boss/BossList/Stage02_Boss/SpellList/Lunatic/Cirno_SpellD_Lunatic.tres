@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://bncn3tpa066km"]
+
+[ext_resource type="Resource" uid="uid://bomgpud62p0s" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMajor.tres" id="1_bp22x"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_wgud6"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellScripts/Cirno_SpellD.gd" id="3_0o6oi"]
+
+[sub_resource type="Resource" id="Resource_2rk0p"]
+script = ExtResource("2_wgud6")
+particles = ExtResource("1_bp22x")
+value = 480000
+point = 36
+power = 18
+life = true
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_0o6oi")
+A_guides = 9
+health = 500.0
+time = 24.0
+base_points = 400000.0
+bonus_points = 1.2e+06
+Death = SubResource("Resource_2rk0p")
+major_phase = true
+hide_boss = true
+move_boss = false
+show_background = false
+hide_background = true
+timeout = true
+warning = false
+difficulty = 3
+boss_id = 0
+spell_id = 0

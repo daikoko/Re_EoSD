@@ -1,0 +1,229 @@
+{
+	"000": {
+		"type": "scene",
+	},
+	"001": {
+		"type": "music_play",
+		"music": "bad_end_theme"
+	},
+	"002": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Scarlet Devil Mansion"
+	},
+	"003": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Rin Satsuki has beaten Remilia Scarlet."
+	},
+	"004": {
+		"type": "scene",
+	},
+	"005": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"Haha, take that, vampire!"
+	},
+	"006": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"Now return the sun!"
+	},
+	"007": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Uuuuuuu."
+	},
+	"008": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"It's too late for that."
+	},
+	"009": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"Huh?"
+	},
+	"010": {
+		"type": "scene",
+	},
+	"011": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Take a look."
+	},
+	"012": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"You took to long to stop the ritual."
+	},
+	"013": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"The moon is at it's zenith."
+	},
+	"014": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"The spell is impossible to reverse at this point."
+	},
+	"015": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"We'll need to wait a few days before the moon 
+			retreats on it's own."
+	},
+	"016": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"Oh."
+	},
+	"017": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"But you can romise that it will return to normal, right?"
+	},
+	"018": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Vampires are many things, but we aren't liars."
+	},
+	"019": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"I guess it's time I head back to the village then.
+			There are probably plenty of people who would get sick 
+			in the meantime."
+	},
+	"020": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"About that, don't you think you should worry about yourself first?
+			This mist does some unpleasant things to humans, and you are right
+			in its center."
+	},
+	"021": {
+		"type": "scene",
+	},
+	"022": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"Argh!"
+	},
+	"023": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Oh, it might be too late for you."
+	},
+	"024": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"Can't breathe... Help!"
+	},
+	"025": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Sorry, I don't think there's anything we can do for 
+			you at this stage."
+	},
+	"026": {
+		"type": "scene",
+	},
+	"027": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"*thud*"
+	},
+	"028": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"You were a nice human, Rin. I was nice meeting you."
+	},
+	"029": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"P-please..."
+	},
+	"030": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"I won't forget you, at least for a couple of centuries."
+	},
+	"031": {
+		"type": "text",
+		"name": "Rin",
+		"text": 
+			"....."
+	},
+	"032": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Ah, I think she expired."
+	},
+	"033": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Humans truely are fragile creatures."
+	},
+	"034": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"Sakuya, please clean her up quickly."
+	},
+	"035": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"I want my next meal to be as fresh as it can be."
+	},
+	"036": {
+		"type": "scene",
+	},
+	"037": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"..."
+	},
+	"038": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Rin - Bad End"
+	},
+	"039": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Try for a Single Credit Clear for the true end!
+			Or move on to the Extra Stage to continue the story."
+	},
+}

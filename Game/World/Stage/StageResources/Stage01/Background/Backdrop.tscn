@@ -1,0 +1,53 @@
+[gd_scene load_steps=12 format=3 uid="uid://dkphry5d00iyi"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/Backdrop.gd" id="1_x7n2s"]
+[ext_resource type="Texture2D" uid="uid://b01age8sjme6i" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01H.png" id="2_ctpyy"]
+[ext_resource type="Texture2D" uid="uid://ctog8lg5tbpbr" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01F.png" id="3_si2rn"]
+[ext_resource type="Texture2D" uid="uid://bs8xy4o508las" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01G.png" id="4_2fgq0"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_acq4y"]
+panorama = ExtResource("2_ctpyy")
+
+[sub_resource type="Sky" id="Sky_yw4ar"]
+sky_material = SubResource("PanoramaSkyMaterial_acq4y")
+
+[sub_resource type="Environment" id="Environment_8q5u4"]
+background_mode = 2
+sky = SubResource("Sky_yw4ar")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_km40e"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("3_si2rn")
+
+[sub_resource type="QuadMesh" id="QuadMesh_jquaf"]
+material = SubResource("StandardMaterial3D_km40e")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_61jpw"]
+transparency = 1
+depth_draw_mode = 1
+shading_mode = 0
+albedo_texture = ExtResource("4_2fgq0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_b8lsb"]
+material = SubResource("StandardMaterial3D_61jpw")
+size = Vector2(2, 2)
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_x7n2s")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_8q5u4")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4, 0.4, -2.9)
+mesh = SubResource("QuadMesh_jquaf")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.2, 1.667, -4.423)
+mesh = SubResource("QuadMesh_b8lsb")

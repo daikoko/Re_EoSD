@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=6 format=3 uid="uid://dcbibvxljh7in"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_sfw4x"]
+[ext_resource type="Resource" uid="uid://b4gdc0ae5o0gb" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidA/DialogueList/StagePhantasm_MidA_DialogueA.tres" id="2_xj05q"]
+[ext_resource type="Resource" uid="uid://blflfjmcphbfs" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidA/SpellList/Phantasm/Daiyousei_SpellB_Phantasm.tres" id="3_y1hpn"]
+[ext_resource type="Resource" uid="uid://ckxefhuaeb8b5" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidA/DialogueList/StagePhantasm_MidA_DialogueB.tres" id="4_d5pul"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="7_bct4m"]
+
+[resource]
+script = ExtResource("7_bct4m")
+easy = Array[ExtResource("1_sfw4x")]([])
+normal = Array[ExtResource("1_sfw4x")]([ExtResource("2_xj05q"), ExtResource("3_y1hpn"), ExtResource("4_d5pul")])
+hard = Array[ExtResource("1_sfw4x")]([])
+lunatic = Array[ExtResource("1_sfw4x")]([])

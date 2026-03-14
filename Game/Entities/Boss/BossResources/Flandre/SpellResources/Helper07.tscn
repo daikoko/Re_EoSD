@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjp1cvdb3sqwx"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper07.gd" id="1_m7kcg"]
+
+[node name="Helper07" type="Node2D"]
+script = ExtResource("1_m7kcg")

@@ -1,0 +1,177 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Wow! I was right! Look at all this cool stuff!"
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"It's like a museum in here!"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"..."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Luckily I brought my extra large burgling bag with me."
+	},
+	
+	
+	"006": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          "Stay where you are."
+	},
+	"007": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"008": {
+		"type":          "enter",
+		"identity":      "patchy",
+		"configuration": "right",
+	},
+	"009": {
+		"type":          "title",
+		"name":          "Patchouli Knowledge",
+		"text":          "Unmoving Library"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"Don't go thinking you can get away with that."
+	},
+	
+	
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Ah, I wan't doing anything (yet) I swear!"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"I heard you from the other side of the library. Didn't 
+			you read the rules before coming in?"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"No using exclaimation points in the library."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Oh right, that. I promise it won't happen again Miss."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"And what was that other thing you said? Something about a burgling?"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Ah yes, I was, uh, trying to stop a burgling from happening."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"You don't seem like the lawful type."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"I don't?"
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"Yes, your voice sounds untrustworthy."
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"It does?"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Perhaps I should get a book on being a better liar?"
+	},
+	
+	
+	"022": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"Mmmh yes, but you won't be getting any from me."
+	},
+}

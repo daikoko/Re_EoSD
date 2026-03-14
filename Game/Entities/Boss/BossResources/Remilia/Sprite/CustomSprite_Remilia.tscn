@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bl0spu2fy3kk7"]
+
+[ext_resource type="Shader" path="res://Game/Objects/Sprites/Flash.gdshader" id="1_voyi2"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/Sprite/CustomSprite_Remilia.gd" id="2_2mfmv"]
+[ext_resource type="SpriteFrames" uid="uid://mh1uvdtql756" path="res://Game/Entities/Boss/BossResources/Remilia/Sprite/SpriteFrames_Remilia.tres" id="2_tllli"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hbhyl"]
+resource_local_to_scene = true
+shader = ExtResource("1_voyi2")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/hide = false
+
+[node name="CustomSpriteBoss" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_hbhyl")
+sprite_frames = ExtResource("2_tllli")
+animation = &"_DefaultIdle"
+script = ExtResource("2_2mfmv")
+
+[node name="InvincibilitySprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+sprite_frames = ExtResource("2_tllli")
+animation = &"Bat"
+
+[node name="FlashTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[connection signal="animation_finished" from="." to="." method="_on_CustomSprite_animation_finished"]
+[connection signal="timeout" from="FlashTimer" to="." method="_on_FlashTimer_timeout"]

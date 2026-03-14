@@ -1,0 +1,168 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"What a big house! It's even bigger than 
+			the noble houses in the village!"
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"This garden is beautiful as well!"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"I wonder what kind of people live here to
+			have such things."
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"I heard you like the garden?"
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Yes that was me. Are you the groundskeeper."
+	},
+	"008": {
+		"type":          "enter",
+		"identity":      "meiling",
+		"configuration": "right",
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling04",
+		"name":          "???",
+		"text":          
+			"Yes, this is my garden. Glad you like it."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"The flowers are very pretty, But do you really maintain this whole
+			garden by yourself?"
+	},
+	"011": {
+		"type":          "title",
+		"name":          "Meiling",
+		"text":          "Chinese Gatekeeper"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling04",
+		"name":          "Meiling",
+		"text":          
+			"I take my role as gate guard very seriously. But since people rarely come,
+			I have time to tend to the landscape."
+	},
+	
+	
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Oh, so you are the gatekeeper?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"That is correct. You are at the gates of the Scarlet Devil Mansion."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"I'm sure you noticed this strange weather we're having. It
+			appears to be coming from this place."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"It does, but I know nothing of it;
+			just to not let outsiders interfere with the lady."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Can I go inside? I really need to know what's going on in there."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"The instructions are clear, no one gets inside."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"Just a small peek then?"
+	},
+	
+	
+	"020": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling02",
+		"name":          "Meiling",
+		"text":          
+			"Sorry Miss, I can't let you inside.
+			Why don't you stay in the garden instead."
+	},
+}

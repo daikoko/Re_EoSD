@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="ParticleData" load_steps=8 format=3 uid="uid://bomgpud62p0s"]
+
+[ext_resource type="Script" path="res://Game/Objects/Particles/ParticlesData.gd" id="1_eqbfy"]
+[ext_resource type="Texture2D" uid="uid://bvs1hngffkrh" path="res://Game/Objects/Particles/Particle_Generic.png" id="2_ifnrm"]
+
+[sub_resource type="Gradient" id="Gradient_nbmsg"]
+offsets = PackedFloat32Array(0, 0.769029, 1)
+colors = PackedColorArray(1, 1, 1, 0.6, 1, 1, 1, 0.6, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dxa6u"]
+gradient = SubResource("Gradient_nbmsg")
+
+[sub_resource type="Curve" id="Curve_awldp"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.657767, 0.842105), 0.0, 0.0, 0, 0, Vector2(1, 0.515789), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_b3xuv"]
+curve = SubResource("Curve_awldp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k4use"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 400.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.2
+scale_max = 0.4
+scale_curve = SubResource("CurveTexture_b3xuv")
+color_ramp = SubResource("GradientTexture1D_dxa6u")
+
+[resource]
+script = ExtResource("1_eqbfy")
+lifetime = 1.6
+amount = 320
+texture = ExtResource("2_ifnrm")
+modulate = Color(1, 1, 1, 1)
+material = SubResource("ParticleProcessMaterial_k4use")
+z_index = 21
+one_shot = true

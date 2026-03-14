@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bg5nxwfnwsl1q"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldSlice.gd" id="1_2pj25"]
+[ext_resource type="Texture2D" uid="uid://c1ixnyb0rrupm" path="res://Game/World/Stage/StageResources/StageExtra/Background/Background_Stage07D.png" id="2_bhhow"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wx01h"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("2_bhhow")
+
+[sub_resource type="QuadMesh" id="QuadMesh_sjlny"]
+material = SubResource("StandardMaterial3D_wx01h")
+size = Vector2(6, 6)
+
+[node name="WorldSliceD" type="Node3D"]
+script = ExtResource("1_2pj25")
+
+[node name="Pillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 3, 0)
+mesh = SubResource("QuadMesh_sjlny")

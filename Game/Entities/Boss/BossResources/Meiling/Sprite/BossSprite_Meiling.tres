@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=4 format=3 uid="uid://d3clqc5h2kah8"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_v7lsl"]
+[ext_resource type="SpriteFrames" uid="uid://bv8mf1uc4en2w" path="res://Game/Entities/Boss/BossResources/Meiling/Sprite/SpriteFrames_Meiling.tres" id="2_pj1ij"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lilbe"]
+radius = 40.0
+
+[resource]
+script = ExtResource("1_v7lsl")
+sprite_frames = ExtResource("2_pj1ij")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_lilbe")

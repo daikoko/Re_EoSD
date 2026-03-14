@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://dufk53caqs7k"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage06/Background/World.gd" id="1_2pc3v"]
+[ext_resource type="PackedScene" uid="uid://b44fbip1nclq8" path="res://Game/World/Background/3D_Background/WorldRepeater.tscn" id="2_ttrmk"]
+[ext_resource type="PackedScene" uid="uid://15u1cih75ygi" path="res://Game/World/Stage/StageResources/Stage06/Background/WorldSliceA.tscn" id="3_54atp"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hmn6p"]
+
+[sub_resource type="Sky" id="Sky_n8fyb"]
+sky_material = SubResource("ProceduralSkyMaterial_hmn6p")
+
+[sub_resource type="Environment" id="Environment_nqvqv"]
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_n8fyb")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.4
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.08
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_2pc3v")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nqvqv")
+
+[node name="Dummy" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="WorldSliceA" parent="Dummy" instance=ExtResource("3_54atp")]
+
+[node name="WorldSliceA2" parent="Dummy" instance=ExtResource("3_54atp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="WorldSliceA3" parent="Dummy" instance=ExtResource("3_54atp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="WorldRepeater" parent="." instance=ExtResource("2_ttrmk")]
+world_slice = ExtResource("3_54atp")
+slice_range = Vector3(10, 8, 12)
+z_extent = Vector2(12, 1)
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.794552, 0.607196, 0, -0.607196, 0.794552, 0, 5, 5)
+
+[connection signal="update_position" from="." to="WorldRepeater" method="_on_World_update_position"]

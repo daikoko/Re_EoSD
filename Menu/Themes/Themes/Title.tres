@@ -1,0 +1,23 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://h8u1joee5x80"]
+
+[ext_resource type="FontFile" uid="uid://csjj3i7y4l17h" path="res://Menu/Themes/Fonts/TexturaBelgica.ttf" id="1_ip07n"]
+[ext_resource type="FontFile" uid="uid://j8cuwu7jw17p" path="res://Menu/Themes/Fonts/KelvinchRoman.otf" id="2_02w45"]
+[ext_resource type="FontFile" uid="uid://c4qq03qq0jlcv" path="res://Menu/Themes/Fonts/Homura.otf" id="3_yus0f"]
+
+[resource]
+Label_MainTitle/base_type = &"RichTextLabel"
+Label_MainTitle/colors/font_outline_color = Color(0, 0, 0, 1)
+Label_MainTitle/constants/line_separation = -3
+Label_MainTitle/constants/outline_size = 12
+Label_MainTitle/font_sizes/normal_font_size = 52
+Label_MainTitle/fonts/normal_font = ExtResource("1_ip07n")
+Label_SubTitle/base_type = &"RichTextLabel"
+Label_SubTitle/colors/font_outline_color = Color(1, 0.313726, 0.25098, 1)
+Label_SubTitle/constants/outline_size = 8
+Label_SubTitle/font_sizes/normal_font_size = 42
+Label_SubTitle/fonts/normal_font = ExtResource("2_02w45")
+Label_SuperTitle/base_type = &"RichTextLabel"
+Label_SuperTitle/colors/font_outline_color = Color(0, 0, 0, 1)
+Label_SuperTitle/constants/outline_size = 12
+Label_SuperTitle/font_sizes/normal_font_size = 90
+Label_SuperTitle/fonts/normal_font = ExtResource("3_yus0f")

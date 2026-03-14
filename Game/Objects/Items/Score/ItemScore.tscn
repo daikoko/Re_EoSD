@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcjln5f8k2knl"]
+
+[ext_resource type="Script" path="res://Game/Objects/Items/Score/ItemScore.gd" id="1_3few6"]
+[ext_resource type="FontFile" uid="uid://cw3pc1tkugp2m" path="res://Game/Themes/Fonts/KelvinchRoman.otf" id="1_w673b"]
+
+[node name="ItemScore" type="Label"]
+z_index = 100
+z_as_relative = false
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("1_w673b")
+text = "+100 pts"
+script = ExtResource("1_3few6")

@@ -1,0 +1,37 @@
+{
+	
+	"pause": {
+		"title_01":  "Paused",
+		"option_01": "Resume",
+		"option_02": "Restart",
+		"option_03": "Exit"
+	},
+	"practice": {
+		"title_01":  "Practice Over",
+		"option_01": "Restart",
+		"option_02": "Exit"
+	},
+	"over":{
+		"title_01":  "Game Over",
+		"label_01":  "Continues:",
+		"option_01": "Continue",
+		"option_02": "Quit"
+	},
+	"stage": {
+		"title_01":  "Stage Complete",
+		"label_01":  "Level Score",
+		"label_02":  "Clear Bonus",
+		"label_03":  "Extra Charge",
+		"label_04":  "Total Score",
+		"option_01": "Next"
+	},
+	"game": {
+		"title_01":  "Game Complete",
+		"label_01":  "Game Score",
+		"label_02":  "Additional Lives Stupid",
+		"label_03":  "Additional Bombs Penalty",
+		"label_04":  "Spellcards Captured",
+		"label_05":  "Total Score",
+		"option_01": "Finish"
+	}
+}

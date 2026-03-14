@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://buipudbx2mdb5"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper13.gd" id="1_03p53"]
+
+[node name="Helper13" type="Node2D"]
+script = ExtResource("1_03p53")

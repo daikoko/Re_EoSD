@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddykbcgq322nt"]
+
+[ext_resource type="Script" path="res://Game/World/Dialogue/DialogueScript/DialoguePlayer.gd" id="1_56duv"]
+[ext_resource type="PackedScene" uid="uid://crdnc3ytr7acj" path="res://Game/World/Dialogue/DialogueScript/PortraitHandler.tscn" id="2_t07bs"]
+[ext_resource type="PackedScene" uid="uid://c5bdiaky3bww2" path="res://Game/World/Dialogue/DialogueScript/TextHandler.tscn" id="3_4b3cn"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_euscn"]
+[ext_resource type="AudioStream" uid="uid://b0vbn0wrdvruu" path="res://Game/World/Dialogue/DialogueResources/Dailogue_Next.ogg" id="5_iyd8y"]
+
+[node name="DialoguePlayer" type="CanvasLayer"]
+script = ExtResource("1_56duv")
+
+[node name="PortraitHandler" parent="." instance=ExtResource("2_t07bs")]
+unique_name_in_owner = true
+layer = 31
+
+[node name="TextHandler" parent="." instance=ExtResource("3_4b3cn")]
+unique_name_in_owner = true
+layer = 32
+
+[node name="SkipTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.05
+autostart = true
+
+[node name="Sound" parent="." instance=ExtResource("4_euscn")]
+unique_name_in_owner = true
+stream = ExtResource("5_iyd8y")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://dejyh72vftjsh"]
+
+[ext_resource type="AudioStream" uid="uid://csno05e8o4oux" path="res://Game/Entities/Boss/BossResources/Patchouli/Audio/TH06_10.ogg" id="1_d8s44"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_ecavu"]
+
+[resource]
+script = ExtResource("1_ecavu")
+id = 10
+name = ""
+music = ExtResource("1_d8s44")
+flag = "Passed_Stage4"

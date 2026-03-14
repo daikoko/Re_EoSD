@@ -1,0 +1,376 @@
+[gd_scene load_steps=13 format=3 uid="uid://d210a1nsk1bac"]
+
+[ext_resource type="Theme" uid="uid://bqb533xlqlgag" path="res://Menu/Themes/Themes/MainMenu.tres" id="1_o3ae0"]
+[ext_resource type="Script" path="res://Menu/Settings/Settings.gd" id="2_2x8lu"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_hc4kn"]
+[ext_resource type="Texture2D" uid="uid://dkqsexkad60qe" path="res://Game/Main/HUD/Bar_StarUnder.png" id="3_otcn1"]
+[ext_resource type="AudioStream" uid="uid://pkemaxo37kwk" path="res://Menu/Main/Menu_Select02.wav" id="4_8ku34"]
+[ext_resource type="Texture2D" uid="uid://skdilrmdnm56" path="res://Game/Main/HUD/Bar_StarLives.png" id="4_nbnxo"]
+[ext_resource type="AudioStream" uid="uid://3bjgn02t8rra" path="res://Menu/Main/Menu_Select04.wav" id="5_1skje"]
+[ext_resource type="Texture2D" uid="uid://di5it3hd7kyyb" path="res://Game/Main/HUD/Bar_StarBombs.png" id="5_g1vki"]
+
+[sub_resource type="Animation" id="Animation_57uei"]
+resource_name = "Load_In"
+length = 0.4
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -80), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Settings:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-80, 180), Vector2(80, 180)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Settings:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0am4b"]
+resource_name = "Load_Out"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Settings:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(80, 180), Vector2(-80, 180)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Settings:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_me1aw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Settings:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-80, 180)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Settings:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcn4v"]
+_data = {
+"Load_In": SubResource("Animation_57uei"),
+"Load_Out": SubResource("Animation_0am4b"),
+"RESET": SubResource("Animation_me1aw")
+}
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_o3ae0")
+script = ExtResource("2_2x8lu")
+
+[node name="Title" type="CenterContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1280, 180)
+layout_mode = 0
+offset_top = -80.0
+offset_right = 1280.0
+offset_bottom = 100.0
+
+[node name="Title" type="Label" parent="Title"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_SubMenu"
+text = "Settings"
+
+[node name="Settings" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1120, 0)
+layout_mode = 0
+offset_left = -80.0
+offset_top = 180.0
+offset_right = 1040.0
+offset_bottom = 444.0
+theme_override_constants/separation = 24
+
+[node name="Start" type="VBoxContainer" parent="Settings"]
+layout_mode = 2
+
+[node name="Lives" type="HBoxContainer" parent="Settings/Start"]
+layout_mode = 2
+
+[node name="LivesLabel" type="Label" parent="Settings/Start/Lives"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Label_ExtraLarge"
+text = "Lives"
+
+[node name="LivesLeft" type="Button" parent="Settings/Start/Lives"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_type_variation = &"Button_NavigationGeneral"
+toggle_mode = true
+text = "<"
+
+[node name="LivesDisplay" type="TextureProgressBar" parent="Settings/Start/Lives"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+max_value = 7.0
+texture_under = ExtResource("3_otcn1")
+texture_progress = ExtResource("4_nbnxo")
+
+[node name="LivesRight" type="Button" parent="Settings/Start/Lives"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"Button_NavigationGeneral"
+toggle_mode = true
+text = ">"
+
+[node name="LivesDecoy" type="Button" parent="Settings/Start/Lives"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../Bombs/BombsDecoy")
+focus_next = NodePath("../../Bombs/BombsDecoy")
+focus_previous = NodePath(".")
+
+[node name="Bombs" type="HBoxContainer" parent="Settings/Start"]
+layout_mode = 2
+
+[node name="BombsLabel" type="Label" parent="Settings/Start/Bombs"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Label_ExtraLarge"
+text = "Bombs"
+
+[node name="BombsLeft" type="Button" parent="Settings/Start/Bombs"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_type_variation = &"Button_NavigationGeneral"
+toggle_mode = true
+text = "<"
+
+[node name="BombsDisplay" type="TextureProgressBar" parent="Settings/Start/Bombs"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+max_value = 7.0
+texture_under = ExtResource("3_otcn1")
+texture_progress = ExtResource("5_g1vki")
+
+[node name="BombsRight" type="Button" parent="Settings/Start/Bombs"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 2
+theme_type_variation = &"Button_NavigationGeneral"
+toggle_mode = true
+text = ">"
+script = ExtResource("2_2x8lu")
+
+[node name="BombsDecoy" type="Button" parent="Settings/Start/Bombs"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../Lives/LivesDecoy")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../../Audio/SoundBox/SoundSlider")
+focus_next = NodePath("../../../Audio/SoundBox/SoundSlider")
+focus_previous = NodePath("../../Lives/LivesDecoy")
+
+[node name="Audio" type="VBoxContainer" parent="Settings"]
+layout_mode = 2
+
+[node name="SoundBox" type="HBoxContainer" parent="Settings/Audio"]
+layout_mode = 2
+
+[node name="SoundLabel" type="Label" parent="Settings/Audio/SoundBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Label_ExtraLarge"
+text = "Sound"
+
+[node name="SoundSlider" type="HSlider" parent="Settings/Audio/SoundBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../../Start/Bombs/BombsDecoy")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../MusicBox/MusicSlider")
+focus_next = NodePath("../../MusicBox/MusicSlider")
+focus_previous = NodePath("../../../Start/Bombs/BombsDecoy")
+mouse_filter = 2
+min_value = -40.0
+max_value = 0.0
+tick_count = 10
+
+[node name="MusicBox" type="HBoxContainer" parent="Settings/Audio"]
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="Settings/Audio/MusicBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+theme_type_variation = &"Label_ExtraLarge"
+text = "Music"
+
+[node name="MusicSlider" type="HSlider" parent="Settings/Audio/MusicBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../SoundBox/SoundSlider")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath("../../SoundBox/SoundSlider")
+mouse_filter = 2
+min_value = -40.0
+max_value = 0.0
+tick_count = 10
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_qcn4v")
+}
+
+[node name="Sound_Select02" parent="." instance=ExtResource("3_hc4kn")]
+unique_name_in_owner = true
+stream = ExtResource("4_8ku34")
+
+[node name="Sound_Select04" parent="." instance=ExtResource("3_hc4kn")]
+unique_name_in_owner = true
+stream = ExtResource("5_1skje")
+
+[connection signal="value_changed" from="Settings/Audio/SoundBox/SoundSlider" to="." method="_on_SoundSlider_value_changed"]
+[connection signal="value_changed" from="Settings/Audio/MusicBox/MusicSlider" to="." method="_on_MusicSlider_value_changed"]

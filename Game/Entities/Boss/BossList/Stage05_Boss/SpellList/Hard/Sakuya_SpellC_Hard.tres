@@ -1,0 +1,39 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://dy8bxuqfpku0v"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_461dm"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_kjbhj"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellScripts/Sakuya_SpellC.gd" id="3_5nh6k"]
+
+[sub_resource type="Resource" id="Resource_5elm2"]
+script = ExtResource("2_kjbhj")
+particles = ExtResource("1_461dm")
+value = 360000
+point = 40
+power = 20
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_5nh6k")
+A_layout_spawner_count = 16
+A_fire_count = 14
+B1_shooter_spawner_count = 6
+B1_shooter_fire_count = 16
+B2_shooter_fire_count = 8
+B2_shooter_stack_count = 4
+health = 28000.0
+time = 36.0
+base_points = 320000.0
+bonus_points = 960000.0
+Death = SubResource("Resource_5elm2")
+major_phase = false
+hide_boss = false
+move_boss = true
+show_background = true
+hide_background = false
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=5 format=3 uid="uid://bdgq24ncy6hdb"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_7xudq"]
+[ext_resource type="PackedScene" uid="uid://e3cgcjh7jpks" path="res://Game/Entities/Boss/BossResources/Flandre/Sprite/CustomSprite_Flandre.tscn" id="2_1pvf2"]
+[ext_resource type="SpriteFrames" uid="uid://cg0mslhhncb2t" path="res://Game/Entities/Boss/BossResources/Flandre/Sprite/SpriteFrames_Flandre.tres" id="3_7vf7j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wecdk"]
+resource_local_to_scene = true
+radius = 40.0
+
+[resource]
+script = ExtResource("1_7xudq")
+sprite_frames = ExtResource("3_7vf7j")
+sprite_base = ExtResource("2_1pvf2")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_wecdk")

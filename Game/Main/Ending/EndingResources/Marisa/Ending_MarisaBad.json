@@ -1,0 +1,160 @@
+{
+	"000": {
+		"type": "scene",
+	},
+	"001": {
+		"type": "music_play",
+		"music": "bad_end_theme"
+	},
+	"002": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"House in the Woods"
+	},
+	"003": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"After a few days, the sky returns to normal."
+	},
+	"004": {
+		"type": "scene",
+	},
+	"005": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Marisa has fallen into a deep sleep ever since the incident."
+	},
+	"006": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Uggh. How long have I been asleep?"
+	},
+	"007": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Sky is clear? Looks like it's finally over."
+	},
+	"008": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I wonder if Reimu has visited."
+	},
+	"009": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Time to get up."
+	},
+	"010": {
+		"type": "scene",
+	},
+	"011": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Where's the bathroom?"
+	},
+	"012": {
+		"type": "scene",
+	},
+	"013": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Hmm?"
+	},
+	"014": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"My eyes weren't this color before."
+	},
+	"015": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Was it the mist's fault? I knew I should've stayed home that day."
+	},
+	"016": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"..."
+	},
+	"017": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I have a sudden urge to go to a place with a lot of humans."
+	},
+	"018": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"..."
+	},
+	"019": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Oh dear something terrible happened hasn't it."
+	},
+	"020": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I really should've stayed home."
+	},
+	"021": {
+		"type": "scene",
+	},
+	"022": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Was going to visit Reimu but..."
+	},
+	"023": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I should stay away from her for now."
+	},
+	"024": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I'll go to the village to... buy some meat."
+	},
+	"025": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Something to satisfy the craving."
+	},
+	"026": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"... I'll be out quickly."
+	},
+	"027": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Marisa - Bad End"
+	},
+	"028": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Try for a Single Credit Clear for the true end!
+			Or move on to the Extra Stage to continue the story."
+	},
+}

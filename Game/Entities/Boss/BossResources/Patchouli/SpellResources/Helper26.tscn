@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dywyen0i2jg4c"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper26.gd" id="1_kk4pq"]
+[ext_resource type="Texture2D" uid="uid://dgupmf7hh7fp2" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/BulletCustom_PatchouliSummon.png" id="2_gh8fy"]
+
+[node name="Helper26" type="Node2D"]
+script = ExtResource("1_kk4pq")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 9
+z_as_relative = false
+texture = ExtResource("2_gh8fy")

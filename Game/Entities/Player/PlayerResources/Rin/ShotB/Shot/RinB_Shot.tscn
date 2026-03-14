@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://wwtdrxec85aw"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Rin/ShotB/Shot/RinB_Shot.gd" id="1_jkf15"]
+[ext_resource type="PackedScene" uid="uid://dhxxma1f5s2q6" path="res://Game/Entities/Player/PlayerResources/_General/Shot/Shot_General.tscn" id="2_jef84"]
+[ext_resource type="PackedScene" uid="uid://b2mkcje1jo5h7" path="res://Game/Entities/Player/PlayerResources/Rin/ShotA/Shot/Shot_Rin.tscn" id="3_wg8o8"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_6r4yx"]
+[ext_resource type="AudioStream" uid="uid://c0s1gbvycmx24" path="res://Game/Entities/Player/PlayerResources/_General/Sound/Player_Shoot01.wav" id="5_sw28f"]
+
+[node name="RinB_Shot" type="Node2D"]
+z_index = 41
+z_as_relative = false
+script = ExtResource("1_jkf15")
+
+[node name="MainShot" parent="." instance=ExtResource("2_jef84")]
+unique_name_in_owner = true
+
+[node name="MainTimer" type="Timer" parent="MainShot"]
+unique_name_in_owner = true
+
+[node name="SideShot" parent="." instance=ExtResource("3_wg8o8")]
+unique_name_in_owner = true
+rotation_multiplier = 1
+
+[node name="SideTimer" type="Timer" parent="SideShot"]
+unique_name_in_owner = true
+
+[node name="Sound_Shoot" parent="." instance=ExtResource("4_6r4yx")]
+unique_name_in_owner = true
+stream = ExtResource("5_sw28f")
+
+[connection signal="timeout" from="MainShot/MainTimer" to="." method="_on_MainTimer_timeout"]
+[connection signal="timeout" from="SideShot/SideTimer" to="." method="_on_SideTimer_timeout"]

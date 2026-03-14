@@ -1,0 +1,165 @@
+{
+	"000": {
+		"type": "scene",
+	},
+	"001": {
+		"type": "music_play",
+		"music": "good_end_theme"
+	},
+	"002": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"House in the Woods"
+	},
+	"004": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"The skies above Gensokyo have been cleared."
+	},
+	"005": {
+		"type": "scene",
+	},
+	"006": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"What a lovely day outside!"
+	},
+	"007": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Much better than that dreary weather."
+	},
+	"008": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I can finally breathe again."
+	},
+	"009": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I should go out to collect some mushrooms today."
+	},
+	"010": {
+		"type": "text",
+		"name": "???",
+		"text": 
+			"Before you do that..."
+	},
+	"011": {
+		"type": "scene",
+	},
+	"012": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Oh it's the butler."
+	},
+	"013": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"I've been told there are some books missing 
+			from Miss Patchouli's library."
+	},
+	"014": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"... I had no idea. Send her my condolences."
+	},
+	"015": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"You wouldn't happen to know what happened to them,
+			do you?"
+	},
+	"016": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"No clue."
+	},
+	"017": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"..."
+	},
+	"018": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"..."
+	},
+	"019": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"Miss Patchouli requests you go to the basement of the mansion."
+	},
+	"020": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"What if I don't?"
+	},
+	"021": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"She say's she'll fire a giant laser at your house."
+	},
+	"022": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I will go to the basement."
+	},
+	"023": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"Good girl."
+	},
+	"024": {
+		"type": "scene",
+	},
+	"025": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"There she goes."
+	},
+	"026": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Looks like I've been given a sidequest.."
+	},
+	"027": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Should've stayed home..."
+	},
+	"028": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Marisa - True End"
+	},
+	"029": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Congratulations!
+			Start the Extra Stage to continue the story."
+	},
+}

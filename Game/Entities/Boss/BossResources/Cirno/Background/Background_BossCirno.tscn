@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4fp0aut6cu2i"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/Background/Background_BossCirno.gd" id="1_2e4l0"]
+[ext_resource type="Texture2D" uid="uid://duytxy17jx5iw" path="res://Game/Entities/Boss/BossResources/Cirno/Background/Background_BossCirno01.png" id="2_1xldy"]
+[ext_resource type="Texture2D" uid="uid://d2pw6640alqlm" path="res://Game/Entities/Boss/BossResources/Cirno/Background/Background_BossCirno02.png" id="3_nwiap"]
+[ext_resource type="Texture2D" uid="uid://q8e3piu5aipj" path="res://Game/Entities/Boss/BossResources/Cirno/Background/Background_BossCirno03.png" id="4_7j2fe"]
+[ext_resource type="Texture2D" uid="uid://blggfqdr6hf5s" path="res://Game/Entities/Boss/BossResources/Cirno/Background/Background_BossCirno04.png" id="5_fka7t"]
+
+[node name="BackgroundCirno" type="CanvasLayer"]
+script = ExtResource("1_2e4l0")
+
+[node name="Parallax01" type="ParallaxBackground" parent="."]
+unique_name_in_owner = true
+layer = -99
+
+[node name="Texture01" type="TextureRect" parent="Parallax01"]
+unique_name_in_owner = true
+offset_right = 680.0
+offset_bottom = 780.0
+texture = ExtResource("2_1xldy")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax01"]
+motion_mirroring = Vector2(680, 1170)
+
+[node name="Texture02" type="TextureRect" parent="Parallax01/ParallaxLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_nwiap")
+
+[node name="Parallax02" type="ParallaxBackground" parent="."]
+unique_name_in_owner = true
+layer = -99
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax02"]
+motion_mirroring = Vector2(680, 1170)
+
+[node name="Texture03" type="TextureRect" parent="Parallax02/ParallaxLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_7j2fe")
+
+[node name="Parallax03" type="ParallaxBackground" parent="."]
+unique_name_in_owner = true
+layer = -99
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax03"]
+motion_mirroring = Vector2(680, 1170)
+
+[node name="Texture04" type="TextureRect" parent="Parallax03/ParallaxLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_fka7t")

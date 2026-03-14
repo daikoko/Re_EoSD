@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://b87hk480dwjjq"]
+
+[ext_resource type="Theme" uid="uid://c3yig8mcly7ot" path="res://Menu/Themes/Themes/Musics.tres" id="1_1o1lj"]
+[ext_resource type="Script" path="res://Menu/Musics/Main/SelectMusicButton.gd" id="2_ne2rj"]
+
+[node name="SelectMusicButton" type="Button"]
+custom_minimum_size = Vector2(540, 40)
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+theme = ExtResource("1_1o1lj")
+toggle_mode = true
+script = ExtResource("2_ne2rj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(520, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_right = 50.0
+offset_bottom = 40.0
+
+[node name="Number" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+
+[node name="Name" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="toggled" from="." to="." method="_on_Self_toggled"]

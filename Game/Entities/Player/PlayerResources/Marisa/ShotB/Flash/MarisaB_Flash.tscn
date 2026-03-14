@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://8tihvdqo0pa4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotB/Flash/MarisaB_Flash.gd" id="1_f60vw"]
+[ext_resource type="Texture2D" uid="uid://bi81gri002c04" path="res://Game/Objects/Shooters/ShooterLaser/Laser_Point.png" id="2_fuusb"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_7r61f"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_3yjhv"]
+[ext_resource type="AudioStream" uid="uid://b8hin3oa87sun" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/Player_Spell03.wav" id="5_gmqsm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kag4"]
+size = Vector2(20, 1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tffre"]
+size = Vector2(20, 1000)
+
+[node name="MarisaB_Flash" type="Node2D"]
+z_index = 38
+z_as_relative = false
+script = ExtResource("1_f60vw")
+
+[node name="DurationTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="IntervalTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+
+[node name="FrameTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="Sprite" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Origin" type="Sprite2D" parent="Sprite"]
+unique_name_in_owner = true
+modulate = Color(0, 1, 1, 1)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_fuusb")
+
+[node name="Beam" type="Line2D" parent="Sprite"]
+unique_name_in_owner = true
+points = PackedVector2Array(0, 0, 0, -1000)
+width = 20.0
+default_color = Color(0, 1, 1, 1)
+
+[node name="Bomb" parent="Sprite/Beam" instance=ExtResource("3_7r61f")]
+unique_name_in_owner = true
+position = Vector2(0, -500)
+collision_mask = 0
+identity = "Bomb"
+shape = SubResource("RectangleShape2D_5kag4")
+
+[node name="Collider" parent="Sprite/Beam" instance=ExtResource("3_7r61f")]
+unique_name_in_owner = true
+position = Vector2(0, -500)
+collision_layer = 0
+collision_mask = 4
+identity = "Collider"
+shape = SubResource("RectangleShape2D_tffre")
+
+[node name="Sound" parent="." instance=ExtResource("4_3yjhv")]
+unique_name_in_owner = true
+stream = ExtResource("5_gmqsm")
+
+[connection signal="timeout" from="DurationTimer" to="." method="_on_DurationTimer_timeout"]
+[connection signal="timeout" from="IntervalTimer" to="." method="_on_IntervalTimer_timeout"]
+[connection signal="collider_entered" from="Sprite/Beam/Collider" to="." method="_on_Collider_collider_entered"]

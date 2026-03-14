@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cbqbgfe1ckpre"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper18.gd" id="1_m6y1c"]
+[ext_resource type="Texture2D" uid="uid://d0y5h5n08wads" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoDarkness01.png" id="2_r8sqd"]
+[ext_resource type="Texture2D" uid="uid://c4f4agshgbwj3" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoDarkness02.png" id="3_bfjtt"]
+
+[node name="Helper18" type="Node2D"]
+script = ExtResource("1_m6y1c")
+
+[node name="Darkness" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 102
+z_as_relative = false
+texture = ExtResource("2_r8sqd")
+
+[node name="DarknessPlayer" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 101
+z_as_relative = false
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("3_bfjtt")

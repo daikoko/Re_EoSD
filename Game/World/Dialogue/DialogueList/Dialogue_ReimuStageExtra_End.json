@@ -1,0 +1,61 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"That's what you get for being a brat."
+	},
+	"003": {
+		"type":          "enter",
+		"identity":      "flan",
+		"configuration": "right",
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "Flandre",
+		"text":          
+			"No fair you cheated!"
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Well cope and seethe harder bitch."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"And go upstairs every once in a while so that your
+			dumb sister doesn't gaslight me again."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"I told you I will after finish I beating these noobs!"
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu03",
+		"name":          "Reimu",
+		"text":          
+			"(What was even the point of me coming down here?)"
+	},
+}

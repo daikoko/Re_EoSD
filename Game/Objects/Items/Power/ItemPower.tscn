@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cndsysjy2mmqs"]
+
+[ext_resource type="Script" path="res://Game/Objects/Items/Power/ItemPower.gd" id="1_t2wmm"]
+[ext_resource type="Texture2D" uid="uid://hqa2sw68s6x1" path="res://Game/Objects/Items/Power/Item_Power.png" id="1_v00ug"]
+
+[node name="ItemPower" type="Sprite2D"]
+z_index = 51
+z_as_relative = false
+texture = ExtResource("1_v00ug")
+script = ExtResource("1_t2wmm")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

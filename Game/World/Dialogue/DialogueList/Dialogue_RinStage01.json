@@ -1,0 +1,202 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"What a strange night."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"I can't hear any birds or insects.
+			Perhaps they are scared? Or is the mist 
+			driving them away."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"This can't be good for very long. Whatever is causing
+			this must be stopped!"
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"But it's such a romantic atmosphere out!"
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "???",
+		"text":          
+			"Pretty girls such as yourself should learn to enjoy the view"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Ah, who are you?"
+	},
+	
+	
+	"010": {
+		"type":          "title",
+		"name":          "Lumia",
+		"text":          "Embodiment of the Dark"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":          
+			"Where are my manners, I am Rumia, a youkai."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"My name is Rin Satsuki, a human."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"It's uh, nice to meet you Miss Rumia. What are you
+			doing out here? It's especially dangerous oustside now."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":         
+			"I'm a youkai, darling, I am not bothered by the current events."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":         
+			"You on the other hand; a cute girl like yourself 
+			should not be wandering by yourself at night."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":         
+			"Perhaps you should stay at my place; i feel like it's going
+			to be a looong night afterall."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"Um, I think I'll pass (Where do youkai even live anyway?)"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia03",
+		"name":          "Lumia",
+		"text":         
+			"Ah well worth a try."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":         
+			"Still, you should go back to the village. i would hate
+			for someone like you to get hurt."
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"I have already decided I'm going out. Today's incident will 
+			be cleared by me!"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":         
+			"Don't you know humans outside the village are free
+			targets for youkai?"
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"I am aware, but that won't stop me!"
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":         
+			"..."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":         
+			"I changed my mind, I won't be letting you go home tonight."
+	},
+	
+	
+	"025": {
+		"type":         "event",
+		"pause":        "false",
+		"event_name":   "boss_theme"
+	}
+}

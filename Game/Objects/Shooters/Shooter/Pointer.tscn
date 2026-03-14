@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://rfv4ie1rf4sr"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shooters/Shooter/Pointer.gd" id="1_gqebc"]
+[ext_resource type="Texture2D" uid="uid://c3yaenidym85" path="res://Game/Objects/Bullets/BulletResources/Bullet_KnifeCyan.png" id="2_umbj3"]
+
+[node name="Pointer" type="Marker2D"]
+script = ExtResource("1_gqebc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_umbj3")

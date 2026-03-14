@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://c8yqwyrx61slj"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_gddcu"]
+[ext_resource type="Texture2D" uid="uid://be3qcvpbud37r" path="res://Game/Entities/Boss/BossResources/Patchouli/Sprite/SpellPortrait_BossPatchouli.png" id="2_kxasy"]
+
+[resource]
+script = ExtResource("1_gddcu")
+texture = ExtResource("2_kxasy")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

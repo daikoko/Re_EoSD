@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://ck0ix7rqifsvv"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper10.gd" id="1_xpms0"]
+[ext_resource type="Texture2D" uid="uid://dby75vyjdxa2y" path="res://icon.svg" id="2_prmme"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_1ioqg"]
+[ext_resource type="AudioStream" uid="uid://chtf44y7n8l5f" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire01.wav" id="4_s6pfg"]
+
+[sub_resource type="Curve2D" id="Curve2D_htoc7"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, -8, 0, 0, 0, 0, 56, -112, 0, 0, 0, 0, 0, -288, 0, 0, 0, 0, -56, -112, 0, 0, 0, 0, 0, -8)
+}
+point_count = 5
+
+[node name="CirnoHelper10" type="Node2D"]
+script = ExtResource("1_xpms0")
+
+[node name="Path" type="Path2D" parent="."]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_htoc7")
+
+[node name="PathFollow" type="PathFollow2D" parent="Path"]
+unique_name_in_owner = true
+position = Vector2(-3.70117e-05, -288)
+rotation = -1.879
+progress = 302.813
+
+[node name="Sprite2D" type="Sprite2D" parent="Path/PathFollow"]
+visible = false
+texture = ExtResource("2_prmme")
+
+[node name="Path2D2" type="Path2D" parent="."]
+rotation = 1.0472
+curve = SubResource("Curve2D_htoc7")
+
+[node name="Sound" parent="." instance=ExtResource("3_1ioqg")]
+unique_name_in_owner = true
+stream = ExtResource("4_s6pfg")

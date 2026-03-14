@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://e3cgcjh7jpks"]
+
+[ext_resource type="Shader" path="res://Game/Entities/Boss/BossResources/Flandre/Sprite/Flash_Flandre.gdshader" id="1_dmy8k"]
+[ext_resource type="SpriteFrames" uid="uid://cg0mslhhncb2t" path="res://Game/Entities/Boss/BossResources/Flandre/Sprite/SpriteFrames_Flandre.tres" id="2_j2l30"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/Sprite/CustomSprite_Flandre.gd" id="3_550ye"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gglmx"]
+resource_local_to_scene = true
+shader = ExtResource("1_dmy8k")
+shader_parameter/base_color = Color(0, 0.766667, 1, 1)
+shader_parameter/base_modifier = 0.2
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/colorize = false
+shader_parameter/hide = false
+
+[node name="CustomSprite_Flandre" type="AnimatedSprite2D"]
+material = SubResource("ShaderMaterial_gglmx")
+sprite_frames = ExtResource("2_j2l30")
+animation = &"AttackA"
+script = ExtResource("3_550ye")
+
+[node name="InvincibilitySprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+sprite_frames = ExtResource("2_j2l30")
+animation = &"Bat"
+
+[node name="FlashTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[connection signal="animation_finished" from="." to="." method="_on_CustomSprite_animation_finished"]
+[connection signal="timeout" from="FlashTimer" to="." method="_on_FlashTimer_timeout"]

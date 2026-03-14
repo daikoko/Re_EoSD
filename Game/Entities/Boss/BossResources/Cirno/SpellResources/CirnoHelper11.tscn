@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://b14s0rbj5yn1a"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper11.gd" id="1_ube24"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_xd5ql"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_k6qqo"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yv0d7"]
+resource_local_to_scene = true
+shader = ExtResource("3_k6qqo")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="CirnoHelper11" type="Node2D"]
+script = ExtResource("1_ube24")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_xd5ql")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_yv0d7")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

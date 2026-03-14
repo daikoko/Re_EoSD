@@ -1,0 +1,42 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://cfhvq1qgq0nyo"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellScripts/Patchouli_SpellH.gd" id="1_pdt1e"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_qi4yk"]
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_si3jq"]
+
+[sub_resource type="Resource" id="Resource_2occ7"]
+script = ExtResource("1_qi4yk")
+particles = ExtResource("1_si3jq")
+value = 400000
+point = 44
+power = 22
+life = false
+bomb = true
+boss = true
+
+[resource]
+script = ExtResource("1_pdt1e")
+A_layout_spawner_count = 9
+B_layout_spawner_count = 4
+B_fire_count = 4
+C_layout_spawner_count = 5
+C_fire_count = 8
+D_layout_spawner_count = 6
+D_fire_count = 6
+E_layout_spawner_count = 4
+E_fire_count = 6
+health = 24000.0
+time = 60.0
+base_points = 360000.0
+bonus_points = 1.08e+06
+Death = SubResource("Resource_2occ7")
+major_phase = false
+hide_boss = true
+move_boss = false
+show_background = false
+hide_background = true
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

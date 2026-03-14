@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://4o3gr70elvuq"]
+
+[ext_resource type="PackedScene" uid="uid://cqpnhyblqajt4" path="res://Game/Entities/Boss/BossResources/Meiling/SpellResources/Helper04.tscn" id="1_v72wl"]
+
+[node name="SpellD_Helper1" type="Node2D"]
+position = Vector2(693, 377)
+
+[node name="Arc1" parent="." instance=ExtResource("1_v72wl")]
+unique_name_in_owner = true
+position = Vector2(10, -17.32)
+rotation = 5.23599
+
+[node name="Arc2" parent="." instance=ExtResource("1_v72wl")]
+unique_name_in_owner = true
+position = Vector2(10, 17.32)
+rotation = 1.0472
+
+[node name="Arc3" parent="." instance=ExtResource("1_v72wl")]
+unique_name_in_owner = true
+position = Vector2(-20, 0)
+rotation = 3.14159
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true

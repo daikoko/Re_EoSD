@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7qi5iw5ujoec"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper20.gd" id="1_h3fx6"]
+[ext_resource type="Texture2D" uid="uid://bp5nwjk7ubj36" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoCirno.png" id="2_qit83"]
+
+[node name="Helper20" type="Node2D"]
+script = ExtResource("1_h3fx6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 103
+z_as_relative = false
+texture = ExtResource("2_qit83")

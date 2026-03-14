@@ -1,0 +1,51 @@
+[gd_resource type="Resource" load_steps=7 format=3 uid="uid://b20k26tk6ogc4"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_aj3ra"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_nd73v"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellScripts/Remilia_SpellB.gd" id="3_io8jr"]
+
+[sub_resource type="Curve" id="Curve_54wcn"]
+max_value = 200.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.355987, 131.048), 0.0, 0.0, 0, 0, Vector2(0.682848, 97.4127), 0.0, 0.0, 0, 0, Vector2(1, 161.32), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_oayrb"]
+max_value = 90.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.158576, 0), 0.0, 0.0, 0, 0, Vector2(0.446602, 61.2419), 0.0, 0.0, 0, 0, Vector2(1, 61.9987), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Resource" id="Resource_57bih"]
+script = ExtResource("2_nd73v")
+particles = ExtResource("1_aj3ra")
+value = 400000
+point = 44
+power = 22
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_io8jr")
+special_animation = false
+A_layout_spawner_count = 24
+A_fire_count = 8
+A_tween_distance_curve = SubResource("Curve_54wcn")
+A_tween_rotation_curve = SubResource("Curve_oayrb")
+B_layout_spawner_count = 6
+B_layout_column_count = 7
+B_fire_count = 8
+health = 32000.0
+time = 40.0
+base_points = 80000.0
+bonus_points = 160000.0
+Death = SubResource("Resource_57bih")
+major_phase = false
+hide_boss = false
+move_boss = true
+show_background = true
+hide_background = false
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

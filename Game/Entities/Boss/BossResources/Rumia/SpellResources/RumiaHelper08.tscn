@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://coqya8n0wai7a"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper08.gd" id="1_pa1xf"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_wmqeq"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_hbuel"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_ncj00"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="5_58uj0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lsvv3"]
+resource_local_to_scene = true
+shader = ExtResource("3_hbuel")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="RumiaHelper08" type="Node2D"]
+script = ExtResource("1_pa1xf")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_wmqeq")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_lsvv3")
+visibility_immunity = true
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[node name="ExplodeTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
+[node name="Sound" parent="." instance=ExtResource("4_ncj00")]
+unique_name_in_owner = true
+stream = ExtResource("5_58uj0")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]
+[connection signal="timeout" from="ExplodeTimer" to="." method="_on_ExplodeTimer_timeout"]

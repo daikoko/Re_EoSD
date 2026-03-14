@@ -1,0 +1,239 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"I'm finally at the top."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"The mist is thicker here."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Another strange place."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"I wonder what the mistress is like."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"I see something in the mist."
+	},
+	
+	
+	"008": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"009": {
+		"type":          "enter",
+		"identity":      "remi",
+		"configuration": "right",
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Oh! So that's what you look like?"
+	},
+	"011": {
+		"type":          "title",
+		"name":          "Remilia Scarlet",
+		"text":          "Eternal Scarlet Moon"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia02",
+		"name":          "Remilia",
+		"text":          
+			"**************"
+	},
+	
+	
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Wait hold on. Ahem. Hello there?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"You've made it quite far for a hu-"
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"You are so cuuuuuuute!"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"Wait wait?"
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Come here!"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia03",
+		"name":          "Remilia",
+		"text":          
+			"Ah! Stop pinching my cheeks!"
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"A bit more time please ~"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia03",
+		"name":          "Remilia",
+		"text":          
+			"uuuuuuuuu"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Ah sorry sorry."
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia02",
+		"name":          "Remilia",
+		"text":          
+			"Ahem."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Why have you come here human?"
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"For what reason do you spread this cursed mist?
+			The village is suffering because of it!"
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"I've alays wanted to go out unimpeded by the sun.
+			Do not worry for it will only be a few more days!"
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"I'm afraid I must stop this now. I have already come
+			so far!"
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"Unfortunately for you, the strings of fate have already
+			been pulled. There is one one outcome now."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"But I will stop you regardless!"
+	},
+	"029": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"I feel as though you have grown braver than when
+			you set out, human. But there is little a mere mortal
+			can do against me."
+	},
+	"030": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Prepare yourself!"
+	},
+	
+	
+	"031": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	}
+}

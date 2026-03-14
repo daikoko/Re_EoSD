@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://dhw8v6c6ojwca"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_73vc0"]
+[ext_resource type="AudioStream" uid="uid://1jmowmy13va8" path="res://Game/Main/Record/TH06_15.ogg" id="1_hmfp6"]
+
+[resource]
+script = ExtResource("1_73vc0")
+id = 15
+name = ""
+music = ExtResource("1_hmfp6")
+flag = "Passed_MainSeries"

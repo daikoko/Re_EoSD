@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=5 format=3 uid="uid://d1eyfs48u8sbt"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_t6gwo"]
+[ext_resource type="PackedScene" uid="uid://bl0spu2fy3kk7" path="res://Game/Entities/Boss/BossResources/Remilia/Sprite/CustomSprite_Remilia.tscn" id="2_2x5gd"]
+[ext_resource type="SpriteFrames" uid="uid://mh1uvdtql756" path="res://Game/Entities/Boss/BossResources/Remilia/Sprite/SpriteFrames_Remilia.tres" id="2_fejhk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_od4iu"]
+radius = 40.0
+
+[resource]
+script = ExtResource("1_t6gwo")
+sprite_frames = ExtResource("2_fejhk")
+sprite_base = ExtResource("2_2x5gd")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_od4iu")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://cdjcaqak2fw3m"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_ceeoi"]
+[ext_resource type="Texture2D" uid="uid://rvd7jswa67d1" path="res://Game/Entities/Player/PlayerResources/Rin/ShotB/Shot/CustomBullet_RinWind.png" id="2_cagns"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cma1"]
+size = Vector2(22, 12)
+
+[resource]
+script = ExtResource("1_ceeoi")
+texture = ExtResource("2_cagns")
+shape = SubResource("RectangleShape2D_7cma1")
+color_option = 0
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-10, -10, 20, 20)

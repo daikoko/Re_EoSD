@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://2gl2ucoy7lbo"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper25.gd" id="1_418pl"]
+[ext_resource type="Texture2D" uid="uid://cp3oqfc6n5fo5" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreBreakerBall.png" id="2_cibgr"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_g0fb1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oynwi"]
+size = Vector2(760, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ox16n"]
+size = Vector2(760, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pnkud"]
+size = Vector2(40, 860)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nu32l"]
+radius = 80.0
+
+[node name="Helper25" type="Node2D"]
+script = ExtResource("1_418pl")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+collision_layer = 256
+collision_mask = 256
+
+[node name="CollisionShape01" type="CollisionShape2D" parent="Wall"]
+position = Vector2(340, -20)
+shape = SubResource("RectangleShape2D_oynwi")
+
+[node name="CollisionShape02" type="CollisionShape2D" parent="Wall"]
+position = Vector2(340, 800)
+shape = SubResource("RectangleShape2D_ox16n")
+
+[node name="CollisionShape03" type="CollisionShape2D" parent="Wall"]
+position = Vector2(-20, 390)
+shape = SubResource("RectangleShape2D_pnkud")
+
+[node name="CollisionShape04" type="CollisionShape2D" parent="Wall"]
+position = Vector2(700, 390)
+shape = SubResource("RectangleShape2D_pnkud")
+
+[node name="Ball" type="CharacterBody2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 256
+collision_mask = 256
+
+[node name="BallSprite" type="Sprite2D" parent="Ball"]
+unique_name_in_owner = true
+texture = ExtResource("2_cibgr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource("CircleShape2D_nu32l")
+
+[node name="Enemy" parent="Ball" instance=ExtResource("3_g0fb1")]
+identity = "Enemy"
+shape = SubResource("CircleShape2D_nu32l")
+
+[connection signal="collider_entered" from="Ball/Enemy" to="." method="_on_Enemy_collider_entered"]

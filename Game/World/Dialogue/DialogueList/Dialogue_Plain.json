@@ -1,0 +1,17 @@
+{
+	"001": {
+		"type":       "event",
+		"pause":      "false",
+		"event_name": "boss_in"
+	},
+	"002": {
+		"type":       "event",
+		"pause":      "false",
+		"event_name": "boss_theme"
+	},
+	"003": {
+		"type":       "event",
+		"pause":      "false",
+		"event_name": "boss_out"
+	}
+}

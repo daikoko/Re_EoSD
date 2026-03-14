@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://dqrkku24xxttg"]
+
+[ext_resource type="AudioStream" uid="uid://cuns6ved1qkyc" path="res://Game/Main/Record/PlaceholderMusic_GameOver.ogg" id="1_ga6y2"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_qjdt3"]
+
+[resource]
+script = ExtResource("1_qjdt3")
+id = 100
+name = ""
+music = ExtResource("1_ga6y2")
+flag = ""

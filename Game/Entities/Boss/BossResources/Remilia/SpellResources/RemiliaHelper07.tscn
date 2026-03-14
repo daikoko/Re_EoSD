@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bwgty3wff23dh"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper07.gd" id="1_5xq2n"]
+
+[node name="RemiliaHelper07" type="Node2D"]
+position = Vector2(0, 20)
+script = ExtResource("1_5xq2n")

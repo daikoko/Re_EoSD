@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://der4i47yu4mwx"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_xkh1v"]
+[ext_resource type="Texture2D" uid="uid://bvcpyvl5mk4ys" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/BulletCustom_PatchouliSpadeOrange.png" id="2_5fakl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xbgb"]
+radius = 7.0
+
+[resource]
+script = ExtResource("1_xkh1v")
+texture = ExtResource("2_5fakl")
+shape = SubResource("CircleShape2D_7xbgb")
+color_option = 0
+color_custom = Color(1, 0.65, 0.3, 1)
+visibility = Rect2(-14, -12, 26, 24)

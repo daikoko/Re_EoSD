@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://dntgw7qqphpvv"]
+
+[ext_resource type="AudioStream" uid="uid://ij88mq3k2wgx" path="res://Game/Main/Ending/EndingResources/_General/TH06_16.ogg" id="1_1cmql"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_fpwpg"]
+
+[resource]
+script = ExtResource("1_fpwpg")
+id = 16
+name = ""
+music = ExtResource("1_1cmql")
+flag = "Passed_MainSeries"

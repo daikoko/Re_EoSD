@@ -1,0 +1,21 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://vmb60ynktns0"]
+
+[ext_resource type="FontFile" uid="uid://cw3pc1tkugp2m" path="res://Game/Themes/Fonts/KelvinchRoman.otf" id="1_suwn2"]
+[ext_resource type="FontFile" uid="uid://kwn73swahsvn" path="res://Game/Themes/Fonts/TexturaBelgica.ttf" id="2_fb2tk"]
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_suwn2")
+Label_MainBorder/base_type = &"Label"
+Label_MainBorder/font_sizes/font_size = 32
+Label_MainBorder/fonts/font = ExtResource("1_suwn2")
+Label_MainName/base_type = &"Label"
+Label_MainName/font_sizes/font_size = 26
+Label_MainName/fonts/font = ExtResource("1_suwn2")
+Label_SideName/base_type = &"Label"
+Label_SideName/colors/font_outline_color = Color(0, 0, 0, 1)
+Label_SideName/constants/outline_size = 12
+Label_SideName/font_sizes/font_size = 48
+Label_SideName/fonts/font = ExtResource("2_fb2tk")

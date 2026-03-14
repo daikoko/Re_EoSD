@@ -1,0 +1,303 @@
+[gd_scene load_steps=19 format=3 uid="uid://ckt2557oyf3lx"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/Bomb/Marisa_Bomb.gd" id="1_83llf"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="2_k8ehr"]
+[ext_resource type="Shader" path="res://Game/Entities/Player/PlayerResources/Marisa/Bomb/MarisaBomb.gdshader" id="3_d2q58"]
+[ext_resource type="Texture2D" uid="uid://clmbv2cxqn456" path="res://Game/Entities/Player/PlayerResources/Marisa/Bomb/MarisaSpark_Back.png" id="4_5pxib"]
+[ext_resource type="Texture2D" uid="uid://bie8lqefeq3wc" path="res://Game/Entities/Player/PlayerResources/Marisa/Bomb/MarisaSpark_Front.png" id="5_fuucl"]
+[ext_resource type="Texture2D" uid="uid://cqfa87xxkvfxl" path="res://Game/Entities/Player/PlayerResources/Marisa/Bomb/BombBackground.png" id="6_qyi5w"]
+[ext_resource type="Texture2D" uid="uid://bvs1hngffkrh" path="res://Game/Objects/Particles/Particle_Generic.png" id="7_1jxj3"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="8_ml7pv"]
+[ext_resource type="AudioStream" uid="uid://ba0gwwuovwxyv" path="res://Game/Entities/Player/PlayerResources/_General/Sound/Player_Spell01.wav" id="9_khb0d"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_3cxal"]
+points = PackedVector2Array(148, -400, 126, 0, 96, 260, 46, 360, 0, 380, -46, 360, -96, 260, -126, 0, -148, -400)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rjb2b"]
+shader = ExtResource("3_d2q58")
+shader_parameter/amplitude = 1.6
+shader_parameter/displacement = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0plo2"]
+radius = 68.0
+
+[sub_resource type="Curve" id="Curve_eskas"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 0.823415), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_h0wxe"]
+curve = SubResource("Curve_eskas")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vlgh7"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 120.0
+emission_ring_inner_radius = 100.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -420.0
+radial_accel_max = -420.0
+scale_min = 0.2
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_h0wxe")
+
+[sub_resource type="Animation" id="Animation_kpq10"]
+resource_name = "Bomb"
+length = 4.0
+step = 0.1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.2, 3.6, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"request_shake"
+}, {
+"args": [],
+"method": &"request_shake_stop"
+}, {
+"args": [],
+"method": &"end_bomb"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beam:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.4, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Beam:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.4, 1.6, 3.6, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1, 1.6, 3.2, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Background/BackgroundBomb")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.4, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"enable"
+}, {
+"args": [],
+"method": &"disable"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Particles:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("IntervalTimer")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 3.8),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [-1],
+"method": &"start"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_5qy4b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Beam:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Beam:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Particles:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2aq8c"]
+_data = {
+"Bomb": SubResource("Animation_kpq10"),
+"RESET": SubResource("Animation_5qy4b")
+}
+
+[node name="MarisaBomb" type="Node2D"]
+script = ExtResource("1_83llf")
+
+[node name="StartTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.8
+
+[node name="IntervalTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+
+[node name="FrameTimer" type="Timer" parent="IntervalTimer"]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="Beam" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 38
+z_as_relative = false
+position = Vector2(0, -440)
+
+[node name="BeamBomb" parent="Beam" instance=ExtResource("2_k8ehr")]
+unique_name_in_owner = true
+collision_mask = 4
+identity = "Bomb"
+shape = SubResource("ConvexPolygonShape2D_3cxal")
+
+[node name="BeamBack" type="Sprite2D" parent="Beam"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_rjb2b")
+texture = ExtResource("4_5pxib")
+
+[node name="BeamFront" type="Sprite2D" parent="Beam"]
+texture = ExtResource("5_fuucl")
+
+[node name="Background" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 39
+z_as_relative = false
+
+[node name="BackgroundBomb" parent="Background" instance=ExtResource("2_k8ehr")]
+unique_name_in_owner = true
+collision_mask = 0
+monitoring = false
+identity = "Bomb"
+shape = SubResource("CircleShape2D_0plo2")
+
+[node name="Background" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("6_qyi5w")
+
+[node name="Particles" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+amount = 42
+process_material = SubResource("ParticleProcessMaterial_vlgh7")
+texture = ExtResource("7_1jxj3")
+lifetime = 0.7
+local_coords = true
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_2aq8c")
+}
+
+[node name="Sound" parent="." instance=ExtResource("8_ml7pv")]
+unique_name_in_owner = true
+stream = ExtResource("9_khb0d")
+
+[connection signal="timeout" from="IntervalTimer" to="." method="_on_IntervalTimer_timeout"]
+[connection signal="collider_entered" from="Beam/BeamBomb" to="." method="_on_BeamBomb_collider_entered"]

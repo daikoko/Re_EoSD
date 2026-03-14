@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnfi74rlhy7o5"]
+
+[ext_resource type="Theme" uid="uid://bqb533xlqlgag" path="res://Menu/Themes/Themes/MainMenu.tres" id="1_74qr1"]
+[ext_resource type="Texture2D" uid="uid://criyy2qa5i4n0" path="res://Menu/Game/SelectShot/Button_SelectShot.png" id="2_8rrt5"]
+[ext_resource type="Texture2D" uid="uid://dniu3pnxx2x3p" path="res://Menu/Game/SelectShot/Button_SelectShotPressed.png" id="3_o0e1g"]
+[ext_resource type="Texture2D" uid="uid://c6xp3hbpnwpyp" path="res://Menu/Game/SelectShot/Button_SelectShotFocused.png" id="4_p1kvu"]
+[ext_resource type="Script" path="res://Menu/Game/SelectShot/SelectShotButton.gd" id="5_rmmea"]
+
+[node name="SelectShotButton" type="TextureButton"]
+custom_minimum_size = Vector2(450, 100)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -830.0
+offset_bottom = -700.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+theme = ExtResource("1_74qr1")
+texture_normal = ExtResource("2_8rrt5")
+texture_pressed = ExtResource("3_o0e1g")
+texture_focused = ExtResource("4_p1kvu")
+script = ExtResource("5_rmmea")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 96)
+layout_mode = 0
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 408.0
+offset_bottom = 82.0
+theme_override_constants/separation = 2
+
+[node name="ShotName" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "Name"
+autowrap_mode = 2
+
+[node name="ShotDescription" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "Description Description Description Description Description Description Description "
+autowrap_mode = 2
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

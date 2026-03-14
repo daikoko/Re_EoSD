@@ -1,0 +1,826 @@
+[gd_scene load_steps=18 format=3 uid="uid://oc3jthkv7b04"]
+
+[ext_resource type="Theme" uid="uid://bqb533xlqlgag" path="res://Menu/Themes/Themes/MainMenu.tres" id="1_euf84"]
+[ext_resource type="Script" path="res://Menu/Manual/Main/Manual.gd" id="2_6jaf5"]
+[ext_resource type="Texture2D" uid="uid://dkqsexkad60qe" path="res://Game/Main/HUD/Bar_StarUnder.png" id="3_q4m42"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_uohab"]
+[ext_resource type="AudioStream" uid="uid://pkemaxo37kwk" path="res://Menu/Main/Menu_Select02.wav" id="4_40nst"]
+[ext_resource type="AudioStream" uid="uid://3bjgn02t8rra" path="res://Menu/Main/Menu_Select04.wav" id="4_fq1n4"]
+[ext_resource type="Texture2D" uid="uid://skdilrmdnm56" path="res://Game/Main/HUD/Bar_StarLives.png" id="4_v3otu"]
+[ext_resource type="Texture2D" uid="uid://di5it3hd7kyyb" path="res://Game/Main/HUD/Bar_StarBombs.png" id="5_b5551"]
+[ext_resource type="Texture2D" uid="uid://due14d70ppgsn" path="res://Game/Main/HUD/Bar_Power.png" id="6_ubrul"]
+[ext_resource type="Texture2D" uid="uid://dmxvfpvsyksyj" path="res://Game/Main/HUD/Bar_Graze.png" id="7_b1wi8"]
+[ext_resource type="SpriteFrames" uid="uid://3epnxee00pla" path="res://Game/Entities/Enemy/EnemyResources/FairyRed/SpriteFrames_FairyRed.tres" id="8_8i1b6"]
+[ext_resource type="SpriteFrames" uid="uid://cktrfotlo4fxs" path="res://Game/Entities/Boss/BossResources/Cirno/Sprite/SpriteFrames_Cirno.tres" id="9_ypxmv"]
+[ext_resource type="Texture2D" uid="uid://o1xgttmxxwp4" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/Hitbox_ReimuInner.png" id="10_d4b1h"]
+[ext_resource type="Texture2D" uid="uid://chesiobewf7x7" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/Hitbox_ReimuOuter.png" id="11_wi8nv"]
+
+[sub_resource type="Animation" id="Animation_e0yy5"]
+resource_name = "Load_In"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -80), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pages:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 160), Vector2(60, 160)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pages:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Navigation:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1280, 710), Vector2(1080, 710)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Navigation:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_l25wx"]
+resource_name = "Load_Out"
+length = 0.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pages:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(60, 160), Vector2(300, 160)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pages:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Navigation:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1080, 710), Vector2(1280, 710)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Navigation:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pvg4r"]
+_data = {
+"Load_In": SubResource("Animation_e0yy5"),
+"Load_Out": SubResource("Animation_l25wx")
+}
+
+[node name="Manual" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_euf84")
+script = ExtResource("2_6jaf5")
+
+[node name="Title" type="CenterContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1280, 180)
+layout_mode = 0
+offset_top = -80.0
+offset_right = 1280.0
+offset_bottom = 100.0
+
+[node name="Title" type="Label" parent="Title"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_SubMenu"
+text = "Manual"
+
+[node name="Pages" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 300.0
+offset_top = 160.0
+offset_right = 300.0
+offset_bottom = 160.0
+
+[node name="Page01" type="Control" parent="Pages"]
+unique_name_in_owner = true
+anchors_preset = 0
+
+[node name="Rect01" type="ColorRect" parent="Pages/Page01"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 540.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page01/Rect01"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 480.0
+offset_bottom = 363.0
+theme_override_constants/separation = 20
+
+[node name="Arrow" type="HBoxContainer" parent="Pages/Page01/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ArrowDisplay" type="Label" parent="Pages/Page01/Rect01/VBoxContainer/Arrow"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Large"
+text = "<   >"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ArrowLabel" type="Label" parent="Pages/Page01/Rect01/VBoxContainer/Arrow"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use the arrow keys to navigate the menu and move in game"
+autowrap_mode = 2
+
+[node name="Space" type="HBoxContainer" parent="Pages/Page01/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SpaceDisplay" type="Label" parent="Pages/Page01/Rect01/VBoxContainer/Space"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[Space]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceLabel" type="Label" parent="Pages/Page01/Rect01/VBoxContainer/Space"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use the [space] key to select in the menu and pause the game"
+autowrap_mode = 2
+
+[node name="Escape" type="HBoxContainer" parent="Pages/Page01/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="EscapeDisplay" type="Label" parent="Pages/Page01/Rect01/VBoxContainer/Escape"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[Esc]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EscapeLabel" type="Label" parent="Pages/Page01/Rect01/VBoxContainer/Escape"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use the [esc] key to go back through the menus"
+autowrap_mode = 2
+
+[node name="Rect02" type="ColorRect" parent="Pages/Page01"]
+layout_mode = 0
+offset_left = 620.0
+offset_right = 1120.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page01/Rect02"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 480.0
+offset_bottom = 388.0
+theme_override_constants/separation = 20
+
+[node name="Shoot" type="HBoxContainer" parent="Pages/Page01/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ShootDisplay" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Shoot"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[Z]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShootLabel" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Shoot"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hold the [z] key to shoot"
+autowrap_mode = 2
+
+[node name="Shift" type="HBoxContainer" parent="Pages/Page01/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ShiftDisplay" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Shift"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[Shift]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ShiftLabel" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Shift"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hold the [shift] key to focus, which adjusts the character speed and shot"
+autowrap_mode = 2
+
+[node name="Bomb" type="HBoxContainer" parent="Pages/Page01/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="BombDisplay" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Bomb"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[X]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BombLabel" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Bomb"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use the [x] key to use a bomb. Requires a spare bomb."
+autowrap_mode = 2
+
+[node name="Flash" type="HBoxContainer" parent="Pages/Page01/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="FlashDisplay" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Flash"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[C]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlashLabel" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Flash"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use the [c] key to use a flash bomb. Requires a filled Graze Bar"
+autowrap_mode = 2
+
+[node name="Next" type="HBoxContainer" parent="Pages/Page01/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="NextDisplay" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Next"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[A]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NextLabel" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Next"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use the [a] or [z] key to advance dialogue"
+autowrap_mode = 2
+
+[node name="Skip" type="HBoxContainer" parent="Pages/Page01/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SkipDisplay" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Skip"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Medium"
+text = "[S]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkipLabel" type="Label" parent="Pages/Page01/Rect02/VBoxContainer/Skip"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hold the [s] or [x] key to skip through dialogue"
+autowrap_mode = 2
+
+[node name="Page02" type="Control" parent="Pages"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 1280.0
+offset_right = 1280.0
+
+[node name="Rect01" type="ColorRect" parent="Pages/Page02"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 540.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page02/Rect01"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 480.0
+offset_bottom = 363.0
+theme_override_constants/separation = 20
+
+[node name="Lives" type="VBoxContainer" parent="Pages/Page02/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LivesDisplay" type="TextureProgressBar" parent="Pages/Page02/Rect01/VBoxContainer/Lives"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 7.0
+value = 4.0
+texture_under = ExtResource("3_q4m42")
+texture_progress = ExtResource("4_v3otu")
+
+[node name="LivesLabel" type="Label" parent="Pages/Page02/Rect01/VBoxContainer/Lives"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "The number of spare Lives is counted in the Red Star Bars. Dying with zero spare lives lead to a game over. Gain more lives by collecting red Life Items."
+autowrap_mode = 2
+
+[node name="Bombs" type="VBoxContainer" parent="Pages/Page02/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BombsDisplay" type="TextureProgressBar" parent="Pages/Page02/Rect01/VBoxContainer/Bombs"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 7.0
+value = 3.0
+texture_under = ExtResource("3_q4m42")
+texture_progress = ExtResource("5_b5551")
+
+[node name="BombsLabel" type="Label" parent="Pages/Page02/Rect01/VBoxContainer/Bombs"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "The number of bomb is counted in the Green Star Bars. Gain more bombs by collecting Bomb Items."
+autowrap_mode = 2
+
+[node name="Power" type="VBoxContainer" parent="Pages/Page02/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PowerDisplay" type="TextureProgressBar" parent="Pages/Page02/Rect01/VBoxContainer/Power"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+value = 40.0
+texture_progress = ExtResource("6_ubrul")
+
+[node name="PowerDisplayLabel" type="Label" parent="Pages/Page02/Rect01/VBoxContainer/Power/PowerDisplay"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "%40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PowerLabel" type="Label" parent="Pages/Page02/Rect01/VBoxContainer/Power"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "The power level is tracked in the Red Power Bar. Gain power by collecting red Power Items."
+autowrap_mode = 2
+
+[node name="Graze" type="VBoxContainer" parent="Pages/Page02/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="GrazeDisplay" type="TextureProgressBar" parent="Pages/Page02/Rect01/VBoxContainer/Graze"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 12.0
+value = 10.0
+allow_greater = true
+texture_progress = ExtResource("7_b1wi8")
+
+[node name="GrazeDisplayLabel" type="Label" parent="Pages/Page02/Rect01/VBoxContainer/Graze/GrazeDisplay"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 30)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "10/12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrazeLabel" type="Label" parent="Pages/Page02/Rect01/VBoxContainer/Graze"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Current Graze is tracked in the Yellow Graze Bar and can overflow. Graze is collected by being close to bullets."
+autowrap_mode = 2
+
+[node name="Rect02" type="ColorRect" parent="Pages/Page02"]
+layout_mode = 0
+offset_left = 620.0
+offset_right = 1120.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page02/Rect02"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 480.0
+offset_bottom = 363.0
+theme_override_constants/separation = 20
+
+[node name="Score" type="HBoxContainer" parent="Pages/Page02/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ScoreDisplay" type="Control" parent="Pages/Page02/Rect02/VBoxContainer/Score"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Sprite01" type="AnimatedSprite2D" parent="Pages/Page02/Rect02/VBoxContainer/Score/ScoreDisplay"]
+unique_name_in_owner = true
+position = Vector2(60, 60)
+sprite_frames = ExtResource("8_8i1b6")
+animation = &"_Idle"
+
+[node name="ScoreLabel" type="Label" parent="Pages/Page02/Rect02/VBoxContainer/Score"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Earn score by collect blue Point Items, killing enemies, and progressing through the game"
+autowrap_mode = 2
+
+[node name="Spellcards" type="HBoxContainer" parent="Pages/Page02/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="SpellcardDisplay" type="Control" parent="Pages/Page02/Rect02/VBoxContainer/Spellcards"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Sprite02" type="AnimatedSprite2D" parent="Pages/Page02/Rect02/VBoxContainer/Spellcards/SpellcardDisplay"]
+unique_name_in_owner = true
+position = Vector2(60, 60)
+sprite_frames = ExtResource("9_ypxmv")
+animation = &"_Idle"
+
+[node name="SpellcardLabel" type="Label" parent="Pages/Page02/Rect02/VBoxContainer/Spellcards"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Spellcards are captured by passing them without losing a life, using a bomb, or running out the timer (if not a timeout spellcard)"
+autowrap_mode = 2
+
+[node name="Focus" type="HBoxContainer" parent="Pages/Page02/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 54)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="FocusDisplay" type="Control" parent="Pages/Page02/Rect02/VBoxContainer/Focus"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 120)
+layout_mode = 2
+
+[node name="Sprite03" type="Sprite2D" parent="Pages/Page02/Rect02/VBoxContainer/Focus/FocusDisplay"]
+unique_name_in_owner = true
+position = Vector2(60, 60)
+texture = ExtResource("10_d4b1h")
+
+[node name="Sprite04" type="Sprite2D" parent="Pages/Page02/Rect02/VBoxContainer/Focus/FocusDisplay"]
+unique_name_in_owner = true
+position = Vector2(60, 60)
+texture = ExtResource("11_wi8nv")
+
+[node name="FocusLabel" type="Label" parent="Pages/Page02/Rect02/VBoxContainer/Focus"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Power will passively improve the shot based on precentage. Focusing while shooting will increase damage further, but will also consume power over time."
+autowrap_mode = 2
+
+[node name="Page03" type="Control" parent="Pages"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 1280.0
+offset_right = 1280.0
+
+[node name="Rect01" type="ColorRect" parent="Pages/Page03"]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 540.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page03/Rect01"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 480.0
+offset_bottom = 363.0
+theme_override_constants/separation = 20
+
+[node name="Casual" type="VBoxContainer" parent="Pages/Page03/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CasualDisplay" type="Label" parent="Pages/Page03/Rect01/VBoxContainer/Casual"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Large"
+text = "Casual Mode"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CasualLabel" type="Label" parent="Pages/Page03/Rect01/VBoxContainer/Casual"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Recommended mode for casual players. Allows saving and restarting at every stage as well as guaranteeing the story's good ending. Disables scoring and replays."
+autowrap_mode = 2
+
+[node name="Arcade" type="VBoxContainer" parent="Pages/Page03/Rect01/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ArcadeDisplay" type="Label" parent="Pages/Page03/Rect01/VBoxContainer/Arcade"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Large"
+text = "Arcade Mode"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ArcadeLabel" type="Label" parent="Pages/Page03/Rect01/VBoxContainer/Arcade"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Recommended mode for people playing for score. Does not alow for saving between stages, but gives a limited amount for Continue Credits to continue the game after a game over. Complete the game without using a Continue Credit to get the story's good ending."
+autowrap_mode = 2
+
+[node name="Rect02" type="ColorRect" parent="Pages/Page03"]
+layout_mode = 0
+offset_left = 620.0
+offset_right = 1120.0
+offset_bottom = 520.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pages/Page03/Rect02"]
+custom_minimum_size = Vector2(460, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 480.0
+offset_bottom = 363.0
+theme_override_constants/separation = 20
+
+[node name="Extra" type="VBoxContainer" parent="Pages/Page03/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ExtraDisplay" type="Label" parent="Pages/Page03/Rect02/VBoxContainer/Extra"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Large"
+text = "Extra Stage"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ExtraLabel" type="Label" parent="Pages/Page03/Rect02/VBoxContainer/Extra"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "The Extra Stage is unlocked by completing the Main Story on any mode and any difficulty. Each character for the extra stage is individually unlocked by completing the Main Story as that character."
+autowrap_mode = 2
+
+[node name="Phantasm" type="VBoxContainer" parent="Pages/Page03/Rect02/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="PhantasmDisplay" type="Label" parent="Pages/Page03/Rect02/VBoxContainer/Phantasm"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Large"
+text = "Phantasm Stage"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PhantasmLabel" type="Label" parent="Pages/Page03/Rect02/VBoxContainer/Phantasm"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "The Phantasm Stage is unlocked by completing the Extra Stage. The Phantasm stage is accessed by pressing the [shift] key on the Extra Stage difficulty select screen 4 times."
+autowrap_mode = 2
+
+[node name="Navigation" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 1280.0
+offset_top = 710.0
+offset_right = 1280.0
+offset_bottom = 710.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Navigation"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 24
+
+[node name="Left" type="Button" parent="Navigation/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"Button_NavigationGeneral"
+toggle_mode = true
+text = "<"
+
+[node name="PageLabel" type="Label" parent="Navigation/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Large"
+text = "1/3"
+
+[node name="Right" type="Button" parent="Navigation/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+theme_type_variation = &"Button_NavigationGeneral"
+toggle_mode = true
+text = ">"
+
+[node name="Decoy" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+
+[node name="Sound_Select01" parent="." instance=ExtResource("3_uohab")]
+unique_name_in_owner = true
+stream = ExtResource("4_40nst")
+
+[node name="Sound_Select02" parent="." instance=ExtResource("3_uohab")]
+unique_name_in_owner = true
+stream = ExtResource("4_40nst")
+
+[node name="Sound_Select04" parent="." instance=ExtResource("3_uohab")]
+unique_name_in_owner = true
+stream = ExtResource("4_fq1n4")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_pvg4r")
+}

@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://dv4lshuhe6fpg"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper02.gd" id="1_gvsaw"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_u54jj"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_qdoox"]
+[ext_resource type="Resource" uid="uid://cqe6f0yyhe42c" path="res://Game/Objects/Bullets/BulletList/Bullet_SpadeRed.tres" id="4_ib1v5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfx37"]
+resource_local_to_scene = true
+shader = ExtResource("3_qdoox")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="Helper02" type="Node2D"]
+script = ExtResource("1_gvsaw")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_u54jj")]
+material = SubResource("ShaderMaterial_jfx37")
+data = ExtResource("4_ib1v5")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EndingData" load_steps=6 format=3 uid="uid://b8ud4te5gxkna"]
+
+[ext_resource type="Texture2D" uid="uid://b8xaxtpxiuyfi" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin01.png" id="1_rol47"]
+[ext_resource type="Texture2D" uid="uid://cieh0nwlcxaws" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin07.png" id="2_gtkht"]
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/EndingData.gd" id="3_4xbuh"]
+[ext_resource type="Texture2D" uid="uid://qbnii03tulvv" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin08.png" id="3_m5g8s"]
+[ext_resource type="Texture2D" uid="uid://bvvflkyfmqho" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin09.png" id="4_r8ddt"]
+
+[resource]
+script = ExtResource("3_4xbuh")
+scenes = Array[Texture]([ExtResource("1_rol47"), ExtResource("2_gtkht"), ExtResource("3_m5g8s"), ExtResource("4_r8ddt")])
+dialogue = "res://Game/Main/Ending/EndingResources/Rin/Ending_RinGood.json"

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://li4drjo6vy3e"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_nk82y"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_s331a"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Koakuma/SpellScripts/Koakuma_NonA.gd" id="3_y0w6j"]
+
+[sub_resource type="Resource" id="Resource_trlb8"]
+script = ExtResource("2_s331a")
+particles = ExtResource("1_nk82y")
+value = 280000
+point = 28
+power = 14
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_y0w6j")
+A_layout_spawner_count = 8
+A_fire_count = 10
+health = 20000.0
+Death = SubResource("Resource_trlb8")
+hide_boss = true
+move_boss = false
+show_background = false
+hide_background = false
+difficulty = 0
+boss_id = 0

@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsunranvrvivl"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotB/Shot/MarisaB_Shot.gd" id="1_l8c64"]
+[ext_resource type="PackedScene" uid="uid://dhxxma1f5s2q6" path="res://Game/Entities/Player/PlayerResources/_General/Shot/Shot_General.tscn" id="2_uvevt"]
+[ext_resource type="PackedScene" uid="uid://bf7wxf44jnrmf" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotB/Shot/Shot_MarisaLaser.tscn" id="3_q08vo"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_7a40r"]
+[ext_resource type="AudioStream" uid="uid://c0s1gbvycmx24" path="res://Game/Entities/Player/PlayerResources/_General/Sound/Player_Shoot01.wav" id="5_ow3ra"]
+
+[node name="MarisaB_Shot" type="Node2D"]
+z_index = 41
+z_as_relative = false
+script = ExtResource("1_l8c64")
+
+[node name="MainShot" parent="." instance=ExtResource("2_uvevt")]
+unique_name_in_owner = true
+
+[node name="MainTimer" type="Timer" parent="MainShot"]
+unique_name_in_owner = true
+
+[node name="SideShot" parent="." instance=ExtResource("3_q08vo")]
+unique_name_in_owner = true
+
+[node name="IntervalTimer" type="Timer" parent="SideShot"]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[node name="FrameTimer" type="Timer" parent="SideShot"]
+unique_name_in_owner = true
+wait_time = 0.05
+one_shot = true
+
+[node name="Sound_Shoot" parent="." instance=ExtResource("4_7a40r")]
+unique_name_in_owner = true
+stream = ExtResource("5_ow3ra")
+
+[connection signal="timeout" from="MainShot/MainTimer" to="." method="_on_MainTimer_timeout"]
+[connection signal="timeout" from="SideShot/IntervalTimer" to="." method="_on_IntervalTimer_timeout"]
+[connection signal="timeout" from="SideShot/FrameTimer" to="." method="_on_FrameTimer_timeout"]

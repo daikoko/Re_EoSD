@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=9 format=3 uid="uid://cl3rc3pyeeert"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_rgqer"]
+[ext_resource type="Resource" uid="uid://hjs3w84x5h6b" path="res://Game/Entities/Boss/BossList/Stage03_MidA/DialogueList/Stage03_MidA_DialogueA.tres" id="2_8tcxi"]
+[ext_resource type="Resource" uid="uid://bhu0fn1jtpo2m" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Easy/Meiling_SpellA_Easy.tres" id="3_3b7sh"]
+[ext_resource type="Resource" uid="uid://c0inktvlhhel8" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Normal/Meiling_SpellA_Normal.tres" id="3_mj6ha"]
+[ext_resource type="Resource" uid="uid://bqokdxt4prs43" path="res://Game/Entities/Boss/BossList/Stage03_MidA/DialogueList/Stage03_MidA_DialogueB.tres" id="4_i08t3"]
+[ext_resource type="Resource" uid="uid://vw3g2x2erhnq" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Hard/Meiling_SpellA_Hard.tres" id="5_it27b"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="5_ugmdd"]
+[ext_resource type="Resource" uid="uid://hxyd2avuhuhi" path="res://Game/Entities/Boss/BossList/Stage03_MidA/SpellList/Lunatic/Meiling_SpellA_Lunatic.tres" id="6_xoxes"]
+
+[resource]
+script = ExtResource("5_ugmdd")
+easy = Array[ExtResource("1_rgqer")]([ExtResource("2_8tcxi"), ExtResource("3_3b7sh"), ExtResource("4_i08t3")])
+normal = Array[ExtResource("1_rgqer")]([ExtResource("2_8tcxi"), ExtResource("3_mj6ha"), ExtResource("4_i08t3")])
+hard = Array[ExtResource("1_rgqer")]([ExtResource("2_8tcxi"), ExtResource("5_it27b"), ExtResource("4_i08t3")])
+lunatic = Array[ExtResource("1_rgqer")]([ExtResource("2_8tcxi"), ExtResource("6_xoxes"), ExtResource("4_i08t3")])

@@ -1,0 +1,29 @@
+[gd_scene load_steps=8 format=3 uid="uid://diy3ovhm05xlg"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper06.gd" id="1_nxlre"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_cvxws"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_rdsp2"]
+[ext_resource type="Resource" uid="uid://dmkrcmo4upg" path="res://Game/Objects/Bullets/BulletList/Bullet_KunaiMagenta.tres" id="4_r6ywk"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="5_2h6kn"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="6_3etd7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ck1s"]
+resource_local_to_scene = true
+shader = ExtResource("3_rdsp2")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="Helper06" type="Node2D"]
+script = ExtResource("1_nxlre")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_cvxws")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_2ck1s")
+data = ExtResource("4_r6ywk")
+visibility_immunity = true
+
+[node name="Sound" parent="." instance=ExtResource("5_2h6kn")]
+unique_name_in_owner = true
+stream = ExtResource("6_3etd7")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

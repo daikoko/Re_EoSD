@@ -1,0 +1,160 @@
+{
+	"000": {
+		"type": "scene",
+	},
+	"001": {
+		"type": "music_play",
+		"music": "bad_end_theme"
+	},
+	"002": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Hakurei Shrine"
+	},
+	"004": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"After a few days, the sky returns to normal."
+	},
+	"005": {
+		"type": "scene",
+	},
+	"006": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Ever since atempting to stop the incident, Reimu has
+			been under a heavy fever."
+	},
+	"007": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Mmmm."
+	},
+	"008": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Reimu? Are feeling better yet, Reimu."
+	},
+	"009": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Nooooo. Let me rest some more."
+	},
+	"010": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I brought you chicken soup."
+	},
+	"011": {
+		"type": "scene",
+	},
+	"012": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Mmmm. I'll be up in a moment."
+	},
+	"013": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"You know, many in the village 
+			are still sick, even more than you."
+	},
+	"014": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"I don't know what that mist did, but
+			it was definitely no good."
+	},
+	"015": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Must be pretty powerful to take you out."
+	},
+	"016": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Luckily I stayed indoors the whole time."
+	},
+	"017": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"If you had gone with me, maybe we could've stopped them."
+	},
+	"018": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Oi, I was busy vampire proofing my house."
+	},
+	"019": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Anyway, I've also come to tell you that the villagers
+			are lining outside your shrine again."
+	},
+	"020": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"They are looking for miracle healing."
+	},
+	"021": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Tell them I'll be out in a bit
+			after this headache subsides."
+	},
+	"022": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"You'll get more donations if you answer their prayers faster."
+	},
+	"023": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"I'd rather not have the whole village be sick.
+			I prefer my shrine being more quiet."
+	},
+	"024": {
+		"type": "text",
+		"name": "Marisa",
+		"text": 
+			"Alright, I'll tell them to go home. I be back tomorrow."
+	},
+	"025": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Thanks."
+	},
+	"026": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Reimu - Bad End"
+	},
+	"027": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Try for a Single Credit Clear for the true end!
+			Or move on to the Extra Stage to continue the story."
+	},
+}

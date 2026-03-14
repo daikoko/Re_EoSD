@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://tfph67srlmbb"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_0h1wa"]
+[ext_resource type="AudioStream" uid="uid://pv5l7rl0t0gp" path="res://Game/Entities/Boss/BossResources/Rumia/Audio/TH06_22.ogg" id="1_0po17"]
+
+[resource]
+script = ExtResource("1_0h1wa")
+id = 22
+name = ""
+music = ExtResource("1_0po17")
+flag = "Passed_StagePhantasm"

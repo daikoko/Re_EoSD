@@ -1,0 +1,82 @@
+{
+	"title": {
+		"title_01":  "東方[color=red]紅魔郷[/color]",
+		"title_02":  "\n [color=red]E[/color]mbodiment [color=red]o[/color]f the
+			[color=red]S[/color]carlet [color=red]D[/color]evil",
+		"title_03":  "Definitely Not",
+		"option_01": " New Game ",
+		"option_02": " Continue ",
+		"option_03": " Extra ",
+		"option_04": " Practice ",
+		"option_05": " Records ",
+		"option_06": " Profiles ",
+		"option_07": " Music Room ",
+		"option_08": " Manual ",
+		"option_09": " Settings ",
+		"option_10": " Quit ",
+	},
+	"mode": {
+		"title_01":  "Select Game Mode",
+		"option_01": "Casual",
+		"option_02": "Arcade",
+		"text_01":   
+			"Able to stop and restart at every stage,
+			but disables scoring and the leaderboard",
+		"text_02":   
+			"Complete the game in one go! Don't be
+			afraid to use Continue!",
+	},
+	"difficulty": {
+		"title_01":  "Select Difficulty",
+		"option_01": "Easy",
+		"option_02": "Normal",
+		"option_03": "Hard",
+		"option_04": "Lunatic",
+		"option_05": "Extra",
+		"option_06": "Phantasm",
+		"label_01":  "For Beginners",
+		"label_02":  "Standard Difficulty",
+		"label_03":  "Challenge Mode",
+		"label_04":  "For Actual Lunatics",
+		"label_05":  "The Hidden Stage",
+		"label_06":  "A Terrible Encounter",
+	},
+	"player": {
+		"title_01":  "Select Player",
+	},
+	"shot": {
+		"title_01":  "Select Shot Type",
+	},
+	"practice": {
+		"title_01":  "Select Practice",
+	},
+	"records": {
+		"title_01":  "Records",
+		"label_01":  "Main",
+		"label_02":  "Extra",
+		"label_03":  "Phantasm",
+		"label_04":  "#",
+		"label_05":  "Name",
+		"label_06":  "Character",
+		"label_07":  "Difficulty",
+		"label_08":  "Stage",
+		"label_09":  "Score",
+		"label_10":  "Date",
+	},
+	"profile": {
+		"title_01":  "Profiles",
+	},
+	"music": {
+		"title_01":  "Music Room",
+	},
+	"manual": {
+		"title_01":  "Manual",
+	},
+	"settings": {
+		"title_01":  "Settings",
+		"label_01":  "Lives",
+		"label_02":  "Bombs",
+		"label_03":  "Sound",
+		"label_04":  "Music",
+	},
+}

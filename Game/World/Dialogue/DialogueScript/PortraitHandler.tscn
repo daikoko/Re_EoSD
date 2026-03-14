@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://crdnc3ytr7acj"]
+
+[ext_resource type="Script" path="res://Game/World/Dialogue/DialogueScript/PortraitHandler.gd" id="1_ntys1"]
+
+[node name="PortraitHandler" type="CanvasLayer"]
+script = ExtResource("1_ntys1")

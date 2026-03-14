@@ -1,0 +1,2469 @@
+[gd_scene load_steps=28 format=3 uid="uid://cqi0cdkt7w18k"]
+
+[ext_resource type="Script" path="res://Game/Main/Menu/Menu.gd" id="1_qborq"]
+[ext_resource type="Theme" uid="uid://dt1uvk3cl0k7n" path="res://Game/Themes/Themes/GameMenu.tres" id="3_l325q"]
+[ext_resource type="Script" path="res://Game/Main/Menu/MenuPause.gd" id="4_pfr0j"]
+[ext_resource type="Script" path="res://Game/Main/Menu/MenuContinue.gd" id="4_scdu4"]
+[ext_resource type="Script" path="res://Game/Main/Menu/MenuStage.gd" id="5_8sm08"]
+[ext_resource type="Texture2D" uid="uid://dfb1sqwt8qu7" path="res://Game/Main/Menu/Icon_Menu01.png" id="5_bvf3u"]
+[ext_resource type="Texture2D" uid="uid://d1di3kwqrtb02" path="res://Game/Main/Menu/Icon_Menu02.png" id="6_rx7ky"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="7_pfn0h"]
+[ext_resource type="AudioStream" uid="uid://coslmwcathp0a" path="res://Menu/Main/Menu_Select01.wav" id="8_pwbot"]
+[ext_resource type="Script" path="res://Game/Main/Menu/MenuGame.gd" id="8_wwfqx"]
+[ext_resource type="AudioStream" uid="uid://pkemaxo37kwk" path="res://Menu/Main/Menu_Select02.wav" id="9_hqp2y"]
+[ext_resource type="AudioStream" uid="uid://dteeosi7mqbop" path="res://Menu/Main/Menu_Select03.wav" id="10_sujhs"]
+[ext_resource type="AudioStream" uid="uid://3bjgn02t8rra" path="res://Menu/Main/Menu_Select04.wav" id="11_eqi0m"]
+
+[sub_resource type="Animation" id="Animation_3jxso"]
+resource_name = "MenuGame_In"
+length = 1.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuGame/Icon01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 230), Vector2(200, 230)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuGame/Icon01:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuGame/Icon02:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(80, 230), Vector2(480, 230)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuGame/Icon02:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuGame/Main/Title/MenuGame_Title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuGame/Main/Modifiers/ScoreBox:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuGame/Main/Modifiers/LivesBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuGame/Main/Modifiers/BombsBox:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuGame/Main/Modifiers/SpellBox:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuGame/Main/Modifiers/TotalBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuGame/Main/Options:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sppir"]
+resource_name = "MenuGame_Out"
+length = 0.001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuGame/Icon01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 230)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuGame/Icon01:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuGame/Icon02:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 230)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuGame/Icon02:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuGame/Main/Title/MenuGame_Title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuGame/Main/Modifiers/ScoreBox:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuGame/Main/Modifiers/LivesBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuGame/Main/Modifiers/BombsBox:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuGame/Main/Modifiers/SpellBox:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuGame/Main/Modifiers/TotalBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuGame/Main/Options:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j8o53"]
+resource_name = "MenuOverArcade_In"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuOver/Main:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 260), Vector2(20, 260)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuOver/Main:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox/Filler:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox/Filler:custom_minimum_size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kdtp2"]
+resource_name = "MenuOverCasual_In"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuOver/Main:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 260), Vector2(20, 260)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuOver/Main:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox/Filler:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox/Filler:custom_minimum_size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_knbk5"]
+resource_name = "MenuOverPractice_In"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuOver/Main:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 260), Vector2(20, 260)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuOver/Main:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox/Filler:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox/Filler:custom_minimum_size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kaq4u"]
+resource_name = "MenuOver_Out"
+length = 0.001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox/Filler:custom_minimum_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ExitBox/Filler:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_QuitBox:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_RestartBox:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuOver/Main/Options/MenuOver_ContinueBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuOver/Main:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40, 260)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuOver/Main:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_be0tm"]
+resource_name = "MenuPauseArcade_In"
+length = 0.8
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuPause/Main:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuPause/Main:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 260), Vector2(20, 260)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox/Filler:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(120, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox/Filler:custom_minimum_size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(160, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gi21d"]
+resource_name = "MenuPauseCasual_In"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuPause/Main:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuPause/Main:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 260), Vector2(20, 260)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox/Filler:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox/Filler:custom_minimum_size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(120, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_yilu3"]
+resource_name = "MenuPausePractice_In"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuPause/Main:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuPause/Main:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-40, 260), Vector2(20, 260)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(40, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.3, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(80, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox/Filler:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox/Filler:custom_minimum_size")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(120, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5px4x"]
+resource_name = "MenuPause_Out"
+length = 0.001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuPause/Main:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuPause/Main:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-40, 260)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ResumeBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_RestartBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(40, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_QuitBox/Filler:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuPause/Main/Options/MenuPause_ExitBox/Filler:custom_minimum_size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rg3t0"]
+resource_name = "MenuStage_In"
+length = 1.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuStage/Icon01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(400, 230), Vector2(200, 230)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuStage/Icon01:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuStage/Icon02:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(80, 230), Vector2(480, 230)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuStage/Icon02:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuStage/Main/Title/MenuStage_Title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuStage/Main/Modifiers/ScoreBox:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuStage/Main/Modifiers/GrazeBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuStage/Main/Modifiers/ClearBox:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1, 1.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuStage/Main/Modifiers/TotalBox:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuStage/Main/Options/MenuStage_Next:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1c7qr"]
+resource_name = "MenuStage_Out"
+length = 0.001
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuStage/Icon01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(400, 230)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuStage/Icon01:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuStage/Icon02:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 230)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuStage/Icon02:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuStage/Main/Title/MenuStage_Title:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("View/View/MenuStage/Main/Modifiers/ScoreBox:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("View/View/MenuStage/Main/Modifiers/GrazeBox:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("View/View/MenuStage/Main/Modifiers/ClearBox:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("View/View/MenuStage/Main/Modifiers/TotalBox:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("View/View/MenuStage/Main/Options/MenuStage_Next:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_txra7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("View/View/MenuGame/Main/Modifiers/LivesBox:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("View/View/MenuGame/Main/Modifiers/BombsBox:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("View/View/MenuGame/Main/Modifiers/SpellBox:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("View/View/MenuGame/Main/Modifiers/TotalBox:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("View/View/MenuGame/Main/Options:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rp3g4"]
+_data = {
+"MenuGame_In": SubResource("Animation_3jxso"),
+"MenuGame_Out": SubResource("Animation_sppir"),
+"MenuOverArcade_In": SubResource("Animation_j8o53"),
+"MenuOverCasual_In": SubResource("Animation_kdtp2"),
+"MenuOverPractice_In": SubResource("Animation_knbk5"),
+"MenuOver_Out": SubResource("Animation_kaq4u"),
+"MenuPauseArcade_In": SubResource("Animation_be0tm"),
+"MenuPauseCasual_In": SubResource("Animation_gi21d"),
+"MenuPausePractice_In": SubResource("Animation_yilu3"),
+"MenuPause_Out": SubResource("Animation_5px4x"),
+"MenuStage_In": SubResource("Animation_rg3t0"),
+"MenuStage_Out": SubResource("Animation_1c7qr"),
+"RESET": SubResource("Animation_txra7")
+}
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_qborq")
+
+[node name="View" type="SubViewportContainer" parent="."]
+offset_left = 120.0
+offset_top = 10.0
+offset_right = 800.0
+offset_bottom = 790.0
+
+[node name="View" type="SubViewport" parent="View"]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="MenuPause" type="Control" parent="View/View"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_l325q")
+script = ExtResource("4_pfr0j")
+
+[node name="Main" type="VBoxContainer" parent="View/View/MenuPause"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -40.0
+offset_top = 260.0
+offset_right = 170.0
+offset_bottom = 506.0
+
+[node name="Title" type="VBoxContainer" parent="View/View/MenuPause/Main"]
+layout_mode = 2
+
+[node name="MenuPause_Title" type="Label" parent="View/View/MenuPause/Main/Title"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Title"
+text = "Paused"
+
+[node name="Options" type="VBoxContainer" parent="View/View/MenuPause/Main"]
+layout_mode = 2
+
+[node name="MenuPause_ResumeBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_ResumeBox"]
+layout_mode = 2
+
+[node name="MenuPause_Resume" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_ResumeBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../MenuPause_RestartBox/MenuPause_Restart")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Resume"
+
+[node name="MenuPause_RestartBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_RestartBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="MenuPause_Restart" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_RestartBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../MenuPause_ResumeBox/MenuPause_Resume")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../MenuPause_ExitBox/MenuPause_Exit")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Restart"
+
+[node name="MenuPause_QuitBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_QuitBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="MenuPause_Quit" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_QuitBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Quit
+"
+
+[node name="MenuPause_ExitBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_ExitBox"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="MenuPause_Exit" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_ExitBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../MenuPause_RestartBox/MenuPause_Restart")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath("../../MenuPause_RestartBox/MenuPause_Restart")
+mouse_filter = 2
+text = "Exit"
+
+[node name="MenuOver" type="Control" parent="View/View"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_l325q")
+script = ExtResource("4_scdu4")
+
+[node name="Main" type="VBoxContainer" parent="View/View/MenuOver"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -40.0
+offset_top = 260.0
+offset_right = 351.0
+offset_bottom = 519.0
+
+[node name="Title" type="VBoxContainer" parent="View/View/MenuOver/Main"]
+layout_mode = 2
+theme_override_constants/separation = -12
+
+[node name="MenuOver_Title" type="Label" parent="View/View/MenuOver/Main/Title"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Title"
+text = "Practice Over"
+
+[node name="ContinueBox" type="HBoxContainer" parent="View/View/MenuOver/Main/Title"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MenuOver_ContinueLabel" type="Label" parent="View/View/MenuOver/Main/Title/ContinueBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = " Continues:"
+
+[node name="MenuOver_ContinueCount" type="Label" parent="View/View/MenuOver/Main/Title/ContinueBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0"
+
+[node name="Options" type="VBoxContainer" parent="View/View/MenuOver/Main"]
+layout_mode = 2
+
+[node name="MenuOver_ContinueBox" type="HBoxContainer" parent="View/View/MenuOver/Main/Options"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuOver/Main/Options/MenuOver_ContinueBox"]
+layout_mode = 2
+
+[node name="MenuOver_Continue" type="Button" parent="View/View/MenuOver/Main/Options/MenuOver_ContinueBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Continue"
+
+[node name="MenuOver_RestartBox" type="HBoxContainer" parent="View/View/MenuOver/Main/Options"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuOver/Main/Options/MenuOver_RestartBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="MenuOver_Restart" type="Button" parent="View/View/MenuOver/Main/Options/MenuOver_RestartBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Restart"
+
+[node name="MenuOver_QuitBox" type="HBoxContainer" parent="View/View/MenuOver/Main/Options"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuOver/Main/Options/MenuOver_QuitBox"]
+layout_mode = 2
+
+[node name="MenuOver_Quit" type="Button" parent="View/View/MenuOver/Main/Options/MenuOver_QuitBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Quit"
+
+[node name="MenuOver_ExitBox" type="HBoxContainer" parent="View/View/MenuOver/Main/Options"]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="View/View/MenuOver/Main/Options/MenuOver_ExitBox"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+
+[node name="MenuOver_Exit" type="Button" parent="View/View/MenuOver/Main/Options/MenuOver_ExitBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Exit
+"
+
+[node name="MenuStage" type="Control" parent="View/View"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_l325q")
+script = ExtResource("5_8sm08")
+
+[node name="Icon01" type="Sprite2D" parent="View/View/MenuStage"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 230)
+texture = ExtResource("5_bvf3u")
+
+[node name="Icon02" type="Sprite2D" parent="View/View/MenuStage"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(80, 230)
+texture = ExtResource("6_rx7ky")
+
+[node name="Main" type="VBoxContainer" parent="View/View/MenuStage"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 200.0
+offset_right = 590.0
+offset_bottom = 482.0
+theme_override_constants/separation = 24
+
+[node name="Title" type="VBoxContainer" parent="View/View/MenuStage/Main"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MenuStage_Title" type="Label" parent="View/View/MenuStage/Main/Title"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Title"
+text = "Stage Complete"
+
+[node name="Modifiers" type="VBoxContainer" parent="View/View/MenuStage/Main"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScoreBox" type="HBoxContainer" parent="View/View/MenuStage/Main/Modifiers"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MenuStage_ScoreLabel" type="Label" parent="View/View/MenuStage/Main/Modifiers/ScoreBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stage Score:"
+
+[node name="MenuStage_Score" type="Label" parent="View/View/MenuStage/Main/Modifiers/ScoreBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="GrazeBox" type="HBoxContainer" parent="View/View/MenuStage/Main/Modifiers"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MenuStage_GrazeLabel" type="Label" parent="View/View/MenuStage/Main/Modifiers/GrazeBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Extra Graze:"
+
+[node name="MenuStage_Graze" type="Label" parent="View/View/MenuStage/Main/Modifiers/GrazeBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="ClearBox" type="HBoxContainer" parent="View/View/MenuStage/Main/Modifiers"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MenuStage_ClearLabel" type="Label" parent="View/View/MenuStage/Main/Modifiers/ClearBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Clear Bonus:"
+
+[node name="MenuStage_Clear" type="Label" parent="View/View/MenuStage/Main/Modifiers/ClearBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="TotalBox" type="HBoxContainer" parent="View/View/MenuStage/Main/Modifiers"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MenuStage_TotalLabel" type="Label" parent="View/View/MenuStage/Main/Modifiers/TotalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Stage Total:"
+
+[node name="MenuStage_Total" type="Label" parent="View/View/MenuStage/Main/Modifiers/TotalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="Options" type="VBoxContainer" parent="View/View/MenuStage/Main"]
+layout_mode = 2
+
+[node name="MenuStage_Next" type="Button" parent="View/View/MenuStage/Main/Options"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Next"
+
+[node name="MenuGame" type="Control" parent="View/View"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_l325q")
+script = ExtResource("8_wwfqx")
+
+[node name="Icon01" type="Sprite2D" parent="View/View/MenuGame"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(400, 230)
+texture = ExtResource("5_bvf3u")
+
+[node name="Icon02" type="Sprite2D" parent="View/View/MenuGame"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(80, 230)
+texture = ExtResource("6_rx7ky")
+
+[node name="Main" type="VBoxContainer" parent="View/View/MenuGame"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 200.0
+offset_right = 590.0
+offset_bottom = 482.0
+theme_override_constants/separation = 24
+
+[node name="Title" type="VBoxContainer" parent="View/View/MenuGame/Main"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MenuGame_Title" type="Label" parent="View/View/MenuGame/Main/Title"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_type_variation = &"Label_Title"
+text = "Game Complete"
+
+[node name="Modifiers" type="VBoxContainer" parent="View/View/MenuGame/Main"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScoreBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MenuGame_ScoreLabel" type="Label" parent="View/View/MenuGame/Main/Modifiers/ScoreBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Game Score:"
+
+[node name="MenuGame_Score" type="Label" parent="View/View/MenuGame/Main/Modifiers/ScoreBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="LivesBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="MenuGame_LivesLabel" type="Label" parent="View/View/MenuGame/Main/Modifiers/LivesBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Extra Lives Penalty:"
+
+[node name="MenuGame_Lives" type="Label" parent="View/View/MenuGame/Main/Modifiers/LivesBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="BombsBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="MenuGame_BombsLabel" type="Label" parent="View/View/MenuGame/Main/Modifiers/BombsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Extra Bombs Penalty:"
+
+[node name="MenuGame_Bombs" type="Label" parent="View/View/MenuGame/Main/Modifiers/BombsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="SpellBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="MenuGame_SpellLabel" type="Label" parent="View/View/MenuGame/Main/Modifiers/SpellBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Spellcard Bonus:"
+
+[node name="MenuGame_Spell" type="Label" parent="View/View/MenuGame/Main/Modifiers/SpellBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="TotalBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="MenuGame_TotalLabel" type="Label" parent="View/View/MenuGame/Main/Modifiers/TotalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Total Score:"
+
+[node name="MenuGame_Total" type="Label" parent="View/View/MenuGame/Main/Modifiers/TotalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "000000000"
+horizontal_alignment = 2
+
+[node name="Options" type="VBoxContainer" parent="View/View/MenuGame/Main"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+
+[node name="MenuGame_Next" type="Button" parent="View/View/MenuGame/Main/Options"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+text = "Next"
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_rp3g4")
+}
+
+[node name="Sound_Select01" parent="." instance=ExtResource("7_pfn0h")]
+unique_name_in_owner = true
+stream = ExtResource("8_pwbot")
+
+[node name="Sound_Select02" parent="." instance=ExtResource("7_pfn0h")]
+unique_name_in_owner = true
+stream = ExtResource("9_hqp2y")
+
+[node name="Sound_Select03" parent="." instance=ExtResource("7_pfn0h")]
+unique_name_in_owner = true
+stream = ExtResource("10_sujhs")
+
+[node name="Sound_Select04" parent="." instance=ExtResource("7_pfn0h")]
+unique_name_in_owner = true
+stream = ExtResource("11_eqi0m")
+
+[connection signal="exit" from="View/View/MenuPause" to="." method="_on_MenuPause_exit"]
+[connection signal="quit" from="View/View/MenuPause" to="." method="_on_MenuPause_quit"]
+[connection signal="restart" from="View/View/MenuPause" to="." method="_on_MenuPause_restart"]
+[connection signal="resume" from="View/View/MenuPause" to="." method="_on_MenuPause_resume"]
+[connection signal="pressed" from="View/View/MenuPause/Main/Options/MenuPause_ResumeBox/MenuPause_Resume" to="View/View/MenuPause" method="_on_MenuPause_Resume_pressed"]
+[connection signal="pressed" from="View/View/MenuPause/Main/Options/MenuPause_RestartBox/MenuPause_Restart" to="View/View/MenuPause" method="_on_MenuPause_Restart_pressed"]
+[connection signal="pressed" from="View/View/MenuPause/Main/Options/MenuPause_QuitBox/MenuPause_Quit" to="View/View/MenuPause" method="_on_MenuPause_quit_pressed"]
+[connection signal="pressed" from="View/View/MenuPause/Main/Options/MenuPause_ExitBox/MenuPause_Exit" to="View/View/MenuPause" method="_on_MenuPause_Exit_pressed"]
+[connection signal="continued" from="View/View/MenuOver" to="." method="_on_MenuOver_continued"]
+[connection signal="exit" from="View/View/MenuOver" to="." method="_on_MenuOver_exit"]
+[connection signal="quit" from="View/View/MenuOver" to="." method="_on_MenuOver_quit"]
+[connection signal="restart" from="View/View/MenuOver" to="." method="_on_MenuOver_restart"]
+[connection signal="pressed" from="View/View/MenuOver/Main/Options/MenuOver_ContinueBox/MenuOver_Continue" to="View/View/MenuOver" method="_on_MenuOver_Continue_pressed"]
+[connection signal="pressed" from="View/View/MenuOver/Main/Options/MenuOver_RestartBox/MenuOver_Restart" to="View/View/MenuOver" method="_on_MenuOver_restart_pressed"]
+[connection signal="pressed" from="View/View/MenuOver/Main/Options/MenuOver_QuitBox/MenuOver_Quit" to="View/View/MenuOver" method="_on_MenuOver_Quit_pressed"]
+[connection signal="pressed" from="View/View/MenuOver/Main/Options/MenuOver_ExitBox/MenuOver_Exit" to="View/View/MenuOver" method="_on_MenuOver_exit_pressed"]
+[connection signal="next" from="View/View/MenuStage" to="." method="_on_MenuStage_next"]
+[connection signal="pressed" from="View/View/MenuStage/Main/Options/MenuStage_Next" to="View/View/MenuStage" method="_on_MenuStage_Next_pressed"]
+[connection signal="finish" from="View/View/MenuGame" to="." method="_on_MenuGame_finish"]
+[connection signal="pressed" from="View/View/MenuGame/Main/Options/MenuGame_Next" to="View/View/MenuGame" method="_on_MenuGame_Next_pressed"]

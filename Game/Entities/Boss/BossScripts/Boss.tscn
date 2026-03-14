@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cnfyn0whf3loe"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/Boss.gd" id="1_hyjmf"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="2_cwppb"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_w6yrj"]
+[ext_resource type="AudioStream" uid="uid://b0ocfs6o2gjbf" path="res://Game/Entities/Boss/BossResources/_General/Sound/Boss_Hit01.wav" id="4_ffbf0"]
+
+[node name="Boss" type="Node2D"]
+z_index = 20
+z_as_relative = false
+script = ExtResource("1_hyjmf")
+
+[node name="Enemy" parent="." instance=ExtResource("2_cwppb")]
+unique_name_in_owner = true
+collision_layer = 4
+identity = "Enemy"
+
+[node name="Sound_Hit" parent="." instance=ExtResource("3_w6yrj")]
+unique_name_in_owner = true
+stream = ExtResource("4_ffbf0")
+
+[connection signal="collider_entered" from="Enemy" to="." method="_on_Enemy_collider_entered"]
+[connection signal="collider_hit" from="Enemy" to="." method="_on_Enemy_collider_hit"]

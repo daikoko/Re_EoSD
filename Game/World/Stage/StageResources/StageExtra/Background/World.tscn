@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://bhng2qlab2vta"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/StageExtra/Background/World.gd" id="1_a8ruf"]
+[ext_resource type="PackedScene" uid="uid://b44fbip1nclq8" path="res://Game/World/Background/3D_Background/WorldRepeater.tscn" id="2_5sufm"]
+[ext_resource type="PackedScene" uid="uid://dgc6cpjbex4uo" path="res://Game/World/Stage/StageResources/StageExtra/Background/WorldSliceA.tscn" id="2_ih662"]
+[ext_resource type="PackedScene" uid="uid://bx4ab6a517l3c" path="res://Game/World/Stage/StageResources/StageExtra/Background/WorldSliceB.tscn" id="3_dcb4c"]
+[ext_resource type="PackedScene" uid="uid://c6a4846lwttkp" path="res://Game/World/Stage/StageResources/StageExtra/Background/WorldSliceC.tscn" id="4_kuwog"]
+[ext_resource type="PackedScene" uid="uid://b3baal5udalrq" path="res://Game/World/Stage/StageResources/StageExtra/Background/WorldSliceE.tscn" id="6_ojcqu"]
+[ext_resource type="PackedScene" uid="uid://bg5nxwfnwsl1q" path="res://Game/World/Stage/StageResources/StageExtra/Background/WorldSliceD.tscn" id="6_t4ct4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_cmjfa"]
+
+[sub_resource type="Sky" id="Sky_vq61a"]
+sky_material = SubResource("ProceduralSkyMaterial_cmjfa")
+
+[sub_resource type="Environment" id="Environment_a4sml"]
+background_mode = 2
+background_color = Color(1, 1, 1, 1)
+sky = SubResource("Sky_vq61a")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.4
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.06
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_a8ruf")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_a4sml")
+
+[node name="Dummy" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="WorldSliceA" parent="Dummy" instance=ExtResource("2_ih662")]
+
+[node name="WorldSliceB" parent="Dummy" instance=ExtResource("3_dcb4c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
+
+[node name="WorldSliceC" parent="Dummy" instance=ExtResource("4_kuwog")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="NodeA" type="Node3D" parent="."]
+
+[node name="WorldRepeaterA" parent="NodeA" instance=ExtResource("2_5sufm")]
+world_slice = ExtResource("2_ih662")
+slice_range = Vector3(12, 4, 24)
+z_extent = Vector2(8, 1)
+
+[node name="NodeB" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0, 0)
+
+[node name="WorldRepeaterB" parent="NodeB" instance=ExtResource("2_5sufm")]
+world_slice = ExtResource("3_dcb4c")
+slice_range = Vector3(24, 6, 24)
+x_extent = Vector2(4, 0)
+z_extent = Vector2(8, 1)
+
+[node name="NodeC" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="WorldRepeaterC" parent="NodeC" instance=ExtResource("2_5sufm")]
+world_slice = ExtResource("4_kuwog")
+slice_range = Vector3(24, 6, 24)
+x_extent = Vector2(0, 4)
+z_extent = Vector2(8, 1)
+
+[node name="NodeD" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 5.4, 0)
+
+[node name="WorldRepeaterD" parent="NodeD" instance=ExtResource("2_5sufm")]
+world_slice = ExtResource("6_t4ct4")
+slice_range = Vector3(24, 6, 24)
+x_extent = Vector2(4, 0)
+y_extent = Vector2(0, 12)
+z_extent = Vector2(8, 1)
+
+[node name="NodeE" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 5.4, 0)
+
+[node name="WorldRepeaterE" parent="NodeE" instance=ExtResource("2_5sufm")]
+world_slice = ExtResource("6_ojcqu")
+slice_range = Vector3(24, 6, 24)
+x_extent = Vector2(0, 4)
+y_extent = Vector2(0, 12)
+z_extent = Vector2(8, 1)
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.998277, 0.0586798, 0, -0.0586798, 0.998277, 0, 5, 5)
+
+[connection signal="update_position" from="." to="NodeA/WorldRepeaterA" method="_on_World_update_position"]
+[connection signal="update_position" from="." to="NodeB/WorldRepeaterB" method="_on_World_update_position"]
+[connection signal="update_position" from="." to="NodeC/WorldRepeaterC" method="_on_World_update_position"]
+[connection signal="update_position" from="." to="NodeD/WorldRepeaterD" method="_on_World_update_position"]
+[connection signal="update_position" from="." to="NodeE/WorldRepeaterE" method="_on_World_update_position"]

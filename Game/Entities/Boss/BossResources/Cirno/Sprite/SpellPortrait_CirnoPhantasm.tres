@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://ca0ih06l2ksv"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_6f15b"]
+[ext_resource type="Texture2D" uid="uid://di6c4lgrxaa7e" path="res://Game/Entities/Boss/BossResources/Cirno/Sprite/Cirno_SpellPortrait_Phantasm.png" id="2_uu0yl"]
+
+[resource]
+script = ExtResource("1_6f15b")
+texture = ExtResource("2_uu0yl")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

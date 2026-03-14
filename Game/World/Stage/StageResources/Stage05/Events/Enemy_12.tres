@@ -1,0 +1,164 @@
+[gd_resource type="Resource" script_class="EnemyData_Free" load_steps=18 format=3 uid="uid://qf3ppicylhy7"]
+
+[ext_resource type="Resource" uid="uid://bvda0rp3ytuea" path="res://Game/Entities/Enemy/DeathList/Death_EnemyPower.tres" id="1_4l05w"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyShooterScripts/EnemyShooter.gd" id="1_a1p21"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyScripts/EnemyData_Free.gd" id="2_1nnce"]
+[ext_resource type="Script" path="res://Game/Objects/Shooters/Data/RowData_Column.gd" id="4_fxvrb"]
+[ext_resource type="Script" path="res://Game/Objects/Shooters/Data/ColumnData.gd" id="5_iwn1j"]
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="6_eyqet"]
+[ext_resource type="Resource" uid="uid://cqe6f0yyhe42c" path="res://Game/Objects/Bullets/BulletList/Bullet_SpadeRed.tres" id="7_smckb"]
+[ext_resource type="Script" path="res://Game/Objects/Shooters/Data/ColumnData_Bullet.gd" id="8_n31it"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyShooterScripts/EnemyShooter_Basic.gd" id="9_u7cbd"]
+[ext_resource type="Resource" uid="uid://c4u7t41shps0v" path="res://Game/Objects/Bullets/BulletList/Bullet_MediumBlue.tres" id="10_l1a2l"]
+[ext_resource type="Resource" uid="uid://kccgonrr3vla" path="res://Game/Entities/Enemy/EnemySpriteList/EnemySprite_MaidFairyBlue.tres" id="11_4df0s"]
+
+[sub_resource type="Resource" id="Resource_307l7"]
+script = ExtResource("8_n31it")
+bullets = Array[ExtResource("6_eyqet")]([ExtResource("7_smckb")])
+
+[sub_resource type="Resource" id="Resource_5raba"]
+script = ExtResource("4_fxvrb")
+columns = Array[ExtResource("5_iwn1j")]([SubResource("Resource_307l7")])
+
+[sub_resource type="Resource" id="Resource_135xa"]
+script = ExtResource("9_u7cbd")
+bullets = Array[ExtResource("4_fxvrb")]([SubResource("Resource_5raba")])
+layout_spawner_count = 3
+layout_column_count = 4
+layout_column_range = 30.0
+layout_shot_range = 360.0
+layout_distance = 20.0
+layout_random = false
+fire_count = 16
+fire_duration = 1.6
+fire_cooldown = 0.4
+fire_start_delay = 0.1
+bullet_speed = 200.0
+bullet_speed_range = 40.0
+bullet_rotation = 0.0
+bullet_rotation_speed = 0.0
+bullet_gravity = 0.0
+spawn_row_speed = 0.0
+spawn_spawner_speed = 0.0
+spawn_stack_count = 1
+spawn_stack_speed = 0.0
+rotation_start = 90.0
+rotation_start_random = true
+rotation_start_aim = false
+rotation_speed = 60.0
+rotation_random = false
+rotation_random_range = Vector2(0, 360)
+flash_scale = 2.0
+flash_time = 0.2
+immunity_time = 0.1
+fire_factor = 1
+fire_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+spawner_factor = 1
+spawner_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+
+[sub_resource type="Resource" id="Resource_7sqe4"]
+script = ExtResource("8_n31it")
+bullets = Array[ExtResource("6_eyqet")]([ExtResource("10_l1a2l")])
+
+[sub_resource type="Resource" id="Resource_il8pt"]
+script = ExtResource("4_fxvrb")
+columns = Array[ExtResource("5_iwn1j")]([SubResource("Resource_7sqe4")])
+
+[sub_resource type="Resource" id="Resource_nxiyd"]
+script = ExtResource("9_u7cbd")
+bullets = Array[ExtResource("4_fxvrb")]([SubResource("Resource_il8pt")])
+layout_spawner_count = 12
+layout_column_count = 1
+layout_column_range = 360.0
+layout_shot_range = 360.0
+layout_distance = 20.0
+layout_random = false
+fire_count = 1
+fire_duration = 0.0
+fire_cooldown = 0.6
+fire_start_delay = 0.1
+bullet_speed = 180.0
+bullet_speed_range = 0.0
+bullet_rotation = 0.0
+bullet_rotation_speed = 0.0
+bullet_gravity = 0.0
+spawn_row_speed = 0.0
+spawn_spawner_speed = 0.0
+spawn_stack_count = 1
+spawn_stack_speed = 0.0
+rotation_start = 90.0
+rotation_start_random = true
+rotation_start_aim = false
+rotation_speed = 0.0
+rotation_random = true
+rotation_random_range = Vector2(0, 360)
+flash_scale = 2.0
+flash_time = 0.2
+immunity_time = 0.1
+fire_factor = 1
+fire_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+spawner_factor = 1
+spawner_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+
+[resource]
+script = ExtResource("2_1nnce")
+position_start = Vector2(80, -20)
+position_final = Vector2(600, -20)
+random_position = true
+enter_angle_start = 90.0
+enter_angle_final = 90.0
+random_enter_angle = false
+exit_angle_start = -90.0
+exit_angle_final = -90.0
+random_exit_angle = false
+distance_start = 80.0
+distance_final = 280.0
+random_distance = true
+id = "12"
+description = ""
+spawn_seed = 499526
+amount = 6
+time = 12.0
+sprite = ExtResource("11_4df0s")
+death = ExtResource("1_4l05w")
+health = 2000.0
+speed = 280.0
+speed_range = 0.0
+start_time = 0.1
+shooters = Array[ExtResource("1_a1p21")]([SubResource("Resource_135xa"), SubResource("Resource_nxiyd")])
+death_shooters = Array[ExtResource("1_a1p21")]([])
+retreat = true
+retreat_time = 1.8
+retreat_speed = 600.0
+amount_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+health_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}

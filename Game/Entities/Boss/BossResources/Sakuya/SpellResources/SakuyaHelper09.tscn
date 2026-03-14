@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://pitrxciasl56"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/SakuyaHelper09.gd" id="1_slabj"]
+
+[sub_resource type="Curve2D" id="Curve2D_xcw8v"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -1000, 0, 0, 0, 0, 0, 1000, 0)
+}
+point_count = 2
+
+[node name="SakuyaHelper09" type="Node2D"]
+script = ExtResource("1_slabj")
+
+[node name="Path" type="Path2D" parent="."]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_xcw8v")
+
+[node name="Follow" type="PathFollow2D" parent="Path"]
+unique_name_in_owner = true
+position = Vector2(0.000244139, 0)
+progress = 1000.0
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+points = PackedVector2Array(-1000, 0, 1000, 0)

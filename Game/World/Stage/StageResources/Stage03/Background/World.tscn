@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c1qdkvaa8y5fw"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage03/Background/World.gd" id="1_nie4a"]
+[ext_resource type="PackedScene" uid="uid://b44fbip1nclq8" path="res://Game/World/Background/3D_Background/WorldRepeater.tscn" id="2_32tyw"]
+[ext_resource type="PackedScene" uid="uid://bqd48m80wkyd6" path="res://Game/World/Stage/StageResources/Stage03/Background/WorldSliceA.tscn" id="3_a37mo"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_y52ta"]
+
+[sub_resource type="Sky" id="Sky_5l3oy"]
+sky_material = SubResource("ProceduralSkyMaterial_y52ta")
+
+[sub_resource type="Environment" id="Environment_xvl84"]
+background_mode = 2
+sky = SubResource("Sky_5l3oy")
+ambient_light_source = 3
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.16
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_nie4a")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_xvl84")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.6)
+
+[node name="WorldRepeater" parent="." instance=ExtResource("2_32tyw")]
+unique_name_in_owner = true
+world_slice = ExtResource("3_a37mo")
+slice_range = Vector3(24, 24, 16)
+z_extent = Vector2(4, 1)
+
+[node name="WorldSliceA" parent="WorldRepeater" instance=ExtResource("3_a37mo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -32)
+
+[node name="WorldSliceA2" parent="WorldRepeater" instance=ExtResource("3_a37mo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.809366, -0.0998134, 0.578761, 6.60601e-09, 0.985452, 0.169952, -0.587305, -0.137553, 0.797591, 13.1686, 7.81275, 9.57199)
+light_energy = 0.2
+
+[connection signal="update_position" from="." to="WorldRepeater" method="_on_World_update_position"]

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://b23kk6rnlmp0l"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossList/Stage01_Boss/DialogueScripts/Stage01_Boss_DialogueB.gd" id="1_keamu"]
+
+[resource]
+script = ExtResource("1_keamu")
+plain = false

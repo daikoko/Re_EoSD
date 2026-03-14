@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bj7nuvi4y0hss"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/PlayerCollider.gd" id="1_nofc8"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="2_6oy6o"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7iua6"]
+
+[node name="PlayerCollider" type="Node2D"]
+script = ExtResource("1_nofc8")
+
+[node name="HitMarker" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 59
+z_as_relative = false
+
+[node name="Inner" type="Sprite2D" parent="HitMarker"]
+unique_name_in_owner = true
+
+[node name="Outer" type="Sprite2D" parent="HitMarker"]
+unique_name_in_owner = true
+
+[node name="PlayerHitbox" parent="." instance=ExtResource("2_6oy6o")]
+unique_name_in_owner = true
+collision_mask = 0
+monitoring = false
+identity = "PlayerHitbox"
+
+[node name="PlayerGraze" parent="." instance=ExtResource("2_6oy6o")]
+unique_name_in_owner = true
+collision_mask = 0
+monitoring = false
+identity = "PlayerGraze"
+
+[node name="PlayerCollection" parent="." instance=ExtResource("2_6oy6o")]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+identity = "PlayerCollection"
+
+[node name="PlayerItem" parent="." instance=ExtResource("2_6oy6o")]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+identity = "PlayerItem"
+shape = SubResource("CircleShape2D_7iua6")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctwhyahy1xlnr"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Rin/ShotA/Shot/SideRin_Flower.gd" id="1_7tynt"]
+[ext_resource type="Texture2D" uid="uid://o8dr1aovx8to" path="res://Game/Entities/Player/PlayerResources/Rin/ShotA/Shot/Side_Rin.png" id="2_ms754"]
+
+[node name="SideRin_Flower" type="Node2D"]
+script = ExtResource("1_7tynt")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("2_ms754")
+
+[node name="Shooters" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Marker" type="Marker2D" parent="Shooters"]
+unique_name_in_owner = true
+rotation = -1.5708

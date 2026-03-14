@@ -1,0 +1,48 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "patch",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli06",
+		"name":          "Patchouli",
+		"text":          "We meet again."
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"I hope this isn't another 'test of strength'."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli08",
+		"name":          "Patchouli",
+		"text":          
+			"It is."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli10",
+		"name":          "Patchouli",
+		"text":          
+			"However, I was holding back previously."
+	},
+}

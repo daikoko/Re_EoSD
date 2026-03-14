@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bf7wxf44jnrmf"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotB/Shot/Shot_MarisaLaser.gd" id="1_clb4a"]
+
+[node name="ShotMarisaLaser" type="Node2D"]
+script = ExtResource("1_clb4a")

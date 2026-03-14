@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://b7jubq04gcrmf"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_3gdgy"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_aemgm"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellScripts/Flandre_NonA.gd" id="2_woaqs"]
+
+[sub_resource type="Resource" id="Resource_q48an"]
+script = ExtResource("1_aemgm")
+particles = ExtResource("1_3gdgy")
+value = 400000
+point = 48
+power = 24
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("2_woaqs")
+special_animation = true
+A_layout_spawner_count = 24
+A_spawn_stack_count = 3
+B_layout_spawner_count = 8
+B_spawn_stack_count = 1
+C_layout_spawner_count = 0
+C_fire_count = 20
+D_layout_spawner_count = 0
+D_fire_count = 6
+E_layout_spawner_count = 0
+health = 12000.0
+Death = SubResource("Resource_q48an")
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+difficulty = 0
+boss_id = 0

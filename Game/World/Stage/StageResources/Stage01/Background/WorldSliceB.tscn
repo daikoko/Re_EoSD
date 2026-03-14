@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://bosuy72heufwc"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldSlice.gd" id="1_uss2h"]
+[ext_resource type="Texture2D" uid="uid://csh2q6ov3bl87" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01B.png" id="2_t2fyu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3ux8i"]
+transparency = 2
+alpha_scissor_threshold = 0.2
+alpha_antialiasing_mode = 0
+depth_draw_mode = 1
+albedo_texture = ExtResource("2_t2fyu")
+
+[sub_resource type="QuadMesh" id="QuadMesh_gihxt"]
+material = SubResource("StandardMaterial3D_3ux8i")
+size = Vector2(5, 5)
+orientation = 1
+
+[node name="WorldSlice" type="Node3D"]
+script = ExtResource("1_uss2h")
+
+[node name="Left" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Left"]
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Left"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="Left2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Left2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Left2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Left2"]
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Left2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Left2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+mesh = SubResource("QuadMesh_gihxt")
+skeleton = NodePath("../..")

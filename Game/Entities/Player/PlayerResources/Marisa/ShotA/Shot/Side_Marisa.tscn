@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsx6pt0dblauo"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Shot/Side_Marisa.gd" id="1_0w6tb"]
+[ext_resource type="Texture2D" uid="uid://bf8cnivbwv8eo" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Shot/Side_Marisa.png" id="2_2dblj"]
+
+[node name="SideMarisa" type="Node2D"]
+script = ExtResource("1_0w6tb")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_2dblj")

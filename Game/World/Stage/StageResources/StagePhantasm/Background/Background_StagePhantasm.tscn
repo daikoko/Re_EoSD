@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://cce57fhxywcp8"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Background_StagePhantasm.gd" id="1_q3dwq"]
+[ext_resource type="PackedScene" uid="uid://cgj003fd335n" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Backdrop.tscn" id="2_11kah"]
+[ext_resource type="PackedScene" uid="uid://b7eg752x3xf2h" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/World.tscn" id="3_l0tja"]
+
+[node name="Background_StagePhantasm" type="CanvasLayer"]
+layer = -100
+script = ExtResource("1_q3dwq")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="Backdrop" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_11kah")]
+unique_name_in_owner = true
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="World" parent="SubViewportContainer2/SubViewport" instance=ExtResource("3_l0tja")]
+unique_name_in_owner = true

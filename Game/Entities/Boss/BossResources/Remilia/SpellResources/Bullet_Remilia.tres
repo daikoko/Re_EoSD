@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://cjvjlbsdbckgm"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_varuc"]
+[ext_resource type="Texture2D" uid="uid://p38fv64abmli" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/BulletCustom_Remilia.png" id="2_5u2l1"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_1dj4i"]
+points = PackedVector2Array(32, 0, -25, -24, -25, 24)
+
+[resource]
+script = ExtResource("1_varuc")
+texture = ExtResource("2_5u2l1")
+shape = SubResource("ConvexPolygonShape2D_1dj4i")
+color_option = 0
+color_custom = Color(1, 0, 0.501961, 1)
+visibility = Rect2(-20, -20, 40, 40)

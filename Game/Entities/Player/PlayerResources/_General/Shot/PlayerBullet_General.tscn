@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm4x3tl8e4med"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/_General/Shot/PlayerBullet_General.gd" id="1_v7tyb"]
+
+[node name="GeneralBullet" type="Sprite2D"]
+z_index = 42
+z_as_relative = false
+script = ExtResource("1_v7tyb")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

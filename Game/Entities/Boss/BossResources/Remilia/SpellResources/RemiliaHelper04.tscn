@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnevut842jjul"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper04.gd" id="1_jm8km"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_fkjeq"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_oat88"]
+[ext_resource type="Resource" uid="uid://bgmo61ymdviu5" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/Bullet_RemiliaStar.tres" id="3_ym80m"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="5_jwsve"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="6_gvanb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3brsx"]
+resource_local_to_scene = true
+shader = ExtResource("3_oat88")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="RemiliaHelper04" type="Node2D"]
+script = ExtResource("1_jm8km")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_fkjeq")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_3brsx")
+data = ExtResource("3_ym80m")
+hit_immunity = true
+visibility_immunity = true
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Delay" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("5_jwsve")]
+unique_name_in_owner = true
+stream = ExtResource("6_gvanb")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

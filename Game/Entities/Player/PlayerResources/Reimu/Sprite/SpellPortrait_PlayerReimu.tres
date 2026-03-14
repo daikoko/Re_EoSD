@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://dghku4q452gy1"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_67sxw"]
+[ext_resource type="Texture2D" uid="uid://dbl6xcc7ls3qb" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/SpellPortrait_PlayerReimu.png" id="2_esdca"]
+
+[resource]
+script = ExtResource("1_67sxw")
+texture = ExtResource("2_esdca")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 0

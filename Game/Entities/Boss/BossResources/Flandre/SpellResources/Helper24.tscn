@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8wpn4bqgemn0"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper24.gd" id="1_xuvit"]
+[ext_resource type="Texture2D" uid="uid://ddslbbl3abcmk" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoRemilia.png" id="2_oo7bf"]
+
+[node name="Helper24" type="Node2D"]
+script = ExtResource("1_xuvit")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 103
+z_as_relative = false
+texture = ExtResource("2_oo7bf")

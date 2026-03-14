@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://ca3yrksvqs037"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_0ysbm"]
+[ext_resource type="Texture2D" uid="uid://b1q8n7dmep1tw" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Shot/CustomBullet_ReimuMain.png" id="2_qc4q1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1yerl"]
+
+[resource]
+script = ExtResource("1_0ysbm")
+texture = ExtResource("2_qc4q1")
+shape = SubResource("CircleShape2D_1yerl")
+color_option = 0
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-10, -10, 20, 20)

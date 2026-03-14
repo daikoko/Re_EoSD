@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c760adn72eloi"]
+
+[ext_resource type="Script" path="res://Game/World/Dialogue/DialogueScript/DialoguePortrait.gd" id="1_bibj8"]
+
+[node name="DialoguePortrait" type="Sprite2D"]
+script = ExtResource("1_bibj8")

@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://bmm6tmsue0byo"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper20.gd" id="1_m0iwr"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_lnl20"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_oafux"]
+[ext_resource type="Resource" uid="uid://cnstlw7n717sh" path="res://Game/Objects/Bullets/BulletList/Bullet_LargeRed.tres" id="4_a7rc3"]
+[ext_resource type="PackedScene" uid="uid://cs8wa14bd2vny" path="res://Game/Objects/Shadow/ShadowHandler.tscn" id="4_tknrg"]
+[ext_resource type="Texture2D" uid="uid://cdtbt3s3ogyxv" path="res://Game/Objects/Bullets/BulletResources/Bullet_LargeRed.png" id="5_e8i3t"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="7_ewb86"]
+[ext_resource type="AudioStream" uid="uid://bvg5obbtcxw58" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire03.wav" id="8_i3h05"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pvm2u"]
+resource_local_to_scene = true
+shader = ExtResource("3_oafux")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="RemiliaHelper20" type="Node2D"]
+script = ExtResource("1_m0iwr")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_lnl20")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_pvm2u")
+data = ExtResource("4_a7rc3")
+hit_immunity = true
+visibility_immunity = true
+
+[node name="ShadowHandler" parent="." instance=ExtResource("4_tknrg")]
+unique_name_in_owner = true
+image = ExtResource("5_e8i3t")
+interval = 0.1
+duration = 0.4
+
+[node name="Main" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+
+[node name="Sound" parent="." instance=ExtResource("7_ewb86")]
+unique_name_in_owner = true
+stream = ExtResource("8_i3h05")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]

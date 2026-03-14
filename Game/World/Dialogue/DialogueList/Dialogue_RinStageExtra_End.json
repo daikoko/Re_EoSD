@@ -1,0 +1,77 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Will you go out now?"
+	},
+	"003": {
+		"type":          "enter",
+		"identity":      "flan",
+		"configuration": "right",
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre05",
+		"name":          "Flandre",
+		"text":          
+			"Gah!"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"Fine."
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"See? That wasn't too hard.
+			I have one more request though."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"What?"
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"Can I pinch your chee-"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"No."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"Go kill yourself."
+	},
+}

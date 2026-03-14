@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://dhl1wnupmdn5n"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_m40j4"]
+[ext_resource type="Texture2D" uid="uid://o7r3qvtt6wm3" path="res://Game/Entities/Boss/BossResources/Rumia/Sprite/SpellPortrait_BossRumia_Phantasm.png" id="2_aw4ln"]
+
+[resource]
+script = ExtResource("1_m40j4")
+texture = ExtResource("2_aw4ln")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

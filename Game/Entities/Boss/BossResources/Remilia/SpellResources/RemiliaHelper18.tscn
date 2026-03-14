@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://8ve82cyp686l"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper18.gd" id="1_n3b21"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_o1nnl"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_vtwir"]
+[ext_resource type="Texture2D" uid="uid://p38fv64abmli" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/BulletCustom_Remilia.png" id="4_njjqo"]
+[ext_resource type="Resource" uid="uid://cjvjlbsdbckgm" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/Bullet_Remilia.tres" id="5_y4b8k"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="6_1b15h"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="7_7ykyc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vpjgh"]
+resource_local_to_scene = true
+shader = ExtResource("3_vtwir")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="RemiliaHelper18" type="Node2D"]
+script = ExtResource("1_n3b21")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_o1nnl")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_vpjgh")
+texture = ExtResource("4_njjqo")
+data = ExtResource("5_y4b8k")
+visibility_immunity = true
+
+[node name="Marker01" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -12)
+rotation = 3.35103
+
+[node name="Marker02" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -4)
+rotation = 3.21141
+
+[node name="Marker03" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 4)
+rotation = 3.07178
+
+[node name="Marker04" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 12)
+rotation = 2.93215
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.05
+autostart = true
+
+[node name="ImmunityTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.2
+one_shot = true
+autostart = true
+
+[node name="Sound" parent="." instance=ExtResource("6_1b15h")]
+unique_name_in_owner = true
+stream = ExtResource("7_7ykyc")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]
+[connection signal="timeout" from="ImmunityTimer" to="." method="_on_ImmunityTimer_timeout"]

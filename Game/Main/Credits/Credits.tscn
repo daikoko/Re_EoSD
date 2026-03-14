@@ -1,0 +1,585 @@
+[gd_scene load_steps=26 format=3 uid="uid://ggqrj70fcrq0"]
+
+[ext_resource type="Script" path="res://Game/Main/Credits/Credits.gd" id="1_bddbg"]
+[ext_resource type="FontFile" uid="uid://cw3pc1tkugp2m" path="res://Game/Themes/Fonts/KelvinchRoman.otf" id="2_dm2k0"]
+[ext_resource type="FontFile" uid="uid://kwn73swahsvn" path="res://Game/Themes/Fonts/TexturaBelgica.ttf" id="3_4fxr7"]
+[ext_resource type="FontFile" uid="uid://c4qq03qq0jlcv" path="res://Menu/Themes/Fonts/Homura.otf" id="4_8g2m7"]
+[ext_resource type="PackedScene" uid="uid://ccgwlstl0fqup" path="res://Master/Audio/Music.tscn" id="5_ks0hq"]
+[ext_resource type="Resource" uid="uid://bgbvmucwkbttm" path="res://Game/Main/Credits/Music_18.tres" id="6_pc7bn"]
+
+[sub_resource type="Theme" id="Theme_pw545"]
+default_font = ExtResource("2_dm2k0")
+default_font_size = 24
+Label/constants/outline_size = 10
+Label/font_sizes/font_size = 28
+
+[sub_resource type="Theme" id="Theme_v4eda"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("2_dm2k0")
+
+[sub_resource type="Theme" id="Theme_sf65g"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_xjigt"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_xbclb"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_v4iwy"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_qnhhb"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_gq281"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("2_dm2k0")
+
+[sub_resource type="Theme" id="Theme_bm4ut"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_0togq"]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("2_dm2k0")
+
+[sub_resource type="Theme" id="Theme_ru851"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_hrp1i"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_uervf"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_tja4b"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_4kb86"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Theme" id="Theme_qtxlm"]
+Label/font_sizes/font_size = 28
+Label/fonts/font = ExtResource("2_dm2k0")
+VBoxContainer/constants/separation = 8
+
+[sub_resource type="Animation" id="Animation_k350q"]
+resource_name = "Credits"
+length = 96.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 2, 91, 96),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Roll:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(8, 85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -2420)]
+}
+
+[sub_resource type="Animation" id="Animation_kjlvp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cover:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Roll:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_52upu"]
+_data = {
+"Credits": SubResource("Animation_k350q"),
+"RESET": SubResource("Animation_kjlvp")
+}
+
+[node name="Credits" type="CanvasLayer"]
+layer = 83
+script = ExtResource("1_bddbg")
+
+[node name="Background" type="ColorRect" parent="."]
+z_as_relative = false
+custom_minimum_size = Vector2(1280, 800)
+offset_right = 1280.0
+offset_bottom = 800.0
+color = Color(0.2, 0, 0, 1)
+
+[node name="Cover" type="ColorRect" parent="."]
+unique_name_in_owner = true
+z_index = 2
+z_as_relative = false
+custom_minimum_size = Vector2(1280, 800)
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="Roll" type="Control" parent="."]
+unique_name_in_owner = true
+z_index = 1
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+offset_top = -2420.0
+offset_right = 40.0
+offset_bottom = -2380.0
+
+[node name="Title" type="Control" parent="Roll"]
+anchors_preset = 0
+
+[node name="Label" type="RichTextLabel" parent="Roll/Title"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 284.0
+offset_right = 536.0
+offset_bottom = 339.0
+theme_override_constants/outline_size = 12
+theme_override_fonts/normal_font = ExtResource("2_dm2k0")
+theme_override_font_sizes/normal_font_size = 40
+text = " Definitely Not"
+
+[node name="Label2" type="RichTextLabel" parent="Roll/Title"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 280.0
+offset_right = 1052.0
+offset_bottom = 388.0
+theme_override_constants/outline_size = 16
+theme_override_fonts/normal_font = ExtResource("3_4fxr7")
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "
+ Embodiment of the [color=red]Scarlet Devil[/color]"
+
+[node name="Label3" type="RichTextLabel" parent="Roll/Title"]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 384.0
+offset_right = 1032.0
+offset_bottom = 484.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 24
+theme_override_fonts/normal_font = ExtResource("4_8g2m7")
+theme_override_font_sizes/normal_font_size = 80
+text = "東方紅魔郷"
+
+[node name="ColorRect" type="ColorRect" parent="Roll/Title"]
+visible = false
+custom_minimum_size = Vector2(20, 800)
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 800.0
+
+[node name="ColorRect2" type="ColorRect" parent="Roll/Title"]
+visible = false
+custom_minimum_size = Vector2(20, 800)
+layout_mode = 0
+offset_left = 1020.0
+offset_right = 1280.0
+offset_bottom = 800.0
+
+[node name="Notice" type="Control" parent="Roll"]
+anchors_preset = 0
+offset_top = 500.0
+offset_right = 40.0
+offset_bottom = 540.0
+
+[node name="Label" type="Label" parent="Roll/Notice"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 0
+offset_left = 240.0
+offset_top = 280.0
+offset_right = 1040.0
+offset_bottom = 480.0
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("2_dm2k0")
+theme_override_font_sizes/font_size = 28
+text = "This fanmade work is a parody of 
+Touhou Koumakyou ~ The Embodiment of Scarlet Devil
+by Team Shanghai Alice (Zun)
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="Control" parent="Roll"]
+anchors_preset = 0
+offset_top = 1000.0
+offset_bottom = 1000.0
+theme = SubResource("Theme_pw545")
+
+[node name="Credits" type="VBoxContainer" parent="Roll/Credits"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 980.0
+offset_bottom = 1178.0
+theme_override_constants/separation = 28
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_v4eda")
+text = "~~ Credits ~~"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_sf65g")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits/VBoxContainer"]
+layout_mode = 2
+text = "Director"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits/VBoxContainer"]
+layout_mode = 2
+text = "Executive Producer"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_xjigt")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits/VBoxContainer2"]
+layout_mode = 2
+text = "Technical Director"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits/VBoxContainer2"]
+layout_mode = 2
+text = "Assistant Technical Lead"
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits/VBoxContainer2"]
+layout_mode = 2
+text = "Lead Backend Engineer"
+
+[node name="Label4" type="Label" parent="Roll/Credits/Credits/VBoxContainer2"]
+layout_mode = 2
+text = "Lead Gameplay Engineer"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_xbclb")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Art Director"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Assistant Art Director"
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Lead Background Artsit"
+
+[node name="Label4" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Lead Sprite Artist"
+
+[node name="Label5" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Lead Gameplay Artist"
+
+[node name="Label6" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Lead Character Artist"
+
+[node name="Label7" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Lead UI Artist"
+
+[node name="Label8" type="Label" parent="Roll/Credits/Credits/VBoxContainer3"]
+layout_mode = 2
+text = "Lead VFX Artist"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_v4iwy")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits/VBoxContainer4"]
+layout_mode = 2
+text = "Music Director"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits/VBoxContainer4"]
+layout_mode = 2
+text = "Lead Composer"
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits/VBoxContainer4"]
+layout_mode = 2
+text = "Lead SFX Artist"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_qnhhb")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits/VBoxContainer5"]
+layout_mode = 2
+text = "Story Director"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits/VBoxContainer5"]
+layout_mode = 2
+text = "Lead Writer"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_gq281")
+text = "~~ Special Thanks ~~"
+horizontal_alignment = 1
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="Roll/Credits/Credits"]
+layout_mode = 2
+theme = SubResource("Theme_bm4ut")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits/VBoxContainer6"]
+layout_mode = 2
+text = "Zun"
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits/VBoxContainer6"]
+layout_mode = 2
+text = "Kale Hakaido"
+
+[node name="Label6" type="Label" parent="Roll/Credits/Credits/VBoxContainer6"]
+layout_mode = 2
+text = "Yoiyami"
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits/VBoxContainer6"]
+layout_mode = 2
+text = "Godot Game Engine"
+
+[node name="Label4" type="Label" parent="Roll/Credits/Credits/VBoxContainer6"]
+layout_mode = 2
+text = "r/touhou"
+
+[node name="Label5" type="Label" parent="Roll/Credits/Credits/VBoxContainer6"]
+layout_mode = 2
+text = "r/2hujerk
+"
+
+[node name="Credits2" type="VBoxContainer" parent="Roll/Credits"]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 980.0
+offset_bottom = 1178.0
+theme_override_constants/separation = 28
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_0togq")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_ru851")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2/VBoxContainer"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2/VBoxContainer"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_hrp1i")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2/VBoxContainer2"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2/VBoxContainer2"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits2/VBoxContainer2"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="Roll/Credits/Credits2/VBoxContainer2"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_uervf")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label4" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label5" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label6" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label7" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label8" type="Label" parent="Roll/Credits/Credits2/VBoxContainer3"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_tja4b")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2/VBoxContainer4"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2/VBoxContainer4"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits2/VBoxContainer4"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_4kb86")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2/VBoxContainer5"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2/VBoxContainer5"]
+layout_mode = 2
+text = "Daikoko"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_gq281")
+horizontal_alignment = 1
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="Roll/Credits/Credits2"]
+layout_mode = 2
+theme = SubResource("Theme_qtxlm")
+
+[node name="Label" type="Label" parent="Roll/Credits/Credits2/VBoxContainer6"]
+layout_mode = 2
+text = "Creator of Touhou Project"
+horizontal_alignment = 2
+
+[node name="Label2" type="Label" parent="Roll/Credits/Credits2/VBoxContainer6"]
+layout_mode = 2
+text = "Original Composer"
+horizontal_alignment = 2
+
+[node name="Label3" type="Label" parent="Roll/Credits/Credits2/VBoxContainer6"]
+layout_mode = 2
+text = "Original Composer"
+horizontal_alignment = 2
+
+[node name="Control" type="Control" parent="Roll"]
+anchors_preset = 0
+offset_top = 2400.0
+offset_right = 40.0
+offset_bottom = 2440.0
+
+[node name="Label" type="Label" parent="Roll/Control"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 0
+offset_left = 500.0
+offset_top = 300.0
+offset_right = 780.0
+offset_bottom = 500.0
+theme_override_fonts/font = ExtResource("2_dm2k0")
+theme_override_font_sizes/font_size = 60
+text = "And You"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" parent="." instance=ExtResource("5_ks0hq")]
+unique_name_in_owner = true
+music = ExtResource("6_pc7bn")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_52upu")
+}

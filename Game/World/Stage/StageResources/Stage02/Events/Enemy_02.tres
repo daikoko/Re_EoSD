@@ -1,0 +1,49 @@
+[gd_resource type="Resource" script_class="EnemyData_Free" load_steps=5 format=3 uid="uid://nnv57h40ptxv"]
+
+[ext_resource type="Resource" uid="uid://domrf57a5r0qw" path="res://Game/Entities/Enemy/DeathList/Death_Enemy.tres" id="1_26h10"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyShooterScripts/EnemyShooter.gd" id="2_0t1jj"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyScripts/EnemyData_Free.gd" id="3_oxuao"]
+[ext_resource type="Resource" uid="uid://bm5jmrfyccu0y" path="res://Game/Entities/Enemy/EnemySpriteList/EnemySprite_PixieYellow.tres" id="4_k5lut"]
+
+[resource]
+script = ExtResource("3_oxuao")
+position_start = Vector2(20, -20)
+position_final = Vector2(660, -20)
+random_position = true
+enter_angle_start = 90.0
+enter_angle_final = 90.0
+random_enter_angle = false
+exit_angle_start = -90.0
+exit_angle_final = -90.0
+random_exit_angle = false
+distance_start = 820.0
+distance_final = 820.0
+random_distance = false
+id = "02"
+description = ""
+spawn_seed = 76851
+amount = 16
+time = 8.0
+sprite = ExtResource("4_k5lut")
+death = ExtResource("1_26h10")
+health = 1.0
+speed = 300.0
+speed_range = 0.0
+start_time = 0.1
+shooters = Array[ExtResource("2_0t1jj")]([])
+death_shooters = Array[ExtResource("2_0t1jj")]([])
+retreat = false
+retreat_time = 5.0
+retreat_speed = 600.0
+amount_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+health_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}

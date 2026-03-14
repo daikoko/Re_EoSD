@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://bpnwprsyg4xon"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_bgkv6"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_bm2ce"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Meiling/SpellScripts/Meiling_SpellD.gd" id="3_onxxn"]
+
+[sub_resource type="Resource" id="Resource_uwd4g"]
+script = ExtResource("2_bm2ce")
+particles = ExtResource("1_bgkv6")
+value = 280000
+point = 32
+power = 16
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_onxxn")
+A_layout_spawner_count = 18
+A_fire_count = 16
+B_fire_count = 24
+health = 16000.0
+time = 24.0
+base_points = 4000.0
+bonus_points = 8000.0
+Death = SubResource("Resource_uwd4g")
+major_phase = false
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+timeout = false
+warning = false
+difficulty = 3
+boss_id = 0
+spell_id = 0

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://1a2n75tt38po"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_haarq"]
+[ext_resource type="Texture2D" uid="uid://rhmfc8lu11lf" path="res://Game/Objects/Bullets/BulletResources/Bullet_SpadeBlack.png" id="2_3phnk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xbgb"]
+radius = 7.0
+
+[resource]
+script = ExtResource("1_haarq")
+texture = ExtResource("2_3phnk")
+shape = SubResource("CircleShape2D_7xbgb")
+color_option = 1
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-14, -12, 26, 24)

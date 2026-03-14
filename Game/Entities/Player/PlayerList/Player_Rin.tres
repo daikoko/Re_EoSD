@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=11 format=3 uid="uid://bkq7s68bhbo2b"]
+
+[ext_resource type="PackedScene" uid="uid://bol6ur8luyjnb" path="res://Game/Entities/Player/PlayerResources/Rin/Bomb/Rin_Bomb.tscn" id="1_t1ybn"]
+[ext_resource type="Texture2D" uid="uid://c6vpbr0b426er" path="res://Game/Entities/Player/PlayerResources/Rin/Sprite/Hitbox_RinInner.png" id="2_21fph"]
+[ext_resource type="Texture2D" uid="uid://pqbr82nojcc2" path="res://Game/Entities/Player/PlayerResources/Rin/Sprite/Hitbox_RinOuter.png" id="3_4tyel"]
+[ext_resource type="Resource" uid="uid://bfkx2uqjxm47w" path="res://Game/Entities/Player/PlayerResources/_General/Death/Death_Player.tres" id="4_nfsbd"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/PlayerData.gd" id="5_lnp0m"]
+[ext_resource type="Texture2D" uid="uid://bup5cadxlhdwh" path="res://Game/Entities/Player/PlayerResources/Rin/Sprite/SelectionPortrait_Rin.png" id="6_2ixx6"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/ShotData.gd" id="7_x4rjw"]
+[ext_resource type="Resource" uid="uid://ixnmb8pomcgp" path="res://Game/Entities/Player/ShotList/Shot_RinA.tres" id="8_oxq5y"]
+[ext_resource type="Resource" uid="uid://bj822iqwd683f" path="res://Game/Entities/Player/ShotList/Shot_RinB.tres" id="9_gw2uh"]
+[ext_resource type="SpriteFrames" uid="uid://k4opuenfod6w" path="res://Game/Entities/Player/PlayerResources/Rin/Sprite/SpriteFrames_PlayerRin.tres" id="10_lthbs"]
+
+[resource]
+script = ExtResource("5_lnp0m")
+id = 3
+selection_portrait = ExtResource("6_2ixx6")
+sprite_frames = ExtResource("10_lthbs")
+sprite_offset = Vector2(0, 0)
+hitbox_inner = ExtResource("2_21fph")
+hitbox_outer = ExtResource("3_4tyel")
+respawn = ExtResource("4_nfsbd")
+power_loss = -20
+bomb = ExtResource("1_t1ybn")
+shots = Array[ExtResource("7_x4rjw")]([ExtResource("8_oxq5y"), ExtResource("9_gw2uh")])
+radius_hitbox = 2
+radius_graze = 20
+radius_collection = 240
+speed_normal = 360.0
+speed_focus = 240.0
+power_max = 24000
+graze_max = 10
+graze_scaling = 1.4
+start_lives = 3
+start_bombs = 2
+flag_main = ""
+flag_extra = "Passed_MainSeries_Rin"
+flag_phantasm = "Passed_ExtraSeries_Rin"
+flag_practice = ""

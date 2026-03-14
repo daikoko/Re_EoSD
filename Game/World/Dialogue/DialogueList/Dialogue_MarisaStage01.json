@@ -1,0 +1,165 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"It is unusually dark outside."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"The air is smokey as well..."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Things should improve soon, or I won't be able to
+			collect ingredients from the forest tomorrow!"
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"I think today's weather is great though"
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "title",
+		"name":          "Lumia",
+		"text":          "Embodiment of the Dark"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":          
+			"Definitely better than the usual Summer weather."
+	},
+	
+	
+	"010": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"You are a youkai, aren't you? Of course
+			today seems fine to you."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Think about what the lack of sun does to other living creatures!"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":          
+			"I think everyone can benefit from being 
+			nocturnal every now and then."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"And what about the smell?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Well, you can get used to it."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Well regardless, what are you stalking around for? You seem pretty
+			strong for someone that gets encountered so early in the day."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Oh I'm just some regular youkai, don't worry about it."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"And I guess you are just doing regular youkai things like
+			taking a walk outside, right?"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":          
+			"Actually, I was going out to eat somewhere."
+	},
+	
+	"019": {
+		"type":         "event",
+		"pause":        "false",
+		"event_name":   "boss_theme"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":          
+			"But I'm hungry now, so..."
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Ah."
+	},
+}

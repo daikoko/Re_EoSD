@@ -1,0 +1,130 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Hey you!"
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"What did you do this time?"
+	},
+	
+	
+	"004": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"005": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Oh? Are you accusing me so fast?"
+	},
+	
+	"007": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"This is clearly your doing isn't it?"
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"The sun is GONE!!"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"How did you even do that?"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"It's not gone, just... changed. Temporarily at least."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"I'd prefer it to be permanent though."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"So you admit to being responsible?"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"I'm just saying what it is."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Maybe it's those vampires again?"
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"I just beat their asses. Now it's time to lock you up again!"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Not much time for exposition huh?"
+	},
+	
+	"017": {
+		"type":         "event",
+		"pause":        "false",
+		"event_name":   "boss_theme"
+	}
+}

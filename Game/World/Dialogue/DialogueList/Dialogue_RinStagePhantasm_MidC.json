@@ -1,0 +1,117 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"Oh its the vampire again."
+	},
+	
+	"003": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "remi",
+		"configuration": "right",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia07",
+		"name":          "Remilia",
+		"text":          
+			"Hello again, human."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia07",
+		"name":          "Remilia",
+		"text":          
+			"Sorry I can't chat right now, I have something to take care of over there."
+	},
+	
+	
+	"007": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"What's happening?"
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"It's so dark out..."
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia10",
+		"name":          "Remilia",
+		"text":          
+			"Er, remeber that whole mist thing?"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia10",
+		"name":          "Remilia",
+		"text":          
+			"Turns out it ended up waking something up."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia08",
+		"name":          "Remilia",
+		"text":          
+			"And when I asked Patchy about it, she just told me to 
+			go deal with it myself!"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Oh that sounds bad! Do you need help?"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia06",
+		"name":          "Remilia",
+		"text":          
+			"Well I think dragging a human along would slow me down..."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia06",
+		"name":          "Remilia",
+		"text":          
+			"And I want to get home as soon as possible so..."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia09",
+		"name":          "Remilia",
+		"text":          
+			"Go home please!"
+	}
+}

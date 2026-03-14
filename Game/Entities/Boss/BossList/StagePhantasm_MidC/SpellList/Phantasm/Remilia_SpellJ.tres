@@ -1,0 +1,36 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://bm36i4wvr6ekf"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_3y7yh"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellScripts/Remilia_SpellJ.gd" id="1_a5hvy"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_7x2q6"]
+
+[sub_resource type="Resource" id="Resource_7hirm"]
+script = ExtResource("2_7x2q6")
+particles = ExtResource("1_3y7yh")
+value = 1200000
+point = 52
+power = 18
+life = false
+bomb = true
+boss = true
+
+[resource]
+script = ExtResource("1_a5hvy")
+special_animation = false
+A_layout_spawner_count = 3
+A_fire_count = 14
+health = 32000.0
+time = 60.0
+base_points = 1.2e+06
+bonus_points = 3.6e+06
+Death = SubResource("Resource_7hirm")
+major_phase = false
+hide_boss = true
+move_boss = false
+show_background = true
+hide_background = true
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

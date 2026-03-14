@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://7uni17bnen8k"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage06/Background/Background_Stage06.gd" id="1_rm06d"]
+[ext_resource type="PackedScene" uid="uid://bnct7dbbh4tqn" path="res://Game/World/Stage/StageResources/Stage06/Background/Backdrop.tscn" id="2_rawl6"]
+[ext_resource type="PackedScene" uid="uid://dufk53caqs7k" path="res://Game/World/Stage/StageResources/Stage06/Background/World.tscn" id="3_k61w4"]
+
+[node name="Background_Stage06" type="CanvasLayer"]
+layer = -99
+script = ExtResource("1_rm06d")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+own_world_3d = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="Backdrop" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_rawl6")]
+unique_name_in_owner = true
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer2"]
+own_world_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="World" parent="SubViewportContainer2/SubViewport" instance=ExtResource("3_k61w4")]
+unique_name_in_owner = true
+
+[connection signal="update_camera" from="SubViewportContainer2/SubViewport/World" to="SubViewportContainer/SubViewport/Backdrop" method="_on_World_update_camera"]

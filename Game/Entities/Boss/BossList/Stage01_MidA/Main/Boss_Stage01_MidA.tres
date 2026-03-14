@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=11 format=3 uid="uid://brj0axejp1pf2"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_e1qfu"]
+[ext_resource type="Resource" uid="uid://crjherlygy23m" path="res://Game/Entities/Boss/BossList/Stage01_MidA/DialogueList/Stage01_MidA_DialogueA.tres" id="2_7qckx"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_kypvr"]
+[ext_resource type="Resource" uid="uid://rp5uheif2bq2" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Easy/Rumia_NonA1_Easy.tres" id="3_eifsj"]
+[ext_resource type="Resource" uid="uid://degr5755m1dw7" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Normal/Rumia_NonA1_Normal.tres" id="3_eo5or"]
+[ext_resource type="Resource" uid="uid://dateljy7q0trc" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Hard/Rumia_NonA1_Hard.tres" id="3_oid5n"]
+[ext_resource type="Resource" uid="uid://cmr6hetffc1ab" path="res://Game/Entities/Boss/BossList/Stage01_MidA/DialogueList/Stage01_MidA_DialogueB.tres" id="4_5lpsq"]
+[ext_resource type="Resource" uid="uid://dkacwuge5i5io" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Hard/Rumia_SpellA_Hard.tres" id="4_wkv78"]
+[ext_resource type="Resource" uid="uid://bfyo2yw1ongl0" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Lunatic/Rumia_NonA1_Lunatic.tres" id="7_mtno3"]
+[ext_resource type="Resource" uid="uid://rqla3f4iqc3q" path="res://Game/Entities/Boss/BossList/Stage01_MidA/SpellList/Lunatic/Rumia_SpellA_Lunatic.tres" id="8_5acog"]
+
+[resource]
+script = ExtResource("2_kypvr")
+easy = Array[ExtResource("1_e1qfu")]([ExtResource("2_7qckx"), ExtResource("3_eifsj"), ExtResource("4_5lpsq")])
+normal = Array[ExtResource("1_e1qfu")]([ExtResource("2_7qckx"), ExtResource("3_eo5or"), ExtResource("4_5lpsq")])
+hard = Array[ExtResource("1_e1qfu")]([ExtResource("2_7qckx"), ExtResource("3_oid5n"), ExtResource("4_wkv78"), ExtResource("4_5lpsq")])
+lunatic = Array[ExtResource("1_e1qfu")]([ExtResource("2_7qckx"), ExtResource("7_mtno3"), ExtResource("8_5acog"), ExtResource("4_5lpsq")])

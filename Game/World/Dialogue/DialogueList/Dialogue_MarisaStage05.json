@@ -1,0 +1,161 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"I keep getting distracted."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"What was I even doing here?"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Oh right, the mist outside."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"I must be getting closer to the source."
+	},
+	
+	
+	"006": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          "You will not be getting any closer however."
+	},
+	"007": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"008": {
+		"type":          "enter",
+		"identity":      "saku",
+		"configuration": "right",
+	},
+	"009": {
+		"type":          "title",
+		"name":          "Sakuya Izayoi",
+		"text":          "Perfect Servant"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"This manor has been noisy lately, it seems you are the reason why."
+	},
+	
+	
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Oh! Handsome lady."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          
+			"Disgusting."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"Hey, that's a bit harsh."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"You would not be welcome anyway."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          
+			"Making a mess of the place is something I cannot tolerate."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"I've only been exploring a little bit. Perhaps some
+			of it was invasive."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya01",
+		"name":          "Sakuya",
+		"text":          
+			"Your bag there looks quite full."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"They are just snacks. It took a while to get here after all."
+	},
+	
+	
+	"019": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya05",
+		"name":          "Sakuya",
+		"text":          
+			"I'll have you pay for every bit of damage you caused here."
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Hey now, don't be so quick to judge."
+	},
+}

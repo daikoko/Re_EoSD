@@ -1,0 +1,33 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c3yig8mcly7ot"]
+
+[ext_resource type="FontFile" uid="uid://j8cuwu7jw17p" path="res://Menu/Themes/Fonts/KelvinchRoman.otf" id="1_ap7wu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhcf4"]
+bg_color = Color(1, 1, 1, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r8wmm"]
+bg_color = Color(0, 0, 0, 0.4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7myn"]
+bg_color = Color(1, 1, 1, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6pjnw"]
+bg_color = Color(0, 0, 0, 0.6)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yy688"]
+bg_color = Color(0, 0, 0, 0.4)
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxFlat_nhcf4")
+Button/styles/normal = SubResource("StyleBoxFlat_r8wmm")
+Button/styles/pressed = SubResource("StyleBoxFlat_v7myn")
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_ap7wu")
+Label_Title/base_type = &"Label"
+Label_Title/constants/outline_size = 14
+Label_Title/font_sizes/font_size = 72
+Label_Title/fonts/font = ExtResource("1_ap7wu")
+LineEdit/font_sizes/font_size = 42
+LineEdit/fonts/font = ExtResource("1_ap7wu")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_6pjnw")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_yy688")

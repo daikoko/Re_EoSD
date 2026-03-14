@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://3ecb3boevwpg"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_umbfl"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_aooix"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellScripts/Rumia_SpellB.gd" id="3_3va17"]
+
+[sub_resource type="Resource" id="Resource_lqqqw"]
+script = ExtResource("2_aooix")
+particles = ExtResource("1_umbfl")
+value = 200000
+point = 24
+power = 12
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_3va17")
+A_fire_count = 4
+A_spawn_stack_count = 2
+B_fire_count = 5
+B_spawn_stack_count = 3
+health = 12000.0
+time = 20.0
+base_points = 160000.0
+bonus_points = 480000.0
+Death = SubResource("Resource_lqqqw")
+major_phase = false
+hide_boss = false
+move_boss = true
+show_background = true
+hide_background = false
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

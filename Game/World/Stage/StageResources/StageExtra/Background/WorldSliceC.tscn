@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6a4846lwttkp"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldSlice.gd" id="1_84k51"]
+[ext_resource type="Texture2D" uid="uid://v1sjaofrayhq" path="res://Game/World/Stage/StageResources/StageExtra/Background/Background_Stage07B.png" id="2_lm6px"]
+[ext_resource type="Texture2D" uid="uid://btygnve4t34hq" path="res://Game/World/Stage/StageResources/StageExtra/Background/Background_Stage07C.png" id="3_ovjm7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5sn3"]
+albedo_texture = ExtResource("2_lm6px")
+
+[sub_resource type="QuadMesh" id="QuadMesh_en137"]
+material = SubResource("StandardMaterial3D_d5sn3")
+size = Vector2(12, 12)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_onrtr"]
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+albedo_texture = ExtResource("3_ovjm7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_yqhbh"]
+material = SubResource("StandardMaterial3D_onrtr")
+size = Vector2(6, 6.2)
+
+[node name="WorldSliceB" type="Node3D"]
+script = ExtResource("1_84k51")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6, 0, 6)
+mesh = SubResource("QuadMesh_en137")
+
+[node name="Floor2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 6, 0, -6)
+mesh = SubResource("QuadMesh_en137")
+
+[node name="Floor3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -6, 0, -6)
+mesh = SubResource("QuadMesh_en137")
+
+[node name="Floor4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -6, 0, 6)
+mesh = SubResource("QuadMesh_en137")
+
+[node name="PillarBase" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2.9, 0)
+mesh = SubResource("QuadMesh_yqhbh")
+skeleton = NodePath("")

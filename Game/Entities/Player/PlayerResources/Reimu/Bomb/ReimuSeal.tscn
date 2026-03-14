@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=3 uid="uid://de8r6x25ivcaf"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/ReimuSeal.gd" id="1_kp4ov"]
+[ext_resource type="Texture2D" uid="uid://8hqt67o6lrou" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/Bomb_ReimuSeal02.png" id="2_yjfe1"]
+[ext_resource type="Texture2D" uid="uid://cr85h01sxev85" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/Bomb_ReimuSeal01.png" id="3_coyyx"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="4_wfi7y"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="5_k6f6o"]
+[ext_resource type="AudioStream" uid="uid://cqfvl0ie6ovi6" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/Player_Spell02.wav" id="6_gmm5u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xbujc"]
+radius = 80.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lx4ub"]
+
+[node name="ReimuSeal" type="Node2D"]
+z_index = 41
+z_as_relative = false
+script = ExtResource("1_kp4ov")
+
+[node name="Sprite" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Back" type="Sprite2D" parent="Sprite"]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("2_yjfe1")
+
+[node name="Front" type="Sprite2D" parent="Sprite"]
+texture = ExtResource("3_coyyx")
+
+[node name="Bomb" parent="Sprite" instance=ExtResource("4_wfi7y")]
+collision_mask = 4
+identity = "Bomb"
+shape = SubResource("CircleShape2D_xbujc")
+
+[node name="ReleaseTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="Targeter" parent="." instance=ExtResource("4_wfi7y")]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+identity = "Targeter"
+shape = SubResource("CircleShape2D_lx4ub")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("5_k6f6o")]
+unique_name_in_owner = true
+stream = ExtResource("6_gmm5u")
+
+[connection signal="collider_entered" from="Sprite/Bomb" to="." method="_on_Bomb_collider_entered"]
+[connection signal="timeout" from="ReleaseTimer" to="." method="_on_ReleaseTimer_timeout"]
+[connection signal="collider_entered" from="Targeter" to="." method="_on_Targeter_collider_entered"]

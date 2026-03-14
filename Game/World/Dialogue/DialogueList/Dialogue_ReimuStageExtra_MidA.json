@@ -1,0 +1,50 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "mei",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "mei",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"So I see you are down here too."
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"And What are you doing here? Is there a
+			gate down here that you need to stand in front of?"
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "mei",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"Something down here needs watching."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "mei",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"You'll see soon."
+	}
+}

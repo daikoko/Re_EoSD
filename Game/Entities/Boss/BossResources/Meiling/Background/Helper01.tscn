@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://r7ss887w5af5"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Meiling/Background/Helper01.gd" id="1_yd26m"]
+
+[node name="Helper01" type="Sprite2D"]
+script = ExtResource("1_yd26m")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+rect = Rect2(-120, -120, 240, 240)
+
+[connection signal="screen_exited" from="Visibility" to="." method="_on_Visibility_screen_exited"]

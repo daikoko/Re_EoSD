@@ -1,0 +1,196 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Ah, I think I've seen that bookshelf before."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Regardless, isn't this library much bigger 
+			on the inside?"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Looks like I found the right place when it comes to weird things
+			happening."
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"It appears we have an unexpected guest."
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "patchy",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "title",
+		"name":          "Patchouli Knowledge",
+		"text":          "Unmoving Library"
+	},
+	
+	
+	"009": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"We have quiet hours in this library you know,
+			which is every hour."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"And I heard you having a very loud fight with my familiar.
+			Did you exorcise it?"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"Oh that was a demon? Looks like a did my job
+			is destroying it then."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"What a bother. I'm out of summoning gems and my 
+			dailys haven't refreshed yet."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"That was my favorite one too, it's going to take forever
+			to get her back."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Don't you have better things to do than rerolling your Makai pulls."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Like eating cake or something. Or can your ass not get any fatter."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"I'm sure you have more important business than breaking and 
+			entering then zapping my assistants and insulting me."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu05",
+		"name":          "Reimu",
+		"text":          
+			"Uh right. So about that red mist..."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"All Remilia's fault. I told her it was a bad idea and that 
+			someone like you would show up. Along with who knows what else
+			if this continues."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu04",
+		"name":          "Reimu",
+		"text":          
+			"Great, so I can get going then."
+	},
+	
+	
+	"020": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"Now hold on, I still need you to pay up. I'm
+			impaitient and summoning gems aren't cheap."
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu05",
+		"name":          "Reimu",
+		"text":          
+			"Er, I don't have any money right now."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"Well I can always recycle your body for material..."
+	},
+	"0024": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Oh hell no."
+	},
+}

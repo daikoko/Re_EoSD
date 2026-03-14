@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://varcxk61x3d3"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_3fqld"]
+[ext_resource type="Texture2D" uid="uid://csw1chp58v6mm" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/BulletCustom_PatchouliPillar.png" id="2_5ujgr"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_053wo"]
+points = PackedVector2Array(44, 102, 0, 118, -44, 102, -44, -102, 0, -118, 44, -102)
+
+[resource]
+script = ExtResource("1_3fqld")
+texture = ExtResource("2_5ujgr")
+shape = SubResource("ConvexPolygonShape2D_053wo")
+color_option = 2
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-120, -120, 240, 240)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://bgmo61ymdviu5"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_mvgy0"]
+[ext_resource type="Texture2D" uid="uid://m6q3mymcmb55" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/BulletCustom_RemiliaStar.png" id="2_id403"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cskeu"]
+radius = 16.0
+
+[resource]
+script = ExtResource("1_mvgy0")
+texture = ExtResource("2_id403")
+shape = SubResource("CircleShape2D_cskeu")
+color_option = 0
+color_custom = Color(1, 0, 0, 1)
+visibility = Rect2(-20, -20, 40, 40)

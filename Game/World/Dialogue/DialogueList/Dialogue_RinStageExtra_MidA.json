@@ -1,0 +1,49 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "mei",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "mei",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"Hello there."
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"Oh hello again. What are you doing down here?"
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "mei",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"Up ahead is quite dangerous."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "mei",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"Have a quick test of strength."
+	}
+}

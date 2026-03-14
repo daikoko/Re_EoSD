@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://xjm2eeipox5d"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/DialogueScripts/StagePhantasm_MidC_DialogueB.gd" id="1_qkb2c"]
+
+[resource]
+script = ExtResource("1_qkb2c")
+plain = false

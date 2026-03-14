@@ -1,0 +1,179 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Looks like a big house had appeared here overnight."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"Or maybe it was always here?"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"There's probably some cool stuff inside, let's take a look~"
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"Halt thief!."
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "meiling",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "title",
+		"name":          "Meiling",
+		"text":          "Chinese Gatekeeper"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling02",
+		"name":          "Meiling",
+		"text":          
+			"You shall not pass!"
+	},
+	
+	
+	"010": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"Who are you calling a thief!"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Ok so maybe sometimes I forget to return stuff."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"But I'm not a thief!"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling02",
+		"name":          "Meiling",
+		"text":          
+			"You are trying to sneak through the back entrance.
+			That is something a thief would do."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"This is the back entrance? That gate looks pretty imposing though."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"This side faces the lake, of course it's the back entrance."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"The front entrance on the other side has proper road access."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"I had to run all the way over the moment I heard you making
+			commotion back there."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"But you see, if I were a thief, would I be making all that noise?"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling01",
+		"name":          "Meiling",
+		"text":          
+			"What would you call that then?"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"..."
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Breaking and entering?"
+	},
+	
+	
+	"023": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "meiling",
+		"expression":    "BossMeiling02",
+		"name":          "Meiling",
+		"text":          
+			"YOU SHALL BE STOPPED!"
+	},
+}

@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://r0xkkcufrwwg"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper21.gd" id="1_twrki"]
+[ext_resource type="Texture2D" uid="uid://d0y5h5n08wads" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoDarkness01.png" id="2_l0hin"]
+[ext_resource type="Texture2D" uid="uid://271k0p0146ps" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/Background_RumiaSky.png" id="3_7hpip"]
+[ext_resource type="Texture2D" uid="uid://c8fnqnhbwd0yy" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/Background_RumiaSky02.png" id="4_3yxww"]
+[ext_resource type="Texture2D" uid="uid://b005rvax3lppe" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/Background_RumiaSky03.png" id="5_ko0ch"]
+[ext_resource type="Texture2D" uid="uid://bhcuoab3nni6x" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/Background_RumiaSky04.png" id="6_qplby"]
+[ext_resource type="Texture2D" uid="uid://yfm4fttwd0fk" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/Decor_RumiaCenter.png" id="7_dywgt"]
+
+[node name="RumiaHelper21" type="Node2D"]
+script = ExtResource("1_twrki")
+
+[node name="Darkness" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 102
+z_as_relative = false
+texture = ExtResource("2_l0hin")
+
+[node name="DarknessPlayer" type="CanvasGroup" parent="."]
+unique_name_in_owner = true
+z_index = 58
+z_as_relative = false
+
+[node name="Sprite01" type="Sprite2D" parent="DarknessPlayer"]
+unique_name_in_owner = true
+texture = ExtResource("3_7hpip")
+
+[node name="Sprite02" type="Sprite2D" parent="DarknessPlayer"]
+unique_name_in_owner = true
+texture = ExtResource("4_3yxww")
+
+[node name="Sprite03" type="Sprite2D" parent="DarknessPlayer"]
+unique_name_in_owner = true
+texture = ExtResource("5_ko0ch")
+
+[node name="Sprite04" type="Sprite2D" parent="DarknessPlayer"]
+unique_name_in_owner = true
+texture = ExtResource("6_qplby")
+
+[node name="Center" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 59
+z_as_relative = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Center"]
+z_index = 66
+z_as_relative = false
+texture = ExtResource("7_dywgt")

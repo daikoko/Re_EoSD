@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://dy4ovglfwlvsl"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_yp1et"]
+[ext_resource type="Texture2D" uid="uid://bk1wsso5q7k02" path="res://Game/Entities/Boss/BossResources/Daiyousei/Sprite/SpellPortrait_BossDaiyousei_Phantasm.png" id="2_sex1w"]
+
+[resource]
+script = ExtResource("1_yp1et")
+texture = ExtResource("2_sex1w")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

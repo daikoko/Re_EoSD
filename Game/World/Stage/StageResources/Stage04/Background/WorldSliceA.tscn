@@ -1,0 +1,192 @@
+[gd_scene load_steps=14 format=3 uid="uid://bu7q2r8t6ovk6"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldSlice.gd" id="1_r0vf4"]
+[ext_resource type="Texture2D" uid="uid://b58m52848nr1m" path="res://Game/World/Stage/StageResources/Stage04/Background/Background_Stage04A.png" id="2_28nvi"]
+[ext_resource type="Texture2D" uid="uid://6pq2fuxrbc1e" path="res://Game/World/Stage/StageResources/Stage04/Background/Background_Stage04B.png" id="3_hvhol"]
+[ext_resource type="Texture2D" uid="uid://bxrftc7vc0x55" path="res://Game/World/Stage/StageResources/Stage04/Background/Background_Stage04C.png" id="4_3u7pg"]
+[ext_resource type="Texture2D" uid="uid://cwd27n8l2ibyu" path="res://Game/World/Stage/StageResources/Stage04/Background/Background_Stage04D.png" id="5_5ngip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_78pga"]
+albedo_texture = ExtResource("2_28nvi")
+
+[sub_resource type="QuadMesh" id="QuadMesh_n4e3n"]
+material = SubResource("StandardMaterial3D_78pga")
+size = Vector2(8, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c32lh"]
+albedo_texture = ExtResource("3_hvhol")
+
+[sub_resource type="QuadMesh" id="QuadMesh_b5grw"]
+material = SubResource("StandardMaterial3D_c32lh")
+size = Vector2(4, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dh72"]
+albedo_texture = ExtResource("4_3u7pg")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ioy83"]
+material = SubResource("StandardMaterial3D_3dh72")
+size = Vector2(4, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qgmsg"]
+albedo_texture = ExtResource("5_5ngip")
+
+[sub_resource type="QuadMesh" id="QuadMesh_61foc"]
+material = SubResource("StandardMaterial3D_qgmsg")
+size = Vector2(8, 8)
+
+[node name="WorldSliceA" type="Node3D"]
+script = ExtResource("1_r0vf4")
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="Floor01" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, -4)
+mesh = SubResource("QuadMesh_n4e3n")
+skeleton = NodePath("../..")
+
+[node name="Floor02" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, -12)
+mesh = SubResource("QuadMesh_n4e3n")
+skeleton = NodePath("../..")
+
+[node name="Floor03" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, -20)
+mesh = SubResource("QuadMesh_n4e3n")
+skeleton = NodePath("../..")
+
+[node name="Floor04" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, -28)
+mesh = SubResource("QuadMesh_n4e3n")
+skeleton = NodePath("../..")
+
+[node name="Floor05" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, -36)
+mesh = SubResource("QuadMesh_n4e3n")
+skeleton = NodePath("../..")
+
+[node name="Floor06" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -4, 0, -44)
+mesh = SubResource("QuadMesh_n4e3n")
+skeleton = NodePath("../..")
+
+[node name="Floor07" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -10, 0, -44)
+mesh = SubResource("QuadMesh_b5grw")
+
+[node name="Bookcase" type="Node3D" parent="."]
+
+[node name="Side01" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 4, 0)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Side02" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 12, 0)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Side03" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, 4, -40)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Side04" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -10, 12, -40)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Top01" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -10, 16, -4)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Top02" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -10, 16, -12)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Top03" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -10, 16, -20)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Top04" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -10, 16, -28)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Top05" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-1, -8.74228e-08, -3.82137e-15, 0, -4.37114e-08, 1, -8.74228e-08, 1, 4.37114e-08, -10, 16, -36)
+mesh = SubResource("QuadMesh_ioy83")
+
+[node name="Front01" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -4)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front02" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -12)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front03" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -20)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front04" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -28)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front05" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 4, -36)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front06" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 12, -4)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front07" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 12, -12)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front08" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 12, -20)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front09" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 12, -28)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front10" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -8, 12, -36)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front11" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 4, -4)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front12" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 4, -12)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front13" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 4, -20)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front14" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 4, -28)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front15" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 4, -36)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front16" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 12, -4)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front17" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 12, -12)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front18" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 12, -20)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front19" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 12, -28)
+mesh = SubResource("QuadMesh_61foc")
+
+[node name="Front20" type="MeshInstance3D" parent="Bookcase"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12, 12, -36)
+mesh = SubResource("QuadMesh_61foc")

@@ -1,0 +1,62 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1aw5x7www6ev"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldSlice.gd" id="1_d2ues"]
+[ext_resource type="Shader" path="res://Game/World/Stage/StageResources/Stage02/Background/Water.gdshader" id="2_e1t4x"]
+[ext_resource type="Texture2D" uid="uid://dsfm8xnucmfaj" path="res://Game/World/Stage/StageResources/Stage02/Background/WaterOffset.png" id="3_s2lby"]
+[ext_resource type="Texture2D" uid="uid://dwxv3v4tj1oh" path="res://Game/World/Stage/StageResources/Stage02/Background/Water01.png" id="4_luo5j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w1y44"]
+render_priority = 0
+shader = ExtResource("2_e1t4x")
+shader_parameter/size = Vector2(5, 5)
+shader_parameter/amplitude = Vector2(0.04, 0.03)
+shader_parameter/frequency = Vector2(2, 1)
+shader_parameter/time_factor = Vector2(2, 3)
+shader_parameter/offset_timescale = 0.2
+shader_parameter/offset_amplitude = 0.01
+shader_parameter/texturemap = ExtResource("4_luo5j")
+shader_parameter/offsetmap = ExtResource("3_s2lby")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xrsjj"]
+material = SubResource("ShaderMaterial_w1y44")
+size = Vector2(5, 5)
+subdivide_width = 60
+subdivide_depth = 60
+
+[node name="WorldSliceA" type="Node3D"]
+script = ExtResource("1_d2ues")
+
+[node name="Water01" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -5)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water02" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water03" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 5)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water04" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water05" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water06" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water07" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -5)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water08" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+mesh = SubResource("PlaneMesh_xrsjj")
+
+[node name="Water09" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+mesh = SubResource("PlaneMesh_xrsjj")

@@ -1,0 +1,95 @@
+[gd_scene load_steps=8 format=3 uid="uid://cf6g3tmurviop"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Rin/Bomb/RinWave.gd" id="1_tk1bi"]
+[ext_resource type="Texture2D" uid="uid://ds5uc10hxo47e" path="res://Game/Entities/Player/PlayerResources/Rin/Bomb/Bomb_Rin03.png" id="2_34upm"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_5sk3a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xlqgd"]
+radius = 380.0
+
+[sub_resource type="Animation" id="Animation_e2gci"]
+resource_name = "Bomb"
+length = 0.8
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bomb:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bomb:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bje65"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Bomb:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Bomb:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ruiwd"]
+_data = {
+"Bomb": SubResource("Animation_e2gci"),
+"RESET": SubResource("Animation_bje65")
+}
+
+[node name="RinWave" type="Node2D"]
+z_index = 38
+z_as_relative = false
+script = ExtResource("1_tk1bi")
+
+[node name="Bomb" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Bomb"]
+texture = ExtResource("2_34upm")
+
+[node name="Bomb" parent="Bomb" instance=ExtResource("3_5sk3a")]
+collision_mask = 4
+identity = "Bomb"
+shape = SubResource("CircleShape2D_xlqgd")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_ruiwd")
+}
+
+[connection signal="collider_entered" from="Bomb/Bomb" to="." method="_on_Bomb_collider_entered"]
+[connection signal="animation_finished" from="Animator" to="." method="_on_Animator_animation_finished"]

@@ -1,0 +1,60 @@
+{
+	"00": {
+		"name":              "",
+		"title":             "",
+		"description":       ""
+	},
+	"01": {
+		"name":              "Reimu Hakurei",
+		"title":             "Shrine Maiden of Paradise",
+		"description":       
+			"A scarlet mist hangs over Gensokyo. While Reimu would usually
+			enjoy the change from the hot Summer weather, the lack of Sun is
+			concerning for both humans and youkai alike. This lazy girl must
+			now set out to fix this anomaly.",
+		"description_extra": 
+			"The skies have been cleared. While Reimu would usually start 
+			lazing about after a hard day's work, it appears the mistress
+			of the mansion believes there are some property damages that 
+			need to be paid for. To avoid another temper tantrum from starting,
+			Reimu heads to the manor's basement for a new incident.",
+		"description_phantasm": 
+			"A great darkness reemerges over Gensokyo...",
+	},
+	"02": {
+		"name":              "Marisa Kirisame",
+		"title":             "Ordinary Witch of the Woods",
+		"description":       
+			"A scarlet mist hangs over Gensokyo. The Forest of Magic is
+			more dark and forboding than ever, and on top of that, the air 
+			is hard to breathe. To fix this situation developing outside her
+			house, Marisa goes out to solve the incident.",
+		"description_extra": 
+			"The skies have been cleared. Marisa is happy to continue her
+			daily routine of whichcraft without breathing problems, but
+			the resident magician appears indignant over 'stolen property'.
+			She is however, willing to forgive the rookie theif, but for 
+			a price. Marisa heads down to the basement to negotiate.",
+		"description_phantasm": 
+			"A great darkness reemerges over Gensokyo...",
+	},
+	"03": {
+		"name":              "Rin Satsuki",
+		"title":             "Regular Village Girl",
+		"description":       
+			"A scarlet mist hangs over Gensokyo. With the schoolhouse closed
+			due to the strange weather and the children sent home, Rin is left
+			with nothing to do. While out of her league and job desciption,
+			she ventures out to resolve the situation herself.",
+		"description_extra": 
+			"The skies have been cleared. Rin looks forward to the village's  
+			days to return to normal and is even happy to greet her new foreign
+			neighbors despite previous misgivings. However, during the 
+			introductions, it appears the mistress of the manor believes that 
+			Rin's work at the school apparently qualifies her to work as an
+			inpromptu babysitter. With a hefty paycheck, Rin is sent down 
+			to the basement",
+		"description_phantasm": 
+			"A great darkness reemerges over Gensokyo...",
+	}
+}

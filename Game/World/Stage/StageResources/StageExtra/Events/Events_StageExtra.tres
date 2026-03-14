@@ -1,0 +1,188 @@
+[gd_resource type="Animation" load_steps=34 format=3 uid="uid://1hwygj108o3s"]
+
+[ext_resource type="Resource" uid="uid://dk32laeudpe7o" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_01.tres" id="1_r8nbs"]
+[ext_resource type="Resource" uid="uid://c483fhshfa2wy" path="res://Game/Entities/Boss/BossList/StageExtra_MidA/Main/Boss_StageExtra_MidA.tres" id="1_wy460"]
+[ext_resource type="Resource" uid="uid://djjw3dh2xvb4d" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_02.tres" id="2_05ee5"]
+[ext_resource type="Resource" uid="uid://c1gut5pm5dgop" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/Main/Boss_StageExtra_MidB.tres" id="2_inm0i"]
+[ext_resource type="Resource" uid="uid://c881ckntuxhi0" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_03.tres" id="3_ivta3"]
+[ext_resource type="Resource" uid="uid://cmmlqs55f6dgi" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/Main/Boss_StageExtra.tres" id="3_uc83a"]
+[ext_resource type="Resource" uid="uid://cp1u8hor51uwr" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_04.tres" id="4_unome"]
+[ext_resource type="Resource" uid="uid://cemkf0a2b3ebi" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_05.tres" id="5_ur3t1"]
+[ext_resource type="Resource" uid="uid://dqbjubx7otdkx" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_06.tres" id="6_s6go1"]
+[ext_resource type="Resource" uid="uid://cuarjhjcfjad6" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_07.tres" id="7_2b7d8"]
+[ext_resource type="Resource" uid="uid://16inp3i4tac6" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_08.tres" id="8_75uas"]
+[ext_resource type="Resource" uid="uid://ckwswkbb5x131" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_09.tres" id="9_68s6f"]
+[ext_resource type="Resource" uid="uid://dndvb3tlmg0ly" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_10.tres" id="10_7jlkr"]
+[ext_resource type="Resource" uid="uid://dqs4rdpmu83hy" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_11.tres" id="12_ryx0r"]
+[ext_resource type="Resource" uid="uid://bgp4bjxhimw74" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_12.tres" id="13_ipee2"]
+[ext_resource type="Resource" uid="uid://dsyuag4pu1qec" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_14.tres" id="14_ji8yf"]
+[ext_resource type="Resource" uid="uid://bqjeusg76n3d2" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_13.tres" id="14_mhsa3"]
+[ext_resource type="Resource" uid="uid://oj6k2rwmfk2i" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_15.tres" id="16_l1dhw"]
+[ext_resource type="Resource" uid="uid://0pb242o6px2c" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_16.tres" id="17_66805"]
+[ext_resource type="Resource" uid="uid://bbktsrnys4ruf" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_17.tres" id="18_3gk64"]
+[ext_resource type="Resource" uid="uid://d4kquuapssw7f" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_18.tres" id="19_ybuvr"]
+[ext_resource type="Resource" uid="uid://dc2a70yjijlqg" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_19.tres" id="20_etohe"]
+[ext_resource type="Resource" uid="uid://dqoxe5kifcg1s" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_20.tres" id="21_upd8d"]
+[ext_resource type="Resource" uid="uid://cjrkuvpyp5vpp" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_21.tres" id="22_6hy5v"]
+[ext_resource type="Resource" uid="uid://brhnsgcovkyv4" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_22.tres" id="23_6utbi"]
+[ext_resource type="Resource" uid="uid://c2bpvcifxcwq0" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_23.tres" id="24_rcmrn"]
+[ext_resource type="Resource" uid="uid://jqq74kwyd5ho" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_24.tres" id="25_825q8"]
+[ext_resource type="Resource" uid="uid://chj2wbs47dfhe" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_25.tres" id="26_l4gj0"]
+[ext_resource type="Resource" uid="uid://brkv755c0nm1n" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_26.tres" id="27_opuak"]
+[ext_resource type="Resource" uid="uid://d4as87o52lmt1" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_27.tres" id="30_4o6ad"]
+[ext_resource type="Resource" uid="uid://ickopw7wntu7" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_28.tres" id="31_jvatu"]
+[ext_resource type="Resource" uid="uid://ccmbs5udx3goe" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_29.tres" id="32_6aif7"]
+[ext_resource type="Resource" uid="uid://dksa0a542slyf" path="res://Game/World/Stage/StageResources/StageExtra/Events/Event_30.tres" id="33_4ykgn"]
+
+[resource]
+length = 210.0
+step = 1.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"play_intro"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"music_play_stage"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(88, 202, 206),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [ExtResource("1_wy460")],
+"method": &"event_boss"
+}, {
+"args": [ExtResource("2_inm0i")],
+"method": &"event_boss"
+}, {
+"args": [ExtResource("3_uc83a")],
+"method": &"event_boss"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 8, 10, 16, 26, 34, 40, 46, 52, 60, 66, 72, 78, 90, 98, 106, 110, 116, 122, 130, 131, 138, 144, 150, 158, 166, 172, 178, 184, 192),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [ExtResource("1_r8nbs")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("2_05ee5")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("3_ivta3")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("4_unome")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("5_ur3t1")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("6_s6go1")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("7_2b7d8")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("8_75uas")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("9_68s6f")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("10_7jlkr")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("12_ryx0r")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("13_ipee2")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("14_mhsa3")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("14_ji8yf")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("16_l1dhw")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("17_66805")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("18_3gk64")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("19_ybuvr")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("20_etohe")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("21_upd8d")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("22_6hy5v")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("23_6utbi")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("24_rcmrn")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("25_825q8")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("26_l4gj0")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("27_opuak")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("30_4o6ad")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("31_jvatu")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("32_6aif7")],
+"method": &"event_spawn"
+}, {
+"args": [ExtResource("33_4ykgn")],
+"method": &"event_spawn"
+}]
+}

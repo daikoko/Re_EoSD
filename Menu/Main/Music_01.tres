@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://c18kfpo72c04q"]
+
+[ext_resource type="AudioStream" uid="uid://dupu80f4womtg" path="res://Menu/Main/TH06_01.ogg" id="1_l4a6x"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_xegtq"]
+
+[resource]
+script = ExtResource("1_xegtq")
+id = 1
+name = ""
+music = ExtResource("1_l4a6x")
+flag = ""

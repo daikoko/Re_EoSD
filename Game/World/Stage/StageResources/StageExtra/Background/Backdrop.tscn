@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqe706ybqwhcq"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/Backdrop.gd" id="1_2ro11"]
+
+[sub_resource type="Environment" id="Environment_n1137"]
+background_mode = 2
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_2ro11")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_n1137")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true

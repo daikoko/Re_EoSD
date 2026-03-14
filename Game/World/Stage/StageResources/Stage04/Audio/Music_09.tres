@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://dctc6t6pm5wv6"]
+
+[ext_resource type="AudioStream" uid="uid://dm8bs0x7nkb1c" path="res://Game/World/Stage/StageResources/Stage04/Audio/TH06_09.ogg" id="1_6e1xd"]
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_t4ykq"]
+
+[resource]
+script = ExtResource("1_t4ykq")
+id = 9
+name = ""
+music = ExtResource("1_6e1xd")
+flag = "Passed_Stage4"

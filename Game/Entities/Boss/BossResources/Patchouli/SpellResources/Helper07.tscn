@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl7whmoid54wb"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper07.gd" id="1_lacx4"]
+[ext_resource type="PackedScene" uid="uid://bcbwr2bpleic8" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper08.tscn" id="2_nm52u"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_44xtv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hmyjq"]
+radius = 80.0
+
+[node name="Helper07" type="Node2D"]
+script = ExtResource("1_lacx4")
+
+[node name="Helper08" parent="." instance=ExtResource("2_nm52u")]
+unique_name_in_owner = true
+
+[node name="Holder" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Collider" parent="." instance=ExtResource("3_44xtv")]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 0
+identity = "Obstacle"
+shape = SubResource("CircleShape2D_hmyjq")

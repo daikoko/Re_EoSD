@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=11 format=3 uid="uid://v0ukndr821x0"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_jl3sa"]
+[ext_resource type="Resource" uid="uid://cpolujpjw4cif" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/DialogueList/StagePhantasm_MidC_DialogueA.tres" id="2_ksttf"]
+[ext_resource type="Resource" uid="uid://b3ty4740dqsi5" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_SpellI.tres" id="3_47dt2"]
+[ext_resource type="Resource" uid="uid://dxukhm4340gtd" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_NonC1.tres" id="3_iduyu"]
+[ext_resource type="Resource" uid="uid://bhaeqw60tr5vk" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_SpellH.tres" id="4_52kth"]
+[ext_resource type="Resource" uid="uid://xjm2eeipox5d" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/DialogueList/StagePhantasm_MidC_DialogueB.tres" id="4_q73nd"]
+[ext_resource type="Resource" uid="uid://b38xl6cbs2wjf" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_NonC2.tres" id="5_3u0hc"]
+[ext_resource type="Resource" uid="uid://bbkf2sljrukc1" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_NonC3.tres" id="7_s2utq"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="7_vre1d"]
+[ext_resource type="Resource" uid="uid://bm36i4wvr6ekf" path="res://Game/Entities/Boss/BossList/StagePhantasm_MidC/SpellList/Phantasm/Remilia_SpellJ.tres" id="8_m3af4"]
+
+[resource]
+script = ExtResource("7_vre1d")
+easy = Array[ExtResource("1_jl3sa")]([])
+normal = Array[ExtResource("1_jl3sa")]([ExtResource("2_ksttf"), ExtResource("3_iduyu"), ExtResource("4_52kth"), ExtResource("5_3u0hc"), ExtResource("3_47dt2"), ExtResource("7_s2utq"), ExtResource("8_m3af4"), ExtResource("4_q73nd")])
+hard = Array[ExtResource("1_jl3sa")]([])
+lunatic = Array[ExtResource("1_jl3sa")]([])

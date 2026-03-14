@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgy4xgl38jnrn"]
+
+[ext_resource type="Script" path="res://Game/Objects/Collider/Collider.gd" id="1_8pntf"]
+
+[node name="Collider" type="Area2D"]
+script = ExtResource("1_8pntf")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="area_entered" from="." to="." method="_on_Collider_area_entered"]

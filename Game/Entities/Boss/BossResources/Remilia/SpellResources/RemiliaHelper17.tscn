@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://c82ph3s8nmrio"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper17.gd" id="1_tvtt0"]
+[ext_resource type="Texture2D" uid="uid://bkk14gknn3fdc" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/Effect_RemiliaChevron.png" id="2_7irvr"]
+[ext_resource type="PackedScene" uid="uid://cs8wa14bd2vny" path="res://Game/Objects/Shadow/ShadowHandler.tscn" id="3_4ppqx"]
+
+[sub_resource type="Curve2D" id="Curve2D_auh1y"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1600, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_jwvg0"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1600, 0)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_ncfrf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1600, 0)
+}
+point_count = 2
+
+[node name="RemiliaHelper17" type="Node2D"]
+modulate = Color(1, 1, 1, 0.4)
+script = ExtResource("1_tvtt0")
+
+[node name="Line01" type="Line2D" parent="."]
+unique_name_in_owner = true
+points = PackedVector2Array(-800, 0, 800, 0)
+width = 60.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line02" type="Line2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-2.15152, 0.0704346)
+scale = Vector2(1.00303, 0.992958)
+points = PackedVector2Array(0, -800, 0, 800)
+width = 60.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Path01" type="Path2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-800, 0)
+curve = SubResource("Curve2D_auh1y")
+
+[node name="PathFollow01" type="PathFollow2D" parent="Path01"]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Path01/PathFollow01"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("2_7irvr")
+
+[node name="ShadowHandler01" parent="Path01/PathFollow01" instance=ExtResource("3_4ppqx")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+image = ExtResource("2_7irvr")
+interval = 0.05
+duration = 0.4
+
+[node name="Path02" type="Path2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(800, 0)
+rotation = 3.14159
+curve = SubResource("Curve2D_jwvg0")
+
+[node name="PathFollow02" type="PathFollow2D" parent="Path02"]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Path02/PathFollow02"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("2_7irvr")
+
+[node name="ShadowHandler02" parent="Path02/PathFollow02" instance=ExtResource("3_4ppqx")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+image = ExtResource("2_7irvr")
+interval = 0.05
+duration = 0.4
+
+[node name="Path03" type="Path2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -800)
+rotation = 1.5708
+curve = SubResource("Curve2D_ncfrf")
+
+[node name="PathFollow03" type="PathFollow2D" parent="Path03"]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Path03/PathFollow03"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("2_7irvr")
+
+[node name="ShadowHandler03" parent="Path03/PathFollow03" instance=ExtResource("3_4ppqx")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+image = ExtResource("2_7irvr")
+interval = 0.05
+duration = 0.4
+
+[node name="Path04" type="Path2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, 800)
+rotation = -1.5708
+curve = SubResource("Curve2D_auh1y")
+
+[node name="PathFollow04" type="PathFollow2D" parent="Path04"]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Path04/PathFollow04"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("2_7irvr")
+
+[node name="ShadowHandler04" parent="Path04/PathFollow04" instance=ExtResource("3_4ppqx")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+image = ExtResource("2_7irvr")
+interval = 0.05
+duration = 0.4

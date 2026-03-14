@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://cdkgcjw2ipqe"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_oqgd8"]
+[ext_resource type="Texture2D" uid="uid://c0wi45lvb5jpx" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/BulletCustom_CirnoShard.png" id="2_uxpc3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1gvkb"]
+
+[resource]
+script = ExtResource("1_oqgd8")
+texture = ExtResource("2_uxpc3")
+shape = SubResource("CircleShape2D_1gvkb")
+color_option = 4
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-20, -10, 40, 20)

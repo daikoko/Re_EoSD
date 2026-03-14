@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://bwnqfo2rlgxrg"]
+
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_fmnpq"]
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_wdql5"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Meiling/SpellScripts/Meiling_NonA.gd" id="2_h0xuo"]
+
+[sub_resource type="Resource" id="Resource_i1vts"]
+script = ExtResource("1_fmnpq")
+particles = ExtResource("1_wdql5")
+value = 240000
+point = 24
+power = 12
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("2_h0xuo")
+A_layout_spawner_count = 8
+A_fire_count = 12
+B_layout_spawner_count = 2
+B_fire_count = 0
+C_layout_spawner_count = 4
+C_fire_count = 10
+health = 12000.0
+Death = SubResource("Resource_i1vts")
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+difficulty = 1
+boss_id = 0

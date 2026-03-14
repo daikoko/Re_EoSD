@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="EnemyData_Path" load_steps=5 format=3 uid="uid://2bxu4ae4wwp4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyShooterScripts/EnemyShooter.gd" id="1_ce80r"]
+[ext_resource type="Resource" uid="uid://bpm31k7np7xau" path="res://Game/Entities/Enemy/DeathList/Death_EnemyPoint.tres" id="1_pmwx1"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyScripts/EnemyData_Path.gd" id="2_s4yaf"]
+[ext_resource type="Resource" uid="uid://ds2g668k5ktfw" path="res://Game/Entities/Enemy/EnemySpriteList/EnemySprite_FairyBlue.tres" id="4_j8lcn"]
+
+[resource]
+script = ExtResource("2_s4yaf")
+path = 4
+id = "Enemy 05"
+description = ""
+spawn_seed = 78515589
+amount = 36
+time = 12.0
+sprite = ExtResource("4_j8lcn")
+death = ExtResource("1_pmwx1")
+health = 100.0
+speed = 300.0
+speed_range = 0.0
+start_time = 0.1
+shooters = Array[ExtResource("1_ce80r")]([])
+death_shooters = Array[ExtResource("1_ce80r")]([])
+retreat = false
+retreat_time = 5.0
+retreat_speed = 600.0
+amount_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+health_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}

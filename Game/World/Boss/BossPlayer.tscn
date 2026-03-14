@@ -1,0 +1,188 @@
+[gd_scene load_steps=11 format=3 uid="uid://bxkxytjfibucd"]
+
+[ext_resource type="Script" path="res://Game/World/Boss/BossPlayer.gd" id="1_re0ts"]
+[ext_resource type="Theme" uid="uid://bguu58ymqat41" path="res://Game/Themes/Themes/BossPlayer.tres" id="2_cqjs2"]
+[ext_resource type="Script" path="res://Game/World/Boss/EventHandler.gd" id="3_bchuu"]
+[ext_resource type="Texture2D" uid="uid://dsqwj5w5jqgn0" path="res://Game/World/Boss/Bar_HealthUnder.png" id="4_pa1ag"]
+[ext_resource type="Texture2D" uid="uid://buvl8nxcgsgpt" path="res://Game/World/Boss/Bar_HealthOver.png" id="5_5sbs1"]
+[ext_resource type="Texture2D" uid="uid://6cecplj358a8" path="res://Game/World/Boss/Bar_Time.png" id="6_ckd80"]
+[ext_resource type="Texture2D" uid="uid://cfy5tww7hlsic" path="res://Game/World/Boss/Bar_Spells.png" id="7_p6rx6"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="8_6gaiu"]
+
+[sub_resource type="Animation" id="Animation_48g6t"]
+resource_name = "Bonus"
+length = 3.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%BonusContainer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 2.4, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 80), Vector2(0, 80), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%BonusContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 2.4, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n1cvy"]
+_data = {
+"Bonus": SubResource("Animation_48g6t")
+}
+
+[node name="BossPlayer" type="CanvasLayer"]
+script = ExtResource("1_re0ts")
+
+[node name="EventHandler" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("2_cqjs2")
+script = ExtResource("3_bchuu")
+
+[node name="ColorRect" type="ColorRect" parent="EventHandler"]
+visible = false
+custom_minimum_size = Vector2(680, 780)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="Timeout" type="ColorRect" parent="EventHandler"]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+z_as_relative = false
+custom_minimum_size = Vector2(640, 15)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 13.0
+offset_right = 660.0
+offset_bottom = 28.0
+color = Color(0, 0, 0.8, 1)
+
+[node name="Label" type="Label" parent="EventHandler/Timeout"]
+custom_minimum_size = Vector2(640, 23)
+layout_mode = 0
+offset_top = -4.0
+offset_right = 640.0
+offset_bottom = 19.0
+theme_type_variation = &"Label_Timeout"
+text = "Timeout!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BarsContainer" type="CenterContainer" parent="EventHandler"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(680, 84)
+layout_mode = 0
+offset_right = 680.0
+offset_bottom = 84.0
+
+[node name="Bars" type="VBoxContainer" parent="EventHandler/BarsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Health" type="TextureProgressBar" parent="EventHandler/BarsContainer/Bars"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_under = ExtResource("4_pa1ag")
+texture_progress = ExtResource("5_5sbs1")
+
+[node name="Time" type="TextureProgressBar" parent="EventHandler/BarsContainer/Bars"]
+unique_name_in_owner = true
+layout_mode = 2
+step = 0.01
+value = 50.0
+texture_progress = ExtResource("6_ckd80")
+
+[node name="Spells" type="TextureProgressBar" parent="EventHandler/BarsContainer/Bars"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 15.0
+value = 13.0
+texture_progress = ExtResource("7_p6rx6")
+
+[node name="BossName" type="Label" parent="EventHandler/BarsContainer/Bars"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Boss Name"
+
+[node name="BonusContainer" type="CenterContainer" parent="EventHandler"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+z_index = 2
+custom_minimum_size = Vector2(680, 0)
+layout_mode = 0
+offset_right = 680.0
+offset_bottom = 46.0
+
+[node name="Bonus" type="Label" parent="EventHandler/BonusContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_Bonus"
+text = "Bonus: 000000000"
+
+[node name="SpellContainer" type="CenterContainer" parent="EventHandler"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 40.0
+offset_top = 68.0
+offset_right = 640.0
+offset_bottom = 88.0
+
+[node name="SpellName" type="Label" parent="EventHandler/SpellContainer"]
+unique_name_in_owner = true
+z_index = 1
+custom_minimum_size = Vector2(600, 0)
+layout_mode = 2
+text = "Spell Name"
+horizontal_alignment = 2
+
+[node name="Sound" parent="EventHandler" instance=ExtResource("8_6gaiu")]
+unique_name_in_owner = true
+
+[node name="EventAnimator" type="AnimationPlayer" parent="EventHandler"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_n1cvy")
+}
+
+[node name="FillTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="DelayTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.8
+one_shot = true
+
+[node name="SpellTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="ImmunityTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+
+[node name="RecordTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="request_calculate_bonus" from="EventHandler" to="." method="_on_EventHandler_request_calculate_bonus"]
+[connection signal="request_count_spells" from="EventHandler" to="." method="_on_EventHandler_request_count_spells"]
+[connection signal="timeout" from="SpellTimer" to="." method="_on_SpellTimer_timeout"]
+[connection signal="timeout" from="RecordTimer" to="." method="_on_RecordTimer_timeout"]

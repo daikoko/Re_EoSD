@@ -1,0 +1,76 @@
+{
+	"00": {
+		"name":        
+			"\n [color=red]T[/color]est Stage",
+		"title":       
+			"\n Empty Shrine Road",
+		"description": 
+			"Remember to add a newline and space for this stupid font to work"
+	},
+	"01": {
+		"name":        
+			"\n Stage [color=red]1[/color]",
+		"title":       
+			"\n Empty Shrine Road",
+		"description": 
+			"'I can't fucking see.'
+			- Reimu Haukrei"
+	},
+	"02": {
+		"name":        
+			"\n Stage [color=red]2[/color]",
+		"title":       
+			"\n Misty Lake",
+		"description": 
+			"'NO, YOUR STUPID!!'
+			- Cirno"
+	},
+	"03": {
+		"name":                
+			"\n Stage [color=red]3[/color]",
+		"title":       
+			"\n Scarlet Devil's Courtyard",
+		"description": 
+			"'I prefer coffee.'
+			- Sakuya Izayoi"
+	},
+	"04": {
+		"name":                        
+			"\n Stage [color=red]4[/color]",
+		"title":              
+			"\n The Magical Library",
+		"description": 
+			"'I will sue you for property damage.'
+			- Patchouli Knowledge"
+	},
+	"05": {
+		"name":        "\n Stage [color=red]5[/color]",
+		"title":       "\n A Corridor to Nowhere",
+		"description": 
+			"'Way too dark. You'd think
+			the owner was a vampire or something.'
+			- Marisa Kirisame"
+	},
+	"06": {
+		"name":        "\n Stage [color=red]6[/color]",
+		"title":       "\n Sumit of the Manor",
+		"description": 
+			"'Please get out of my house.'
+			- Remilia Scarlet"
+	},
+	"07": {
+		"name":        "\n [color=red]Extra[/color] Stage",
+		"title":       "\n The Hidden Basement",
+		"description": 
+			"'Go touch grass? Why don't 
+			you touch some bitches instead.'
+			- Flandre Scarlet"
+	},
+	"08": {
+		"name":        "\n [color=red]Phantasm[/color] Stage",
+		"title":       "\n Darkest after Dawn",
+		"description": 
+			"'What the Makai? It's even worse now!'
+			- Reimu Hakurei"
+	},
+}

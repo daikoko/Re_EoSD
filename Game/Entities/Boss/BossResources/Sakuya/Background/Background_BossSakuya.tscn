@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://dke3no2se6od"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya.gd" id="1_4kstk"]
+[ext_resource type="PackedScene" uid="uid://dp1mhls7shm71" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Helper01.tscn" id="1_57dkl"]
+[ext_resource type="Texture2D" uid="uid://cp2l7ieuidks6" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya01.png" id="2_c48tj"]
+[ext_resource type="Texture2D" uid="uid://dbevifo6vh1gk" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya02.png" id="3_iddb3"]
+[ext_resource type="Texture2D" uid="uid://cstx5bb806q4j" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya03.png" id="4_w3qnq"]
+[ext_resource type="Texture2D" uid="uid://crw76w25ij4qa" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya04.png" id="5_8bnwp"]
+[ext_resource type="Texture2D" uid="uid://6pfji4jd2rpk" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya05.png" id="6_fxhu7"]
+[ext_resource type="Texture2D" uid="uid://bvdlmde1j6w31" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Background_BossSakuya06.png" id="7_yj2pe"]
+
+[node name="BackgroundBossSakuya" type="CanvasLayer"]
+script = ExtResource("1_4kstk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(680, 780)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.0392157, 0.0392157, 0.0392157, 1)
+
+[node name="Helper01" parent="." instance=ExtResource("1_57dkl")]
+position = Vector2(537, 209)
+texture = ExtResource("2_c48tj")
+rotation_speed = 6.0
+
+[node name="Helper02" parent="." instance=ExtResource("1_57dkl")]
+position = Vector2(130, 633)
+texture = ExtResource("3_iddb3")
+rotation_speed = -10.0
+
+[node name="Helper03" parent="." instance=ExtResource("1_57dkl")]
+position = Vector2(23, 463)
+texture = ExtResource("4_w3qnq")
+rotation_speed = 16.0
+
+[node name="Helper04" parent="." instance=ExtResource("1_57dkl")]
+position = Vector2(534, 692)
+texture = ExtResource("5_8bnwp")
+rotation_speed = 12.0
+
+[node name="Helper05" parent="." instance=ExtResource("1_57dkl")]
+position = Vector2(69, 196)
+texture = ExtResource("6_fxhu7")
+rotation_speed = -14.0
+
+[node name="Helper06" parent="." instance=ExtResource("1_57dkl")]
+position = Vector2(691, 321)
+texture = ExtResource("7_yj2pe")
+rotation_speed = 8.0

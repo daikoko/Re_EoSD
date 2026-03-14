@@ -1,0 +1,286 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Looks like I finally reached somewhere important."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"That moon looks pretty menacing. That's not an ordinary
+			shade of red."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Forget about canon fodder youkai. If this keeps up,
+			demons might start appearing on the surface."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Or worse..."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Oh, something is approaching."
+	},
+	
+	
+	"007": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"008": {
+		"type":          "enter",
+		"identity":      "remi",
+		"configuration": "right",
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"A demon?"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia03",
+		"name":          "Remilia",
+		"text":          
+			"*****"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Oh, luckily I can speak in the demonic tongues."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Ahem."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"How are you doing, fellow crewmate?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"What?"
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"Oh, I meant compatriot."
+	},
+	"016": {
+		"type":          "title",
+		"name":          "Remilia Scarlet",
+		"text":          "Eternal Scarlet Moon"
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Well, I'd like to assure you I'm not a (true) demon."
+	},
+	
+	
+	
+	"018": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Good to hear, I thought I was in real trouble there for a second.
+			Especially because I don't actually know how to speak demon
+			that well."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Especially because we aren't even speakig demonic right now."
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Really? I thought you had casted a Babelfish spell or something.
+			What we are speaking is pretty demonic sounding, no?"
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"I'm pretty sure this is a normal human language though?
+			From the outside? French?"
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Never heard of that one, guess one of my books was mislabeled."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Ah whatever. Would you like some tea and pastries? I am having
+			a few snacks while the ritual finishes."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Oh yes, the scary moon thing. Why did you do that?"
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"The sun is the natural enemy of vampires of course!
+			I'd like to get some fresh air while everyone else is awake."
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia03",
+		"name":          "Remilia",
+		"text":          
+			"Only being awake during the night gets lonely sometimes you know?"
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"And besides, there is a certain someone who I'm trying to get to 
+			go outside more."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"With the sun out of the way, maybe she'll finally spend some 
+			time with her lovely sister."
+	},
+	"029": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Don't you think that's a bit too much. Plenty of living creatures 
+			depend on the sun you know."
+	},
+	"030": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Don't worry it's just a temporary thing. Once it finishes,
+			I'll leave it up for a few days and then I can reverse it."
+	},
+	"031": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia05",
+		"name":          "Remilia",
+		"text":          
+			"I think."
+	},
+	"032": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Sounds like I'll have to stop you then."
+	},
+	"033": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia01",
+		"name":          "Remilia",
+		"text":          
+			"Well I more or less expected this to happen."
+	},
+	"034": {
+		"type":          "dialogue",
+		"identity":      "remi",
+		"expression":    "BossRemilia04",
+		"name":          "Remilia",
+		"text":          
+			"Come at me then! The night is forever young!"
+	},
+	
+	
+	"035": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	}
+}

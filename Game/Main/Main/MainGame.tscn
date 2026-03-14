@@ -1,0 +1,175 @@
+[gd_scene load_steps=18 format=3 uid="uid://6repong5nuv5"]
+
+[ext_resource type="Script" path="res://Game/Main/Main/MainGame.gd" id="1_366ne"]
+[ext_resource type="Script" path="res://Game/Main/Main/MainGameWorld.gd" id="2_5cryj"]
+[ext_resource type="Script" path="res://Game/Main/Main/MainGameCover.gd" id="3_k0wxe"]
+[ext_resource type="PackedScene" uid="uid://cqhjtgo4lnvl" path="res://Game/Main/HUD/HUD.tscn" id="3_siit1"]
+[ext_resource type="Shader" path="res://Game/Main/Menu/Blur.gdshader" id="3_svdm3"]
+[ext_resource type="Shader" path="res://Game/Main/Menu/Grayscale.gdshader" id="4_ksbim"]
+[ext_resource type="PackedScene" uid="uid://ccf22jt5l7ly0" path="res://Game/World/Pool/Pool.tscn" id="4_sk5qn"]
+[ext_resource type="PackedScene" uid="uid://cqi0cdkt7w18k" path="res://Game/Main/Menu/Menu.tscn" id="5_vue8c"]
+[ext_resource type="PackedScene" uid="uid://bxlsoc0kkc8m3" path="res://Game/Main/Record/Record.tscn" id="6_hhxyv"]
+[ext_resource type="PackedScene" uid="uid://djv8yep44kwh5" path="res://Game/Main/Ending/EndingScripts/EndingPlayer.tscn" id="7_dwp4i"]
+[ext_resource type="PackedScene" uid="uid://ggqrj70fcrq0" path="res://Game/Main/Credits/Credits.tscn" id="11_vnph2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tbubx"]
+shader = ExtResource("3_svdm3")
+shader_parameter/lod = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_s83b6"]
+shader = ExtResource("4_ksbim")
+shader_parameter/brightness = 0.5
+
+[sub_resource type="Animation" id="Animation_x27u6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_b65bf"]
+resource_name = "Stage_In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_luwf4"]
+resource_name = "Stage_Out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rggv2"]
+_data = {
+"RESET": SubResource("Animation_x27u6"),
+"Stage_In": SubResource("Animation_b65bf"),
+"Stage_Out": SubResource("Animation_luwf4")
+}
+
+[node name="MainGame" type="Node2D"]
+script = ExtResource("1_366ne")
+
+[node name="MainGameWorld" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_5cryj")
+
+[node name="GameWindowContainer" type="SubViewportContainer" parent="MainGameWorld"]
+offset_left = 120.0
+offset_top = 10.0
+offset_right = 632.0
+offset_bottom = 522.0
+
+[node name="GameWindow" type="SubViewport" parent="MainGameWorld/GameWindowContainer"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="Blur" type="CanvasLayer" parent="MainGameWorld/GameWindowContainer/GameWindow"]
+layer = 62
+
+[node name="Blur" type="ColorRect" parent="MainGameWorld/GameWindowContainer/GameWindow/Blur"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_tbubx")
+custom_minimum_size = Vector2(680, 780)
+offset_right = 680.0
+offset_bottom = 780.0
+
+[node name="Grayscale" type="CanvasLayer" parent="MainGameWorld/GameWindowContainer/GameWindow"]
+layer = 10
+
+[node name="Grayscale" type="TextureRect" parent="MainGameWorld/GameWindowContainer/GameWindow/Grayscale"]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_s83b6")
+custom_minimum_size = Vector2(680, 780)
+offset_right = 680.0
+offset_bottom = 780.0
+
+[node name="Pool" parent="MainGameWorld/GameWindowContainer/GameWindow" instance=ExtResource("4_sk5qn")]
+unique_name_in_owner = true
+bullet_gravity = 2000
+bullet_linear = 2000
+bullet_tween = 1000
+bullet_sine = 1000
+
+[node name="GameCamera" type="Camera2D" parent="MainGameWorld/GameWindowContainer/GameWindow"]
+unique_name_in_owner = true
+offset = Vector2(340, 390)
+
+[node name="HUD" parent="MainGameWorld" instance=ExtResource("3_siit1")]
+unique_name_in_owner = true
+layer = 60
+
+[node name="MainGameCover" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 63
+visible = false
+script = ExtResource("3_k0wxe")
+
+[node name="StageCover" type="ColorRect" parent="MainGameCover"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(680, 780)
+offset_left = 120.0
+offset_top = 10.0
+offset_right = 800.0
+offset_bottom = 790.0
+
+[node name="Animator" type="AnimationPlayer" parent="MainGameCover"]
+unique_name_in_owner = true
+root_node = NodePath("../StageCover")
+libraries = {
+"": SubResource("AnimationLibrary_rggv2")
+}
+
+[node name="Menu" parent="." instance=ExtResource("5_vue8c")]
+unique_name_in_owner = true
+layer = 61
+
+[node name="Record" parent="." instance=ExtResource("6_hhxyv")]
+unique_name_in_owner = true
+layer = 70
+visible = false
+
+[node name="EndingPlayer" parent="." instance=ExtResource("7_dwp4i")]
+unique_name_in_owner = true
+visible = false
+
+[node name="Credits" parent="." instance=ExtResource("11_vnph2")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="player_paused" from="MainGameWorld/HUD" to="." method="_on_HUD_player_paused"]
+[connection signal="continued" from="Menu" to="." method="_on_Menu_continued"]
+[connection signal="exit" from="Menu" to="." method="_on_Menu_exit"]
+[connection signal="finish" from="Menu" to="." method="_on_Menu_finish"]
+[connection signal="next" from="Menu" to="." method="_on_Menu_next"]
+[connection signal="quit" from="Menu" to="." method="_on_Menu_quit"]
+[connection signal="restart" from="Menu" to="." method="_on_Menu_restart"]
+[connection signal="resume" from="Menu" to="." method="_on_Menu_resume"]

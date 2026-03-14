@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://4fass1v2ta87"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage02/Background/Backdrop.gd" id="1_1i4dt"]
+[ext_resource type="Texture2D" uid="uid://dq7wiu0w8gu8v" path="res://Game/World/Stage/StageResources/Stage02/Background/Mansion.png" id="2_yunl5"]
+
+[sub_resource type="Sky" id="Sky_u8hnc"]
+
+[sub_resource type="Environment" id="Environment_37qah"]
+background_mode = 2
+sky = SubResource("Sky_u8hnc")
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+fog_enabled = true
+fog_light_color = Color(1, 1, 1, 1)
+fog_density = 0.02
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h1btl"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("2_yunl5")
+
+[sub_resource type="QuadMesh" id="QuadMesh_m5an0"]
+material = SubResource("StandardMaterial3D_h1btl")
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_1i4dt")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+unique_name_in_owner = true
+environment = SubResource("Environment_37qah")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0, 0, 0)
+
+[node name="Mansion" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, -0.866025, 0.6, 0.2, 3.1)
+mesh = SubResource("QuadMesh_m5an0")

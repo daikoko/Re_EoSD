@@ -1,0 +1,54 @@
+[gd_resource type="Resource" load_steps=8 format=3 uid="uid://b3wdhplbqecxy"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shooters/ShooterLaser/LaserData.gd" id="1_eok6c"]
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="2_y4ygh"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="3_ipqwp"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellScripts/Remilia_SpellA.gd" id="4_r57g7"]
+
+[sub_resource type="Resource" id="Resource_f012l"]
+script = ExtResource("1_eok6c")
+color_option = 1
+color_custom = Color(0, 0, 0, 1)
+weight = 20.0
+
+[sub_resource type="Resource" id="Resource_oyjsw"]
+script = ExtResource("1_eok6c")
+color_option = 1
+color_custom = Color(0, 0, 0, 1)
+weight = 10.0
+
+[sub_resource type="Resource" id="Resource_1y6kl"]
+script = ExtResource("3_ipqwp")
+particles = ExtResource("2_y4ygh")
+value = 400000
+point = 44
+power = 22
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("4_r57g7")
+special_animation = false
+A_primary_laser = SubResource("Resource_f012l")
+A_secondary_laser = SubResource("Resource_oyjsw")
+A_spawner_count = 9
+B1_layout_spawner_count = 10
+B1_fire_count = 6
+B2_layout_spawner_count = 12
+B2_fire_count = 10
+health = 32000.0
+time = 40.0
+base_points = 80000.0
+bonus_points = 160000.0
+Death = SubResource("Resource_1y6kl")
+major_phase = false
+hide_boss = false
+move_boss = true
+show_background = true
+hide_background = true
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=26 format=3 uid="uid://bx1aixaagh0ep"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_a2xlm"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_emopy"]
+[ext_resource type="Resource" uid="uid://dqd5qr7oxjrlj" path="res://Game/Entities/Boss/BossList/Stage02_Boss/DialogueList/Stage02_Boss_DialogueA.tres" id="2_ig4re"]
+[ext_resource type="Resource" uid="uid://c26wdd0oafhfy" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellC_Lunatic.tres" id="3_0u0cn"]
+[ext_resource type="Resource" uid="uid://cel0rvigg8mj5" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellA_Lunatic.tres" id="3_0vqyk"]
+[ext_resource type="Resource" uid="uid://2ydmprkwbtf4" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_NonA1_Lunatic.tres" id="3_4drsg"]
+[ext_resource type="Resource" uid="uid://mvbkg661up5l" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_NonA1_Easy.tres" id="3_5lsay"]
+[ext_resource type="Resource" uid="uid://dgvoxkj1fovvh" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_SpellC_Easy.tres" id="3_6o87d"]
+[ext_resource type="Resource" uid="uid://beopyx70am0wl" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_NonA1_Normal.tres" id="3_8sdit"]
+[ext_resource type="Resource" uid="uid://8yaw4b6peii6" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_SpellA_Easy.tres" id="3_cmfqx"]
+[ext_resource type="Resource" uid="uid://cfga1my7l8862" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_SpellA_Normal.tres" id="3_f5pj4"]
+[ext_resource type="Resource" uid="uid://bkdpv6p5yvmme" path="res://Game/Entities/Boss/BossList/Stage02_Boss/DialogueList/Stage02_Boss_DialogueB.tres" id="3_frft6"]
+[ext_resource type="Resource" uid="uid://bx7gs6an4dq2j" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_SpellB_Normal.tres" id="3_hjnxh"]
+[ext_resource type="Resource" uid="uid://dbjxhjutnl2uk" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellB_Lunatic.tres" id="3_m655r"]
+[ext_resource type="Resource" uid="uid://bncn3tpa066km" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_SpellD_Lunatic.tres" id="3_njobv"]
+[ext_resource type="Resource" uid="uid://dwto5rqjg588b" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_SpellC_Normal.tres" id="3_sv6pj"]
+[ext_resource type="Resource" uid="uid://0dgeuq255ye3" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_SpellB_Easy.tres" id="3_u1jr1"]
+[ext_resource type="Resource" uid="uid://c5klfut4drioe" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Easy/Cirno_NonA2_Easy.tres" id="4_arfgr"]
+[ext_resource type="Resource" uid="uid://dni2upaeav4rd" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Lunatic/Cirno_NonA2_Lunatic.tres" id="4_fith4"]
+[ext_resource type="Resource" uid="uid://be3j0hqvsxsu3" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Normal/Cirno_NonA2_Normal.tres" id="4_y34k8"]
+[ext_resource type="Resource" uid="uid://cml6va6wyqjvn" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_NonA1_Hard.tres" id="9_gywqc"]
+[ext_resource type="Resource" uid="uid://hlelejk5533w" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_SpellA_Hard.tres" id="10_megk0"]
+[ext_resource type="Resource" uid="uid://bvch2dwybjtjh" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_NonA2_Hard.tres" id="11_lhfss"]
+[ext_resource type="Resource" uid="uid://b784wpe0b7usn" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_SpellB_Hard.tres" id="12_flk35"]
+[ext_resource type="Resource" uid="uid://dyp0l0fq0j47x" path="res://Game/Entities/Boss/BossList/Stage02_Boss/SpellList/Hard/Cirno_SpellC_Hard.tres" id="13_6dc3b"]
+
+[resource]
+script = ExtResource("2_emopy")
+easy = Array[ExtResource("1_a2xlm")]([ExtResource("2_ig4re"), ExtResource("3_5lsay"), ExtResource("3_cmfqx"), ExtResource("4_arfgr"), ExtResource("3_u1jr1"), ExtResource("3_6o87d"), ExtResource("3_frft6")])
+normal = Array[ExtResource("1_a2xlm")]([ExtResource("2_ig4re"), ExtResource("3_8sdit"), ExtResource("3_f5pj4"), ExtResource("4_y34k8"), ExtResource("3_hjnxh"), ExtResource("3_sv6pj"), ExtResource("3_frft6")])
+hard = Array[ExtResource("1_a2xlm")]([ExtResource("2_ig4re"), ExtResource("9_gywqc"), ExtResource("10_megk0"), ExtResource("11_lhfss"), ExtResource("12_flk35"), ExtResource("13_6dc3b"), ExtResource("3_frft6")])
+lunatic = Array[ExtResource("1_a2xlm")]([ExtResource("2_ig4re"), ExtResource("3_4drsg"), ExtResource("3_0vqyk"), ExtResource("4_fith4"), ExtResource("3_m655r"), ExtResource("3_0u0cn"), ExtResource("3_njobv"), ExtResource("3_frft6")])

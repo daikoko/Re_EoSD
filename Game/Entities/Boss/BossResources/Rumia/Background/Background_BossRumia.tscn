@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy2opa6cfngmp"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/Background/Background_BossRumia.gd" id="1_mhl5r"]
+[ext_resource type="Texture2D" uid="uid://2inrordft8jc" path="res://Game/Entities/Boss/BossResources/Rumia/Background/Background_BossRumia01.png" id="2_x0l1o"]
+[ext_resource type="Texture2D" uid="uid://cjtxjgaa3c8op" path="res://Game/Entities/Boss/BossResources/Rumia/Background/Background_BossRumia02.png" id="3_o7r6p"]
+[ext_resource type="Texture2D" uid="uid://bdgaao6w6n6jf" path="res://Game/Entities/Boss/BossResources/Rumia/Background/Background_BossRumia03.png" id="4_hm4ej"]
+
+[node name="BackgroundRumia" type="CanvasLayer"]
+layer = -98
+script = ExtResource("1_mhl5r")
+
+[node name="Parallax" type="ParallaxBackground" parent="."]
+unique_name_in_owner = true
+layer = -98
+
+[node name="TextureRect" type="TextureRect" parent="Parallax"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_x0l1o")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax"]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(0, 1170)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_o7r6p")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(0, 1170)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax/ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_hm4ej")

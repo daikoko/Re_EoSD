@@ -1,0 +1,44 @@
+[gd_scene load_steps=10 format=3 uid="uid://dp2k66utnr5w4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper10.gd" id="1_fx7mk"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_imo2f"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_vyt8x"]
+[ext_resource type="Resource" uid="uid://cnstlw7n717sh" path="res://Game/Objects/Bullets/BulletList/Bullet_LargeRed.tres" id="4_0rqkj"]
+[ext_resource type="PackedScene" uid="uid://cs8wa14bd2vny" path="res://Game/Objects/Shadow/ShadowHandler.tscn" id="5_md6h4"]
+[ext_resource type="Texture2D" uid="uid://cdtbt3s3ogyxv" path="res://Game/Objects/Bullets/BulletResources/Bullet_LargeRed.png" id="6_1chgt"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="7_8ckhb"]
+[ext_resource type="AudioStream" uid="uid://chtf44y7n8l5f" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire01.wav" id="8_6fy2i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r7ttx"]
+resource_local_to_scene = true
+shader = ExtResource("3_vyt8x")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="RemiliaHelper10" type="Node2D"]
+script = ExtResource("1_fx7mk")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_imo2f")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_r7ttx")
+data = ExtResource("4_0rqkj")
+hit_immunity = true
+visibility_immunity = true
+
+[node name="ShadowHandler" parent="." instance=ExtResource("5_md6h4")]
+unique_name_in_owner = true
+image = ExtResource("6_1chgt")
+interval = 0.2
+duration = 0.6
+
+[node name="Guide" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("7_8ckhb")]
+unique_name_in_owner = true
+stream = ExtResource("8_6fy2i")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

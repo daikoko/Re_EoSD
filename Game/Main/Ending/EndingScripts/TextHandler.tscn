@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfw3tqhrnyb4t"]
+
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/TextHandler.gd" id="1_0dl7r"]
+[ext_resource type="Theme" uid="uid://vmb60ynktns0" path="res://Game/Themes/Themes/DialoguePlayer.tres" id="2_s8uvj"]
+
+[node name="TextHandler" type="CanvasLayer"]
+layer = 82
+script = ExtResource("1_0dl7r")
+
+[node name="Main" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 75.0
+offset_top = 580.0
+offset_right = 75.0
+offset_bottom = 580.0
+theme = ExtResource("2_s8uvj")
+
+[node name="MainPanel" type="ColorRect" parent="Main"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1125, 170)
+offset_right = 1125.0
+offset_bottom = 170.0
+color = Color(0, 0, 0, 0.4)
+
+[node name="MainName" type="Label" parent="Main"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 10.0
+offset_right = 89.0
+offset_bottom = 46.0
+theme_type_variation = &"Label_MainName"
+text = "Name
+"
+
+[node name="MainBorder" type="Label" parent="Main"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 30.0
+offset_right = 205.0
+offset_bottom = 73.0
+theme_type_variation = &"Label_MainBorder"
+text = "~ ~ ~ ~ ~ ~ ~"
+
+[node name="MainText" type="Label" parent="Main"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1085, 0)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 65.0
+offset_right = 1105.0
+offset_bottom = 155.0
+text = "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text"
+autowrap_mode = 2

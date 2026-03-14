@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmpjd5veblc4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper07.gd" id="1_wsn36"]
+
+[node name="RumiaHelper07" type="Node2D"]
+script = ExtResource("1_wsn36")

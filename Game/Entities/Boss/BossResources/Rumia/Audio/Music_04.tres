@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://c1sf06tr88muy"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_apx4e"]
+[ext_resource type="AudioStream" uid="uid://dlf2ru8a0da0i" path="res://Game/Entities/Boss/BossResources/Rumia/Audio/TH06_04.ogg" id="1_ha8pu"]
+
+[resource]
+script = ExtResource("1_apx4e")
+id = 4
+name = ""
+music = ExtResource("1_ha8pu")
+flag = "Passed_Stage1"

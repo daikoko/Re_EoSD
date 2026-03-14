@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://c5cl7ano24w3i"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Rin/ShotB/Flash/RinB_Flash.gd" id="1_t6sd0"]
+[ext_resource type="Texture2D" uid="uid://dj6bawtf0k2j2" path="res://Game/Entities/Player/PlayerResources/Rin/ShotB/Flash/Flash_RinShield.png" id="2_tv22i"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_hhxuj"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_10me4"]
+[ext_resource type="AudioStream" uid="uid://b8hin3oa87sun" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/Player_Spell03.wav" id="5_ppij5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p36j8"]
+radius = 92.0
+
+[sub_resource type="Animation" id="Animation_y0xu0"]
+resource_name = "Flash"
+length = 3.2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 2.8, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gc36m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t2r5n"]
+_data = {
+"Flash": SubResource("Animation_y0xu0"),
+"RESET": SubResource("Animation_gc36m")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_675qp"]
+radius = 12.0
+
+[node name="RinB_Flash" type="Node2D"]
+z_index = 38
+z_as_relative = false
+script = ExtResource("1_t6sd0")
+
+[node name="Shield" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Shield"]
+texture = ExtResource("2_tv22i")
+
+[node name="Bomb" parent="Shield" instance=ExtResource("3_hhxuj")]
+collision_mask = 4
+identity = "Bomb"
+shape = SubResource("CircleShape2D_p36j8")
+
+[node name="Animator" type="AnimationPlayer" parent="Shield"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_t2r5n")
+}
+
+[node name="Cooldown" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.2
+
+[node name="Blocker" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.6
+
+[node name="Bomb" parent="Blocker" instance=ExtResource("3_hhxuj")]
+unique_name_in_owner = true
+collision_mask = 4
+identity = "Bomb"
+shape = SubResource("CircleShape2D_675qp")
+
+[node name="Sound" parent="." instance=ExtResource("4_10me4")]
+unique_name_in_owner = true
+stream = ExtResource("5_ppij5")
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_Cooldown_timeout"]
+[connection signal="timeout" from="Blocker" to="." method="_on_Blocker_timeout"]
+[connection signal="collider_entered" from="Blocker/Bomb" to="." method="_on_Bomb_collider_entered"]

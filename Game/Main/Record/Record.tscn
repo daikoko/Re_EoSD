@@ -1,0 +1,195 @@
+[gd_scene load_steps=9 format=3 uid="uid://bxlsoc0kkc8m3"]
+
+[ext_resource type="Script" path="res://Game/Main/Record/Record.gd" id="1_7mx77"]
+[ext_resource type="Texture2D" uid="uid://cak1ujymoqvi" path="res://Master/Main/Background_Main.png" id="2_ry5dh"]
+[ext_resource type="Theme" uid="uid://dy76bevuq7s2k" path="res://Menu/Themes/Themes/Records.tres" id="3_xgvp2"]
+[ext_resource type="PackedScene" uid="uid://ccgwlstl0fqup" path="res://Master/Audio/Music.tscn" id="4_nv7kg"]
+[ext_resource type="Resource" uid="uid://dhw8v6c6ojwca" path="res://Game/Main/Record/Music_15.tres" id="5_7t6q8"]
+
+[sub_resource type="Animation" id="Animation_lmfx5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rank:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rank:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Name:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1mk5i"]
+resource_name = "Records_Start"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rank:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(750, 0), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rank:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Name:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(750, 0), Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Name:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gcxfo"]
+_data = {
+"RESET": SubResource("Animation_lmfx5"),
+"Records_Start": SubResource("Animation_1mk5i")
+}
+
+[node name="Record" type="CanvasLayer"]
+script = ExtResource("1_7mx77")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ry5dh")
+
+[node name="Rank" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_xgvp2")
+
+[node name="Rank_Title" type="Label" parent="Rank"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(700, 100)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 60.0
+offset_right = 750.0
+offset_bottom = 160.0
+theme_type_variation = &"Label_Title"
+text = "New Rankings
+"
+vertical_alignment = 1
+
+[node name="Rank_Container" type="ScrollContainer" parent="Rank"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(700, 575)
+layout_mode = 0
+offset_left = 50.0
+offset_top = 175.0
+offset_right = 750.0
+offset_bottom = 750.0
+follow_focus = true
+
+[node name="Rank_List" type="VBoxContainer" parent="Rank/Rank_Container"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Name" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("3_xgvp2")
+
+[node name="Name_Edit" type="LineEdit" parent="Name"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(450, 66)
+layout_mode = 0
+offset_left = 775.0
+offset_top = 690.0
+offset_right = 1225.0
+offset_bottom = 756.0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+placeholder_text = "Enter Name"
+alignment = 1
+
+[node name="Music" parent="." instance=ExtResource("4_nv7kg")]
+unique_name_in_owner = true
+music = ExtResource("5_7t6q8")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_gcxfo")
+}

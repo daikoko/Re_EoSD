@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemySpriteData" load_steps=4 format=3 uid="uid://by174tvsacwo3"]
+
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemySpriteScripts/EnemySpriteData.gd" id="1_a0c7u"]
+[ext_resource type="SpriteFrames" uid="uid://3epnxee00pla" path="res://Game/Entities/Enemy/EnemyResources/FairyRed/SpriteFrames_FairyRed.tres" id="2_jeaob"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iukeo"]
+radius = 28.0
+
+[resource]
+script = ExtResource("1_a0c7u")
+sprite_frames = ExtResource("2_jeaob")
+sprite_offset = Vector2(0, 0)
+hitbox = SubResource("CircleShape2D_iukeo")

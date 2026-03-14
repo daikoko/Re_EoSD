@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://bust2h6m5fx0r"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Shot/PlayerBullet_ReimuHoming.gd" id="1_dx47l"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="2_j73f2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_na1ym"]
+
+[node name="ReimuHoming" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.6)
+z_index = 42
+z_as_relative = false
+script = ExtResource("1_dx47l")
+
+[node name="Targeter" parent="." instance=ExtResource("2_j73f2")]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+identity = "Targeter"
+shape = SubResource("CircleShape2D_na1ym")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ImmunityTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[connection signal="collider_entered" from="Targeter" to="." method="_on_Targeter_collider_entered"]
+[connection signal="timeout" from="ImmunityTimer" to="." method="_on_ImmunityTimer_timeout"]

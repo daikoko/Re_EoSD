@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://c33ylyq45arik"]
+
+[ext_resource type="Texture2D" uid="uid://drs4nu0fttd6p" path="res://Game/Entities/Enemy/EnemyResources/MaidFairyBlue/GameSprites_EnemyMaidFairyBlue.png" id="1_pu6wp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bgmga"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chrr7"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x4a0s"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w06qu"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_actue"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16tmk"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kvpr"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ejwa5"]
+atlas = ExtResource("1_pu6wp")
+region = Rect2(100, 200, 100, 100)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bgmga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chrr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x4a0s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w06qu")
+}],
+"loop": true,
+"name": &"_Idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_actue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16tmk")
+}],
+"loop": false,
+"name": &"_Left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kvpr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ejwa5")
+}],
+"loop": false,
+"name": &"_Right",
+"speed": 6.0
+}]

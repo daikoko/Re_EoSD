@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ncvbaaivuiu4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper01.gd" id="1_1gmw4"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_hoshn"]
+[ext_resource type="AudioStream" uid="uid://ibf3ilirvje2" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire07.wav" id="3_5nq0v"]
+
+[node name="RemiliaHelper01" type="Node2D"]
+script = ExtResource("1_1gmw4")
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="FireSound" parent="." instance=ExtResource("2_hoshn")]
+unique_name_in_owner = true
+stream = ExtResource("3_5nq0v")

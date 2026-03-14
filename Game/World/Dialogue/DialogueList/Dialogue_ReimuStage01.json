@@ -1,0 +1,222 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"So dark outside..."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Despite it being the middle of the day..."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu05",
+		"name":          "Reimu",
+		"text":          
+			"Or maybe its the evening? I keep losing track of time."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu05",
+		"name":          "Reimu",
+		"text":          
+			"Maybe I should buy a clock. 
+			Or stop sleeping in the middle of the day."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu03",
+		"name":          "Reimu",
+		"text":          
+			"But I don't have the money for a clock.
+			And I certainly don't want to miss out on sleep."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu03",
+		"name":          "Reimu",
+		"text":          
+			"What to do..."
+	},
+	
+	
+	"008": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"Talking to yourself again?"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu01",
+		"name":          "Reimu",
+		"text":          
+			"Eh? Who's there?"
+	},
+	"010": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"011": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "???",
+		"text":          
+			"Forgot me already?"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Oh no it's you again."
+	},
+	
+	
+	"014": {
+		"type":          "title",
+		"name":          "Lumia",
+		"text":          "Embodiment of the Dark"
+	},
+	"0015": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia02",
+		"name":          "Lumia",
+		"text":          
+			"Oh dear, so serious again?"
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu03",
+		"name":          "Reimu",
+		"text":          
+			"Yeah yeah, what do you want?"
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia03",
+		"name":          "Lumia",
+		"text":         
+			 "I'm just taking a stroll outside though?"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"This cursed weather is your doing right?
+			The sun vanishing, air becoming hard to breathe,
+			the sky becoming unnaturally dark."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"It's clearly your fault."
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":         
+			"I'll have you know I having nothing to do with
+			it this time."
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":         
+			"I'm just enjoying the lovely weather we are having today."
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Well, where are you headed? Not the village I hope."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":         
+			"What a coincidence, I was actually headed over there."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia01",
+		"name":          "Lumia",
+		"text":         
+			"Heard they opened up a nice restaurant in town."
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"I'm going to have to stop you right there.
+			Promise me you'll go home when I beat your ass."
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":         
+			"Oh my what a serious incident solver. Your mother
+			would be proud."
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"SHUT UUUUUP!!"
+	},
+	"028": {
+		"type":         "event",
+		"pause":        "false",
+		"event_name":   "boss_theme"
+	}
+}

@@ -1,0 +1,71 @@
+100 - LoadingScreen
+99 - Debug
+
+82 - EndingText
+81 - EndingScene
+80 - EndingPlayer
+
+70 - Record
+
+63 - GameCover
+62 - GameEffects
+61 - Menu
+60 - HUD
+
+50 - StageEffects
+
+40 - SpellPortraits
+
+32 - DialogueText
+31 - DialogueScene
+30 - DialoguePlayer
+
+22 - SpellcardBonus
+21 - BossInfo
+20 - BossPlayer
+
+
+
+
+### Layer 0 ###
+
+100 - Label
+
+90 - GeneralBomb
+
+71 - Laser Particle
+70 - Laser
+
+65 - Bullet Particle
+64 - Dull Bullet
+63 - Tween Bullet
+62 - Sine Bullet
+61 - Linear Bullet
+60 - Gravity Bullet
+
+53 - Bomb Item 
+52 - Life Item 
+51 - Power Item 
+50 - Point Item 
+
+43 - PlayerParticles
+42 - PlayerBullets
+41 - PlayerShot
+40 - Player
+39 - PlayerBombBackground
+
+20 - Boss
+10 - BossParticles
+
+1 - EnemyParticles
+0 - Enemy
+
+### Layer 0 ###
+
+
+
+
+-97 - Player Spell Background
+-98 - Boss Spell Background
+-99 - LevelBackground
+-100 - MainBackground

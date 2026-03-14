@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://catxvew5gi57s"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper16.gd" id="1_cbvrw"]
+[ext_resource type="Texture2D" uid="uid://bkk14gknn3fdc" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/Effect_RemiliaChevron.png" id="2_7xhjo"]
+[ext_resource type="PackedScene" uid="uid://cs8wa14bd2vny" path="res://Game/Objects/Shadow/ShadowHandler.tscn" id="3_vtvno"]
+
+[sub_resource type="Curve2D" id="Curve2D_ysvaj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, 0)
+}
+point_count = 2
+
+[node name="RemiliaHelper16" type="Node2D"]
+rotation = 1.0472
+script = ExtResource("1_cbvrw")
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.4)
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 0.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Path" type="Path2D" parent="."]
+curve = SubResource("Curve2D_ysvaj")
+
+[node name="PathFollow" type="PathFollow2D" parent="Path"]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Path/PathFollow"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("2_7xhjo")
+
+[node name="ShadowHandler" parent="Path/PathFollow" instance=ExtResource("3_vtvno")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+image = ExtResource("2_7xhjo")
+interval = 0.05
+duration = 0.4

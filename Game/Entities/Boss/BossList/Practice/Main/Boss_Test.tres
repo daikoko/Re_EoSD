@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=6 format=3 uid="uid://d0mmk2s8uc1om"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_ucns3"]
+[ext_resource type="Resource" uid="uid://cvvu6qe6ljdnf" path="res://Game/Entities/Boss/BossList/Practice/DialogueList/Test_Boss_DialogueA.tres" id="2_b2ytg"]
+[ext_resource type="Resource" uid="uid://bybgnidmais60" path="res://Game/Entities/Boss/BossList/Practice/SpellList/Test/Rumia_Test.tres" id="3_ur6rd"]
+[ext_resource type="Resource" uid="uid://c45y4p8yswqxo" path="res://Game/Entities/Boss/BossList/Practice/DialogueList/Test_Boss_DialogueB.tres" id="4_n6643"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="5_m6o15"]
+
+[resource]
+script = ExtResource("5_m6o15")
+easy = Array[ExtResource("1_ucns3")]([])
+normal = Array[ExtResource("1_ucns3")]([ExtResource("2_b2ytg"), ExtResource("3_ur6rd"), ExtResource("4_n6643")])
+hard = Array[ExtResource("1_ucns3")]([])
+lunatic = Array[ExtResource("1_ucns3")]([])

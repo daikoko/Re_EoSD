@@ -1,0 +1,226 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"So many books..."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"But this place is so big it's beginning to give
+			me vertigo."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Shouldn't I have gotten to the other 
+			side of this library right now?"
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          "An unexpected intruder?"
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "patchy",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "title",
+		"name":          "Patchouli Knowledge",
+		"text":          "Unmoving Library"
+	},
+	
+	
+	"009": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"Sorry, but the library is closed and I'm not in the mood
+			for small talk."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Oh dear, are you being affected by the dreary weatger outside too?"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"My asthma has nothing to do with current events, 
+			although that mist has put me in a bad mood."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"Been spending all day preparing to clean up after Remilia's mess."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"And that is?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"I assume you're here to dispel the mist? Remilia is stubborn and
+			once she gets an idea she will go on with it."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"That ritual is going to end up very very poorly. And I'm here making
+			sure we can deal with the worst once Remilia comes crying
+			at me to fix it."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Why don't you go stop her then?"
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"She has an ability to simply get what she wants. 
+			This is not metaphorical."
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli03",
+		"name":          "Patchouli",
+		"text":          
+			"Say you haven't seen any strange youkai around lately right?
+			Those who are walking in this mist like it's regular air."
+	},
+	"019": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli03",
+		"name":          "Patchouli",
+		"text":          
+			"Whose affinity fits this current weather like a second nature?"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"... I don't remeber seeing any out of place youkai."
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli03",
+		"name":          "Patchouli",
+		"text":          
+			"We might have some time then."
+	},
+	
+	
+	"022": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"But now..."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Whoa! What are you doing?"
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli01",
+		"name":          "Patchouli",
+		"text":          
+			"Think of it as a test of strength. There's not much a regular human
+			like you can do against Remilia, but it's worth a try."
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"I feel like this is completely unneccesary!"
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"Too bad, I have nothing else to say to you."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "patchy",
+		"expression":    "BossPatchouli02",
+		"name":          "Patchouli",
+		"text":          
+			"Get lore-dumped, idiot."
+	},
+}

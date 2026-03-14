@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://dpnsnpv7adbta"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper11.gd" id="1_sagof"]
+[ext_resource type="Texture2D" uid="uid://d01adwsowb1" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_MiniSaw.png" id="2_t42k6"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="3_vxqpt"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="4_ixbbg"]
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="5_sixgj"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="6_qpedu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ieblq"]
+resource_local_to_scene = true
+shader = ExtResource("4_ixbbg")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rtkdl"]
+radius = 5.0
+
+[sub_resource type="Resource" id="Resource_ehopg"]
+script = ExtResource("5_sixgj")
+shape = SubResource("CircleShape2D_rtkdl")
+color_option = 0
+color_custom = Color(1, 0, 0, 1)
+visibility = Rect2(-60, -60, 60, 60)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4s2w5"]
+radius = 3.0
+height = 52.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q487o"]
+radius = 3.0
+height = 52.0
+
+[node name="Helper11" type="Node2D"]
+script = ExtResource("1_sagof")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+z_index = 64
+z_as_relative = false
+rotation = 1.5708
+texture = ExtResource("2_t42k6")
+
+[node name="BulletDull" parent="." instance=ExtResource("3_vxqpt")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_ieblq")
+data = SubResource("Resource_ehopg")
+
+[node name="Collider01" parent="." instance=ExtResource("6_qpedu")]
+identity = "Bullet"
+shape = SubResource("CapsuleShape2D_4s2w5")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Collider01"]
+position = Vector2(0, -36)
+shape = SubResource("CapsuleShape2D_q487o")
+
+[node name="Collider02" parent="." instance=ExtResource("6_qpedu")]
+identity = "Bullet"
+shape = SubResource("CapsuleShape2D_4s2w5")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Collider02"]
+position = Vector2(0, 36)
+shape = SubResource("CapsuleShape2D_q487o")
+
+[node name="Collider03" parent="." instance=ExtResource("6_qpedu")]
+rotation = 1.5708
+identity = "Bullet"
+shape = SubResource("CapsuleShape2D_4s2w5")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Collider03"]
+position = Vector2(0, 36)
+shape = SubResource("CapsuleShape2D_q487o")
+
+[node name="Collider04" parent="." instance=ExtResource("6_qpedu")]
+rotation = 1.5708
+identity = "Bullet"
+shape = SubResource("CapsuleShape2D_4s2w5")
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Collider04"]
+position = Vector2(-1.57361e-06, -36)
+shape = SubResource("CapsuleShape2D_q487o")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="collider_entered" from="Collider01" to="." method="_on_Collider_collider_entered"]
+[connection signal="collider_entered" from="Collider02" to="." method="_on_Collider_collider_entered"]
+[connection signal="collider_entered" from="Collider03" to="." method="_on_Collider_collider_entered"]
+[connection signal="collider_entered" from="Collider04" to="." method="_on_Collider_collider_entered"]

@@ -1,0 +1,184 @@
+[gd_scene load_steps=11 format=3 uid="uid://bol6ur8luyjnb"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Rin/Bomb/Rin_Bomb.gd" id="1_2fuq8"]
+[ext_resource type="Texture2D" uid="uid://bad3fkdu04lax" path="res://Game/Entities/Player/PlayerResources/Rin/Bomb/Bomb_Rin01.png" id="2_fbexf"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_2yogq"]
+[ext_resource type="Texture2D" uid="uid://ib8whacuoo2f" path="res://Game/Entities/Player/PlayerResources/Rin/Bomb/Bomb_Rin.png" id="4_i6tbh"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="5_jy54i"]
+[ext_resource type="AudioStream" uid="uid://ba0gwwuovwxyv" path="res://Game/Entities/Player/PlayerResources/_General/Sound/Player_Spell01.wav" id="6_06qg6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pu8bo"]
+radius = 68.0
+
+[sub_resource type="Animation" id="Animation_t3m5x"]
+resource_name = "Bomb"
+length = 3.2
+step = 0.2
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.4, 1.8, 2.2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"spawn_wave"
+}, {
+"args": [],
+"method": &"spawn_wave"
+}, {
+"args": [],
+"method": &"spawn_wave"
+}, {
+"args": [],
+"method": &"spawn_wave"
+}, {
+"args": [],
+"method": &"end_bomb"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decoration:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decoration:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 2.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0.8), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Background:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5oivm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Decoration:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decoration:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Background:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Background:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fjp5n"]
+_data = {
+"Bomb": SubResource("Animation_t3m5x"),
+"RESET": SubResource("Animation_5oivm")
+}
+
+[node name="Rin_Bomb" type="Node2D"]
+script = ExtResource("1_2fuq8")
+
+[node name="Decoration" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 39
+z_as_relative = false
+
+[node name="Sprite" type="Sprite2D" parent="Decoration"]
+texture = ExtResource("2_fbexf")
+
+[node name="Background" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 39
+z_as_relative = false
+
+[node name="BackgroundBomb" parent="Background" instance=ExtResource("3_2yogq")]
+unique_name_in_owner = true
+collision_mask = 0
+monitoring = false
+identity = "Bomb"
+shape = SubResource("CircleShape2D_pu8bo")
+
+[node name="Background" type="Sprite2D" parent="Background"]
+modulate = Color(1, 1, 1, 0.6)
+texture = ExtResource("4_i6tbh")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_fjp5n")
+}
+
+[node name="Sound" parent="." instance=ExtResource("5_jy54i")]
+unique_name_in_owner = true
+stream = ExtResource("6_06qg6")

@@ -1,0 +1,32 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "saku",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          "Looks like you don't give up easily do you?"
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa02",
+		"name":          "Marisa",
+		"text":          
+			"You're the one going for the second round tonight."
+	},
+}

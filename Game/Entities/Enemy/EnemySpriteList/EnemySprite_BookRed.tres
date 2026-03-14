@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EnemySpriteData" load_steps=5 format=3 uid="uid://dmjx04j4oqjxi"]
+
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemySpriteScripts/EnemySpriteData.gd" id="1_yqv7a"]
+[ext_resource type="SpriteFrames" uid="uid://0h5p7snh0poi" path="res://Game/Entities/Enemy/EnemyResources/BookRed/SpriteFrames_BookRed.tres" id="2_3028q"]
+[ext_resource type="PackedScene" uid="uid://c7613dar5nuy4" path="res://Game/Entities/Enemy/EnemyResources/BookRed/CustomSprite_Book.tscn" id="2_ct7vy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6p2xv"]
+radius = 28.0
+
+[resource]
+script = ExtResource("1_yqv7a")
+sprite_frames = ExtResource("2_3028q")
+sprite_base = ExtResource("2_ct7vy")
+sprite_offset = Vector2(0, 0)
+hitbox = SubResource("CircleShape2D_6p2xv")

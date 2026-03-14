@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgw15mt1xe53e"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage05/Background/World.gd" id="1_wtf2w"]
+[ext_resource type="PackedScene" uid="uid://cdfwe14q7i7v6" path="res://Game/World/Stage/StageResources/Stage05/Background/WorldSliceA.tscn" id="2_t81a0"]
+[ext_resource type="PackedScene" uid="uid://b44fbip1nclq8" path="res://Game/World/Background/3D_Background/WorldRepeater.tscn" id="3_s61m5"]
+
+[sub_resource type="Environment" id="Environment_glt44"]
+background_mode = 2
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.02
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.08
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_wtf2w")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_glt44")
+
+[node name="Dummy" type="Node3D" parent="."]
+unique_name_in_owner = true
+
+[node name="WorldSliceA" parent="Dummy" instance=ExtResource("2_t81a0")]
+
+[node name="WorldSliceA2" parent="Dummy" instance=ExtResource("2_t81a0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -12)
+
+[node name="WorldSliceA3" parent="Dummy" instance=ExtResource("2_t81a0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+
+[node name="WorldRepeaterA" parent="." instance=ExtResource("3_s61m5")]
+unique_name_in_owner = true
+world_slice = ExtResource("2_t81a0")
+slice_range = Vector3(12, 12, 12)
+z_extent = Vector2(12, 1)
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.53523, 4.85626)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.414693, 0.593384, -0.689873, 0, 0.758134, 0.652098, 0.909961, 0.270421, -0.314393, -10, 10, 0)
+light_color = Color(1, 0.4, 0.4, 1)
+light_energy = 2.0
+shadow_enabled = true
+shadow_bias = 1.767
+shadow_normal_bias = 1.508
+shadow_reverse_cull_face = true
+shadow_transmittance_bias = -8.839
+shadow_blur = 0.0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.414693, 0.593384, -0.689873, 0, 0.758134, 0.652098, 0.909961, 0.270421, -0.314393, -10, 10, -3.57026)
+light_color = Color(1, 0.2, 0.2, 1)
+light_energy = 0.1
+shadow_bias = 1.767
+shadow_normal_bias = 1.508
+shadow_reverse_cull_face = true
+shadow_transmittance_bias = -8.839
+shadow_blur = 0.0
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.414693, -0.593384, 0.689873, 0, -0.758134, -0.652098, 0.909961, -0.270421, 0.314393, -10, 10, -9.08573)
+light_color = Color(1, 0.4, 0.4, 1)
+light_energy = 0.3
+shadow_bias = 1.767
+shadow_normal_bias = 1.508
+shadow_reverse_cull_face = true
+shadow_transmittance_bias = -8.839
+shadow_blur = 0.0
+
+[connection signal="update_position" from="." to="WorldRepeaterA" method="_on_World_update_position"]

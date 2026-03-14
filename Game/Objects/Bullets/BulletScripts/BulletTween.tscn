@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://xdmpty67sv0y"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletTween.gd" id="1_8ksnw"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="1_0166c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sdu3w"]
+resource_local_to_scene = true
+shader = ExtResource("1_0166c")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fddnp"]
+resource_local_to_scene = true
+shader = ExtResource("1_0166c")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="BulletTween" type="Sprite2D"]
+z_index = 63
+z_as_relative = false
+material = SubResource("ShaderMaterial_sdu3w")
+script = ExtResource("1_8ksnw")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_fddnp")
+use_parent_material = true

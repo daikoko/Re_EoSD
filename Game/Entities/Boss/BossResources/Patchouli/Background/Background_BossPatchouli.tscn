@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://dndrxgi8lyoyi"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/Background/Background_BossPatchouli.gd" id="1_sgb3x"]
+[ext_resource type="Texture2D" uid="uid://dyskqdktl6fts" path="res://Game/Entities/Boss/BossResources/Patchouli/Background/Background_BossPatchouli01.png" id="2_1e66r"]
+[ext_resource type="Texture2D" uid="uid://b88s8m0qwbeso" path="res://Game/Entities/Boss/BossResources/Patchouli/Background/Background_BossPatchouli02.png" id="3_glww2"]
+[ext_resource type="Texture2D" uid="uid://o3lqyro4niv2" path="res://Game/Entities/Boss/BossResources/Patchouli/Background/Background_BossPatchouli03.png" id="4_k86cq"]
+[ext_resource type="Texture2D" uid="uid://cu5ualrutllrp" path="res://Game/Entities/Boss/BossResources/Patchouli/Background/Background_BossPatchouli04.png" id="5_cj6vx"]
+
+[node name="BackgroundBossPatchouli" type="CanvasLayer"]
+layer = -98
+script = ExtResource("1_sgb3x")
+
+[node name="Parallax" type="ParallaxBackground" parent="."]
+unique_name_in_owner = true
+layer = -98
+
+[node name="TextureRect" type="TextureRect" parent="Parallax"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_1e66r")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax"]
+motion_scale = Vector2(0.25, 0.25)
+motion_mirroring = Vector2(0, 1200)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax/ParallaxLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("3_glww2")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(0, 1200)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax/ParallaxLayer2"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("4_k86cq")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax"]
+motion_scale = Vector2(0.75, 0.75)
+motion_mirroring = Vector2(0, 1200)
+
+[node name="TextureRect" type="TextureRect" parent="Parallax/ParallaxLayer3"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("5_cj6vx")

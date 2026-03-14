@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://bj3l11arywapa"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper11.gd" id="1_yuwug"]
+[ext_resource type="Texture2D" uid="uid://wk5kxr3xqqk3" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaBeam.png" id="2_fhlia"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_y1s8r"]
+
+[sub_resource type="Curve" id="Curve_tkg3k"]
+max_value = 60.0
+_data = [Vector2(0, 20.4396), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_lcwhg"]
+max_value = 120.0
+_data = [Vector2(0, 120), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_c4s05"]
+max_value = 60.0
+_data = [Vector2(0, 30.3297), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_g0yo8"]
+max_value = 120.0
+_data = [Vector2(0, 100.22), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_6tbee"]
+max_value = 60.0
+_data = [Vector2(0, 40.2198), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_wjh08"]
+max_value = 120.0
+_data = [Vector2(0, 80.4396), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_wsgr8"]
+points = PackedVector2Array(-490, 28, 490, 86, 490, -86, -490, -28)
+
+[node name="RumiaHelper11" type="Node2D"]
+script = ExtResource("1_yuwug")
+B_tween_distance_01 = SubResource("Curve_tkg3k")
+B_tween_rotation_01 = SubResource("Curve_lcwhg")
+B_tween_distance_02 = SubResource("Curve_c4s05")
+B_tween_rotation_02 = SubResource("Curve_g0yo8")
+B_tween_distance_03 = SubResource("Curve_6tbee")
+B_tween_rotation_03 = SubResource("Curve_wjh08")
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+points = PackedVector2Array(160, 0, 1000, 0)
+width = 2.0
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(500, 0)
+texture = ExtResource("2_fhlia")
+
+[node name="Collider" parent="Sprite" instance=ExtResource("3_y1s8r")]
+unique_name_in_owner = true
+shape = SubResource("ConvexPolygonShape2D_wsgr8")
+
+[node name="Shooters" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="tree_exiting" from="." to="." method="_on_Self_tree_exiting"]
+[connection signal="collider_entered" from="Sprite/Collider" to="." method="_on_Collider_collider_entered"]

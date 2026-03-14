@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://bmo5mdfsvnkvy"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_jg24r"]
+[ext_resource type="AudioStream" uid="uid://cbes4d0k0rhyo" path="res://Game/Entities/Boss/BossResources/Remilia/Audio/TH06_14.ogg" id="1_o18tg"]
+
+[resource]
+script = ExtResource("1_jg24r")
+id = 14
+name = ""
+music = ExtResource("1_o18tg")
+flag = "Passed_Stage6"

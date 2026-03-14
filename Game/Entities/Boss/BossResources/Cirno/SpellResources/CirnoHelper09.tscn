@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://bh06ua5ka1slk"]
+
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="1_pt608"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper09.gd" id="1_r82yb"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="2_wc6si"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_yxfdx"]
+[ext_resource type="Resource" uid="uid://bu1dnkvss7pc3" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/Bullet_CirnoFollower.tres" id="4_flv8b"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_35ne8"]
+resource_local_to_scene = true
+shader = ExtResource("2_wc6si")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bbbft"]
+radius = 20.0
+
+[node name="CirnoHelper09" type="Node2D"]
+script = ExtResource("1_r82yb")
+
+[node name="BulletDull" parent="." instance=ExtResource("1_pt608")]
+material = SubResource("ShaderMaterial_35ne8")
+data = ExtResource("4_flv8b")
+hit_immunity = true
+visibility_immunity = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Marker01" type="Marker2D" parent="Sprite2D"]
+unique_name_in_owner = true
+rotation = 3.07178
+
+[node name="Marker02" type="Marker2D" parent="Sprite2D"]
+unique_name_in_owner = true
+rotation = 3.14159
+
+[node name="Marker03" type="Marker2D" parent="Sprite2D"]
+unique_name_in_owner = true
+rotation = 3.21141
+
+[node name="FireTimer" type="Timer" parent="Sprite2D"]
+unique_name_in_owner = true
+wait_time = 0.3
+autostart = true
+
+[node name="Collider" parent="." instance=ExtResource("3_yxfdx")]
+unique_name_in_owner = true
+collision_layer = 128
+collision_mask = 128
+shape = SubResource("CircleShape2D_bbbft")
+
+[node name="FreeTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="timeout" from="Sprite2D/FireTimer" to="." method="_on_FireTimer_timeout"]

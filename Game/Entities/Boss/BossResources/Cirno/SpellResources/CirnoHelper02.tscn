@@ -1,0 +1,39 @@
+[gd_scene load_steps=10 format=3 uid="uid://d1au4s3q0ji8g"]
+
+[ext_resource type="Shader" path="res://Game/Objects/Sprites/Flash.gdshader" id="1_g6flk"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper02.gd" id="2_2d8jr"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="3_wo4vq"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="4_beke4"]
+[ext_resource type="Resource" uid="uid://dasrcqwgjeq21" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/Bullet_CirnoDrop.tres" id="5_xun4f"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="6_a86oa"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="7_xkb7v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fe7js"]
+shader = ExtResource("1_g6flk")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e0226"]
+resource_local_to_scene = true
+shader = ExtResource("4_beke4")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="CirnoHelper01" type="Node2D"]
+material = SubResource("ShaderMaterial_fe7js")
+script = ExtResource("2_2d8jr")
+
+[node name="BulletDull" parent="." instance=ExtResource("3_wo4vq")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_e0226")
+data = ExtResource("5_xun4f")
+
+[node name="Guide" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("6_a86oa")]
+unique_name_in_owner = true
+stream = ExtResource("7_xkb7v")

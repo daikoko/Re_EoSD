@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemySpriteData" load_steps=4 format=3 uid="uid://ds2g668k5ktfw"]
+
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemySpriteScripts/EnemySpriteData.gd" id="1_umpjj"]
+[ext_resource type="SpriteFrames" uid="uid://d1o414hkooh0c" path="res://Game/Entities/Enemy/EnemyResources/FairyBlue/SpriteFrames_FairyBlue.tres" id="2_lsrbq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_typ6k"]
+radius = 28.0
+
+[resource]
+script = ExtResource("1_umpjj")
+sprite_frames = ExtResource("2_lsrbq")
+sprite_offset = Vector2(0, 0)
+hitbox = SubResource("CircleShape2D_typ6k")

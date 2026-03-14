@@ -1,0 +1,44 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://cpa3r37esxkyr"]
+
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_cq1ia"]
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_i2cgx"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellScripts/Flandre_SpellD.gd" id="2_y5hc1"]
+
+[sub_resource type="Resource" id="Resource_mjejm"]
+script = ExtResource("1_cq1ia")
+particles = ExtResource("1_i2cgx")
+value = 800000
+point = 64
+power = 16
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("2_y5hc1")
+special_animation = false
+A_layout_spawner_count = 5
+A_fire_count = 12
+B1_layout_spawner_count = 7
+B1_fire_count = 6
+B2_layout_spawner_count = 12
+B3_layout_spawner_count = 5
+B3_fire_count = 6
+B4_layout_spawner_count = 3
+B4_layout_column_count = 5
+B4_fire_count = 16
+health = 24000.0
+time = 60.0
+base_points = 800000.0
+bonus_points = 2.4e+06
+Death = SubResource("Resource_mjejm")
+major_phase = false
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = true
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

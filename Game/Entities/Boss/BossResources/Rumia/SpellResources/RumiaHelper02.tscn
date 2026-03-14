@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dto36okchpmqw"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper02.gd" id="1_5mvv4"]
+[ext_resource type="Texture2D" uid="uid://cdw6nmmwytd0h" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaShield.png" id="2_r8g2j"]
+
+[node name="RumiaHelper02" type="Node2D"]
+script = ExtResource("1_5mvv4")
+
+[node name="Rotater01" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite01" type="Sprite2D" parent="Rotater01"]
+unique_name_in_owner = true
+texture = ExtResource("2_r8g2j")
+
+[node name="Rotater02" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite02" type="Sprite2D" parent="Rotater02"]
+unique_name_in_owner = true
+texture = ExtResource("2_r8g2j")

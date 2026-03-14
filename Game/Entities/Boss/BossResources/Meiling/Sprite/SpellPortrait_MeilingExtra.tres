@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://8fkl0jycouhp"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_2tky5"]
+[ext_resource type="Texture2D" uid="uid://ckff4gp8gr56f" path="res://Game/Entities/Boss/BossResources/Meiling/Sprite/SpellPortrait_BossMeiling_Extra.png" id="2_yk0y8"]
+
+[resource]
+script = ExtResource("1_2tky5")
+texture = ExtResource("2_yk0y8")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

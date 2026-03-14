@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EndingData" load_steps=6 format=3 uid="uid://b7rvc0md3xike"]
+
+[ext_resource type="Texture2D" uid="uid://k1cnmc033ifb" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa01.png" id="1_vspoc"]
+[ext_resource type="Texture2D" uid="uid://chuxx4bfv1j1h" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa06.png" id="2_e3nqv"]
+[ext_resource type="Texture2D" uid="uid://7a8d4xdgeois" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa07.png" id="3_2035s"]
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/EndingData.gd" id="3_h77go"]
+[ext_resource type="Texture2D" uid="uid://b3w2wtj7m6dck" path="res://Game/Main/Ending/EndingResources/Marisa/EndingMarisa08.png" id="4_vgtcq"]
+
+[resource]
+script = ExtResource("3_h77go")
+scenes = Array[Texture]([ExtResource("1_vspoc"), ExtResource("2_e3nqv"), ExtResource("3_2035s"), ExtResource("4_vgtcq")])
+dialogue = "res://Game/Main/Ending/EndingResources/Marisa/Ending_MarisaGood.json"

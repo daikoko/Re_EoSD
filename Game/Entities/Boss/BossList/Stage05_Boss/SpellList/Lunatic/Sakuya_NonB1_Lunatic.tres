@@ -1,0 +1,46 @@
+[gd_resource type="Resource" load_steps=6 format=3 uid="uid://bnlqehba3chit"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_ic1mv"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_2o1yl"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellScripts/Sakuya_NonB.gd" id="3_fx8kv"]
+
+[sub_resource type="Curve" id="Curve_tfmif"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.912558, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_8eod7"]
+script = ExtResource("2_2o1yl")
+particles = ExtResource("1_ic1mv")
+value = 320000
+point = 32
+power = 16
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_fx8kv")
+A_attack_set = 0
+A_travel_distance_curve = SubResource("Curve_tfmif")
+A1_primary_layout_spawner_count = 5
+A1_primary_fire_count = 4
+A1_secondary_layout_spawner_count = 4
+A1_secondary_stack_count = 3
+A2_primary_layout_spawner_count = 5
+A2_primary_fire_count = 4
+A2_secondary_layout_spawner_count = 4
+A2_secondary_stack_count = 3
+A3_primary_layout_spawner_count = 6
+A3_primary_fire_count = 3
+A3_secondary_layout_spawner_count = 4
+A3_secondary_stack_count = 3
+B_layout_column_count = 5
+B_fire_count = 16
+health = 24000.0
+Death = SubResource("Resource_8eod7")
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+difficulty = 0
+boss_id = 0

@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb5ppyf5clqgn"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/ReimuA_Flash.gd" id="1_8nh1l"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_6yk5n"]
+[ext_resource type="AudioStream" uid="uid://b8hin3oa87sun" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/Player_Spell03.wav" id="3_nln0g"]
+
+[node name="ReimuAFlash" type="Node2D"]
+script = ExtResource("1_8nh1l")
+
+[node name="Sound" parent="." instance=ExtResource("2_6yk5n")]
+unique_name_in_owner = true
+stream = ExtResource("3_nln0g")

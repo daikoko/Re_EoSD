@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://cien5noh4ckvi"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper14.gd" id="1_i2jp6"]
+[ext_resource type="Texture2D" uid="uid://bvcpyvl5mk4ys" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/BulletCustom_PatchouliSpadeOrange.png" id="2_svgr4"]
+
+[sub_resource type="Curve" id="Curve_v6gg6"]
+max_value = 800.0
+_data = [Vector2(0, 131.868), 0.0, 0.0, 0, 0, Vector2(0.246862, 175.824), 0.0, 0.0, 0, 0, Vector2(0.451883, 158.242), 0.0, 0.0, 0, 0, Vector2(0.65272, 193.407), 0.0, 0.0, 0, 0, Vector2(0.841004, 149.451), 0.0, 0.0, 0, 0, Vector2(1, 800), 6753.53, 0.0, 0, 0]
+point_count = 6
+
+[sub_resource type="Curve" id="Curve_h8lll"]
+max_value = 60.0
+_data = [Vector2(0, 60), 0.0, 0.0, 0, 0, Vector2(0.866109, 50.7692), -30.7478, -30.7478, 0, 0, Vector2(1, 32.967), -125.258, 0.0, 0, 0]
+point_count = 3
+
+[node name="Helper14" type="Node2D"]
+script = ExtResource("1_i2jp6")
+distance_curve = SubResource("Curve_v6gg6")
+rotation_curve = SubResource("Curve_h8lll")
+
+[node name="Guide" type="Node2D" parent="."]
+unique_name_in_owner = true
+rotation = 1.5708
+
+[node name="Sprite2D" type="Sprite2D" parent="Guide"]
+visible = false
+texture = ExtResource("2_svgr4")

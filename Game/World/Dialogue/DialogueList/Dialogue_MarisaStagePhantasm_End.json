@@ -1,0 +1,54 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"I still have no idea what happened."
+	},
+	
+	"003": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia03",
+		"name":          "Lumia",
+		"text":          
+			"Ah, ritual ran out of power."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia02",
+		"name":          "Lumia",
+		"text":          
+			"You really distracted me good there. Well played for a simple thief."
+	},
+	
+	"006": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"Um??"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"Alright??"
+	},
+}

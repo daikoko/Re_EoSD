@@ -1,0 +1,47 @@
+[gd_scene load_steps=10 format=3 uid="uid://ccf22jt5l7ly0"]
+
+[ext_resource type="Script" path="res://Game/World/Pool/Pool.gd" id="1_5eexn"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolBulletGravity.gd" id="1_eyr74"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolBulletLinear.gd" id="2_8rgyr"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolBulletSine.gd" id="3_5bdva"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolBulletTween.gd" id="4_ktd53"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolItemPoint.gd" id="5_o1dxj"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolItemPower.gd" id="6_ppxs1"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolItemScore.gd" id="7_763rw"]
+[ext_resource type="Script" path="res://Game/World/Pool/PoolParticle.gd" id="8_2vs7a"]
+
+[node name="Pool" type="Node2D"]
+script = ExtResource("1_5eexn")
+item_drop = 1
+
+[node name="PoolBulletGravity" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_eyr74")
+
+[node name="PoolBulletLinear" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_8rgyr")
+
+[node name="PoolBulletSine" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_5bdva")
+
+[node name="PoolBulletTween" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_ktd53")
+
+[node name="PoolItemPoint" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_o1dxj")
+
+[node name="PoolItemPower" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_ppxs1")
+
+[node name="PoolItemScore" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("7_763rw")
+
+[node name="PoolParticle" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_2vs7a")

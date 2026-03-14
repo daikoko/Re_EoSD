@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EndingData" load_steps=5 format=3 uid="uid://cf4f8m1x5wcue"]
+
+[ext_resource type="Texture2D" uid="uid://ckyn3t7w6epl6" path="res://Game/Main/Ending/EndingResources/Reimu/EndingReimu01.png" id="1_jnlvd"]
+[ext_resource type="Texture2D" uid="uid://bi0ic068uc03b" path="res://Game/Main/Ending/EndingResources/Reimu/EndingReimu02.png" id="2_2uenu"]
+[ext_resource type="Texture2D" uid="uid://buwftk3hx4ihb" path="res://Game/Main/Ending/EndingResources/Reimu/EndingReimu03.png" id="3_0ein5"]
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/EndingData.gd" id="3_6i6ye"]
+
+[resource]
+script = ExtResource("3_6i6ye")
+scenes = Array[Texture]([ExtResource("1_jnlvd"), ExtResource("2_2uenu"), ExtResource("3_0ein5")])
+dialogue = "res://Game/Main/Ending/EndingResources/Reimu/Ending_ReimuBad.json"

@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://bn1stedi7hhqq"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/SakuyaHelper04.gd" id="1_nsvvv"]
+[ext_resource type="Texture2D" uid="uid://bx1t6rq1x754f" path="res://Game/Entities/Boss/BossResources/Sakuya/Sprite/GameSprites_BossSakuya.png" id="2_hojet"]
+[ext_resource type="Texture2D" uid="uid://bvs1hngffkrh" path="res://Game/Objects/Particles/Particle_Generic.png" id="3_cch33"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_tlrnl"]
+[ext_resource type="AudioStream" uid="uid://0hoeilfvw6qp" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/StopFire.mp3" id="5_cnphu"]
+[ext_resource type="AudioStream" uid="uid://c551suywhr7xb" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/TimeStop.wav" id="6_3roml"]
+[ext_resource type="AudioStream" uid="uid://br0hmqri4pwst" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/TimeStop_Release.mp3" id="7_e6h3p"]
+
+[node name="SakuyaHelper04" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_nsvvv")
+
+[node name="LayoverSprite" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="LayoverSprite" type="Sprite2D" parent="LayoverSprite"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("2_hojet")
+offset = Vector2(0, 20)
+region_enabled = true
+region_rect = Rect2(240, 600, 120, 120)
+
+[node name="Flash" type="Sprite2D" parent="LayoverSprite"]
+unique_name_in_owner = true
+texture = ExtResource("3_cch33")
+
+[node name="Set01_RotationFirst" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Set01_RotationSecond" type="Marker2D" parent="Set01_RotationFirst"]
+unique_name_in_owner = true
+
+[node name="Set01_SpawnerMain" type="Marker2D" parent="Set01_RotationFirst/Set01_RotationSecond"]
+unique_name_in_owner = true
+position = Vector2(100, 0)
+
+[node name="Set02_RotationFirst" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Set02_SpawnerMain" type="Marker2D" parent="Set02_RotationFirst"]
+unique_name_in_owner = true
+position = Vector2(100, 0)
+
+[node name="Sound_Fire" parent="." instance=ExtResource("4_tlrnl")]
+unique_name_in_owner = true
+stream = ExtResource("5_cnphu")
+
+[node name="Sound_Stop" parent="." instance=ExtResource("4_tlrnl")]
+unique_name_in_owner = true
+stream = ExtResource("6_3roml")
+
+[node name="Sound_Release" parent="." instance=ExtResource("4_tlrnl")]
+unique_name_in_owner = true
+stream = ExtResource("7_e6h3p")

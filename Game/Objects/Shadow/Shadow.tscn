@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2xrxbnk8xmnj"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shadow/Shadow.gd" id="1_u3k56"]
+
+[node name="Shadow" type="Node2D"]
+script = ExtResource("1_u3k56")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 19
+z_as_relative = false

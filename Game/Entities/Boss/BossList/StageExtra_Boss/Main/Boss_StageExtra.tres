@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=19 format=3 uid="uid://cmmlqs55f6dgi"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_f52ye"]
+[ext_resource type="Resource" uid="uid://v7cxefd6dug6" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/DialogueList/StageExtra_Boss_DialogueA.tres" id="2_4lrwh"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_wspar"]
+[ext_resource type="Resource" uid="uid://b7jubq04gcrmf" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA1_Extra.tres" id="3_3lfjp"]
+[ext_resource type="Resource" uid="uid://43u2wjcr0gi4" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellB_Extra.tres" id="3_8xtjq"]
+[ext_resource type="Resource" uid="uid://c5gi2n4ccyh4x" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellG_Extra.tres" id="3_ar865"]
+[ext_resource type="Resource" uid="uid://b0x4nhdtt4oeg" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellA_Extra.tres" id="3_fj6s7"]
+[ext_resource type="Resource" uid="uid://h1yihuo8yhra" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellI_Extra.tres" id="3_fldvy"]
+[ext_resource type="Resource" uid="uid://bcrxik21tkv7e" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellC_Extra.tres" id="3_gifbs"]
+[ext_resource type="Resource" uid="uid://b0288jl44msy8" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellE_Extra.tres" id="3_l8a86"]
+[ext_resource type="Resource" uid="uid://cpa3r37esxkyr" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellD_Extra.tres" id="3_u55x2"]
+[ext_resource type="Resource" uid="uid://dn5qhabomes3y" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellF_Extra.tres" id="3_uurk0"]
+[ext_resource type="Resource" uid="uid://bd3vrqi4hnxcu" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellH_Extra.tres" id="3_v7lr7"]
+[ext_resource type="Resource" uid="uid://cp7rqron27e5o" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA2_Extra.tres" id="4_55o5b"]
+[ext_resource type="Resource" uid="uid://c2r74yieewvmp" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/DialogueList/StageExtra_Boss_DialogueB.tres" id="4_oc16k"]
+[ext_resource type="Resource" uid="uid://bgd624hsnbnuf" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA3_Extra.tres" id="5_sd1xt"]
+[ext_resource type="Resource" uid="uid://dk76h42sddeik" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA4_Extra.tres" id="6_j4u5j"]
+[ext_resource type="Resource" uid="uid://d1g42mdebkp3w" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA5_Extra.tres" id="7_q6cad"]
+
+[resource]
+script = ExtResource("2_wspar")
+easy = Array[ExtResource("1_f52ye")]([])
+normal = Array[ExtResource("1_f52ye")]([ExtResource("2_4lrwh"), ExtResource("3_3lfjp"), ExtResource("3_fj6s7"), ExtResource("4_55o5b"), ExtResource("3_8xtjq"), ExtResource("5_sd1xt"), ExtResource("3_gifbs"), ExtResource("3_u55x2"), ExtResource("6_j4u5j"), ExtResource("3_l8a86"), ExtResource("3_uurk0"), ExtResource("7_q6cad"), ExtResource("3_ar865"), ExtResource("3_v7lr7"), ExtResource("3_fldvy"), ExtResource("4_oc16k")])
+hard = Array[ExtResource("1_f52ye")]([])
+lunatic = Array[ExtResource("1_f52ye")]([])

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://c3m5yd5x3doek"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_4yyuj"]
+[ext_resource type="Texture2D" uid="uid://dfr5dxxymfl8l" path="res://Game/Entities/Boss/BossResources/Daiyousei/SpellResources/BulletCustom_DaiyouseiFlowerYellow.png" id="2_lqtkj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_emdct"]
+radius = 40.0
+
+[resource]
+script = ExtResource("1_4yyuj")
+texture = ExtResource("2_lqtkj")
+shape = SubResource("CircleShape2D_emdct")
+color_option = 2
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-64, -64, 128, 128)

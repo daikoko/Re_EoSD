@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://dt1uvk3cl0k7n"]
+
+[ext_resource type="FontFile" uid="uid://cw3pc1tkugp2m" path="res://Game/Themes/Fonts/KelvinchRoman.otf" id="1_t0eop"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w6aak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sxf7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x1br0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0px7g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pmjk1"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.6, 0.6, 0.6, 1)
+Button/colors/font_focus_color = Color(1, 0.4, 0.4, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 0, 0, 1)
+Button/constants/outline_size = 6
+Button/font_sizes/font_size = 26
+Button/fonts/font = ExtResource("1_t0eop")
+Button/styles/disabled = SubResource("StyleBoxEmpty_w6aak")
+Button/styles/focus = SubResource("StyleBoxEmpty_sxf7j")
+Button/styles/hover = SubResource("StyleBoxEmpty_x1br0")
+Button/styles/normal = SubResource("StyleBoxEmpty_0px7g")
+Button/styles/pressed = SubResource("StyleBoxEmpty_pmjk1")
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/constants/outline_size = 3
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("1_t0eop")
+Label_Title/base_type = &"Label"
+Label_Title/colors/font_outline_color = Color(0, 0, 0, 1)
+Label_Title/constants/outline_size = 12
+Label_Title/font_sizes/font_size = 64
+Label_Title/fonts/font = ExtResource("1_t0eop")

@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://duwtg5u6uiysx"]
+
+[ext_resource type="Texture2D" uid="uid://dvpctoad286j6" path="res://Game/Entities/Player/PlayerResources/_General/Bomb/Bomb_General.png" id="1_cd72a"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/_General/Bomb/GeneralBomb.gd" id="2_x44se"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_i1bon"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gwxwl"]
+radius = 1040.0
+
+[sub_resource type="Animation" id="Animation_qiqhy"]
+resource_name = "Bomb"
+length = 1.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.4), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"disable"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_ru7mn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("..:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vgifw"]
+_data = {
+"Bomb": SubResource("Animation_qiqhy"),
+"RESET": SubResource("Animation_ru7mn")
+}
+
+[node name="GeneralBomb" type="Sprite2D"]
+z_index = 90
+z_as_relative = false
+texture = ExtResource("1_cd72a")
+script = ExtResource("2_x44se")
+
+[node name="Collider" parent="." instance=ExtResource("3_i1bon")]
+collision_mask = 0
+monitoring = false
+identity = "Bomb"
+shape = SubResource("CircleShape2D_gwxwl")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../Collider")
+libraries = {
+"": SubResource("AnimationLibrary_vgifw")
+}

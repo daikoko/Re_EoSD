@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://fn41euw7ibln"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper22.gd" id="1_wkk8c"]
+[ext_resource type="Texture2D" uid="uid://dqogmovpd3o5f" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoPatchy.png" id="2_agopy"]
+
+[node name="Helper22" type="Node2D"]
+script = ExtResource("1_wkk8c")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 103
+z_as_relative = false
+texture = ExtResource("2_agopy")

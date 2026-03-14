@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://caqafx5j4wfje"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper05.gd" id="1_s8hrh"]
+
+[sub_resource type="Curve2D" id="Curve2D_5oc86"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1000, -1)
+}
+point_count = 2
+
+[node name="Helper05" type="Node2D"]
+rotation = 1.12748
+script = ExtResource("1_s8hrh")
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 2.0
+default_color = Color(1, 0, 1, 1)
+
+[node name="Path" type="Path2D" parent="."]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_5oc86")
+
+[node name="Guide" type="PathFollow2D" parent="Path"]
+unique_name_in_owner = true
+rotation = -0.001
+loop = false

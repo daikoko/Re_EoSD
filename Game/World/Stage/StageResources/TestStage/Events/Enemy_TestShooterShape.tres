@@ -1,0 +1,91 @@
+[gd_resource type="Resource" script_class="EnemyData_Free" load_steps=12 format=3 uid="uid://dq7tyidkoau3x"]
+
+[ext_resource type="Resource" uid="uid://dy308npnjq5r3" path="res://Game/Entities/Enemy/DeathList/Death_EnemyLarge.tres" id="1_qv5sx"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyShooterScripts/EnemyShooter.gd" id="2_lbde8"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyScripts/EnemyData_Free.gd" id="3_3iwq2"]
+[ext_resource type="Script" path="res://Game/Objects/Shooters/Data/RowData_Bullet.gd" id="4_60k8v"]
+[ext_resource type="Script" path="res://Game/Entities/Enemy/EnemyShooterScripts/EnemyShooter_Shape.gd" id="5_ys0m8"]
+[ext_resource type="Resource" uid="uid://s25mhyeioeve" path="res://Game/Objects/Bullets/BulletList/Bullet_SmallRed.tres" id="6_1vktv"]
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="6_iubhh"]
+[ext_resource type="Resource" uid="uid://bm2ld6tl0wujt" path="res://Game/Objects/Bullets/BulletList/Bullet_SmallYellow.tres" id="7_gs2do"]
+[ext_resource type="Resource" uid="uid://by174tvsacwo3" path="res://Game/Entities/Enemy/EnemySpriteList/EnemySprite_FairyRed.tres" id="10_ion20"]
+
+[sub_resource type="Resource" id="Resource_ej65u"]
+script = ExtResource("4_60k8v")
+bullets = Array[ExtResource("6_iubhh")]([ExtResource("6_1vktv"), ExtResource("7_gs2do")])
+
+[sub_resource type="Resource" id="Resource_wl333"]
+script = ExtResource("5_ys0m8")
+bullets = Array[ExtResource("4_60k8v")]([SubResource("Resource_ej65u")])
+shape_count = 24
+shape = 2
+distance = 20.0
+scale = Vector2(1, 1)
+fire_count = 6
+fire_duration = 2.0
+cool_duration = 1.0
+start_delay = 0.1
+speed = 100.0
+bullet_rotation = 0.0
+shape_follow = true
+row_speed = 0.0
+rotation_start = 90.0
+rotation_start_random = true
+rotation_start_aim = false
+rotation_speed = 30.0
+flash_scale = 2.0
+flash_time = 0.2
+immunity_time = 0.1
+fire_factor = 1
+fire_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+shape_factor = 1
+shape_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+
+[resource]
+script = ExtResource("3_3iwq2")
+position_start = Vector2(340, -20)
+position_final = Vector2(340, -20)
+random_position = false
+enter_angle_start = 90.0
+enter_angle_final = 90.0
+exit_angle_start = -90.0
+exit_angle_final = -90.0
+distance_start = 320.0
+distance_final = 320.0
+random_distance = false
+id = "TestBasic"
+spawn_seed = 275235
+amount = 1
+time = 1.0
+sprite = ExtResource("10_ion20")
+death = ExtResource("1_qv5sx")
+health = 1.0
+speed = 350.0
+start_time = 0.1
+shooters = Array[ExtResource("2_lbde8")]([SubResource("Resource_wl333")])
+death_shooters = Array[ExtResource("2_lbde8")]([])
+retreat = true
+retreat_time = 20.0
+retreat_speed = 600.0
+amount_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}
+health_override = {
+"Easy": -1,
+"Hard": -1,
+"Lunatic": -1,
+"Normal": -1
+}

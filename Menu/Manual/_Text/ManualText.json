@@ -1,0 +1,57 @@
+{
+	"page_01": {
+		"text_01":   "Use the arrow keys to navigate the menu and move in game",
+		"text_02":   "Use the [space] key to select in the menu and pause the game",
+		"text_03":   "Use the [esc] key to go back through the menus",
+		"text_04":   "Hold the [z] key to shoot",
+		"text_05":   "Hold the [shift] key to focus, which adjusts the character speed and shot",
+		"text_06":   "Use the [x] key to use a bomb. Requires a spare bomb.",
+		"text_07":   "Use the [c] key to use a flash bomb. Requires a filled Graze Bar",
+		"text_08":   "Use the [a] or [z] key to advance dialogue",
+		"text_09":   "Hold the [s] or [x] key to skip through dialogue",
+	},
+	"page_02": {
+		"text_10":  
+			"The number of spare Lives is counted in the Red Star Bars.
+			Dying with zero spare lives lead to a game over.
+			Gain more lives by collecting red Life Items.",
+		"text_11":  
+			"The number of bomb is counted in the Green Star Bars.
+			Gain more bombs by collecting Bomb Items.",
+		"text_12":  
+			"The power level is tracked in the Red Power Bar.
+			Gain power by collecting red Power Items.",
+		"text_13":  
+			"Current Graze is tracked in the Yellow Graze Bar and can overflow.
+			Graze is collected by being close to bullets.",
+		"text_14":  
+			"Earn score by collect blue Point Items, killing enemies,
+			and progressing through the game",
+		"text_15":  
+			"Spellcards are captured by passing them without losing a life,
+			using a bomb, or running out the timer (if not a timeout spellcard)",
+		"text_16":  
+			"Power will passively improve the shot based on precentage.
+			Focusing while shooting will increase damage further,
+			but will also consume power over time.",
+	},
+	"page_03": {
+		"text_17":  
+			"Recommended mode for casual players.
+			Allows saving and restarting at every stage as well as
+			guaranteeing the story's good ending. Disables scoring and replays.",
+		"text_18":  
+			"Recommended mode for people playing for score.
+			Does not alow for saving between stages, but gives a limited amount
+			of Continue Credits to continue the game after a game over.
+			Complete the game without using a Continue Credit to get the story's good ending.",
+		"text_19":  
+			"The Extra Stage is unlocked by completing the Main Story
+			on any mode and any difficulty. Each character for the extra stage
+			is individually unlocked by completing the Main Story as that character.",
+		"text_20": 
+			"The Phantasm Stage is unlocked by completing the Extra Stage.
+			The Phantasm stage is accessed by pressing the [shift] key on the
+			Extra Stage difficulty select screen 4 times.",
+	}
+}

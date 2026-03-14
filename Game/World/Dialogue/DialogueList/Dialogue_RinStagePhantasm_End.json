@@ -1,0 +1,72 @@
+{
+	"001": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Oh you were serious about stopping me after all."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"What a shame."
+	},
+	
+	"004": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin02",
+		"name":          "Rin",
+		"text":          
+			"I don't know what you are talking about, but there's no way
+			I'm leaving the sky the way it is!"
+	},
+	
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"Well, this method of doing things wouldn't have been permanent anyway."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia05",
+		"name":          "Lumia",
+		"text":          
+			"So I should take my leave now."
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"However, maybe we'll meet again someday."
+	},
+	
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"What an odd person..."
+	},
+}

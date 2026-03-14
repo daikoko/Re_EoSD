@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmix71dikamn4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Meiling/Background/Background_BossMeiling.gd" id="1_wak1x"]
+[ext_resource type="Texture2D" uid="uid://c80xecinjls12" path="res://Game/Entities/Boss/BossResources/Meiling/Background/Background_BossMeiling01.png" id="2_dre6x"]
+
+[node name="Background_BossMeiling" type="CanvasLayer"]
+layer = -99
+script = ExtResource("1_wak1x")
+
+[node name="SmallSpawn_Timer" type="Timer" parent="."]
+wait_time = 1.2
+autostart = true
+
+[node name="LargeSpawn_Timer" type="Timer" parent="."]
+wait_time = 3.8
+autostart = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_dre6x")
+
+[connection signal="timeout" from="SmallSpawn_Timer" to="." method="_on_SmallSpawnTimer_timeout"]
+[connection signal="timeout" from="LargeSpawn_Timer" to="." method="_on_LargeSpawnTimer_timeout"]

@@ -1,0 +1,53 @@
+[gd_scene load_steps=12 format=3 uid="uid://crjvnfsf7kwu6"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage03/Background/Backdrop.gd" id="1_fbn68"]
+[ext_resource type="Texture2D" uid="uid://b01age8sjme6i" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01H.png" id="2_e83g8"]
+[ext_resource type="Texture2D" uid="uid://dhs61fobpgcyu" path="res://Game/World/Stage/StageResources/Stage03/Background/Background_Stage03E.png" id="3_lusqv"]
+[ext_resource type="Texture2D" uid="uid://cramktmsnjkeo" path="res://Game/World/Stage/StageResources/Stage03/Background/Background_Stage03F.png" id="4_fppk3"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_deyl1"]
+panorama = ExtResource("2_e83g8")
+
+[sub_resource type="Sky" id="Sky_pofdl"]
+sky_material = SubResource("PanoramaSkyMaterial_deyl1")
+
+[sub_resource type="Environment" id="Environment_4nubc"]
+background_mode = 2
+sky = SubResource("Sky_pofdl")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4vhak"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("3_lusqv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_d5req"]
+material = SubResource("StandardMaterial3D_4vhak")
+size = Vector2(8, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t4gf5"]
+transparency = 1
+albedo_texture = ExtResource("4_fppk3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_0aiqj"]
+material = SubResource("StandardMaterial3D_t4gf5")
+size = Vector2(8, 8)
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_fbn68")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4nubc")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Mansion" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, -5.8)
+mesh = SubResource("QuadMesh_d5req")
+
+[node name="Wall" type="MeshInstance3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2, -5.6)
+mesh = SubResource("QuadMesh_0aiqj")

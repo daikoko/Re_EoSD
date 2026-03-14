@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=4 format=3 uid="uid://cet431uyetepd"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_a08ft"]
+[ext_resource type="SpriteFrames" uid="uid://co2n6k22yovlo" path="res://Game/Entities/Boss/BossResources/Cirno/Sprite/SpriteFrames_CirnoPhantasm.tres" id="2_jrc4u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_68ngd"]
+radius = 40.0
+
+[resource]
+script = ExtResource("1_a08ft")
+sprite_frames = ExtResource("2_jrc4u")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_68ngd")

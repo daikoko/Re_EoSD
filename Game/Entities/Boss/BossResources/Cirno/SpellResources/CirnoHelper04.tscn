@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://bu4wtbhw3bqwp"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper04.gd" id="1_rlxvb"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_4mubh"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_wh0kt"]
+[ext_resource type="Texture2D" uid="uid://c0wi45lvb5jpx" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/BulletCustom_CirnoShard.png" id="4_ch0k8"]
+[ext_resource type="Resource" uid="uid://cdkgcjw2ipqe" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/Bullet_CirnoShard.tres" id="5_pjece"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kju28"]
+resource_local_to_scene = true
+shader = ExtResource("3_wh0kt")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="CirnoHelper04" type="Node2D"]
+script = ExtResource("1_rlxvb")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_4mubh")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_kju28")
+texture = ExtResource("4_ch0k8")
+data = ExtResource("5_pjece")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs8wa14bd2vny"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shadow/ShadowHandler.gd" id="1_2btso"]
+[ext_resource type="Texture2D" uid="uid://dvpctoad286j6" path="res://Game/Entities/Player/PlayerResources/_General/Bomb/Bomb_General.png" id="2_is5dm"]
+
+[node name="ShadowHandler" type="Node2D"]
+script = ExtResource("1_2btso")
+image = ExtResource("2_is5dm")
+interval = 0.2
+duration = 0.8
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

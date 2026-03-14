@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://bddavmrqqewq7"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_mslsv"]
+[ext_resource type="Texture2D" uid="uid://cdm7k56wqcomr" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotB/Shot/Bullet_ReimuNeedle.png" id="2_lypvy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ff46m"]
+size = Vector2(20, 4)
+
+[resource]
+script = ExtResource("1_mslsv")
+texture = ExtResource("2_lypvy")
+shape = SubResource("RectangleShape2D_ff46m")
+color_option = 0
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-10, -10, 20, 20)

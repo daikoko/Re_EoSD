@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b44fbip1nclq8"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldRepeater.gd" id="1_hrmj4"]
+
+[node name="WorldRepeater" type="Node3D"]
+script = ExtResource("1_hrmj4")

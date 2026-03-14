@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp1mhls7shm71"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/Background/Helper01.gd" id="1_5yp7i"]
+
+[node name="Helper01" type="Sprite2D"]
+script = ExtResource("1_5yp7i")

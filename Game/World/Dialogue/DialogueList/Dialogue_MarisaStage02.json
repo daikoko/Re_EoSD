@@ -1,0 +1,105 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Doesn't this lake seem bigger than normal?"
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Getting harder to see too, something is definitely up."
+	},
+	
+	
+	"004": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"005": {
+		"type":          "enter",
+		"identity":      "cirno",
+		"configuration": "right",
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno01",
+		"name":          "???",
+		"text":          
+			"You are right to fear human, for it is I!"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"And you are?"
+	},
+	"008": {
+		"type":          "title",
+		"name":          "Cirno",
+		"text":          "Little Ice Fairy"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno02",
+		"name":          "Cirno",
+		"text":          
+			"The mastermind of the Misty Lake Incident!"
+	},
+	
+	
+	"010": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Oh you are?"
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Usually It takes me much longer to find the culprit."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "cirno",
+		"expression":    "BossCirno01",
+		"name":          "Cirno",
+		"text":          
+			"That's right, but your quest ends here!"
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Alright then. Bring it!"
+	},
+	
+	
+	"014": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+}

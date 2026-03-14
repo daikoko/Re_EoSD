@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bksjtemyc7ueq"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper17.gd" id="1_cs2rl"]
+[ext_resource type="Texture2D" uid="uid://bvkrdg1wa8obh" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreCivHex.png" id="2_il7qf"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_on1no"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_3bt1e"]
+points = PackedVector2Array(50, -29, 50, 29, 0, 58, -50, 29, -50, -29, 0, -58)
+
+[node name="Helper17" type="Node2D"]
+script = ExtResource("1_cs2rl")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_il7qf")
+
+[node name="Enemy" parent="." instance=ExtResource("3_on1no")]
+unique_name_in_owner = true
+identity = "Enemy"
+shape = SubResource("ConvexPolygonShape2D_3bt1e")
+
+[connection signal="collider_entered" from="Enemy" to="." method="_on_Enemy_collider_entered"]

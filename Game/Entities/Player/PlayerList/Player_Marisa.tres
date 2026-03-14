@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=11 format=3 uid="uid://c81s8obahoy34"]
+
+[ext_resource type="PackedScene" uid="uid://ckt2557oyf3lx" path="res://Game/Entities/Player/PlayerResources/Marisa/Bomb/Marisa_Bomb.tscn" id="1_a0ewd"]
+[ext_resource type="Texture2D" uid="uid://bj3r0qr2qorbu" path="res://Game/Entities/Player/PlayerResources/Marisa/Sprite/Hitbox_MarisaInner.png" id="1_rjqdq"]
+[ext_resource type="Texture2D" uid="uid://cmh77rdf2fe37" path="res://Game/Entities/Player/PlayerResources/Marisa/Sprite/Hitbox_MarisaOuter.png" id="2_tob2d"]
+[ext_resource type="Resource" uid="uid://bfkx2uqjxm47w" path="res://Game/Entities/Player/PlayerResources/_General/Death/Death_Player.tres" id="4_4oi03"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/PlayerData.gd" id="5_0fqmq"]
+[ext_resource type="Texture2D" uid="uid://b81cbbcl11yls" path="res://Game/Entities/Player/PlayerResources/Marisa/Sprite/SelectionPortrait_Marisa.png" id="5_n6sr8"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/ShotData.gd" id="7_aqsvt"]
+[ext_resource type="SpriteFrames" uid="uid://kmdsp3euar6l" path="res://Game/Entities/Player/PlayerResources/Marisa/Sprite/SpriteFrames_PlayerMarisa.tres" id="7_vqa07"]
+[ext_resource type="Resource" uid="uid://bl80uxmqk1xw" path="res://Game/Entities/Player/ShotList/Shot_MarisaA.tres" id="8_n3b3p"]
+[ext_resource type="Resource" uid="uid://dgxgn2578y2ya" path="res://Game/Entities/Player/ShotList/Shot_MarisaB.tres" id="9_2b2cp"]
+
+[resource]
+script = ExtResource("5_0fqmq")
+id = 2
+selection_portrait = ExtResource("5_n6sr8")
+sprite_frames = ExtResource("7_vqa07")
+sprite_offset = Vector2(0, 0)
+hitbox_inner = ExtResource("1_rjqdq")
+hitbox_outer = ExtResource("2_tob2d")
+respawn = ExtResource("4_4oi03")
+power_loss = -20
+bomb = ExtResource("1_a0ewd")
+shots = Array[ExtResource("7_aqsvt")]([ExtResource("8_n3b3p"), ExtResource("9_2b2cp")])
+radius_hitbox = 4
+radius_graze = 32
+radius_collection = 120
+speed_normal = 400.0
+speed_focus = 200.0
+power_max = 8000
+graze_max = 6
+graze_scaling = 2.0
+start_lives = 2
+start_bombs = 3
+flag_main = ""
+flag_extra = "Passed_MainSeries_Marisa"
+flag_phantasm = "Passed_ExtraSeries_Marisa"
+flag_practice = ""

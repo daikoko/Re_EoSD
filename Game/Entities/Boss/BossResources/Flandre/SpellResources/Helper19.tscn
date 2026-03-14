@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp7gp44qf76bb"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper19.gd" id="1_03owy"]
+[ext_resource type="Texture2D" uid="uid://ch6sd4ffqof88" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoRumia.png" id="2_g83l4"]
+
+[node name="Helper19" type="Node2D"]
+script = ExtResource("1_03owy")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 103
+z_as_relative = false
+texture = ExtResource("2_g83l4")

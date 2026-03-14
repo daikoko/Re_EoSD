@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bldkpkfyfedgu"]
+
+[ext_resource type="Theme" uid="uid://dy76bevuq7s2k" path="res://Menu/Themes/Themes/Records.tres" id="1_rdqkh"]
+[ext_resource type="Script" path="res://Game/Main/Record/RecordDisplayShort.gd" id="2_l5foc"]
+
+[node name="RecordDisplayShort" type="Button"]
+custom_minimum_size = Vector2(700, 40)
+theme = ExtResource("1_rdqkh")
+script = ExtResource("2_l5foc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(680, 0)
+layout_mode = 0
+offset_left = 10.0
+offset_right = 50.0
+offset_bottom = 40.0
+
+[node name="Rank" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+text = "#"
+
+[node name="Name" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Stage" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+text = "Stage"
+
+[node name="Score" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "Score
+"
+horizontal_alignment = 2

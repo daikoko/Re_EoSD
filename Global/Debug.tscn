@@ -1,0 +1,198 @@
+[gd_scene load_steps=2 format=3 uid="uid://vy4v6m8lwll6"]
+
+[ext_resource type="Script" path="res://Global/Debug.gd" id="1_d3q7f"]
+
+[node name="Debug" type="CanvasLayer"]
+layer = 98
+script = ExtResource("1_d3q7f")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_left = 1120.0
+offset_top = 540.0
+offset_right = 1260.0
+offset_bottom = 790.0
+
+[node name="Drop" type="ColorRect" parent="CenterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(140, 250)
+layout_mode = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+custom_minimum_size = Vector2(122, 246)
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 2
+
+[node name="BulletList" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="BulletBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/BulletBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "Bullets: "
+
+[node name="Bullets" type="Label" parent="CenterContainer/VBoxContainer/BulletList/BulletBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="GravityBulletBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/GravityBulletBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "    Gravity: "
+
+[node name="GravityBullets" type="Label" parent="CenterContainer/VBoxContainer/BulletList/GravityBulletBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="LinearBulletBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/LinearBulletBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "    Linear: "
+
+[node name="LinearBullets" type="Label" parent="CenterContainer/VBoxContainer/BulletList/LinearBulletBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="SineBulletBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/SineBulletBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "    Sine: "
+
+[node name="SineBullets" type="Label" parent="CenterContainer/VBoxContainer/BulletList/SineBulletBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="TweenBulletBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/TweenBulletBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "    Tween: "
+
+[node name="TweenBullets" type="Label" parent="CenterContainer/VBoxContainer/BulletList/TweenBulletBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="DullBulletBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/DullBulletBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "    Dull: "
+
+[node name="DullBullets" type="Label" parent="CenterContainer/VBoxContainer/BulletList/DullBulletBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="LaserBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/BulletList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/BulletList/LaserBox"]
+custom_minimum_size = Vector2(81, 0)
+layout_mode = 2
+text = "Lasers: "
+
+[node name="Lasers" type="Label" parent="CenterContainer/VBoxContainer/BulletList/LaserBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "00"
+horizontal_alignment = 2
+
+[node name="GameList" type="VBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HitBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/GameList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/GameList/HitBox"]
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Hits: "
+
+[node name="Hits" type="Label" parent="CenterContainer/VBoxContainer/GameList/HitBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(46, 0)
+layout_mode = 2
+text = "00"
+horizontal_alignment = 2
+
+[node name="GrazeBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer/GameList"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/GameList/GrazeBox"]
+custom_minimum_size = Vector2(54, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Graze: "
+
+[node name="Graze" type="Label" parent="CenterContainer/VBoxContainer/GameList/GrazeBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(46, 0)
+layout_mode = 2
+text = "00"
+horizontal_alignment = 2
+
+[node name="FPSBox" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer/FPSBox"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "FPS: "
+
+[node name="FPS" type="Label" parent="CenterContainer/VBoxContainer/FPSBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "00"
+horizontal_alignment = 2

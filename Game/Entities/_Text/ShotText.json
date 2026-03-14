@@ -1,0 +1,51 @@
+{	
+	"00": {
+		"type":        "",
+		"name":        "Test Shot",
+		"description": "",
+		"bomb":        "",
+		"flash":       ""
+	},
+	"01": {
+		"type":        "Reimu A",
+		"name":        "Homing Amulet",
+		"description": "Balanced shot type with tracking bullets",
+		"bomb":        "Fantasy Seal",
+		"flash":       "Evil Sealing Circle"
+	},
+	"02": {
+		"type":        "Reimu B",
+		"name":        "Persuasion Needle",
+		"description": "Low power but wide range shot type",
+		"bomb":        "Fantasy Seal",
+		"flash":       "Double Danmaku Barrier"
+	},
+	"03": {
+		"type":        "Marisa A",
+		"name":        "Magic Missle",
+		"description": "High powered shot type with piercing bullets",
+		"bomb":        "Master Spark",
+		"flash":       "Stardust Reverie"
+	},
+	"04": {
+		"type":        "Marisa B",
+		"name":        "Illusion Laser",
+		"description": "High powered shot type with lasers",
+		"bomb":        "Master Spark",
+		"flash":       "Minispark"
+	},
+	"05": {
+		"type":        "Rin A",
+		"name":        "Flowering Song",
+		"description": "Balanced shot type with strange movements",
+		"bomb":        "Cherry Bomb",
+		"flash":       "Flower View"
+	},
+	"06": {
+		"type":        "Rin B",
+		"name":        "Sonic Gale",
+		"description": "Low powered shot type with full range",
+		"bomb":        "Cherry Bomb",
+		"flash":       "Gale Barrier"
+	}
+}

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=4 format=3 uid="uid://chvd7w02xxjan"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_s5swj"]
+[ext_resource type="SpriteFrames" uid="uid://b5xjit5ch8iaf" path="res://Game/Entities/Boss/BossResources/Koakuma/Sprite/SpriteFrames_Koakuma.tres" id="2_5tij7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8qmc0"]
+radius = 40.0
+
+[resource]
+script = ExtResource("1_s5swj")
+sprite_frames = ExtResource("2_5tij7")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_8qmc0")

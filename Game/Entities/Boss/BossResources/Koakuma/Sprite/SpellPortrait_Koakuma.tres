@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://dnp6qeeskq7g4"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_rjq3k"]
+[ext_resource type="Texture2D" uid="uid://y36tclyqdwlp" path="res://Game/Entities/Boss/BossResources/Koakuma/Sprite/SpellPortrait_BossKoakuma.png" id="2_lg6og"]
+
+[resource]
+script = ExtResource("1_rjq3k")
+texture = ExtResource("2_lg6og")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

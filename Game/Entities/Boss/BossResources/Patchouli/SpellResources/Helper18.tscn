@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://da7kxvar105mt"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Patchouli/SpellResources/Helper18.gd" id="1_ngykn"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_53cj1"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_dthoq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5xdro"]
+resource_local_to_scene = true
+shader = ExtResource("3_dthoq")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="Helper18" type="Node2D"]
+script = ExtResource("1_ngykn")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_53cj1")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_5xdro")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://cexsxr4syu1w3"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper09.gd" id="1_vb36n"]
+[ext_resource type="Texture2D" uid="uid://bl4lu6gkv3hds" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_MiniBarrier.png" id="2_5t818"]
+[ext_resource type="PackedScene" uid="uid://cs8wa14bd2vny" path="res://Game/Objects/Shadow/ShadowHandler.tscn" id="3_lkm75"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="4_kusjo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfitf"]
+size = Vector2(640, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axcse"]
+size = Vector2(116, 640)
+
+[node name="Helper09" type="Node2D"]
+script = ExtResource("1_vb36n")
+
+[node name="Barrier" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite" type="Sprite2D" parent="Barrier"]
+z_index = 20
+z_as_relative = false
+texture = ExtResource("2_5t818")
+
+[node name="Afterimage" parent="Barrier" instance=ExtResource("3_lkm75")]
+unique_name_in_owner = true
+image = ExtResource("2_5t818")
+interval = 0.05
+duration = 0.4
+
+[node name="Collider1" parent="Barrier" instance=ExtResource("4_kusjo")]
+position = Vector2(0, -296)
+collision_layer = 0
+identity = "Enemy"
+shape = SubResource("RectangleShape2D_rfitf")
+
+[node name="Collider2" parent="Barrier" instance=ExtResource("4_kusjo")]
+position = Vector2(0, 296)
+collision_layer = 0
+monitorable = false
+identity = "Enemy"
+shape = SubResource("RectangleShape2D_rfitf")
+
+[node name="Collider3" parent="Barrier" instance=ExtResource("4_kusjo")]
+position = Vector2(-296, 0)
+collision_layer = 0
+identity = "Enemy"
+shape = SubResource("RectangleShape2D_axcse")
+
+[node name="Collider4" parent="Barrier" instance=ExtResource("4_kusjo")]
+position = Vector2(296, 0)
+collision_layer = 0
+identity = "Enemy"
+shape = SubResource("RectangleShape2D_axcse")
+
+[connection signal="collider_entered" from="Barrier/Collider1" to="." method="_on_Collider_collider_entered"]
+[connection signal="collider_entered" from="Barrier/Collider2" to="." method="_on_Collider_collider_entered"]
+[connection signal="collider_entered" from="Barrier/Collider3" to="." method="_on_Collider_collider_entered"]
+[connection signal="collider_entered" from="Barrier/Collider4" to="." method="_on_Collider_collider_entered"]

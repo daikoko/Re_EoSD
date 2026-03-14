@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://do4jpgwvsu3ci"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_gusf4"]
+[ext_resource type="Texture2D" uid="uid://v48lkl2x8tuk" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFuitBanana.png" id="2_2f5mr"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_sow4v"]
+points = PackedVector2Array(52, -36, 20, 60, -30, 42, -64, -10, -40, -66)
+
+[resource]
+script = ExtResource("1_gusf4")
+texture = ExtResource("2_2f5mr")
+shape = SubResource("ConvexPolygonShape2D_sow4v")
+color_option = 1
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-200, -200, 200, 200)

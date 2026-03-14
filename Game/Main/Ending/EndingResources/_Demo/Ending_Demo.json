@@ -1,0 +1,43 @@
+{
+	"000": {
+		"type": "scene",
+	},
+	"001": {
+		"type": "music_play",
+		"music": "Demo"
+	},
+	"002": {
+		"type": "text",
+		"name": "",
+		"text": "Testing 1"
+	},
+	"003": {
+		"type": "scene",
+	},
+	"004": {
+		"type": "text",
+		"name": "",
+		"text": "Testing 2"
+	},
+	"005": {
+		"type": "scene",
+	},
+	"006": {
+		"type": "text",
+		"name": "",
+		"text": "Testing 3"
+	},
+	"007": {
+		"type": "scene",
+	},
+	"008": {
+		"type": "text",
+		"name": "",
+		"text": "Testing 4"
+	},
+	"009": {
+		"type": "text",
+		"name": "",
+		"text": "Demo Over"
+	},
+}

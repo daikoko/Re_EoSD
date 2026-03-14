@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://belmlqhi2v8nr"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shooters/ShooterTween/Shooter_Tween.gd" id="1_6g41b"]
+[ext_resource type="AudioStream" uid="uid://bvygsbw5ounf6" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire05.wav" id="2_jmldu"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_mik1l"]
+
+[node name="ShooterTween" type="Node2D"]
+script = ExtResource("1_6g41b")
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+
+[node name="FireSound" parent="." instance=ExtResource("2_mik1l")]
+unique_name_in_owner = true
+stream = ExtResource("2_jmldu")

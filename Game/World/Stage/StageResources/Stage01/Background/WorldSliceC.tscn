@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://uqahk8dkxf5g"]
+
+[ext_resource type="Script" path="res://Game/World/Background/3D_Background/WorldSlice.gd" id="1_s6hea"]
+[ext_resource type="Texture2D" uid="uid://wt22csrj2fm0" path="res://Game/World/Stage/StageResources/Stage01/Background/Background_Stage01C.png" id="2_fi4py"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n1ehr"]
+depth_draw_mode = 1
+albedo_texture = ExtResource("2_fi4py")
+
+[sub_resource type="QuadMesh" id="QuadMesh_kyqir"]
+material = SubResource("StandardMaterial3D_n1ehr")
+size = Vector2(10, 5)
+orientation = 1
+
+[node name="WorldSlice" type="Node3D"]
+script = ExtResource("1_s6hea")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+mesh = SubResource("QuadMesh_kyqir")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+mesh = SubResource("QuadMesh_kyqir")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_kyqir")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+mesh = SubResource("QuadMesh_kyqir")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10)
+mesh = SubResource("QuadMesh_kyqir")

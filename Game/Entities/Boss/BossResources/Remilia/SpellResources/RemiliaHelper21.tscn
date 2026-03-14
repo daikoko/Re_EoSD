@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://56w44ix68oqr"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper21.gd" id="1_o43qb"]
+
+[node name="RemiliaHelper21" type="Node2D"]
+script = ExtResource("1_o43qb")
+
+[node name="Main" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Line01" type="Line2D" parent="Main"]
+unique_name_in_owner = true
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line02" type="Line2D" parent="Main"]
+unique_name_in_owner = true
+rotation = -0.349066
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="Line03" type="Line2D" parent="Main"]
+unique_name_in_owner = true
+rotation = 0.349066
+points = PackedVector2Array(0, 0, 1000, 0)
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]

@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://b38xl6cbs2wjf"]
+
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_3de4f"]
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_d0rvx"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellScripts/Remilia_NonC.gd" id="1_yqbct"]
+
+[sub_resource type="Resource" id="Resource_12yu5"]
+script = ExtResource("1_3de4f")
+particles = ExtResource("1_d0rvx")
+value = 800000
+point = 48
+power = 16
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("1_yqbct")
+special_animation = false
+A1_active = false
+A1_fire_time = 1.0
+A2_active = true
+A2_spawner_count = 9
+A3_active = false
+A3_fire_time = 1.0
+health = 20000.0
+Death = SubResource("Resource_12yu5")
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+difficulty = 0
+boss_id = 0

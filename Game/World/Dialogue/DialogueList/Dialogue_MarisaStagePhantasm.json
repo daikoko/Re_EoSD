@@ -1,0 +1,123 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Actually, come to think of it I didn't get the chance
+			to ask that vampire whats going on."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"She probably knew what was going on."
+	},
+	
+	"004": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"005": {
+		"type":          "enter",
+		"identity":      "rumia",
+		"configuration": "right",
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"Oh she won't be important anymore."
+	},
+	
+	"007": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa03",
+		"name":          "Marisa",
+		"text":          
+			"You again? Some random youkai is the mastermind?"
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"I'm not falling for that again."
+	},
+	
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia03",
+		"name":          "Lumia",
+		"text":          
+			"Hey you could at least be more threatened by whats going on you know?."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia03",
+		"name":          "Lumia",
+		"text":          
+			"I worked hard to set this all up."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Well to be honest I don't really pay attention to what happens during these incidents."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"I just like looking at new places."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia02",
+		"name":          "Lumia",
+		"text":          
+			"More like looking at what's worth pick pocketing."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"Not that it matters now."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "rumia",
+		"expression":    "BossRumia04",
+		"name":          "Lumia",
+		"text":          
+			"May your mortal mind begin fraying at the edges!"
+	},
+	
+	"016": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	}
+}

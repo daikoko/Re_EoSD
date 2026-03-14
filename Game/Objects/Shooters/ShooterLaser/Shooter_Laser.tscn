@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://fkub1phb5l0u"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shooters/ShooterLaser/Shooter_Laser.gd" id="1_pro82"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_3eokq"]
+[ext_resource type="AudioStream" uid="uid://ibf3ilirvje2" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire07.wav" id="2_h4hf2"]
+
+[node name="ShooterLaser" type="Node2D"]
+script = ExtResource("1_pro82")
+
+[node name="DelayTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="FireSound" parent="." instance=ExtResource("2_3eokq")]
+unique_name_in_owner = true
+stream = ExtResource("2_h4hf2")
+
+[connection signal="timeout" from="DelayTimer" to="." method="_on_DelayTimer_timeout"]

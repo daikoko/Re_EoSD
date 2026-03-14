@@ -1,0 +1,47 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "saku",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          "It appears one warning was not enough."
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "reimu",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Nope, will you try to stop me again?"
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "saku",
+		"expression":    "BossSakuya02",
+		"name":          "Sakuya",
+		"text":          "It is my job to protect the lady."
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "reimu",
+		"expression":    "PlayerReimu02",
+		"name":          "Reimu",
+		"text":          
+			"Well you are quite bad at it."
+	},
+}

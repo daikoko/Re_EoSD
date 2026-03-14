@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://y16fo5j7b4ma"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper05.gd" id="1_ckem1"]
+[ext_resource type="Texture2D" uid="uid://qgw8d4q2civp" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreRandomWheel.png" id="2_ai7w6"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_sam5a"]
+[ext_resource type="Texture2D" uid="uid://dwbfjkc6ts3e8" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreRandomPicker.png" id="4_g1b4n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8y4m8"]
+radius = 120.0
+
+[node name="Helper05" type="Node2D"]
+script = ExtResource("1_ckem1")
+
+[node name="Wheel" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 70
+z_as_relative = false
+texture = ExtResource("2_ai7w6")
+
+[node name="Blinkers" type="Node2D" parent="Wheel"]
+unique_name_in_owner = true
+
+[node name="Enemy" parent="Wheel" instance=ExtResource("3_sam5a")]
+identity = "Enemy"
+shape = SubResource("CircleShape2D_8y4m8")
+
+[node name="Pointer" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 70
+z_as_relative = false
+position = Vector2(0, -20)
+texture = ExtResource("4_g1b4n")

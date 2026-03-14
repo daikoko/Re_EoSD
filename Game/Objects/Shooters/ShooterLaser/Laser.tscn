@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://c7wqd82ifejym"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shooters/ShooterLaser/Laser.gd" id="1_iinpt"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="2_lrsth"]
+[ext_resource type="Texture2D" uid="uid://bi81gri002c04" path="res://Game/Objects/Shooters/ShooterLaser/Laser_Point.png" id="3_mgwkf"]
+[ext_resource type="Texture2D" uid="uid://chdqy3rukdcpu" path="res://Game/Objects/Shooters/ShooterLaser/Laser_Particle.png" id="4_8btun"]
+[ext_resource type="Material" uid="uid://b1qs87wq1pbxi" path="res://Game/Objects/Shooters/ShooterLaser/LaserParticlesStart.tres" id="5_2hnfr"]
+[ext_resource type="Material" uid="uid://cxj4kfols0avd" path="res://Game/Objects/Shooters/ShooterLaser/LaserParticlesBeam.tres" id="6_wk24n"]
+[ext_resource type="Material" uid="uid://lf5ks041dppa" path="res://Game/Objects/Shooters/ShooterLaser/LaserParticlesEnd.tres" id="7_d3vr7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqp0e"]
+resource_local_to_scene = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qak3w"]
+resource_local_to_scene = true
+
+[node name="Laser" type="Node2D"]
+z_index = 70
+z_as_relative = false
+script = ExtResource("1_iinpt")
+
+[node name="PlayerCollider" parent="." instance=ExtResource("2_lrsth")]
+unique_name_in_owner = true
+collision_layer = 0
+monitorable = false
+identity = "Laser"
+shape = SubResource("RectangleShape2D_fqp0e")
+
+[node name="GrazeCollider" parent="." instance=ExtResource("2_lrsth")]
+unique_name_in_owner = true
+collision_layer = 0
+monitorable = false
+identity = "Laser"
+shape = SubResource("RectangleShape2D_qak3w")
+
+[node name="GrazeTimer" type="Timer" parent="GrazeCollider"]
+unique_name_in_owner = true
+wait_time = 0.02
+one_shot = true
+
+[node name="Cast" type="RayCast2D" parent="."]
+unique_name_in_owner = true
+target_position = Vector2(1024, 0)
+collision_mask = 0
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Laser" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = 70
+z_as_relative = false
+
+[node name="Start" type="Sprite2D" parent="Laser"]
+unique_name_in_owner = true
+scale = Vector2(0.004, 0.004)
+texture = ExtResource("3_mgwkf")
+
+[node name="End" type="Sprite2D" parent="Laser"]
+unique_name_in_owner = true
+position = Vector2(1024, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("4_8btun")
+
+[node name="Beam" type="ColorRect" parent="Laser"]
+unique_name_in_owner = true
+offset_top = -2.0
+offset_right = 1024.0
+offset_bottom = 2.0
+
+[node name="ParticlesStart" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+process_material = ExtResource("5_2hnfr")
+texture = ExtResource("4_8btun")
+lifetime = 0.5
+
+[node name="ParticlesEnd" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1024, 0)
+amount = 64
+process_material = ExtResource("7_d3vr7")
+texture = ExtResource("4_8btun")
+lifetime = 0.5
+
+[node name="ParticlesBeam" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(512, 0)
+amount = 96
+process_material = ExtResource("6_wk24n")
+texture = ExtResource("4_8btun")
+lifetime = 0.5
+visibility_rect = Rect2(-512, -100, 1024, 200)
+
+[connection signal="collider_entered" from="PlayerCollider" to="." method="_on_PlayerCollider_collider_entered"]
+[connection signal="collider_entered" from="GrazeCollider" to="." method="_on_GrazeCollider_collider_entered"]

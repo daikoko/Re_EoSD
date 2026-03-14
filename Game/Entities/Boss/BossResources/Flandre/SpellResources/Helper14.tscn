@@ -1,0 +1,80 @@
+[gd_scene load_steps=15 format=3 uid="uid://dy2npc7mhwh3f"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper14.gd" id="1_67opg"]
+[ext_resource type="Texture2D" uid="uid://cd1n36pjd7mjr" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_DragonBeacon.png" id="2_c572e"]
+[ext_resource type="Shader" path="res://Game/Objects/Sprites/Flash.gdshader" id="2_kdlpg"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="3_ikon8"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="4_4dofp"]
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="5_macy3"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="6_f55oh"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="8_pbeno"]
+[ext_resource type="AudioStream" uid="uid://en2ly2xyk2jk" path="res://Game/Entities/Enemy/EnemyResources/_General/Enemy_Death01.wav" id="9_ishcv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7smw"]
+resource_local_to_scene = true
+shader = ExtResource("2_kdlpg")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/hide = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sf7o0"]
+resource_local_to_scene = true
+shader = ExtResource("4_4dofp")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahoej"]
+size = Vector2(55.5, 55.5)
+
+[sub_resource type="Resource" id="Resource_joi2j"]
+script = ExtResource("5_macy3")
+shape = SubResource("RectangleShape2D_ahoej")
+color_option = 0
+color_custom = Color(1, 0, 0, 1)
+visibility = Rect2(-10, -10, 20, 20)
+
+[sub_resource type="Gradient" id="Gradient_yy3jt"]
+offsets = PackedFloat32Array(0.0211864, 0.152542, 0.809322, 0.966102)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 0.870588, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Helper14" type="Node2D"]
+script = ExtResource("1_67opg")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 19
+z_as_relative = false
+material = SubResource("ShaderMaterial_m7smw")
+texture = ExtResource("2_c572e")
+
+[node name="BulletDull" parent="." instance=ExtResource("3_ikon8")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_sf7o0")
+data = SubResource("Resource_joi2j")
+hit_immunity = true
+
+[node name="Enemy" parent="." instance=ExtResource("6_f55oh")]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+identity = "Enemy"
+shape = SubResource("RectangleShape2D_ahoej")
+
+[node name="Line" type="Line2D" parent="."]
+unique_name_in_owner = true
+z_index = 18
+z_as_relative = false
+gradient = SubResource("Gradient_yy3jt")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="Sound" parent="." instance=ExtResource("8_pbeno")]
+unique_name_in_owner = true
+stream = ExtResource("9_ishcv")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="collider_hit" from="Enemy" to="." method="_on_Enemy_collider_hit"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

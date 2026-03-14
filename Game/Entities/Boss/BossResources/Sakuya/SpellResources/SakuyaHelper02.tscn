@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdpjbu1grpnew"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/SakuyaHelper02.gd" id="1_n2f5d"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_uss5i"]
+[ext_resource type="Resource" uid="uid://dfw7kgyql6vtq" path="res://Game/Objects/Bullets/BulletList/Bullet_BrightRed.tres" id="3_lcgrr"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_uam2t"]
+[ext_resource type="Texture2D" uid="uid://bvs1hngffkrh" path="res://Game/Objects/Particles/Particle_Generic.png" id="4_45wgl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vxpck"]
+resource_local_to_scene = true
+shader = ExtResource("3_uam2t")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="SakuyaHelper02" type="Node2D"]
+script = ExtResource("1_n2f5d")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_uss5i")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_vxpck")
+data = ExtResource("3_lcgrr")
+
+[node name="Flash" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 65
+z_as_relative = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_45wgl")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

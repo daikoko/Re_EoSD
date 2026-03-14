@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://g4v4un7rb66c"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper16.gd" id="1_l4h7t"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="3_dfq5f"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="4_kddi1"]
+[ext_resource type="Resource" uid="uid://dfw7kgyql6vtq" path="res://Game/Objects/Bullets/BulletList/Bullet_BrightRed.tres" id="5_6koyd"]
+[ext_resource type="Texture2D" uid="uid://elmys5gdbe73" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreCivNukeSmall.png" id="6_w3384"]
+[ext_resource type="Texture2D" uid="uid://bxoiap2id7wg0" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreCivNukeLarge.png" id="7_oa761"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="7_qoym4"]
+[ext_resource type="AudioStream" uid="uid://ibf3ilirvje2" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire07.wav" id="8_2h28e"]
+
+[sub_resource type="Curve2D" id="Curve2D_8o33f"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 50, -29, 0, 0, 0, 0, 50, 29, 0, 0, 0, 0, 0, 58, 0, 0, 0, 0, -50, 29, 0, 0, 0, 0, -50, -29, 0, 0, 0, 0, 0, -58, 0, 0, 0, 0, 50, -29)
+}
+point_count = 7
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q128o"]
+resource_local_to_scene = true
+shader = ExtResource("4_kddi1")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="Helper16" type="Node2D"]
+script = ExtResource("1_l4h7t")
+
+[node name="Path" type="Path2D" parent="."]
+curve = SubResource("Curve2D_8o33f")
+
+[node name="Follow" type="PathFollow2D" parent="Path"]
+unique_name_in_owner = true
+position = Vector2(50, -29)
+rotation = 1.5708
+rotates = false
+
+[node name="BulletDull" parent="Path/Follow" instance=ExtResource("3_dfq5f")]
+unique_name_in_owner = true
+z_index = 9
+material = SubResource("ShaderMaterial_q128o")
+data = ExtResource("5_6koyd")
+hit_immunity = true
+bomb_immunity = true
+clear_immunity = true
+visibility_immunity = true
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Small" type="Sprite2D" parent="Sprite"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("6_w3384")
+
+[node name="Large" type="Sprite2D" parent="Sprite"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("7_oa761")
+
+[node name="Sound" parent="." instance=ExtResource("7_qoym4")]
+unique_name_in_owner = true
+stream = ExtResource("8_2h28e")
+
+[connection signal="bullet_deactivate" from="Path/Follow/BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://s1egopre088q"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/RumiaHelper18.gd" id="1_tuuhv"]
+[ext_resource type="Texture2D" uid="uid://domvb1nbmo36f" path="res://Game/Objects/Bullets/BulletResources/Bullet_BrightWhite.png" id="2_pxx8f"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="3_p77x8"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="4_y2daw"]
+[ext_resource type="Resource" uid="uid://886dg7es4bcu" path="res://Game/Objects/Bullets/BulletList/Bullet_BrightWhite.tres" id="5_l4wwr"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6mpns"]
+resource_local_to_scene = true
+shader = ExtResource("4_y2daw")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="RumiaHelper18" type="Node2D"]
+script = ExtResource("1_tuuhv")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.966667, 1, 0, 1)
+z_index = 65
+z_as_relative = false
+texture = ExtResource("2_pxx8f")
+
+[node name="BulletDull" parent="." instance=ExtResource("3_p77x8")]
+unique_name_in_owner = true
+modulate = Color(1, 0, 0, 1)
+material = SubResource("ShaderMaterial_6mpns")
+texture = ExtResource("2_pxx8f")
+data = ExtResource("5_l4wwr")
+hit_immunity = true
+bomb_immunity = true
+clear_immunity = true
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cv846bm638yba"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/Background/Background_BossFlandre.gd" id="1_e7jcb"]
+[ext_resource type="Texture2D" uid="uid://c2sgy731yhqlb" path="res://Game/Entities/Boss/BossResources/Flandre/Background/Background_BossFlandre01.png" id="2_id2v3"]
+[ext_resource type="Texture2D" uid="uid://27u71d8x0xh2" path="res://Game/Entities/Boss/BossResources/Flandre/Background/Background_BossFlandre02.png" id="3_8433t"]
+[ext_resource type="Texture2D" uid="uid://boqxf7gh8gv5v" path="res://Game/Entities/Boss/BossResources/Flandre/Background/Background_BossFlandre03.png" id="4_diswx"]
+[ext_resource type="Texture2D" uid="uid://do1y85t72y2k" path="res://Game/Entities/Boss/BossResources/Flandre/Background/Background_BossFlandre04.png" id="5_vgwfa"]
+
+[node name="BackgroundBossFlandre" type="CanvasLayer"]
+layer = -98
+script = ExtResource("1_e7jcb")
+
+[node name="Layer01" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(340, 390)
+texture = ExtResource("2_id2v3")
+
+[node name="Layer02" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(340, 390)
+texture = ExtResource("3_8433t")
+
+[node name="Layer03" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(340, 390)
+texture = ExtResource("4_diswx")
+
+[node name="Layer04" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(340, 390)
+texture = ExtResource("5_vgwfa")

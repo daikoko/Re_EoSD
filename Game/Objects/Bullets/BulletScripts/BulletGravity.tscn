@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1pqbx43dwxmy"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletGravity.gd" id="1_0g7sj"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="1_frbss"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mu3e7"]
+resource_local_to_scene = true
+shader = ExtResource("1_frbss")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = false
+
+[node name="BulletGravity" type="Sprite2D"]
+z_index = 60
+z_as_relative = false
+material = SubResource("ShaderMaterial_mu3e7")
+script = ExtResource("1_0g7sj")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

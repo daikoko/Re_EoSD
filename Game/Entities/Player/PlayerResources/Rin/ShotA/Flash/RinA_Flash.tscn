@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://3namfhn61ocj"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Rin/ShotA/Flash/RinA_Flash.gd" id="1_2gquq"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="1_06uj2"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_obbuf"]
+[ext_resource type="AudioStream" uid="uid://b8hin3oa87sun" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/Player_Spell03.wav" id="4_yxm01"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ra0rm"]
+radius = 12.0
+
+[node name="RinAFlash" type="Node2D"]
+script = ExtResource("1_2gquq")
+
+[node name="Cooldown" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.2
+
+[node name="Blocker" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 1.6
+
+[node name="Bomb" parent="Blocker" instance=ExtResource("1_06uj2")]
+unique_name_in_owner = true
+collision_mask = 0
+identity = "Bomb"
+shape = SubResource("CircleShape2D_ra0rm")
+
+[node name="Sound" parent="." instance=ExtResource("3_obbuf")]
+unique_name_in_owner = true
+stream = ExtResource("4_yxm01")
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_Cooldown_timeout"]
+[connection signal="timeout" from="Blocker" to="." method="_on_Blocker_timeout"]

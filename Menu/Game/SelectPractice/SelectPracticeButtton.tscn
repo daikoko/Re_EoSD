@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ljb3dot616cb"]
+
+[ext_resource type="Theme" uid="uid://bqb533xlqlgag" path="res://Menu/Themes/Themes/MainMenu.tres" id="1_atge6"]
+[ext_resource type="Script" path="res://Menu/Game/SelectPractice/SelectPracticeButton.gd" id="2_3hwim"]
+
+[node name="SelectPracticeButtton" type="Button"]
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+theme = ExtResource("1_atge6")
+toggle_mode = true
+text = "Button"
+alignment = 0
+script = ExtResource("2_3hwim")
+
+[connection signal="pressed" from="." to="." method="_on_SelectPracticeButton_pressed"]

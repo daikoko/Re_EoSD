@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ShotData" load_steps=4 format=3 uid="uid://cj30l1uhtogk3"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/ShotData.gd" id="1_3evef"]
+[ext_resource type="PackedScene" uid="uid://bb5ppyf5clqgn" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Flash/ReimuA_Flash.tscn" id="1_i6cbs"]
+[ext_resource type="PackedScene" uid="uid://btl27of2cygjg" path="res://Game/Entities/Player/PlayerResources/Reimu/ShotA/Shot/ReimuA_Shot.tscn" id="2_txblg"]
+
+[resource]
+script = ExtResource("1_3evef")
+id = 1
+shot = ExtResource("2_txblg")
+flash = ExtResource("1_i6cbs")
+flag = ""

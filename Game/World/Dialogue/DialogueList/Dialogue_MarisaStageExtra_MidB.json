@@ -1,0 +1,69 @@
+{	
+	"001": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"002": {
+		"type":          "enter",
+		"identity":      "patch",
+		"configuration": "right",
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli07",
+		"name":          "Patchouli",
+		"text":          "Didn't think you'd show up."
+	},
+	"004": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Why the sour face, I'm here to return all the books aren't I."
+	},
+	"006": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"And in return, I get to borrow some on extended loan right?"
+	},
+	"007": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli07",
+		"name":          "Patchouli",
+		"text":          "That's not the meaning of 'return everything'."
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"What if I ask nicely?"
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli07",
+		"name":          "Patchouli",
+		"text":          "Alright screw this."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "patch",
+		"expression":    "BossPatchouli10",
+		"name":          "Patchouli",
+		"text":          "Prepare to eat true magic you harlequin."
+	},
+}

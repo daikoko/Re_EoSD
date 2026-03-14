@@ -1,0 +1,622 @@
+[gd_scene load_steps=41 format=3 uid="uid://bg47w16357njx"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageScripts/Stage.gd" id="1_1ommx"]
+[ext_resource type="PackedScene" uid="uid://bxkxytjfibucd" path="res://Game/World/Boss/BossPlayer.tscn" id="3_ic3q4"]
+[ext_resource type="PackedScene" uid="uid://ddykbcgq322nt" path="res://Game/World/Dialogue/DialogueScript/DialoguePlayer.tscn" id="3_ir2lb"]
+[ext_resource type="Script" path="res://Game/World/Stage/StageScripts/StageEffects.gd" id="4_6mhf7"]
+[ext_resource type="Theme" uid="uid://cvge4qmk6xo7c" path="res://Game/Themes/Themes/StageEffects.tres" id="5_pixgx"]
+[ext_resource type="Texture2D" uid="uid://ber7b6m6q15oj" path="res://Game/Objects/Bullets/BulletResources/Bullet_KnifeWhite.png" id="6_nd61m"]
+[ext_resource type="Animation" uid="uid://dof8rcqgahcj2" path="res://Game/World/Stage/StageResources/TestStage/Events/Events_TestStage.res" id="6_nmwbu"]
+[ext_resource type="PackedScene" uid="uid://ccgwlstl0fqup" path="res://Master/Audio/Music.tscn" id="6_w67bf"]
+[ext_resource type="Shader" path="res://Game/Main/Menu/Grayscale.gdshader" id="7_1767r"]
+[ext_resource type="Animation" uid="uid://blh465qm8bl6f" path="res://Game/World/Stage/StageResources/Stage01/Events/Events_Stage01.res" id="8_7xjy8"]
+[ext_resource type="Animation" uid="uid://37i3ukunjuga" path="res://Game/World/Stage/StageResources/Stage02/Events/Events_Stage02.res" id="9_ql4or"]
+[ext_resource type="Animation" uid="uid://r82aaymp7kgv" path="res://Game/World/Stage/StageResources/Stage03/Events/Events_Stage03.res" id="11_lt6cg"]
+[ext_resource type="Animation" uid="uid://p76bmote8avt" path="res://Game/World/Stage/StageResources/Stage04/Events/Events_Stage04.res" id="12_wjjpw"]
+[ext_resource type="Animation" uid="uid://dwf1o1g315nj8" path="res://Game/World/Stage/StageResources/Stage05/Events/Events_Stage05.res" id="13_ikl6t"]
+[ext_resource type="Animation" uid="uid://c1q31e5521w2e" path="res://Game/World/Stage/StageResources/Stage06/Events/Events_Stage06.tres" id="15_y8rqe"]
+[ext_resource type="Animation" uid="uid://1hwygj108o3s" path="res://Game/World/Stage/StageResources/StageExtra/Events/Events_StageExtra.tres" id="16_plmjy"]
+[ext_resource type="Animation" uid="uid://13dvrthcq7iw" path="res://Game/World/Stage/StageResources/StagePhantasm/Events/Events_StagePhantasm.res" id="17_tkoa0"]
+
+[sub_resource type="Animation" id="Animation_ovvvk"]
+resource_name = "Intro_In"
+length = 4.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroName:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 160), Vector2(40, 160), Vector2(40, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2, 3.4, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntroTitle:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 3.4, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntroDescription:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 3.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(360, 320), Vector2(360, 320), Vector2(280, 320), Vector2(280, 320)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntroDescription:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2, 3.4, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3ihia"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IntroName:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("IntroName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("IntroTitle:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("IntroDescription:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(380, 320)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("IntroDescription:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_onfnj"]
+_data = {
+"Intro_In": SubResource("Animation_ovvvk"),
+"RESET": SubResource("Animation_3ihia")
+}
+
+[sub_resource type="Animation" id="Animation_uybl3"]
+resource_name = "Music_In"
+length = 2.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MusicName:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(550, 745), Vector2(350, 745), Vector2(350, 745), Vector2(550, 745)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MusicName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.6, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xkbtu"]
+_data = {
+"Music_In": SubResource("Animation_uybl3")
+}
+
+[sub_resource type="Animation" id="Animation_yj1lp"]
+resource_name = "Bomb_End"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%SpellControl:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%SpellName:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1ofqy"]
+resource_name = "Bomb_Start"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%SpellControl:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%SpellName:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(6, 6), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5bs8i"]
+resource_name = "Flash_End"
+length = 0.6
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%SpellControl:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%SpellName:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rvq23"]
+resource_name = "Flash_Start"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%SpellControl:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("%SpellName:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hqitn"]
+_data = {
+"Bomb_End": SubResource("Animation_yj1lp"),
+"Bomb_Start": SubResource("Animation_1ofqy"),
+"Flash_End": SubResource("Animation_5bs8i"),
+"Flash_Start": SubResource("Animation_rvq23")
+}
+
+[sub_resource type="Curve2D" id="Curve2D_rybem"]
+
+[sub_resource type="Curve2D" id="Curve2D_2k5xf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -80, 40, -68.974, -156.975, 68.974, 156.975, 340, 260, 0, 0, 0, 0, 760, 480)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_oo116"]
+_data = {
+"points": PackedVector2Array(0, 2.37841, 0, -2.37841, 760, 40, 84.4337, -186.705, -84.4337, 186.705, 340, 260, 0, 0, 0, 0, -80, 480)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_qei7g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 40, -40, -121.363, 0, 121.363, 0, 280, 320, 0, 0, 0, 0, 560, 820)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_sqf2m"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 640, -40, 121.363, 1.49831, -121.363, -1.49831, 400, 320, 0, 0, 0, 0, 120, 820)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_6mnyu"]
+_data = {
+"points": PackedVector2Array(-78.3416, 0.943874, 78.3416, -0.943874, -60, 120, -82.1171, 0, 82.1171, 0, 140, 200, -79.2854, 0, 79.2854, 0, 340, 120, -83.0609, 0, 83.0609, 0, 540, 200, -76.4538, -0.943874, 76.4538, 0.943874, 740, 120)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_6qbhi"]
+_data = {
+"points": PackedVector2Array(77.3977, -0.943874, -77.3977, 0.943874, 740, 120, 77.3977, -0.943874, -77.3977, 0.943874, 540, 200, 80.2293, 0, -80.2293, 0, 340, 120, 82.1171, -0.943874, -82.1171, 0.943874, 140, 200, 81.1732, 0.943874, -81.1732, -0.943874, -60, 120)
+}
+point_count = 5
+
+[sub_resource type="Curve2D" id="Curve2D_0ta4v"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -80, 40, -204.288, -80.8173, 204.288, 80.8173, 160, 280, 0, 0, 0, 0, 760, 360)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_5dns4"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 760, 120, 241.329, -80.8173, -241.329, 80.8173, 520, 360, 0, 0, 0, 0, -80, 440)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_je4h2"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -64, 192, -168.291, -28.2843, 168.291, 28.2843, 296, 216, -0.943874, -0.943874, 0.943874, 0.943874, 704, 320)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_nvn55"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 744, 192, 173.385, -34.6411, -173.385, 34.6411, 376, 216, -0.943874, -0.943874, 0.943874, 0.943874, -24, 320)
+}
+point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h0cpb"]
+shader = ExtResource("7_1767r")
+shader_parameter/brightness = 0.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_043df"]
+_data = {
+"Events_Stage01": ExtResource("8_7xjy8"),
+"Events_Stage02": ExtResource("9_ql4or"),
+"Events_Stage03": ExtResource("11_lt6cg"),
+"Events_Stage04": ExtResource("12_wjjpw"),
+"Events_Stage05": ExtResource("13_ikl6t"),
+"Events_Stage06": ExtResource("15_y8rqe"),
+"Events_StageExtra": ExtResource("16_plmjy"),
+"Events_StagePhantasm": ExtResource("17_tkoa0"),
+"Events_TestStage": ExtResource("6_nmwbu")
+}
+
+[node name="Stage" type="Node2D"]
+script = ExtResource("1_1ommx")
+
+[node name="StageEffects" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 50
+script = ExtResource("4_6mhf7")
+
+[node name="Introduction" type="Control" parent="StageEffects"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("5_pixgx")
+
+[node name="IntroName" type="RichTextLabel" parent="StageEffects/Introduction"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_top = 160.0
+offset_right = 498.0
+offset_bottom = 274.0
+theme_type_variation = &"Label_Name"
+bbcode_enabled = true
+text = "
+ Stage Name"
+fit_content = true
+
+[node name="IntroTitle" type="RichTextLabel" parent="StageEffects/Introduction"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 58.0
+offset_top = 252.0
+offset_right = 920.0
+offset_bottom = 326.0
+theme_type_variation = &"Label_Title"
+bbcode_enabled = true
+text = "
+ Stage Title"
+
+[node name="IntroDescription" type="Label" parent="StageEffects/Introduction"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 380.0
+offset_top = 320.0
+offset_right = 729.0
+offset_bottom = 475.0
+text = "Stage Description"
+autowrap_mode = 2
+
+[node name="IntroAnimator" type="AnimationPlayer" parent="StageEffects/Introduction"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_onfnj")
+}
+
+[node name="Music" type="Control" parent="StageEffects"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("5_pixgx")
+
+[node name="MusicName" type="Label" parent="StageEffects/Music"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 0
+offset_left = 550.0
+offset_top = 745.0
+offset_right = 870.0
+offset_bottom = 770.0
+text = "Music name"
+horizontal_alignment = 2
+
+[node name="MusicAnimator" type="AnimationPlayer" parent="StageEffects/Music"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_xkbtu")
+}
+
+[node name="Spell" type="Control" parent="StageEffects"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = ExtResource("5_pixgx")
+
+[node name="SpellControl" type="Control" parent="StageEffects/Spell"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SpellName" type="Label" parent="StageEffects/Spell/SpellControl"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 10.0
+offset_top = 745.0
+offset_right = 103.0
+offset_bottom = 770.0
+pivot_offset = Vector2(46.5, 12.5)
+text = "Spell Name
+"
+
+[node name="SpellFlashTimer" type="Timer" parent="StageEffects/Spell"]
+unique_name_in_owner = true
+wait_time = 1.6
+one_shot = true
+
+[node name="SpellAnimator" type="AnimationPlayer" parent="StageEffects/Spell"]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_hqitn")
+}
+
+[node name="SpellPortraits" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 40
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("3_ir2lb")]
+unique_name_in_owner = true
+layer = 30
+
+[node name="BossPlayer" parent="." instance=ExtResource("3_ic3q4")]
+unique_name_in_owner = true
+layer = 20
+
+[node name="StageObjects" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Guide" type="ColorRect" parent="StageObjects"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(680, 780)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
+
+[node name="Line2D" type="Line2D" parent="StageObjects/Guide"]
+points = PackedVector2Array(-80, -80, 340, 200)
+
+[node name="Line2D2" type="Line2D" parent="StageObjects/Guide"]
+points = PackedVector2Array(-80, 0, 0, -120)
+
+[node name="Sprite2D" type="Sprite2D" parent="StageObjects/Guide"]
+position = Vector2(3.05176e-05, -120)
+rotation = 0.593412
+scale = Vector2(2, 2)
+texture = ExtResource("6_nd61m")
+
+[node name="Paths" type="Node2D" parent="StageObjects"]
+unique_name_in_owner = true
+
+[node name="Path_00" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_rybem")
+
+[node name="Path_01" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_2k5xf")
+
+[node name="Path_02" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_oo116")
+
+[node name="Path_03" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_qei7g")
+
+[node name="Path_04" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_sqf2m")
+
+[node name="Path_05" type="Path2D" parent="StageObjects/Paths"]
+position = Vector2(0, -20)
+curve = SubResource("Curve2D_6mnyu")
+
+[node name="Path_06" type="Path2D" parent="StageObjects/Paths"]
+position = Vector2(0, 80)
+curve = SubResource("Curve2D_6qbhi")
+
+[node name="Path_07" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_0ta4v")
+
+[node name="Path_08" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_5dns4")
+
+[node name="Path_09" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_je4h2")
+
+[node name="Path_10" type="Path2D" parent="StageObjects/Paths"]
+curve = SubResource("Curve2D_nvn55")
+
+[node name="ClearTimer" type="Timer" parent="StageObjects"]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="BombTimer" type="Timer" parent="StageObjects"]
+unique_name_in_owner = true
+wait_time = 0.4
+one_shot = true
+
+[node name="Grayscale" type="TextureRect" parent="StageObjects"]
+unique_name_in_owner = true
+visible = false
+material = SubResource("ShaderMaterial_h0cpb")
+custom_minimum_size = Vector2(680, 780)
+offset_right = 680.0
+offset_bottom = 780.0
+
+[node name="Backgrounds" type="Node2D" parent="."]
+z_index = -100
+z_as_relative = false
+
+[node name="BackgroundsContainer" type="SubViewportContainer" parent="Backgrounds"]
+offset_right = 680.0
+offset_bottom = 780.0
+
+[node name="Backgrounds" type="SubViewport" parent="Backgrounds/BackgroundsContainer"]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(680, 780)
+render_target_update_mode = 4
+
+[node name="Music_Main" parent="." instance=ExtResource("6_w67bf")]
+unique_name_in_owner = true
+process_mode = 3
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_043df")
+}
+
+[connection signal="animation_finished" from="StageEffects/Introduction/IntroAnimator" to="StageEffects" method="_on_IntroAnimator_animation_finished"]
+[connection signal="timeout" from="StageEffects/Spell/SpellFlashTimer" to="StageEffects" method="_on_SpellFlashTimer_timeout"]
+[connection signal="animation_finished" from="Animator" to="." method="_on_Animator_animation_finished"]

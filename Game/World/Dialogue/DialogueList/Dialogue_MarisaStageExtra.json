@@ -1,0 +1,239 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "marisa",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"A new area to explore."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"But it seems like there's not too much things
+			of interest."
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Just a bunch of clutter everywhere."
+	},
+	"005": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"I wonder who lives like this?"
+	},
+	
+	
+	"006": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"You got a problem?"
+	},
+	"007": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"008": {
+		"type":          "enter",
+		"identity":      "flan",
+		"configuration": "right",
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "???",
+		"text":          
+			"It's my room, I get to do whatever with it."
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Well, I'm not one to judge, my house is pretty similar."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "???",
+		"text":          
+			"Who are you anyway? You interrupted my ranked match with
+			all your ruckus."
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Uh, I'm a shrine maiden you see."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "???",
+		"text":          
+			"..."
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "???",
+		"text":          
+			"Wow you are bad at lying."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "???",
+		"text":          
+			"You should go get a book on how to be a better liar."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "???",
+		"text":          
+			"And maybe some less obvious hair dye."
+	},
+	"017": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"(Perhaps I should've said I was a nurse instead?)"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa01",
+		"name":          "Marisa",
+		"text":          
+			"Anyway, who are you and why are you living down here?"
+	},
+	"019": {
+		"type":          "title",
+		"name":          "Flandre Scarlet",
+		"text":          "The Devil's Sister"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"Flandre Scarlet. A vampire."
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre04",
+		"name":          "Flandre",
+		"text":          
+			"And I'm here because my sister is lame as hell."
+	},
+	
+	
+	"022": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa04",
+		"name":          "Marisa",
+		"text":          
+			"Oh wow a real vampire! I haven't seen once 
+			since your sister yesterday!"
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre04",
+		"name":          "Flandre",
+		"text":          
+			"Pretty rare to see food so lively too."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"Wait food?! I'm not here to be eaten!"
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"Well vampires eat humans don't they? Plus you don't have any
+			shrine maiden blood, you're perfectly safe to eat!"
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "marisa",
+		"expression":    "PlayerMarisa05",
+		"name":          "Marisa",
+		"text":          
+			"I think you should respect your elders by not
+			seeing them as food!"
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"I am at least 478 years older than you."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"Perhaps you should respect your elders by not complaining
+			about being eaten."
+	},
+	
+	
+	"029": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"030": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "Flandre",
+		"text":          
+			"Now stay still, I'm gonna gut ya."
+	},
+}

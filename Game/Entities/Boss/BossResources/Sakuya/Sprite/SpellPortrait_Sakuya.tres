@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SpellPortrait_Data" load_steps=3 format=3 uid="uid://c2ddv0pwcb7sg"]
+
+[ext_resource type="Script" path="res://Game/Objects/Portrait/SpellPortrait_Data.gd" id="1_v8nl0"]
+[ext_resource type="Texture2D" uid="uid://k34esr8kyh30" path="res://Game/Entities/Boss/BossResources/Sakuya/Sprite/SpellPortrait_BossSakuya.png" id="2_518ed"]
+
+[resource]
+script = ExtResource("1_v8nl0")
+texture = ExtResource("2_518ed")
+offset = Vector2(0, 0)
+scale = Vector2(1, 1)
+mode = 1

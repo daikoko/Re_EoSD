@@ -1,0 +1,38 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://blflfjmcphbfs"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_5v852"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_vbyni"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Daiyousei/SpellScripts/Daiyousei_SpellB.gd" id="2_scub8"]
+
+[sub_resource type="Resource" id="Resource_yusdw"]
+script = ExtResource("1_vbyni")
+particles = ExtResource("1_5v852")
+value = 600000
+point = 48
+power = 16
+life = true
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("2_scub8")
+A_layout_spawner_count = 6
+A_fire_count = 36
+B1_layout_spawner_count = 6
+B2_layout_spawner_count = 5
+B_fire_count = 3
+health = 24000.0
+time = 60.0
+base_points = 600000.0
+bonus_points = 1.8e+06
+Death = SubResource("Resource_yusdw")
+major_phase = false
+hide_boss = true
+move_boss = false
+show_background = false
+hide_background = false
+timeout = false
+warning = false
+difficulty = 0
+boss_id = 0
+spell_id = 0

@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="ParticleData" load_steps=8 format=3 uid="uid://b8ds55hchrql4"]
+
+[ext_resource type="Script" path="res://Game/Objects/Particles/ParticlesData.gd" id="1_iktws"]
+[ext_resource type="Texture2D" uid="uid://bvs1hngffkrh" path="res://Game/Objects/Particles/Particle_Generic.png" id="2_veelj"]
+
+[sub_resource type="Gradient" id="Gradient_dcqvn"]
+offsets = PackedFloat32Array(0, 0.455128, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_hsvxw"]
+gradient = SubResource("Gradient_dcqvn")
+
+[sub_resource type="Curve" id="Curve_6jnyp"]
+_data = [Vector2(0, 0.281818), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_7ryc7"]
+curve = SubResource("Curve_6jnyp")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gjsqj"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 160.0
+emission_ring_inner_radius = 180.0
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -360.0
+radial_accel_max = -340.0
+scale_min = 0.1
+scale_max = 0.3
+scale_curve = SubResource("CurveTexture_7ryc7")
+color_ramp = SubResource("GradientTexture1D_hsvxw")
+
+[resource]
+script = ExtResource("1_iktws")
+lifetime = 1.0
+amount = 240
+texture = ExtResource("2_veelj")
+modulate = Color(1, 1, 1, 1)
+material = SubResource("ParticleProcessMaterial_gjsqj")
+z_index = 19
+one_shot = false

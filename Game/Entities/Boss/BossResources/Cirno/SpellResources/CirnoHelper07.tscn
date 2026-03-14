@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://co5dlan075vgc"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper07.gd" id="1_pm0o4"]
+
+[node name="CirnoHelper07" type="Node2D"]
+script = ExtResource("1_pm0o4")
+
+[node name="DelayTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 2.4
+one_shot = true

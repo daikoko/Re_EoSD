@@ -1,0 +1,54 @@
+extends BossEvent_Dialogue
+
+const BOSS_ID := GlobalSettings.BOSS.DAIYOUSEI
+const BOSS := preload("res://Game/Entities/Boss/BossScripts/Boss.tscn")
+const SPRITE := preload("res://Game/Entities/Boss/BossResources/Daiyousei/Sprite/BossSprite_Daiyousei.tres")
+
+const BOSS_IN_POSITION := Vector2(-100, -100)
+
+var Boss:BossObject
+
+signal boss_in_ended
+
+
+
+
+func play_dialogue(EventHandler:Control, BossDict:Dictionary) -> void:
+	self.EventHandler = EventHandler
+	self.BossDict = BossDict
+	set_id(BOSS_ID)
+	
+	Boss = BOSS.instantiate()
+	Boss.position = BOSS_IN_POSITION
+	Boss.set_sprite(SPRITE)
+	Boss.disable()
+	BossDict["boss"] = Boss
+	GlobalStage.request_add_object.emit(Boss)
+	
+	GlobalStage.request_dialogue.emit(DIALOGUE_PLAIN, self, true)
+
+
+func play_event(event_name:String) -> void:
+	if event_name == "boss_in":
+		boss_in()
+		await self.boss_in_ended
+		end_dialogue_event()
+	
+	if event_name == "end":
+		show_bars()
+		event_ended.emit()
+	
+	else:
+		end_dialogue_event()
+
+
+
+
+func boss_in() -> void:
+	Boss.enable()
+	
+	var tween:Tween = Boss.create_tween()
+	tween.tween_property(Boss, "position", GlobalStage.BOSS_DEFAULT_POSITION, 0.6)
+	await tween.finished
+	
+	boss_in_ended.emit()

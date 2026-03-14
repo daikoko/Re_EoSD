@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://co03buce26oun"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper21.gd" id="1_r4sog"]
+[ext_resource type="Texture2D" uid="uid://b25y8ugq7knjg" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFumoMeiling.png" id="2_ke6rh"]
+
+[node name="Helper21" type="Node2D"]
+script = ExtResource("1_r4sog")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 103
+z_as_relative = false
+texture = ExtResource("2_ke6rh")

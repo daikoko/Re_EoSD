@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EndingData" load_steps=8 format=3 uid="uid://c3xlv78srgqby"]
+
+[ext_resource type="Texture2D" uid="uid://b8xaxtpxiuyfi" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin01.png" id="1_3gc2i"]
+[ext_resource type="Texture2D" uid="uid://c1idj56fuqnig" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin02.png" id="2_p8i6s"]
+[ext_resource type="Texture2D" uid="uid://cty8lr7dl6vvq" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin03.png" id="3_mlrtu"]
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/EndingData.gd" id="3_tducs"]
+[ext_resource type="Texture2D" uid="uid://b3pa1650y0n4q" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin04.png" id="4_5piye"]
+[ext_resource type="Texture2D" uid="uid://fc6ldjqr4h0b" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin05.png" id="5_ma17t"]
+[ext_resource type="Texture2D" uid="uid://b7na3k30dyu2c" path="res://Game/Main/Ending/EndingResources/Rin/EndingRin06.png" id="6_v5iql"]
+
+[resource]
+script = ExtResource("3_tducs")
+scenes = Array[Texture]([ExtResource("1_3gc2i"), ExtResource("2_p8i6s"), ExtResource("3_mlrtu"), ExtResource("4_5piye"), ExtResource("5_ma17t"), ExtResource("6_v5iql")])
+dialogue = "res://Game/Main/Ending/EndingResources/Rin/Ending_RinBad.json"

@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://g1cfl0rjnm8m"]
+
+[ext_resource type="Texture2D" uid="uid://oktoj1nrjcna" path="res://Game/Entities/Enemy/EnemyResources/PixieGreen/GameSprites_EnemyPixieGreen.png" id="1_iogtb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_atl1t"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74gqv"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fldh"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m5pv"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7uel4"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70dru"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iublk"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea74p"]
+atlas = ExtResource("1_iogtb")
+region = Rect2(100, 200, 100, 100)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_atl1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74gqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fldh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m5pv")
+}],
+"loop": true,
+"name": &"_Idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7uel4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70dru")
+}],
+"loop": false,
+"name": &"_Left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iublk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea74p")
+}],
+"loop": false,
+"name": &"_Right",
+"speed": 6.0
+}]

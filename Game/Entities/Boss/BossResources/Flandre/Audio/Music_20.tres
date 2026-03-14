@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MusicData" load_steps=3 format=3 uid="uid://bbf7b57fcmkr"]
+
+[ext_resource type="Script" path="res://Master/Audio/MusicData.gd" id="1_awhqk"]
+[ext_resource type="AudioStream" uid="uid://dyum7p814kjw0" path="res://Game/Entities/Boss/BossResources/Flandre/Audio/TH06_20.ogg" id="1_rjxxg"]
+
+[resource]
+script = ExtResource("1_awhqk")
+id = 20
+name = ""
+music = ExtResource("1_rjxxg")
+flag = "Passed_StageExtra"

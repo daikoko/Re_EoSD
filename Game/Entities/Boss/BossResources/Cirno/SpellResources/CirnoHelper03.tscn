@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://822alb3qokpp"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellResources/CirnoHelper03.gd" id="1_3w8v5"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_peut8"]
+[ext_resource type="AudioStream" uid="uid://chtf44y7n8l5f" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire01.wav" id="3_hb4q4"]
+
+[node name="CirnoHelper03" type="Node2D"]
+script = ExtResource("1_3w8v5")
+
+[node name="ShooterA" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="ShooterB" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="Sound" parent="." instance=ExtResource("2_peut8")]
+unique_name_in_owner = true
+stream = ExtResource("3_hb4q4")

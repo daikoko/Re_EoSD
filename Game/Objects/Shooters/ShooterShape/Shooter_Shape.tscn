@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu0oi0bul74i5"]
+
+[ext_resource type="Script" path="res://Game/Objects/Shooters/ShooterShape/Shooter_Shape.gd" id="1_l4lp3"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="2_7efhx"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_ms5jd"]
+
+[node name="ShooterShape" type="Node2D"]
+script = ExtResource("1_l4lp3")
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+
+[node name="FireSound" parent="." instance=ExtResource("2_ms5jd")]
+unique_name_in_owner = true
+stream = ExtResource("2_7efhx")

@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://c4cavw6pfffwr"]
+
+[ext_resource type="Shader" path="res://Game/Objects/Sprites/Flash.gdshader" id="1_jc3jr"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper04.gd" id="1_n7plx"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_hlhr3"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_2iykx"]
+[ext_resource type="Texture2D" uid="uid://v48lkl2x8tuk" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreFuitBanana.png" id="4_onpn6"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="5_2enfw"]
+[ext_resource type="AudioStream" uid="uid://bckv1ge5msd8a" path="res://Game/Entities/Enemy/EnemyResources/_General/Enemy_Hit01.wav" id="6_0pkgh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qh8fe"]
+shader = ExtResource("1_jc3jr")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/hide = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wprm7"]
+resource_local_to_scene = true
+shader = ExtResource("3_2iykx")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+shader_parameter/flash_alpha = true
+
+[node name="Helper04" type="Node2D"]
+material = SubResource("ShaderMaterial_qh8fe")
+script = ExtResource("1_n7plx")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_hlhr3")]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_wprm7")
+texture = ExtResource("4_onpn6")
+hit_immunity = true
+immunity_time = 20.0
+
+[node name="Enemy" parent="." instance=ExtResource("5_2enfw")]
+unique_name_in_owner = true
+collision_layer = 4
+collision_mask = 0
+identity = "Enemy"
+
+[node name="FlashTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+one_shot = true
+
+[node name="Sound_Hit" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_0pkgh")
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]
+[connection signal="collider_hit" from="Enemy" to="." method="_on_Enemy_collider_hit"]
+[connection signal="timeout" from="FlashTimer" to="." method="_on_FlashTimer_timeout"]

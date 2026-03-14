@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://8dwipde872ws"]
+
+[ext_resource type="Script" path="res://Game/Objects/Timer/ShortTimer.gd" id="1_k7amb"]
+
+[node name="ShortTimer" type="Timer"]
+script = ExtResource("1_k7amb")
+
+[connection signal="timeout" from="." to="." method="_on_Self_timeout"]

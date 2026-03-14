@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0qfy3wmt4t4j"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/SakuyaHelper01.gd" id="1_d8uhm"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="2_48aqk"]
+[ext_resource type="AudioStream" uid="uid://c8pt3cmfetuqv" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire02.wav" id="3_f1fye"]
+
+[node name="SakuyaHelper01" type="Node2D"]
+script = ExtResource("1_d8uhm")
+
+[node name="FireTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+
+[node name="FireSound" parent="." instance=ExtResource("2_48aqk")]
+unique_name_in_owner = true
+stream = ExtResource("3_f1fye")

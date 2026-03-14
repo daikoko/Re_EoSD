@@ -1,0 +1,8 @@
+LAYER 1:
+	Player-EnemyBullet
+
+LAYER 2:
+	Player-Items
+
+Layer 3:
+	Enemy-PlayerBullets

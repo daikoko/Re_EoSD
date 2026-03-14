@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=6 format=3 uid="uid://baj7fq1nb4nsx"]
+
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="1_mwq1h"]
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_uq0ud"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellScripts/Sakuya_NonA.gd" id="2_a5cwl"]
+
+[sub_resource type="Curve" id="Curve_1x6jh"]
+max_value = 300.0
+_data = [Vector2(0, 146.574), 0.0, 647.525, 0, 0, Vector2(0.503185, 300), 0.0, 0.0, 0, 0, Vector2(1, 146.574), -596.078, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Resource" id="Resource_4483y"]
+script = ExtResource("1_mwq1h")
+particles = ExtResource("1_uq0ud")
+value = 320000
+point = 32
+power = 16
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("2_a5cwl")
+A_layout_spawner_count = 2
+A_layout_column_count = 6
+A_fire_count = 16
+A_bullet_speed_curve = SubResource("Curve_1x6jh")
+B_layout_spawner_count = 4
+B_fire_count = 8
+health = 24000.0
+Death = SubResource("Resource_4483y")
+hide_boss = false
+move_boss = false
+show_background = false
+hide_background = false
+difficulty = 0
+boss_id = 0

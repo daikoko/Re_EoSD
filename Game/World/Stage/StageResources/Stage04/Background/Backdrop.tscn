@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ber3sqa6tdk44"]
+
+[ext_resource type="Script" path="res://Game/World/Stage/StageResources/Stage04/Background/Backdrop.gd" id="1_831vi"]
+
+[sub_resource type="Environment" id="Environment_moyuv"]
+background_mode = 2
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.2
+fog_enabled = true
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 0.04
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_831vi")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_moyuv")
+
+[node name="Camera" type="Camera3D" parent="."]
+unique_name_in_owner = true

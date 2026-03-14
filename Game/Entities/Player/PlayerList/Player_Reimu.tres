@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="PlayerData" load_steps=11 format=3 uid="uid://bipdaxn432rou"]
+
+[ext_resource type="Texture2D" uid="uid://o1xgttmxxwp4" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/Hitbox_ReimuInner.png" id="1_10gh6"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/PlayerData.gd" id="1_sjuko"]
+[ext_resource type="PackedScene" uid="uid://c2se7inw4vnxw" path="res://Game/Entities/Player/PlayerResources/Reimu/Bomb/Reimu_Bomb.tscn" id="1_u1e7w"]
+[ext_resource type="Texture2D" uid="uid://chesiobewf7x7" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/Hitbox_ReimuOuter.png" id="2_1dh4d"]
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerScripts/ShotData.gd" id="2_3r1ga"]
+[ext_resource type="Resource" uid="uid://cj30l1uhtogk3" path="res://Game/Entities/Player/ShotList/Shot_ReimuA.tres" id="2_urclo"]
+[ext_resource type="Texture2D" uid="uid://iofui66recsv" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/SelectionPortrait_Reimu.png" id="3_hq1eb"]
+[ext_resource type="Resource" uid="uid://bfkx2uqjxm47w" path="res://Game/Entities/Player/PlayerResources/_General/Death/Death_Player.tres" id="4_iknn3"]
+[ext_resource type="SpriteFrames" uid="uid://1nyjwyfl3815" path="res://Game/Entities/Player/PlayerResources/Reimu/Sprite/SpriteFrames_PlayerReimu.tres" id="9_bm3d1"]
+[ext_resource type="Resource" uid="uid://byvv2xpssglff" path="res://Game/Entities/Player/ShotList/Shot_ReimuB.tres" id="9_rn41q"]
+
+[resource]
+script = ExtResource("1_sjuko")
+id = 1
+selection_portrait = ExtResource("3_hq1eb")
+sprite_frames = ExtResource("9_bm3d1")
+sprite_offset = Vector2(0, 0)
+hitbox_inner = ExtResource("1_10gh6")
+hitbox_outer = ExtResource("2_1dh4d")
+respawn = ExtResource("4_iknn3")
+power_loss = -20
+bomb = ExtResource("1_u1e7w")
+shots = Array[ExtResource("2_3r1ga")]([ExtResource("2_urclo"), ExtResource("9_rn41q")])
+radius_hitbox = 2
+radius_graze = 20
+radius_collection = 120
+speed_normal = 360.0
+speed_focus = 180.0
+power_max = 10000
+graze_max = 10
+graze_scaling = 1.7
+start_lives = 3
+start_bombs = 2
+flag_main = ""
+flag_extra = "Passed_MainSeries_Reimu"
+flag_phantasm = "Passed_ExtraSeries_Reimu"
+flag_practice = ""

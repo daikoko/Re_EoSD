@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="StageData" load_steps=5 format=3 uid="uid://cshyo3f20nbgu"]
+
+[ext_resource type="PackedScene" uid="uid://cce57fhxywcp8" path="res://Game/World/Stage/StageResources/StagePhantasm/Background/Background_StagePhantasm.tscn" id="1_c03vi"]
+[ext_resource type="Animation" uid="uid://13dvrthcq7iw" path="res://Game/World/Stage/StageResources/StagePhantasm/Events/Events_StagePhantasm.res" id="2_36sdn"]
+[ext_resource type="Resource" uid="uid://bc0sn2qt0wn13" path="res://Game/World/Stage/StageResources/StagePhantasm/Audio/Music_21.tres" id="3_nrgwr"]
+[ext_resource type="Script" path="res://Game/World/Stage/StageScripts/StageData.gd" id="4_haao5"]
+
+[resource]
+script = ExtResource("4_haao5")
+id = 8
+background = ExtResource("1_c03vi")
+music = ExtResource("3_nrgwr")
+events = ExtResource("2_36sdn")
+clear_bonus = 2400000
+level_seed = -1

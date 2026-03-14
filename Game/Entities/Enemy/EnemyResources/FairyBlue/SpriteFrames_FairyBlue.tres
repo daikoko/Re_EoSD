@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://d1o414hkooh0c"]
+
+[ext_resource type="Texture2D" uid="uid://1miw4we2s7ak" path="res://Game/Entities/Enemy/EnemyResources/FairyBlue/GameSprites_EnemyFairyBlue.png" id="1_5jfyt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lbsx"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bowxj"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wt0lr"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hr8bo"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5b0t"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(0, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhpca"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(100, 100, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rf78"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(0, 200, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duejd"]
+atlas = ExtResource("1_5jfyt")
+region = Rect2(100, 200, 100, 100)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lbsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bowxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wt0lr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hr8bo")
+}],
+"loop": true,
+"name": &"_Idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5b0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhpca")
+}],
+"loop": false,
+"name": &"_Left",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rf78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duejd")
+}],
+"loop": false,
+"name": &"_Right",
+"speed": 6.0
+}]

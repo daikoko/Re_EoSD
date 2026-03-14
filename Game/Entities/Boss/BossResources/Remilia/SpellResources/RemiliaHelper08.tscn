@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb4mamf5gifer"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Remilia/SpellResources/RemiliaHelper08.gd" id="1_kk4wd"]
+[ext_resource type="PackedScene" uid="uid://1kulvpp0e13f" path="res://Game/Objects/Bullets/BulletScripts/BulletDull.tscn" id="2_nvdot"]
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="3_neuye"]
+[ext_resource type="Resource" uid="uid://cnstlw7n717sh" path="res://Game/Objects/Bullets/BulletList/Bullet_LargeRed.tres" id="4_tjm8v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6vg0y"]
+resource_local_to_scene = true
+shader = ExtResource("3_neuye")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="RemiliaHelper08" type="Node2D"]
+script = ExtResource("1_kk4wd")
+
+[node name="BulletDull" parent="." instance=ExtResource("2_nvdot")]
+unique_name_in_owner = true
+z_index = 59
+material = SubResource("ShaderMaterial_6vg0y")
+data = ExtResource("4_tjm8v")
+hit_immunity = true
+visibility_immunity = true
+
+[connection signal="bullet_deactivate" from="BulletDull" to="." method="_on_BulletDull_bullet_deactivate"]

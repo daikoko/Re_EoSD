@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=5 format=3 uid="uid://cml6va6wyqjvn"]
+
+[ext_resource type="Resource" uid="uid://bfkuaph2mxfdv" path="res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres" id="1_clgg7"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_olhci"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Cirno/SpellScripts/Cirno_NonA.gd" id="3_cgh1h"]
+
+[sub_resource type="Resource" id="Resource_2oeal"]
+script = ExtResource("2_olhci")
+particles = ExtResource("1_clgg7")
+value = 200000
+point = 20
+power = 10
+life = false
+bomb = false
+boss = true
+
+[resource]
+script = ExtResource("3_cgh1h")
+A_layout_spawner_count = 4
+A_fire_count = 4
+B_layout_column_count = 2
+B_fire_count = 8
+health = 8000.0
+Death = SubResource("Resource_2oeal")
+hide_boss = false
+move_boss = true
+show_background = false
+hide_background = false
+difficulty = 2
+boss_id = 0

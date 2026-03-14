@@ -1,0 +1,192 @@
+{
+	"000": {
+		"type": "scene",
+	},
+	"001": {
+		"type": "music_play",
+		"music": "good_end_theme"
+	},
+	"002": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Hakurei Shrine"
+	},
+	"004": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"The skies above Gensokyo have been cleared."
+	},
+	"005": {
+		"type": "scene",
+	},
+	"006": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Agh, the Summer sun is back. It's so hot."
+	},
+	"007": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"I almost miss that overcast."
+	},
+	"008": {
+		"type": "text",
+		"name": "???",
+		"text": 
+			"The mistress askes if you are feling regertful."
+	},
+	"009": {
+		"type": "scene",
+	},
+	"010": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Oh, it's you two from the manor."
+	},
+	"011": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"*************"
+	},
+	"012": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"The mistress says we've come to crash at your shrine."
+	},
+	"013": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Shouldn't you be repelled by this place? I'd
+			rather not have the shrine be crowded by youkai."
+	},
+	"014": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"It is a pretty decrepid building; perhaps you should put
+			more work into repairing it?"
+	},
+	"015": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Look, if I ever get married, the first thing I'm doing
+			is making my man fix up this places."
+	},
+	"016": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"But speaking of damages, are you aware that you caused quite
+			a bit of collatoral damage all over my house?"
+	},
+	"017": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"The gatekeeper is quite mad that you stepped all over her garden."
+	},
+	"018": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Irk. I don't have any way to pay."
+	},
+	"019": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"Yeah we can tell. But the mistress can let bygones be bygones."
+	},
+	"020": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"Just a teensy favor to ask you."
+	},
+	"021": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Oh? What is it?"
+	},
+	"022": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"********************"
+	},
+	"023": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"The mistress would like you to clear out her basement."
+	},
+	"024": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"Like clearing out dustbunnies or something?
+			Isn't that your job?"
+	},
+	"025": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"****************"
+	},
+	"026": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"The mistress needs someone as strong her her to do it,
+			and you have already proven yourself."
+	},
+	"027": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"What kind of dustbunnies are we taliking about?!
+			You make it sound like extermination work!"
+	},
+	"028": {
+		"type": "text",
+		"name": "Remilia",
+		"text": 
+			"************!!!"
+	},
+	"029": {
+		"type": "text",
+		"name": "Sakuya",
+		"text": 
+			"The mistress says no extermination.
+			Just clean it out. Please stop by tomorrow."
+	},
+	"030": {
+		"type": "text",
+		"name": "Reimu",
+		"text": 
+			"looks like I don't really have a choice."
+	},
+	"031": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Reimu - True End"
+	},
+	"032": {
+		"type": "text",
+		"name": "",
+		"text": 
+			"Congratulations!
+			Start the Extra Stage to continue the story."
+	},
+}

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjnqxn0hwvbob"]
+
+[ext_resource type="Script" path="res://Game/Objects/Items/Point/ItemPoint.gd" id="1_asddt"]
+[ext_resource type="Texture2D" uid="uid://7tyge2iiouxy" path="res://Game/Objects/Items/Point/Item_Point.png" id="1_rw7a0"]
+
+[node name="ItemPoint" type="Sprite2D"]
+z_index = 50
+z_as_relative = false
+texture = ExtResource("1_rw7a0")
+script = ExtResource("1_asddt")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

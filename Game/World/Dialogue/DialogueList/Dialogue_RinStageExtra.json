@@ -1,0 +1,243 @@
+{	
+	"001": {
+		"type":          "enter",
+		"identity":      "rin",
+		"configuration": "left",
+	},
+	"002": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Everyone seems a bit worried about me coming down here."
+	},
+	"003": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"But the younger sister can't be that bad can she?"
+	},
+	"004": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin01",
+		"name":          "Rin",
+		"text":          
+			"She's probaly just as precious!"
+	},
+	
+	
+	"005": {
+		"type":          "dialogue",
+		"identity":      "",
+		"expression":    "",
+		"name":          "???",
+		"text":          
+			"Another visitor?"
+	},
+	"006": {
+		"type":          "event",
+		"pause":         "true",
+		"event_name":    "boss_in"
+	},
+	"007": {
+		"type":          "enter",
+		"identity":      "flan",
+		"configuration": "right",
+	},
+	"008": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "???",
+		"text":          
+			"You'll all crowd the basement at this rate."
+	},
+	"009": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Awa! How cu-"
+	},
+	"010": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "???",
+		"text":          
+			"Don't even try it."
+	},
+	"011": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "???",
+		"text":          
+			"What did my lame sister send down here anyway?"
+	},
+	"012": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"I'm a magician."
+	},
+	"013": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre04",
+		"name":          "???",
+		"text":          
+			"Oh did my dork sister send someone down here to
+			do party tricks?"
+	},
+	"014": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre04",
+		"name":          "???",
+		"text":          
+			"Har Har."
+	},
+	"015": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre02",
+		"name":          "???",
+		"text":          
+			"Yeah I ain't buying it."
+	},
+	"016": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin05",
+		"name":          "Rin",
+		"text":          
+			"(Maybe I should've tried going as a shrine maiden instead?)"
+	},
+	"017": {
+		"type":          "title",
+		"name":          "Flandre Scarlet",
+		"text":          "The Devil's Sister"
+	},
+	"018": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"But anyway, what did my stupid sister send you down for."
+	},
+	
+	
+	"019": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"Well have you considered going outs-"
+	},
+	"020": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "Flandre",
+		"text":          
+			"No."
+	},
+	"021": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin04",
+		"name":          "Rin",
+		"text":          
+			"But what abou-"
+	},
+	"022": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "Flandre",
+		"text":          
+			"Nuh uh."
+	},
+	"023": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"I have everything down here. I have my bed, my games."
+	},
+	"024": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"I have soda and hot chip."
+	},
+	"025": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"And every once in a while, Sakuya gives me
+			some child bones to gnaw on."
+	},
+	"026": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"Your sister worked so hard to get you outside."
+	},
+	"027": {
+		"type":          "dialogue",
+		"identity":      "rin",
+		"expression":    "PlayerRin03",
+		"name":          "Rin",
+		"text":          
+			"All she wants is to spend some time with you."
+	},
+	"028": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre01",
+		"name":          "Flandre",
+		"text":          
+			"..."
+	},
+	"029": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "Flandre",
+		"text":          
+			"Well she's a mega lame loser for that."
+	},
+	
+	
+	"030": {
+		"type":          "event",
+		"pause":         "false",
+		"event_name":    "boss_theme"
+	},
+	"031": {
+		"type":          "dialogue",
+		"identity":      "flan",
+		"expression":    "BossFlandre03",
+		"name":          "Flandre",
+		"text":          
+			"Now out with you."
+	},
+}

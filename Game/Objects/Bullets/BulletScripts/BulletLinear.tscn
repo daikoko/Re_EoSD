@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ue6psmu16av"]
+
+[ext_resource type="Shader" path="res://Game/Objects/Bullets/BulletResources/Bullet.gdshader" id="1_0fwg5"]
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletLinear.gd" id="1_h5siu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_c5psq"]
+resource_local_to_scene = true
+shader = ExtResource("1_0fwg5")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_modifier = 0.0
+
+[node name="BulletLinear" type="Sprite2D"]
+z_index = 61
+z_as_relative = false
+material = SubResource("ShaderMaterial_c5psq")
+script = ExtResource("1_h5siu")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BossSpriteData" load_steps=5 format=3 uid="uid://c3pmjv21g2jxi"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossSpriteScripts/BossSpriteData.gd" id="1_p75rs"]
+[ext_resource type="PackedScene" uid="uid://dm26no61rlycr" path="res://Game/Entities/Boss/BossResources/Rumia/Sprite/CustomSprite_Rumia.tscn" id="2_icmci"]
+[ext_resource type="SpriteFrames" uid="uid://c101eue3g8lpp" path="res://Game/Entities/Boss/BossResources/Rumia/Sprite/SpriteFrames_Rumia.tres" id="2_w6raq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lilbe"]
+radius = 40.0
+
+[resource]
+script = ExtResource("1_p75rs")
+sprite_frames = ExtResource("2_w6raq")
+sprite_base = ExtResource("2_icmci")
+sprite_offset = Vector2(0, 20)
+hitbox = SubResource("CircleShape2D_lilbe")

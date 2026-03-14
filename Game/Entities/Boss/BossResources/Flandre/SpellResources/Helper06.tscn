@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt3tnhk0lo3u4"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Helper06.gd" id="1_w6pty"]
+[ext_resource type="Texture2D" uid="uid://dgpubecl11p7l" path="res://Game/Entities/Boss/BossResources/Flandre/SpellResources/BulletCustom_FlandreRandomWheelCover.png" id="2_5go7i"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="3_rspoo"]
+[ext_resource type="AudioStream" uid="uid://chtf44y7n8l5f" path="res://Game/Objects/Shooters/Shooter/Shooter_Fire01.wav" id="4_tpp2p"]
+
+[node name="Helper06" type="Node2D"]
+script = ExtResource("1_w6pty")
+
+[node name="Blinker" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 70
+z_as_relative = false
+texture = ExtResource("2_5go7i")
+
+[node name="Timer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[node name="Sound" parent="." instance=ExtResource("3_rspoo")]
+unique_name_in_owner = true
+stream = ExtResource("4_tpp2p")
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

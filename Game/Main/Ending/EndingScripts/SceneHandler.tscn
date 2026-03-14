@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvwo5v2ekur2i"]
+
+[ext_resource type="Script" path="res://Game/Main/Ending/EndingScripts/SceneHandler.gd" id="1_k1pwx"]
+
+[node name="SceneHandler" type="CanvasLayer"]
+layer = 81
+script = ExtResource("1_k1pwx")
+
+[node name="Scene" type="TextureRect" parent="."]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 40.0

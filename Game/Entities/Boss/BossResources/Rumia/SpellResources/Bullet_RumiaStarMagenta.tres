@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://dc8m46s3s1ead"]
+
+[ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_0ojth"]
+[ext_resource type="Texture2D" uid="uid://d35dgp8ow24lc" path="res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaStarPurple.png" id="2_cr5d8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rk582"]
+radius = 6.0
+
+[resource]
+script = ExtResource("1_0ojth")
+texture = ExtResource("2_cr5d8")
+shape = SubResource("CircleShape2D_rk582")
+color_option = 6
+color_custom = Color(0, 0, 0, 1)
+visibility = Rect2(-10, -10, 20, 20)

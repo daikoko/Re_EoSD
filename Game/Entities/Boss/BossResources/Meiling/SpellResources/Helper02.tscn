@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://chntjitaxmftm"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Meiling/SpellResources/Helper02.gd" id="1_jdpq7"]
+
+[node name="SpellA_Helper1" type="Node2D"]
+script = ExtResource("1_jdpq7")
+
+[node name="Marker_1" type="Marker2D" parent="."]
+rotation = 0.20944
+
+[node name="Marker_2" type="Marker2D" parent="."]
+rotation = 0.10472
+
+[node name="Marker_3" type="Marker2D" parent="."]
+
+[node name="Marker_4" type="Marker2D" parent="."]
+rotation = -0.10472
+
+[node name="Marker_5" type="Marker2D" parent="."]
+rotation = -0.20944
+
+[node name="Marker_6" type="Marker2D" parent="."]
+rotation = 1.74533
+
+[node name="Marker_7" type="Marker2D" parent="."]
+rotation = 1.90241
+
+[node name="Marker_8" type="Marker2D" parent="."]
+rotation = -1.74533
+
+[node name="Marker_9" type="Marker2D" parent="."]
+rotation = -1.90241
+
+[node name="Marker_10" type="Marker2D" parent="."]
+rotation = 3.61283
+
+[node name="Marker_11" type="Marker2D" parent="."]
+rotation = 3.45575
+
+[node name="Marker_12" type="Marker2D" parent="."]
+rotation = 3.29867
+
+[node name="Marker_13" type="Marker2D" parent="."]
+rotation = 3.14159
+
+[node name="Marker_14" type="Marker2D" parent="."]
+rotation = 2.98451
+
+[node name="Marker_15" type="Marker2D" parent="."]
+rotation = 2.82743
+
+[node name="Marker_16" type="Marker2D" parent="."]
+rotation = 2.67035

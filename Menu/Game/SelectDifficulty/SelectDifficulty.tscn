@@ -1,0 +1,961 @@
+[gd_scene load_steps=25 format=3 uid="uid://tvncgygkibet"]
+
+[ext_resource type="Theme" uid="uid://bqb533xlqlgag" path="res://Menu/Themes/Themes/MainMenu.tres" id="1_vjf05"]
+[ext_resource type="Script" path="res://Menu/Game/SelectDifficulty/SelectDifficulty.gd" id="2_ypeyc"]
+[ext_resource type="Texture2D" uid="uid://b8fp2oe4nt8kk" path="res://Menu/Game/SelectDifficulty/Button_SelectDifficulty.png" id="3_ixosn"]
+[ext_resource type="Texture2D" uid="uid://cc4gsw6w1jtk8" path="res://Menu/Game/SelectDifficulty/Button_SelectDifficultyPressed.png" id="4_4cbn1"]
+[ext_resource type="Texture2D" uid="uid://cae0gp47qtpbp" path="res://Menu/Game/SelectDifficulty/Button_SelectDifficultyFocused.png" id="5_8mpw2"]
+[ext_resource type="Texture2D" uid="uid://whdw6ar3383m" path="res://Menu/Game/SelectDifficulty/Icon_DifficultyEasy.png" id="6_jl8kc"]
+[ext_resource type="Texture2D" uid="uid://c5xxhidibyv5u" path="res://Menu/Game/SelectDifficulty/IconDifficultyNormal.png" id="7_8dyca"]
+[ext_resource type="Texture2D" uid="uid://bdqfypmapdhx2" path="res://Menu/Game/SelectDifficulty/Icon_DifficultyHard.png" id="8_815ue"]
+[ext_resource type="Texture2D" uid="uid://5adofdxwc56o" path="res://Menu/Game/SelectDifficulty/Icon_DifficultyLunatic.png" id="9_dfidr"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="10_3x6yt"]
+[ext_resource type="Shader" path="res://Menu/Game/SelectDifficulty/PhantasmShader.gdshader" id="10_u7c4a"]
+[ext_resource type="Texture2D" uid="uid://dje1x6k4owxtx" path="res://Master/Main/Bootsplash.png" id="11_bfdby"]
+[ext_resource type="AudioStream" uid="uid://pkemaxo37kwk" path="res://Menu/Main/Menu_Select02.wav" id="11_yyo24"]
+[ext_resource type="AudioStream" uid="uid://3bjgn02t8rra" path="res://Menu/Main/Menu_Select04.wav" id="12_m1koe"]
+[ext_resource type="AudioStream" uid="uid://dbf5gxo0c67pd" path="res://Menu/Game/SelectDifficulty/Phantasm.wav" id="13_d2n8a"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_4mkqi"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_88f6p"]
+noise = SubResource("FastNoiseLite_4mkqi")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_prwao"]
+resource_local_to_scene = true
+shader = ExtResource("10_u7c4a")
+shader_parameter/distortion_intensity = 10.0
+shader_parameter/distortion_alpha = 1.0
+shader_parameter/noise = SubResource("NoiseTexture2D_88f6p")
+
+[sub_resource type="Animation" id="Animation_4ykvg"]
+resource_name = "Load_In"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -180), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main/EasyBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/NormalBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(150, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/HardBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(300, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/LunaticBox/Filler:custom_minimum_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(450, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Extra:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Phantasm:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_2vapg"]
+resource_name = "Load_In_Back"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -180), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main/EasyBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/NormalBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(150, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/HardBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(300, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/LunaticBox/Filler:custom_minimum_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(225, 0), Vector2(450, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Extra:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Phantasm:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_fvgmb"]
+resource_name = "Load_Out"
+length = 0.2
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -180)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main/EasyBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(225, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/NormalBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(150, 0), Vector2(225, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/HardBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 0), Vector2(225, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/LunaticBox/Filler:custom_minimum_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(450, 0), Vector2(225, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Extra:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Phantasm:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_5esi6"]
+resource_name = "Load_Out_Next"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -180)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main/EasyBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(225, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/NormalBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(150, 0), Vector2(225, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/HardBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(300, 0), Vector2(225, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/LunaticBox/Filler:custom_minimum_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(450, 0), Vector2(225, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Extra:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Phantasm:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_u3nvf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -180)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Main/EasyBox/Filler:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(225, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/NormalBox/Filler:custom_minimum_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(225, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/HardBox/Filler:custom_minimum_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(225, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/LunaticBox/Filler:custom_minimum_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(225, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Extra:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Phantasm:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mr0hd"]
+_data = {
+"Load_In": SubResource("Animation_4ykvg"),
+"Load_In_Back": SubResource("Animation_2vapg"),
+"Load_Out": SubResource("Animation_fvgmb"),
+"Load_Out_Next": SubResource("Animation_5esi6"),
+"RESET": SubResource("Animation_u3nvf")
+}
+
+[node name="SelectDifficulty" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_vjf05")
+script = ExtResource("2_ypeyc")
+
+[node name="Title" type="CenterContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1280, 180)
+layout_mode = 0
+offset_top = -180.0
+offset_right = 1280.0
+
+[node name="Title" type="Label" parent="Title"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_SubMenu"
+text = "Select Difficulty"
+
+[node name="Main" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(980, 0)
+layout_mode = 0
+offset_left = 150.0
+offset_top = 160.0
+offset_right = 1144.0
+offset_bottom = 825.0
+theme_override_constants/separation = 40
+
+[node name="EasyBox" type="HBoxContainer" parent="Main"]
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="Main/EasyBox"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+
+[node name="EasyButton" type="TextureButton" parent="Main/EasyBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../NormalBox/NormalButton")
+focus_next = NodePath("../../NormalBox/NormalButton")
+focus_previous = NodePath(".")
+mouse_filter = 2
+texture_normal = ExtResource("3_ixosn")
+texture_pressed = ExtResource("4_4cbn1")
+texture_focused = ExtResource("5_8mpw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Main/EasyBox/EasyButton"]
+position = Vector2(100, 90)
+texture = ExtResource("6_jl8kc")
+
+[node name="EasyName" type="Label" parent="Main/EasyBox/EasyButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 200.0
+offset_bottom = 35.0
+theme_type_variation = &"Label_Difficulty"
+text = "Easy"
+
+[node name="EasyText" type="Label" parent="Main/EasyBox/EasyButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 52.0
+offset_right = 249.0
+offset_bottom = 75.0
+text = "Description
+"
+
+[node name="NormalBox" type="HBoxContainer" parent="Main"]
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="Main/NormalBox"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+
+[node name="NormalButton" type="TextureButton" parent="Main/NormalBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../EasyBox/EasyButton")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../HardBox/HardButton")
+focus_next = NodePath("../../HardBox/HardButton")
+focus_previous = NodePath("../../EasyBox/EasyButton")
+mouse_filter = 2
+texture_normal = ExtResource("3_ixosn")
+texture_pressed = ExtResource("4_4cbn1")
+texture_focused = ExtResource("5_8mpw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Main/NormalBox/NormalButton"]
+position = Vector2(100, 90)
+texture = ExtResource("7_8dyca")
+
+[node name="NormalName" type="Label" parent="Main/NormalBox/NormalButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 200.0
+offset_bottom = 35.0
+theme_type_variation = &"Label_Difficulty"
+text = "Normal"
+
+[node name="NormalText" type="Label" parent="Main/NormalBox/NormalButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 52.0
+offset_right = 249.0
+offset_bottom = 75.0
+text = "Description
+"
+
+[node name="HardBox" type="HBoxContainer" parent="Main"]
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="Main/HardBox"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+
+[node name="HardButton" type="TextureButton" parent="Main/HardBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../NormalBox/NormalButton")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../LunaticBox/LunaticButton")
+focus_next = NodePath("../../LunaticBox/LunaticButton")
+focus_previous = NodePath("../../NormalBox/NormalButton")
+mouse_filter = 2
+texture_normal = ExtResource("3_ixosn")
+texture_pressed = ExtResource("4_4cbn1")
+texture_focused = ExtResource("5_8mpw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Main/HardBox/HardButton"]
+position = Vector2(100, 90)
+texture = ExtResource("8_815ue")
+
+[node name="HardName" type="Label" parent="Main/HardBox/HardButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 200.0
+offset_bottom = 35.0
+theme_type_variation = &"Label_Difficulty"
+text = "Hard"
+
+[node name="HardText" type="Label" parent="Main/HardBox/HardButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 52.0
+offset_right = 249.0
+offset_bottom = 75.0
+text = "Description
+"
+
+[node name="LunaticBox" type="HBoxContainer" parent="Main"]
+layout_mode = 2
+
+[node name="Filler" type="Label" parent="Main/LunaticBox"]
+custom_minimum_size = Vector2(225, 0)
+layout_mode = 2
+
+[node name="LunaticButton" type="TextureButton" parent="Main/LunaticBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../HardBox/HardButton")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath("../../HardBox/HardButton")
+mouse_filter = 2
+texture_normal = ExtResource("3_ixosn")
+texture_pressed = ExtResource("4_4cbn1")
+texture_focused = ExtResource("5_8mpw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Main/LunaticBox/LunaticButton"]
+position = Vector2(100, 90)
+texture = ExtResource("9_dfidr")
+
+[node name="LunaticName" type="Label" parent="Main/LunaticBox/LunaticButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 200.0
+offset_bottom = 35.0
+theme_type_variation = &"Label_Difficulty"
+text = "Lunatic
+"
+
+[node name="LunaticText" type="Label" parent="Main/LunaticBox/LunaticButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 52.0
+offset_right = 249.0
+offset_bottom = 75.0
+text = "Description
+"
+
+[node name="Extra" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 150.0
+offset_top = 320.0
+offset_right = 1144.0
+offset_bottom = 440.0
+
+[node name="ExtraButton" type="TextureButton" parent="Extra"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+texture_normal = ExtResource("3_ixosn")
+texture_pressed = ExtResource("4_4cbn1")
+texture_focused = ExtResource("5_8mpw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Extra/ExtraButton"]
+position = Vector2(100, 90)
+texture = ExtResource("9_dfidr")
+
+[node name="ExtraName" type="Label" parent="Extra/ExtraButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 200.0
+offset_bottom = 35.0
+theme_type_variation = &"Label_Difficulty"
+text = "Extra
+"
+
+[node name="ExtraText" type="Label" parent="Extra/ExtraButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 52.0
+offset_right = 249.0
+offset_bottom = 75.0
+text = "Description
+"
+
+[node name="Phantasm" type="VBoxContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 150.0
+offset_top = 320.0
+offset_right = 1144.0
+offset_bottom = 440.0
+
+[node name="PhantasmButton" type="TextureButton" parent="Phantasm"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+mouse_filter = 2
+texture_normal = ExtResource("3_ixosn")
+texture_pressed = ExtResource("4_4cbn1")
+texture_focused = ExtResource("5_8mpw2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Phantasm/PhantasmButton"]
+position = Vector2(100, 90)
+texture = ExtResource("9_dfidr")
+
+[node name="PhantasmName" type="Label" parent="Phantasm/PhantasmButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 12.0
+offset_right = 200.0
+offset_bottom = 35.0
+theme_type_variation = &"Label_Difficulty"
+text = "Phantasm
+"
+
+[node name="PhantasmText" type="Label" parent="Phantasm/PhantasmButton"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 160.0
+offset_top = 52.0
+offset_right = 249.0
+offset_bottom = 75.0
+text = "Description
+"
+
+[node name="ShiftTimer" type="Timer" parent="Phantasm"]
+unique_name_in_owner = true
+wait_time = 1.2
+one_shot = true
+
+[node name="PhantasmLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+layer = 100
+
+[node name="PhantasmCover" type="TextureRect" parent="PhantasmLayer"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_prwao")
+custom_minimum_size = Vector2(1280, 800)
+offset_right = 1280.0
+offset_bottom = 800.0
+texture = ExtResource("11_bfdby")
+
+[node name="PhantasmSound" parent="PhantasmLayer" instance=ExtResource("10_3x6yt")]
+unique_name_in_owner = true
+stream = ExtResource("13_d2n8a")
+
+[node name="Sound_Select02" parent="." instance=ExtResource("10_3x6yt")]
+unique_name_in_owner = true
+stream = ExtResource("11_yyo24")
+
+[node name="Sound_Select04" parent="." instance=ExtResource("10_3x6yt")]
+unique_name_in_owner = true
+stream = ExtResource("12_m1koe")
+
+[node name="Animator" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_mr0hd")
+}
+
+[connection signal="pressed" from="Main/EasyBox/EasyButton" to="." method="_on_EasyButton_pressed"]
+[connection signal="pressed" from="Main/NormalBox/NormalButton" to="." method="_on_NormalButton_pressed"]
+[connection signal="pressed" from="Main/HardBox/HardButton" to="." method="_on_HardButton_pressed"]
+[connection signal="pressed" from="Main/LunaticBox/LunaticButton" to="." method="_on_LunaticButton_pressed"]
+[connection signal="pressed" from="Extra/ExtraButton" to="." method="_on_ExtraButton_pressed"]
+[connection signal="pressed" from="Phantasm/PhantasmButton" to="." method="_on_PhantasmButton_pressed"]
+[connection signal="timeout" from="Phantasm/ShiftTimer" to="." method="_on_ShiftTimer_timeout"]

@@ -1,0 +1,34 @@
+[gd_resource type="Resource" script_class="BossData" load_steps=26 format=3 uid="uid://dg6hee5sc6ln8"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_jfhcx"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_jrjy0"]
+[ext_resource type="Resource" uid="uid://b2jy3u3cpj8te" path="res://Game/Entities/Boss/BossList/Stage03_Boss/DialogueList/Stage03_Boss_DialogueA.tres" id="2_uks56"]
+[ext_resource type="Resource" uid="uid://c4uvaotrxn78j" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_SpellB_Normal.tres" id="3_0vp5x"]
+[ext_resource type="Resource" uid="uid://dvtp6wueigg7t" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_SpellD_Normal.tres" id="3_8e4ut"]
+[ext_resource type="Resource" uid="uid://cewn66ewvywl2" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellE_Lunatic.tres" id="3_cs86w"]
+[ext_resource type="Resource" uid="uid://sov4a8cbj1kd" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellB_Lunatic.tres" id="3_hics4"]
+[ext_resource type="Resource" uid="uid://b8chmwujewbj0" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_NonA1_Easy.tres" id="3_i1fxb"]
+[ext_resource type="Resource" uid="uid://7sn0hc0mkqvj" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_SpellC_Normal.tres" id="3_n31l8"]
+[ext_resource type="Resource" uid="uid://tylk8c8r30c3" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_NonA1_Lunatic.tres" id="3_otpka"]
+[ext_resource type="Resource" uid="uid://dknhsj0qd73tn" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_SpellB_Easy.tres" id="3_pgv0n"]
+[ext_resource type="Resource" uid="uid://bwnqfo2rlgxrg" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_NonA1_Normal.tres" id="3_so4ij"]
+[ext_resource type="Resource" uid="uid://d2lqsf4uaglru" path="res://Game/Entities/Boss/BossList/Stage03_Boss/DialogueList/Stage03_Boss_DialogueB.tres" id="4_06aqp"]
+[ext_resource type="Resource" uid="uid://dbctpd31tfbas" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Normal/Meiling_NonA2_Normal.tres" id="4_edxu1"]
+[ext_resource type="Resource" uid="uid://ba7tkorobacmt" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_NonA2_Lunatic.tres" id="4_nnm2g"]
+[ext_resource type="Resource" uid="uid://dokusht1ewyb3" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_NonA2_Easy.tres" id="4_vhfms"]
+[ext_resource type="Resource" uid="uid://chtim467e61ai" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_SpellC_Easy.tres" id="6_egbru"]
+[ext_resource type="Resource" uid="uid://dodee2gv8n671" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Easy/Meiling_SpellD_Easy.tres" id="7_fp25s"]
+[ext_resource type="Resource" uid="uid://bsqvj554ccghp" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_NonA1_Hard.tres" id="9_ixttu"]
+[ext_resource type="Resource" uid="uid://crhbfm5un8f36" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_SpellB_Hard.tres" id="10_qtl1l"]
+[ext_resource type="Resource" uid="uid://pnftlv5kqvbr" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_NonA2_Hard.tres" id="11_5stwc"]
+[ext_resource type="Resource" uid="uid://dg3oarx6oud3j" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_SpellC_Hard.tres" id="12_k3hjo"]
+[ext_resource type="Resource" uid="uid://bpxa87378yyu4" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Hard/Meiling_SpellD_Hard.tres" id="13_xfpho"]
+[ext_resource type="Resource" uid="uid://cfhtu2hhctopx" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellC_Lunatic.tres" id="17_hyth3"]
+[ext_resource type="Resource" uid="uid://bpnwprsyg4xon" path="res://Game/Entities/Boss/BossList/Stage03_Boss/SpellList/Lunatic/Meiling_SpellD_Lunatic.tres" id="18_6fpds"]
+
+[resource]
+script = ExtResource("2_jrjy0")
+easy = Array[ExtResource("1_jfhcx")]([ExtResource("2_uks56"), ExtResource("3_i1fxb"), ExtResource("3_pgv0n"), ExtResource("4_vhfms"), ExtResource("6_egbru"), ExtResource("7_fp25s"), ExtResource("4_06aqp")])
+normal = Array[ExtResource("1_jfhcx")]([ExtResource("2_uks56"), ExtResource("3_so4ij"), ExtResource("3_0vp5x"), ExtResource("4_edxu1"), ExtResource("3_n31l8"), ExtResource("3_8e4ut"), ExtResource("4_06aqp")])
+hard = Array[ExtResource("1_jfhcx")]([ExtResource("2_uks56"), ExtResource("9_ixttu"), ExtResource("10_qtl1l"), ExtResource("11_5stwc"), ExtResource("12_k3hjo"), ExtResource("13_xfpho"), ExtResource("4_06aqp")])
+lunatic = Array[ExtResource("1_jfhcx")]([ExtResource("2_uks56"), ExtResource("3_otpka"), ExtResource("3_hics4"), ExtResource("4_nnm2g"), ExtResource("17_hyth3"), ExtResource("18_6fpds"), ExtResource("3_cs86w"), ExtResource("4_06aqp")])

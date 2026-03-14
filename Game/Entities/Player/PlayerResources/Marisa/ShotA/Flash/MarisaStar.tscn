@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://jjvl77jucbfa"]
+
+[ext_resource type="Script" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Flash/MarisaStar.gd" id="1_vg506"]
+[ext_resource type="Texture2D" uid="uid://kt3h5g8x5d1y" path="res://Game/Entities/Player/PlayerResources/Marisa/ShotA/Flash/Flash_MarisaStar.png" id="2_yfd1f"]
+[ext_resource type="PackedScene" uid="uid://bgy4xgl38jnrn" path="res://Game/Objects/Collider/Collider.tscn" id="3_5fnv1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_618fy"]
+radius = 30.0
+
+[sub_resource type="Curve" id="Curve_uguj4"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_g2hwr"]
+curve = SubResource("Curve_uguj4")
+
+[sub_resource type="Gradient" id="Gradient_kn8n0"]
+offsets = PackedFloat32Array(0, 0.451957, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yk7b1"]
+gradient = SubResource("Gradient_kn8n0")
+
+[sub_resource type="Curve" id="Curve_2u45x"]
+_data = [Vector2(0, 0.30207), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_rujn1"]
+curve = SubResource("Curve_2u45x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_h8lid"]
+particle_flag_disable_z = true
+angle_min = -720.0
+angle_max = 720.0
+angle_curve = SubResource("CurveTexture_g2hwr")
+spread = 180.0
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_rujn1")
+color_ramp = SubResource("GradientTexture1D_yk7b1")
+
+[node name="MarisaStar" type="Node2D"]
+z_index = 38
+z_as_relative = false
+script = ExtResource("1_vg506")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_yfd1f")
+
+[node name="Bomb" parent="." instance=ExtResource("3_5fnv1")]
+unique_name_in_owner = true
+collision_mask = 4
+identity = "Bomb"
+shape = SubResource("CircleShape2D_618fy")
+
+[node name="Visibility" type="VisibleOnScreenNotifier2D" parent="."]
+unique_name_in_owner = true
+rect = Rect2(-100, -100, 200, 200)
+
+[node name="DeleteTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 10.0
+
+[node name="Particles" type="GPUParticles2D" parent="."]
+z_index = 40
+z_as_relative = false
+amount = 24
+process_material = SubResource("ParticleProcessMaterial_h8lid")
+texture = ExtResource("2_yfd1f")
+lifetime = 1.5
+visibility_rect = Rect2(-200, -200, 400, 400)
+
+[connection signal="collider_entered" from="Bomb" to="." method="_on_Bomb_collider_entered"]
+[connection signal="timeout" from="DeleteTimer" to="." method="_on_DeleteTimer_timeout"]

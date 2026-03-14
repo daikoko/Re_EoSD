@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DeathData" load_steps=3 format=3 uid="uid://bvda0rp3ytuea"]
+
+[ext_resource type="Resource" uid="uid://dirfd6jxme6of" path="res://Game/Entities/Enemy/DeathList/Particles_EnemyDeath.tres" id="1_7ygj7"]
+[ext_resource type="Script" path="res://Game/Objects/Death/DeathData.gd" id="2_yvpff"]
+
+[resource]
+script = ExtResource("2_yvpff")
+particles = ExtResource("1_7ygj7")
+value = 8000
+point = 8
+power = 4
+life = false
+bomb = false
+boss = false

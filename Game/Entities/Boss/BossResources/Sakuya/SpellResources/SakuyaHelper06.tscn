@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://dumnk4y5g6p72"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/SakuyaHelper06.gd" id="1_jl55o"]
+[ext_resource type="Texture2D" uid="uid://bx1t6rq1x754f" path="res://Game/Entities/Boss/BossResources/Sakuya/Sprite/GameSprites_BossSakuya.png" id="2_6ysoc"]
+[ext_resource type="Texture2D" uid="uid://bvs1hngffkrh" path="res://Game/Objects/Particles/Particle_Generic.png" id="3_tv3oq"]
+[ext_resource type="PackedScene" uid="uid://bc88ekvsfc28e" path="res://Master/Audio/Sound.tscn" id="4_x2nr0"]
+[ext_resource type="AudioStream" uid="uid://0hoeilfvw6qp" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/StopFire.mp3" id="5_xsybx"]
+[ext_resource type="AudioStream" uid="uid://c551suywhr7xb" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/TimeStop.wav" id="6_jsnnt"]
+[ext_resource type="AudioStream" uid="uid://br0hmqri4pwst" path="res://Game/Entities/Boss/BossResources/Sakuya/SpellResources/TimeStop_Release.mp3" id="7_604ef"]
+
+[node name="SakuyaHelper05" type="Node2D"]
+process_mode = 3
+script = ExtResource("1_jl55o")
+
+[node name="LayoverSprite" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="LayoverSprite" type="Sprite2D" parent="LayoverSprite"]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("2_6ysoc")
+offset = Vector2(0, 20)
+region_enabled = true
+region_rect = Rect2(240, 600, 120, 120)
+
+[node name="Flash" type="Sprite2D" parent="LayoverSprite"]
+unique_name_in_owner = true
+texture = ExtResource("3_tv3oq")
+
+[node name="Rotation" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="SpawnerMain" type="Marker2D" parent="Rotation"]
+unique_name_in_owner = true
+position = Vector2(100, 0)
+
+[node name="Sound_Fire" parent="." instance=ExtResource("4_x2nr0")]
+unique_name_in_owner = true
+stream = ExtResource("5_xsybx")
+
+[node name="Sound_Stop" parent="." instance=ExtResource("4_x2nr0")]
+unique_name_in_owner = true
+stream = ExtResource("6_jsnnt")
+
+[node name="Sound_Release" parent="." instance=ExtResource("4_x2nr0")]
+unique_name_in_owner = true
+stream = ExtResource("7_604ef")
