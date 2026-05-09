@@ -28,9 +28,9 @@ func show_menu(mode:int) -> void:
 	if mode == GlobalSettings.MODE.CASUAL:
 		
 		%MenuPause_Resume.focus_neighbor_top     = %MenuPause_Resume.get_path_to(%MenuPause_Resume)
-		%MenuPause_Resume.focus_neighbor_bottom  =  %MenuPause_Resume.get_path_to(%MenuPause_Restart)
+		%MenuPause_Resume.focus_neighbor_bottom  = %MenuPause_Resume.get_path_to(%MenuPause_Restart)
 		%MenuPause_Resume.focus_next             = %MenuPause_Resume.get_path_to(%MenuPause_Restart)
-		%MenuPause_Resume.focus_previous         =  %MenuPause_Resume.get_path_to(%MenuPause_Resume)
+		%MenuPause_Resume.focus_previous         = %MenuPause_Resume.get_path_to(%MenuPause_Resume)
 		
 		%MenuPause_Restart.focus_neighbor_top    = %MenuPause_Restart.get_path_to(%MenuPause_Resume)
 		%MenuPause_Restart.focus_neighbor_bottom = %MenuPause_Restart.get_path_to(%MenuPause_Exit)
@@ -52,10 +52,10 @@ func show_menu(mode:int) -> void:
 		%MenuPause_Resume.focus_next             = %MenuPause_Resume.get_path_to(%MenuPause_Restart)
 		%MenuPause_Resume.focus_previous         = %MenuPause_Resume.get_path_to(%MenuPause_Resume)
 		
-		%MenuPause_Restart.focus_neighbor_top    = %MenuPause_Resume.get_path_to(%MenuPause_Resume)
-		%MenuPause_Restart.focus_neighbor_bottom = %MenuPause_Resume.get_path_to(%MenuPause_Quit)
-		%MenuPause_Restart.focus_next            = %MenuPause_Resume.get_path_to(%MenuPause_Quit)
-		%MenuPause_Restart.focus_previous        = %MenuPause_Resume.get_path_to(%MenuPause_Resume)
+		%MenuPause_Restart.focus_neighbor_top    = %MenuPause_Restart.get_path_to(%MenuPause_Resume)
+		%MenuPause_Restart.focus_neighbor_bottom = %MenuPause_Restart.get_path_to(%MenuPause_Quit)
+		%MenuPause_Restart.focus_next            = %MenuPause_Restart.get_path_to(%MenuPause_Quit)
+		%MenuPause_Restart.focus_previous        = %MenuPause_Restart.get_path_to(%MenuPause_Resume)
 		
 		%MenuPause_Quit.focus_neighbor_top       = %MenuPause_Quit.get_path_to(%MenuPause_Restart)
 		%MenuPause_Quit.focus_neighbor_bottom    = %MenuPause_Quit.get_path_to(%MenuPause_Exit)

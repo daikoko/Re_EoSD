@@ -1931,11 +1931,10 @@ theme = ExtResource("3_l325q")
 script = ExtResource("4_pfr0j")
 
 [node name="Main" type="VBoxContainer" parent="View/View/MenuPause"]
-modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = -40.0
+offset_left = 20.0
 offset_top = 260.0
-offset_right = 170.0
+offset_right = 230.0
 offset_bottom = 506.0
 
 [node name="Title" type="VBoxContainer" parent="View/View/MenuPause/Main"]
@@ -1955,6 +1954,7 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_ResumeBox"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
 [node name="MenuPause_Resume" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_ResumeBox"]
@@ -1971,7 +1971,6 @@ text = "Resume"
 
 [node name="MenuPause_RestartBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
 unique_name_in_owner = true
-modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_RestartBox"]
@@ -1995,7 +1994,7 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_QuitBox"]
-custom_minimum_size = Vector2(80, 0)
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 
 [node name="MenuPause_Quit" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_QuitBox"]
@@ -2016,7 +2015,7 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_ExitBox"]
-custom_minimum_size = Vector2(120, 0)
+custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 
 [node name="MenuPause_Exit" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_ExitBox"]
