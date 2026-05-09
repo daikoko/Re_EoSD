@@ -15,6 +15,8 @@ var fire_count:int
 var fire_duration:float
 var bullet_speed:float
 
+var is_destroyed = false
+
 const DEATH_PARTICLES := preload("res://Game/Entities/Boss/BossResources/_General/Death/Particles_BossMinor.tres")
 const DISTANCE := 20.0
 
@@ -106,7 +108,7 @@ func destroy():
 	)
 	%Sound.play()
 	set_process(false)
-	await self.create_tween().tween_interval(0.8).finished
+	await self.create_tween().tween_interval(0.2).finished
 	
 	queue_free()
 
@@ -125,11 +127,13 @@ func _on_BulletDull_bullet_deactivate() -> void:
 
 func _on_Enemy_collider_hit(damage) -> void:
 	if GlobalStage.is_current_player_bomb(): return
+	if is_destroyed: return
 	
 	flash()
 	
 	health -= damage
 	if health < 0:
+		is_destroyed = true
 		destroy()
 
 

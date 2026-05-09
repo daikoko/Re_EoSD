@@ -31,7 +31,7 @@ point_count = 2
 [sub_resource type="Resource" id="Resource_mk2vu"]
 script = ExtResource("7_halmf")
 bullets = Array[ExtResource("4_c0yw0")]([SubResource("Resource_4ob7h")])
-layout_spawner_count = 12
+layout_spawner_count = 10
 layout_shape = 0
 layout_shape_scale = Vector2(1, 1)
 layout_distance = 20.0

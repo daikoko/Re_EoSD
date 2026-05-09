@@ -11,7 +11,10 @@ var D2_Shooter:Shooter_Basic
 var D2_Bullets:Array[RowData_Column]
 
 var time:float
-var disabled:bool
+var disabled:bool = true
+
+var mod_act:float  = 0
+var mod_bomb:float = 1
 
 signal finished_round()
 
@@ -19,8 +22,6 @@ signal finished_round()
 
 
 func _ready() -> void:
-	%Sprite.modulate.a = 0
-	
 	GlobalPlayer.player_used_bomb.connect(_on_GlobalPlayer_player_used_bomb)
 	GlobalPlayer.player_used_bomb_stop.connect(_on_GlobalPlayer_player_used_bomb_stop)
 
@@ -29,6 +30,7 @@ func _process(delta:float) -> void:
 	%Sprite.rotation = (PI / 12.0) * sin(1.2 * time)
 	
 	time += delta
+	%Sprite.modulate.a = mod_act * mod_bomb
 
 
 
@@ -46,6 +48,8 @@ func start(
 		D2_bullet_speed:float,
 		D2_bullet_speed_range:float,
 	):
+	
+	disabled = false
 	
 	D1_Shooter_a = GlobalShooter.create_basic_shooter(D1_layout_spawner_count)
 	D1_Shooter_b = GlobalShooter.create_basic_shooter(D1_layout_spawner_count)
@@ -76,7 +80,7 @@ func start(
 	self.add_child(D2_Shooter)
 	
 	SelfTween = set_tween()
-	SelfTween.tween_property(%Sprite, "modulate:a", 1, 1.0)
+	SelfTween.tween_property(self, "mod_act", 1, 1.0)
 	await SelfTween.finished
 	
 	D1_Shooter_a.fire_round(
@@ -113,7 +117,7 @@ func disable():
 	D2_Shooter.disable()
 	
 	SelfTween = set_tween()
-	SelfTween.tween_property(%Sprite, "modulate:a", 0, 0.6)
+	SelfTween.tween_property(self, "mod_act", 0, 0.6)
 
 
 
@@ -127,14 +131,8 @@ func set_tween() -> Tween:
 
 
 func _on_GlobalPlayer_player_used_bomb(_spellname):
-	if disabled: return
-	
-	SelfTween = set_tween()
-	SelfTween.tween_property(%Sprite, "modulate:a", 0, 0.4)
+	self.create_tween().tween_property(self, "mod_bomb", 0, 0.4)
 
 
 func _on_GlobalPlayer_player_used_bomb_stop():
-	if disabled: return
-	
-	SelfTween = set_tween()
-	SelfTween.tween_property(%Sprite, "modulate:a", 1, 0.4)
+	self.create_tween().tween_property(self, "mod_bomb", 1, 0.4)

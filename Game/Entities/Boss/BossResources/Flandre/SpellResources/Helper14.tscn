@@ -53,6 +53,7 @@ unique_name_in_owner = true
 material = SubResource("ShaderMaterial_sf7o0")
 data = SubResource("Resource_joi2j")
 hit_immunity = true
+clear_immunity = true
 
 [node name="Enemy" parent="." instance=ExtResource("6_f55oh")]
 collision_layer = 4

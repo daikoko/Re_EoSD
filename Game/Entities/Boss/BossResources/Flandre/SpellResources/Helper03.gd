@@ -18,7 +18,7 @@ const FRUIT_APPLE  := preload("res://Game/Entities/Boss/BossResources/Flandre/Sp
 const FRUIT_BANANA := preload("res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Bullet_FlandreFruitBanana.tres")
 const FRUIT_GRAPE  := preload("res://Game/Entities/Boss/BossResources/Flandre/SpellResources/Bullet_FlandreFruitGrape.tres")
 
-const HEALTH_BOMB  := 20
+const HEALTH_BOMB  := 280
 
 
 

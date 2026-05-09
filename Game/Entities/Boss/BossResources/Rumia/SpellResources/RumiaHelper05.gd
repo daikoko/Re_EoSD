@@ -3,14 +3,14 @@ extends Node2D
 const SPRITE := preload("res://Game/Entities/Boss/BossResources/Rumia/SpellResources/BulletCustom_RumiaDarkGlow.png")
 
 const A_LAYER_DISTANCE = 180.0
-const A_LAYER_SPAWN_COUNT = 36
+const A_LAYER_SPAWN_COUNT = 24
 const A_LAYER_BULLET_SPEED = 40
 const A_LAYER_LINEAR_DELAY = 1.2
 const A_LAYER_LINEAR_TIME = 1.2
 const A_LAYER_LINEAR_SPEED = 160
 
 const B_LAYER_DISTANCE = 120.0
-const B_LAYER_SPAWN_COUNT = 12
+const B_LAYER_SPAWN_COUNT = 8
 const B_LAYER_BULLET_SPEED = 0
 const B_LAYER_LINEAR_DELAY = 0.5
 const B_LAYER_LINEAR_TIME = 2.4

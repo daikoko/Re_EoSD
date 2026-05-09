@@ -104,8 +104,8 @@ func set_hud(save:SaveFile) -> void:
 	%Score.text =       str(score)
 	%Lives.value =      save.lives
 	%Bombs.value =      save.bombs
-	%Power.value =      10000 #save.power
-	%Power.max_value =  10000 #player.power_max
+	%Power.value =      save.power
+	%Power.max_value =  player.power_max
 	%Graze.value =      0
 	%Graze.max_value =  player.graze_max
 	
@@ -133,9 +133,6 @@ func set_hud(save:SaveFile) -> void:
 		%PracticeMode.show()
 	
 	await get_tree().process_frame
-	
-	print(%Power.value)
-	print(%Power.max_value)
 	
 	update_bomb()
 	update_power()
@@ -247,7 +244,7 @@ func play_animation() -> void:
 
 func _on_GlobalPlayer_player_hit():
 	
-	var grace_frames = 4
+	var grace_frames = 8
 	for i in grace_frames:
 		await get_tree().process_frame
 		if (GlobalStage.is_current_player_bomb()): return
@@ -272,7 +269,7 @@ func _on_GlobalPlayer_player_hit():
 func _on_GlobalPlayer_player_graze():
 	Debug.add_graze()
 	update_graze(1)
-	update_power(1)
+	update_power(60)
 	%Sound_Graze.play()
 
 

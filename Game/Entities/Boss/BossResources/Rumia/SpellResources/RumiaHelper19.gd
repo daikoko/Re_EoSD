@@ -124,7 +124,7 @@ func fire_c():
 		if i % 2 == 0:
 			spawner.create_shooter(
 				GlobalShooter.BRIGHT_RED,
-				20, 
+				18, 
 				260,
 				1,
 				60.0,

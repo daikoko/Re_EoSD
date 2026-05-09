@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="BossData" load_steps=6 format=3 uid="uid://c483fhshfa2wy"]
+[gd_resource type="Resource" script_class="BossData_Single" load_steps=6 format=3 uid="uid://cipjked46srlc"]
 
 [ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_x6i1o"]
-[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_ajqyg"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData_Single.gd" id="2_ks487"]
 [ext_resource type="Resource" uid="uid://cuiew21ulxgq4" path="res://Game/Entities/Boss/BossList/StageExtra_MidA/DialogueList/StageExtra_MidA_DialogueA.tres" id="2_qibtl"]
 [ext_resource type="Resource" uid="uid://b34w14pyyxyte" path="res://Game/Entities/Boss/BossList/StageExtra_MidA/SpellList/Extra/Meiling_SpellF_Extra.tres" id="3_xwd16"]
 [ext_resource type="Resource" uid="uid://c47u6meat6od8" path="res://Game/Entities/Boss/BossList/StageExtra_MidA/DialogueList/StageExtra_MidA_DialogueB.tres" id="4_2suds"]
 
 [resource]
-script = ExtResource("2_ajqyg")
+script = ExtResource("2_ks487")
+single = Array[ExtResource("1_x6i1o")]([ExtResource("2_qibtl"), ExtResource("3_xwd16"), ExtResource("4_2suds")])
 easy = Array[ExtResource("1_x6i1o")]([])
-normal = Array[ExtResource("1_x6i1o")]([ExtResource("2_qibtl"), ExtResource("3_xwd16"), ExtResource("4_2suds")])
+normal = Array[ExtResource("1_x6i1o")]([])
 hard = Array[ExtResource("1_x6i1o")]([])
 lunatic = Array[ExtResource("1_x6i1o")]([])

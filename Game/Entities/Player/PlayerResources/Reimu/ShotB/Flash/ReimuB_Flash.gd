@@ -5,7 +5,7 @@ var spellname: String
 
 const REIMU_BARRIER := preload("res://Game/Entities/Player/PlayerResources/Reimu/ShotB/Flash/ReimuBarrier.tscn")
 
-const DAMAGE := 4000
+const DAMAGE := 2800
 
 var avaliable:bool
 var enabled:bool

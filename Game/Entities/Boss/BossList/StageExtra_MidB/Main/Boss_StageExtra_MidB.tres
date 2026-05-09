@@ -1,16 +1,17 @@
-[gd_resource type="Resource" script_class="BossData" load_steps=8 format=3 uid="uid://c1gut5pm5dgop"]
+[gd_resource type="Resource" script_class="BossData_Single" load_steps=8 format=3 uid="uid://c2bw6q8gsj2td"]
 
 [ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_a3q52"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData_Single.gd" id="2_gu6qm"]
 [ext_resource type="Resource" uid="uid://cg4m2am4ti6h1" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/DialogueList/StageExtra_MidB_DialogueA.tres" id="2_hiff2"]
-[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_uxdkn"]
 [ext_resource type="Resource" uid="uid://ch1o0lugmmq6l" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/SpellList/Extra/Patchouli_SpellF_Extra.tres" id="3_h1pqa"]
 [ext_resource type="Resource" uid="uid://cfhvq1qgq0nyo" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/SpellList/Extra/Patchouli_SpellH_Extra.tres" id="3_o1043"]
 [ext_resource type="Resource" uid="uid://cryxlislklfyv" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/DialogueList/StageExtra_MidB_DialogueB.tres" id="3_ptqwf"]
 [ext_resource type="Resource" uid="uid://x3eklsjemfxl" path="res://Game/Entities/Boss/BossList/StageExtra_MidB/SpellList/Extra/Patchouli_SpellG_Extra.tres" id="4_q5v7v"]
 
 [resource]
-script = ExtResource("2_uxdkn")
+script = ExtResource("2_gu6qm")
+single = Array[ExtResource("1_a3q52")]([ExtResource("2_hiff2"), ExtResource("3_h1pqa"), ExtResource("4_q5v7v"), ExtResource("3_o1043"), ExtResource("3_ptqwf")])
 easy = Array[ExtResource("1_a3q52")]([])
-normal = Array[ExtResource("1_a3q52")]([ExtResource("2_hiff2"), ExtResource("3_h1pqa"), ExtResource("4_q5v7v"), ExtResource("3_o1043"), ExtResource("3_ptqwf")])
+normal = Array[ExtResource("1_a3q52")]([])
 hard = Array[ExtResource("1_a3q52")]([])
 lunatic = Array[ExtResource("1_a3q52")]([])

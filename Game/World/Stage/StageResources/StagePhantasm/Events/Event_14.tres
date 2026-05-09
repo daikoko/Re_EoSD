@@ -30,7 +30,7 @@ layout_column_range = 360.0
 layout_shot_range = 360.0
 layout_distance = 20.0
 layout_random = true
-fire_count = 48
+fire_count = 40
 fire_duration = 0.0
 fire_cooldown = 10.0
 fire_start_delay = 0.1
@@ -81,7 +81,7 @@ columns = Array[ExtResource("5_djx7o")]([SubResource("Resource_5jid5")])
 [sub_resource type="Resource" id="Resource_ynytb"]
 script = ExtResource("11_iy1df")
 bullets = Array[ExtResource("4_hicgs")]([SubResource("Resource_mef0g")])
-layout_spawner_count = 6
+layout_spawner_count = 5
 layout_column_count = 1
 layout_column_range = 360.0
 layout_shot_range = 360.0

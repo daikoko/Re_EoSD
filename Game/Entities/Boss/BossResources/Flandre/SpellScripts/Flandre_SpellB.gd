@@ -21,14 +21,14 @@ const HELPER_03         := preload("res://Game/Entities/Boss/BossResources/Fland
 var A_Shooter:Node2D
 @export_group("Attack_A")
 @export var A_fire_time:float
-const A_HEALTH_MIN          :=   40.0
-const A_HEALTH_MAX          :=  120.0
-const A_SPEED_MIN           :=  180.0
-const A_SPEED_MAX           :=  260.0
-const A_ROTATION_SPEED_MIN  :=   30.0
-const A_ROTATION_SPEED_MAX  :=   60.0
-const A_TIME_MIN            :=    1.0
-const A_TIME_MAX            :=    2.0
+const A_HEALTH_MIN          :=   800.0
+const A_HEALTH_MAX          :=  1600.0
+const A_SPEED_MIN           :=   180.0
+const A_SPEED_MAX           :=   260.0
+const A_ROTATION_SPEED_MIN  :=    30.0
+const A_ROTATION_SPEED_MAX  :=    60.0
+const A_TIME_MIN            :=     1.0
+const A_TIME_MAX            :=     2.0
 
 const MOVE_BOUND_RIGHT  := 620.0
 const MOVE_BOUND_LEFT   :=  30.0

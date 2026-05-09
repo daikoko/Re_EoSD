@@ -25,7 +25,7 @@ var A_Shooter:Node2D
 @export var A_fire_count:int
 const A_FIRE_DURATION        :=    1.2
 const A_BULLET_SPEED         :=  240.0
-const A_SHOOTER_HEALTH       :=  280
+const A_SHOOTER_HEALTH       :=  8000
 const A_SHOOTER_ROTATION_MIN :=   20.0
 const A_SHOOTER_ROTATION_MAX :=   30.0
 var A_direction:int = 1

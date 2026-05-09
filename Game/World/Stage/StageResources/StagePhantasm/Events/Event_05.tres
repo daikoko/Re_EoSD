@@ -22,7 +22,7 @@ columns = Array[ExtResource("5_rosbn")]([SubResource("Resource_qr3ws")])
 [sub_resource type="Resource" id="Resource_i6gyq"]
 script = ExtResource("9_ckpgi")
 bullets = Array[ExtResource("4_xt8y0")]([SubResource("Resource_qbnih")])
-layout_spawner_count = 24
+layout_spawner_count = 20
 layout_column_count = 1
 layout_column_range = 360.0
 layout_shot_range = 360.0
@@ -82,7 +82,7 @@ random_distance = true
 id = "5"
 description = "Power Fodder"
 spawn_seed = 446215
-amount = 24
+amount = 20
 time = 12.0
 sprite = ExtResource("10_24wnf")
 death = ExtResource("1_hxkc7")

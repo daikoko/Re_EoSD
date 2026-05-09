@@ -114,6 +114,7 @@ offset_bottom = 780.0
 
 [node name="Pool" parent="MainGameWorld/GameWindowContainer/GameWindow" instance=ExtResource("4_sk5qn")]
 unique_name_in_owner = true
+bullet_stagger = 4
 bullet_gravity = 2000
 bullet_linear = 2000
 bullet_tween = 1000

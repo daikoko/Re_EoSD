@@ -76,7 +76,7 @@ func toggle_buttons(enable:bool) -> void:
 	else:
 		%Continue.disabled = true
 	
-	if enable and GlobalSettings.get_series_extra() != null:
+	if true: #enable and GlobalSettings.get_series_extra() != null:
 		%Extra.disabled = false
 	else:
 		%Extra.disabled = true

@@ -176,7 +176,7 @@ one_shot = true
 
 [node name="ImmunityTimer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 2.0
+wait_time = 4.0
 one_shot = true
 
 [node name="RecordTimer" type="Timer" parent="."]

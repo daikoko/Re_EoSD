@@ -17,7 +17,7 @@ boss = true
 [resource]
 script = ExtResource("1_6i478")
 special_animation = false
-health = 40000.0
+health = 28000.0
 time = 60.0
 base_points = 1.6e+06
 bonus_points = 4.8e+06

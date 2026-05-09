@@ -16,12 +16,12 @@ boss = true
 
 [resource]
 script = ExtResource("1_f6b6n")
-A_fire_count = 20
+A_fire_count = 16
 A_fire_duration = 0.8
 A_round_count = 4
 A_round_duration = 2.0
 B_fire_time = 0.6
-health = 28000.0
+health = 20000.0
 time = 60.0
 base_points = 800000.0
 bonus_points = 2.4e+06

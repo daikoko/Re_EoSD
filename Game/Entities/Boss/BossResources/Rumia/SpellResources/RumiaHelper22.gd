@@ -6,7 +6,7 @@ const TIME_LIMIT := 2.0
 var MainShooter:Shooter_Linear
 var MainBullets:Array[RowData_Column]
 const LAYOUT_SPAWNER_COUNT := 1
-const FIRE_COUNT := 64
+const FIRE_COUNT := 48
 const FIRE_DURATION := 0
 const BULLET_SPEED := 160.0
 const BULLET_SPEED_RANGE := 80.0

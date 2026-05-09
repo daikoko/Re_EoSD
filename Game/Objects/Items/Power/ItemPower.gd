@@ -10,7 +10,7 @@ enum STATE {
 	TARGET
 }
 
-const INITIAL_VALUE := 40.0
+const INITIAL_VALUE := 60.0
 const DECAY := 20.0
 
 const LAUNCH_TIME := 0.2

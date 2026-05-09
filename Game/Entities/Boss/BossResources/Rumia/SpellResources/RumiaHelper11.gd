@@ -5,7 +5,7 @@ const YELLOW_STAR := preload("res://Game/Entities/Boss/BossResources/Rumia/Spell
 
 var A_Shooter:Shooter_Linear
 var A_Bullets:Array[RowData_Column]
-const A_LAYOUT_SPAWNER_COUNT := 32
+const A_LAYOUT_SPAWNER_COUNT := 24
 const A_BULLET_SPEED := 0.0
 const A_LINEAR_TIME := 1.2
 const A_LINEAR_SPEED := 160.0
@@ -13,7 +13,7 @@ const A_LINEAR_SPEED := 160.0
 var B_Shooter:Shooter_Tween
 var B_Bullets:Array[RowData_Bullet]
 const B_BULLET_ROTATION := 45.0
-const B_LAYOUT_SPAWNER_COUNT := 20
+const B_LAYOUT_SPAWNER_COUNT := 16
 const B_TWEEN_RELEASE_SPEED := 120
 const B_TWEEN_RELEASE_ANGLE := 45.0
 @export_subgroup("First")

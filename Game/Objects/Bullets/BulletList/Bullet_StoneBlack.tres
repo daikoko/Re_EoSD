@@ -1,15 +1,13 @@
 [gd_resource type="Resource" script_class="BulletData" load_steps=4 format=3 uid="uid://c403r3jujyy5j"]
 
 [ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_5vvh0"]
+[ext_resource type="Shape2D" uid="uid://nqmnhqy11gs3" path="res://Game/Objects/Bullets/BulletResources/Shape_Stone.tres" id="2_t6862"]
 [ext_resource type="Texture2D" uid="uid://ddfu8nw0coufl" path="res://Game/Objects/Bullets/BulletResources/Bullet_StoneBlack.png" id="2_w86pe"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_678q8"]
-size = Vector2(20, 10)
 
 [resource]
 script = ExtResource("1_5vvh0")
 texture = ExtResource("2_w86pe")
-shape = SubResource("RectangleShape2D_678q8")
+shape = ExtResource("2_t6862")
 color_option = 7
 color_custom = Color(0, 0, 0, 1)
 visibility = Rect2(-17, -8, 34, 16)

@@ -4,7 +4,7 @@ const ID := GlobalSettings.SHOT.MARISA_B
 var spellname: String
 
 const DURATION_TIME := 1.0
-const DAMAGE := 1200.0
+const DAMAGE := 800.0
 
 var avaliable:bool
 var enabled:bool

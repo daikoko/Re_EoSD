@@ -83,6 +83,8 @@ func play_intro() -> void:
 
 
 func event_spawn(event:EnemyData) -> void:
+	# print(event.id)
+	
 	event.start()
 
 

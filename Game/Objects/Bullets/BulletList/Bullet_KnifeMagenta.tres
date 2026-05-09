@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_yydxt"]
 [ext_resource type="Texture2D" uid="uid://i05ash7t2pb4" path="res://Game/Objects/Bullets/BulletResources/Bullet_KnifeMagenta.png" id="2_jfwfw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8jxli"]
-size = Vector2(45, 8)
+[ext_resource type="Shape2D" uid="uid://bhumx7uyqmjmi" path="res://Game/Objects/Bullets/BulletResources/Shape_Knife.tres" id="2_s7urb"]
 
 [resource]
 script = ExtResource("1_yydxt")
 texture = ExtResource("2_jfwfw")
-shape = SubResource("RectangleShape2D_8jxli")
+shape = ExtResource("2_s7urb")
 color_option = 6
 color_custom = Color(0, 0, 0, 1)
 visibility = Rect2(-20, -8, 38, 16)

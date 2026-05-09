@@ -24,7 +24,7 @@ func fill_pool(amount:int) -> void:
 		var bullet = BULLET.instantiate()
 		bullet.id = i
 		bullet.stagger = i % 2
-		bullet.point = (i % 2 == 0)
+		bullet.point = (i % 4 == 0)
 		bullet_pool.append(i)
 		active_pool.append(0)
 		active_pool_size += 1

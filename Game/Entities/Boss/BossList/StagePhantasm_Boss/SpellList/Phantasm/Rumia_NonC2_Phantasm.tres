@@ -17,7 +17,7 @@ boss = true
 [resource]
 script = ExtResource("2_35dti")
 special_animation = false
-A_layout_spawner_count = 6
+A_layout_spawner_count = 5
 A_layout_column_count = 1
 A_spawn_stack_count = 4
 A_fire_count = 12
@@ -31,7 +31,7 @@ D_spawn_stack_count = 4
 E_layout_spawner_count = 0
 E_shooter_round_count = 4
 F_layout_spawner_count = 0
-health = 28000.0
+health = 14000.0
 Death = SubResource("Resource_2v876")
 hide_boss = false
 move_boss = true

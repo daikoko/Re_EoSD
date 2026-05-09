@@ -8,7 +8,7 @@ var A_Bullets:Array[RowData_Column]
 const A_LAYOUT_SPAWNER_COUNT := 2
 const A_LAYOUT_COLUMN_COUNT := 6
 const A_LAYOUT_COLUMN_RANGE := 10
-const A_FIRE_COUNT := 10
+const A_FIRE_COUNT := 8
 const A_FIRE_DURATION := 1.0
 const A_BULLET_SPEED := 120.0
 const A_BULLET_SPEED_RANGE := 30.0
@@ -16,7 +16,7 @@ const A_SHOOTER_ROTATION_SPEED := 16.0
 
 var B_Shooter:Shooter_Tween
 var B_Bullets:Array[RowData_Bullet]
-const B_LAYOUT_SPAWNER_COUNT := 12
+const B_LAYOUT_SPAWNER_COUNT := 10
 const B_FIRE_COUNT := 1
 const B_FIRE_DURATON = 2.0
 const B_TWEEN_TIME := 10.0

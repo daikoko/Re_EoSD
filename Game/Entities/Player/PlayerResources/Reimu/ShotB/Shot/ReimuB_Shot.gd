@@ -15,23 +15,23 @@ const DISPLACEMENT_FOCUS :=  6.0
 
 const MAIN_BASE_FIRE_TIME := 0.1
 const MAIN_BASE_SPEED := 1000.0
-const MAIN_BASE_DAMAGE := 60
-const MAIN_BASE_EXTRA := 20
+const MAIN_BASE_DAMAGE := 80
+const MAIN_BASE_EXTRA := 40
 const MAIN_BASE_DECAY := 20
 
-const MAIN_FOCUS_FIRE_TIME := 0.08
+const MAIN_FOCUS_FIRE_TIME := 0.05
 const MAIN_FOCUS_SPEED := 1200.0
-const MAIN_FOCUS_DAMAGE := 140
+const MAIN_FOCUS_DAMAGE := 80
 
 const SIDE_BASE_FIRE_TIME := 0.10
 const SIDE_BASE_SPEED := 600.0
-const SIDE_BASE_DAMAGE := 10
+const SIDE_BASE_DAMAGE := 4
 const SIDE_BASE_EXTRA := 0
 const SIDE_BASE_DECAY := 0
 
 const SIDE_FOCUS_FIRE_TIME := 0.05
 const SIDE_FOCUS_SPEED := 800.0
-const SIDE_FOCUS_DAMAGE := 10
+const SIDE_FOCUS_DAMAGE := 4
 
 const ROTATION_SPEED := 120.0
 
@@ -40,7 +40,6 @@ var power_usage:int
 
 var enabled:bool = false
 var shooting:bool = false
-var deflator:float = 1.0
 
 var power: float = 0.0
 var focusing:bool = false
@@ -60,94 +59,128 @@ func _ready():
 	var main_03 = Marker2D.new()
 	var main_04 = Marker2D.new()
 	var main_05 = Marker2D.new()
+	var main_06 = Marker2D.new()
+	
+	const ZERO_SET    = Transform2D(deg_to_rad(-90), Vector2.ZERO)
+	
+	const MAIN_SET_01 = Transform2D(deg_to_rad(-90), Vector2( 12, -24))
+	const MAIN_SET_02 = Transform2D(deg_to_rad(-90), Vector2(-12, -24))
+	const MAIN_SET_03 = Transform2D(deg_to_rad(-90 + 12), Vector2( 30, -12))
+	const MAIN_SET_04 = Transform2D(deg_to_rad(-90 - 12), Vector2(-30, -12))
+	const MAIN_SET_05 = Transform2D(deg_to_rad(-90 + 24), Vector2( 48,   0))
+	const MAIN_SET_06 = Transform2D(deg_to_rad(-90 - 24), Vector2(-48,   0))
+	
+	const MAIN_FOCUS_SET_01 = Transform2D(deg_to_rad(-90), Vector2( 12, -24))
+	const MAIN_FOCUS_SET_02 = Transform2D(deg_to_rad(-90), Vector2(-12, -24))
+	const MAIN_FOCUS_SET_03 = Transform2D(deg_to_rad(-90 +  8), Vector2( 28, -12))
+	const MAIN_FOCUS_SET_04 = Transform2D(deg_to_rad(-90 -  8), Vector2(-28, -12))
+	const MAIN_FOCUS_SET_05 = Transform2D(deg_to_rad(-90 + 16), Vector2( 44,   0))
+	const MAIN_FOCUS_SET_06 = Transform2D(deg_to_rad(-90 - 16), Vector2(-44,   0))
+	
 	%MainShot.set_levels(
-		[main_01, main_02, main_03, main_04, main_05],
+		[main_01, main_02, main_03, main_04, main_05, main_06],
 		{
 			1: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
+					"activated": false
+				},
+				main_06: {
+					"transform": ZERO_SET,
 					"activated": false
 				}
 			},
 			2: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2(20, 0)),
+					"transform": MAIN_SET_01,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2(-20, 0)),
+					"transform": MAIN_SET_02,
 					"activated": true
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
+					"activated": false
+				},
+				main_06: {
+					"transform": ZERO_SET,
 					"activated": false
 				}
 			},
 			3: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": MAIN_SET_01,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90 + 6), Vector2.ZERO),
+					"transform": MAIN_SET_02,
 					"activated": true
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90 - 6), Vector2.ZERO),
+					"transform": MAIN_SET_03,
 					"activated": true
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
-					"activated": false
+					"transform": MAIN_SET_04,
+					"activated": true
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
+					"activated": false
+				},
+				main_06: {
+					"transform": ZERO_SET,
 					"activated": false
 				}
 			},
 			4: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": MAIN_SET_01,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90 + 8), Vector2.ZERO),
+					"transform": MAIN_SET_02,
 					"activated": true
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90 - 8), Vector2.ZERO),
+					"transform": MAIN_SET_03,
 					"activated": true
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90 + 16), Vector2.ZERO),
+					"transform": MAIN_SET_04,
 					"activated": true
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90 - 16), Vector2.ZERO),
+					"transform": MAIN_SET_05,
+					"activated": true
+				},
+				main_06: {
+					"transform": MAIN_SET_06,
 					"activated": true
 				}
 			}
@@ -155,89 +188,105 @@ func _ready():
 		{
 			1: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
+					"activated": false
+				},
+				main_06: {
+					"transform": ZERO_SET,
 					"activated": false
 				}
 			},
 			2: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2(10, 0)),
+					"transform": MAIN_FOCUS_SET_01,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2(-10, 0)),
+					"transform": MAIN_FOCUS_SET_02,
 					"activated": true
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
 					"activated": false
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
+					"activated": false
+				},
+				main_06: {
+					"transform": ZERO_SET,
 					"activated": false
 				}
 			},
 			3: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_01,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90 + 2), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_02,
 					"activated": true
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90 - 2), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_03,
 					"activated": true
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
-					"activated": false
+					"transform": MAIN_FOCUS_SET_04,
+					"activated": true
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": ZERO_SET,
+					"activated": false
+				},
+				main_06: {
+					"transform": ZERO_SET,
 					"activated": false
 				}
 			},
 			4: {
 				main_01: {
-					"transform": Transform2D(deg_to_rad(-90), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_01,
 					"activated": true
 				},
 				main_02: {
-					"transform": Transform2D(deg_to_rad(-90 + 4), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_02,
 					"activated": true
 				},
 				main_03: {
-					"transform": Transform2D(deg_to_rad(-90 - 4), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_03,
 					"activated": true
 				},
 				main_04: {
-					"transform": Transform2D(deg_to_rad(-90 + 8), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_04,
 					"activated": true
 				},
 				main_05: {
-					"transform": Transform2D(deg_to_rad(-90 - 8), Vector2.ZERO),
+					"transform": MAIN_FOCUS_SET_05,
+					"activated": true
+				},
+				main_06: {
+					"transform": MAIN_FOCUS_SET_06,
 					"activated": true
 				}
 			}
@@ -653,13 +702,13 @@ func shoot_main() -> void:
 			bullet.set_bullet(
 				REIMU_MAIN, 
 				shot.global_transform, MAIN_FOCUS_SPEED,
-				MAIN_FOCUS_DAMAGE * deflator, MAIN_BASE_DECAY
+				MAIN_FOCUS_DAMAGE, MAIN_BASE_DECAY
 			)
 		else:
 			bullet.set_bullet(
 				REIMU_MAIN, 
 				shot.global_transform, MAIN_BASE_SPEED,
-				(MAIN_BASE_DAMAGE + (MAIN_BASE_EXTRA * power)) * deflator, MAIN_BASE_DECAY
+				(MAIN_BASE_DAMAGE + (MAIN_BASE_EXTRA * power)), MAIN_BASE_DECAY
 			)
 		
 		GlobalStage.request_add_object.emit(bullet)
@@ -732,39 +781,33 @@ func _on_SideTimer_timeout():
 
 func _on_GlobalPlayer_updated_power(percentage):
 	power = percentage
-	if power > 0.15:
+	if power > 0.2:
 		power_usage = MAX_POWER_USAGE * clampf(power, 0.2, 1.0)
 	else:
 		power_usage = 0
-	focus_enabled = percentage > 0.15
+	focus_enabled = percentage > 0.2
 	check_focusing()
 	
 	if percentage < 0.1:
 		%MainShot.change_level(1)
 		%SideShot.change_level(1)
-		deflator = 1.0
 		
 	elif percentage < 0.2:
 		%MainShot.change_level(1)
 		%SideShot.change_level(2)
-		deflator = 1.0
 		
 	elif percentage < 0.3:
 		%MainShot.change_level(2)
 		%SideShot.change_level(2)
-		deflator = 0.6
 	
 	elif percentage < 0.4:
 		%MainShot.change_level(3)
 		%SideShot.change_level(2)
-		deflator = 0.4
 		
 	elif percentage < 0.6:
 		%MainShot.change_level(3)
 		%SideShot.change_level(3)
-		deflator = 0.4
 		
 	else:
 		%MainShot.change_level(4)
 		%SideShot.change_level(3)
-		deflator = 0.3

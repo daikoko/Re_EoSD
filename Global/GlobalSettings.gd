@@ -72,7 +72,7 @@ enum BOSS {
 }
 
 ## Starting amount of continues
-const STARTING_CONTINUES_MAIN     := 3
+const STARTING_CONTINUES_MAIN     := 100
 const STARTING_CONTINUES_EXTRA    := 0
 const STARTING_CONTINUES_PHANTASM := 0
 
@@ -324,6 +324,8 @@ func get_music_text(music_id:int) -> String:
 
 
 func flag_check(flag:String) -> bool:
+	return true
+	
 	if Debug.debug_mode:
 		return true
 	

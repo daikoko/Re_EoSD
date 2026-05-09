@@ -38,7 +38,7 @@ var A4_Bullets:Array[RowData_Column]
 @export var A1_fire_count:int = 1
 const A1_FIRE_DURATION := 1.0
 const A1_BULLET_SPEED := 180
-const A1_SHOOTER_ROTATION_SPEED := 280
+const A1_SHOOTER_ROTATION_SPEED := 490
 @export_subgroup("A2")
 @export var A2_layout_spawner_count:int = 1
 @export var A2_fire_count:int = 1

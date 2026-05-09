@@ -34,7 +34,7 @@ const A_LAYOUT_DISTANCE := 40
 const A_PRIMARY_DURATION := 0.8
 const A_SECONDARY_DURATION := 0.6
 const A_SECONDARY_DELAY := 0.6
-const A_SHOOTER_ROTATION_SPEED := 12
+const A_SHOOTER_ROTATION_SPEED := 8
 var A_direction:int = 1
 
 var B1_Shooter:Shooter_Basic

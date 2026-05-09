@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="BossData" load_steps=19 format=3 uid="uid://cmmlqs55f6dgi"]
+[gd_resource type="Resource" script_class="BossData_Single" load_steps=19 format=3 uid="uid://c1ei5i7isfqhq"]
 
 [ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_f52ye"]
 [ext_resource type="Resource" uid="uid://v7cxefd6dug6" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/DialogueList/StageExtra_Boss_DialogueA.tres" id="2_4lrwh"]
-[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData.gd" id="2_wspar"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData_Single.gd" id="2_stls6"]
 [ext_resource type="Resource" uid="uid://b7jubq04gcrmf" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA1_Extra.tres" id="3_3lfjp"]
 [ext_resource type="Resource" uid="uid://43u2wjcr0gi4" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellB_Extra.tres" id="3_8xtjq"]
 [ext_resource type="Resource" uid="uid://c5gi2n4ccyh4x" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_SpellG_Extra.tres" id="3_ar865"]
@@ -20,8 +20,9 @@
 [ext_resource type="Resource" uid="uid://d1g42mdebkp3w" path="res://Game/Entities/Boss/BossList/StageExtra_Boss/SpellList/Extra/Flandre_NonA5_Extra.tres" id="7_q6cad"]
 
 [resource]
-script = ExtResource("2_wspar")
+script = ExtResource("2_stls6")
+single = Array[ExtResource("1_f52ye")]([ExtResource("2_4lrwh"), ExtResource("3_3lfjp"), ExtResource("3_fj6s7"), ExtResource("4_55o5b"), ExtResource("3_8xtjq"), ExtResource("5_sd1xt"), ExtResource("3_gifbs"), ExtResource("3_u55x2"), ExtResource("6_j4u5j"), ExtResource("3_l8a86"), ExtResource("3_uurk0"), ExtResource("7_q6cad"), ExtResource("3_ar865"), ExtResource("3_v7lr7"), ExtResource("3_fldvy"), ExtResource("4_oc16k")])
 easy = Array[ExtResource("1_f52ye")]([])
-normal = Array[ExtResource("1_f52ye")]([ExtResource("2_4lrwh"), ExtResource("3_3lfjp"), ExtResource("3_fj6s7"), ExtResource("4_55o5b"), ExtResource("3_8xtjq"), ExtResource("5_sd1xt"), ExtResource("3_gifbs"), ExtResource("3_u55x2"), ExtResource("6_j4u5j"), ExtResource("3_l8a86"), ExtResource("3_uurk0"), ExtResource("7_q6cad"), ExtResource("3_ar865"), ExtResource("3_v7lr7"), ExtResource("3_fldvy"), ExtResource("4_oc16k")])
+normal = Array[ExtResource("1_f52ye")]([])
 hard = Array[ExtResource("1_f52ye")]([])
 lunatic = Array[ExtResource("1_f52ye")]([])

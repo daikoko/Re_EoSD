@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5pff6peg7n86"]
+[gd_scene load_steps=20 format=3 uid="uid://c5pff6peg7n86"]
 
 [ext_resource type="Script" path="res://Master/Main/Master.gd" id="1_3aqi1"]
 [ext_resource type="Script" path="res://Master/Series/SeriesData.gd" id="2_3c01v"]
@@ -6,14 +6,19 @@
 [ext_resource type="Script" path="res://Game/World/Stage/StageScripts/StageData.gd" id="3_i4frk"]
 [ext_resource type="Shader" path="res://Master/Main/LoadingAnimation.gdshader" id="3_n4726"]
 [ext_resource type="Texture2D" uid="uid://dg741ray5t56y" path="res://Master/Main/LoadingTexture.png" id="4_blxc3"]
+[ext_resource type="Resource" uid="uid://5x1nbut251rr" path="res://Game/World/Stage/StageList/Stage_01.tres" id="4_mdjjh"]
+[ext_resource type="Resource" uid="uid://dgug4a0sturcm" path="res://Game/World/Stage/StageList/Stage_02.tres" id="5_4xm3j"]
 [ext_resource type="Texture2D" uid="uid://cak1ujymoqvi" path="res://Master/Main/Background_Main.png" id="5_j0omy"]
 [ext_resource type="Resource" uid="uid://bmjq5ee4jes5g" path="res://Game/World/Stage/StageList/Stage_Extra.tres" id="5_qv1d3"]
+[ext_resource type="Resource" uid="uid://cs2td2oivn7ht" path="res://Game/World/Stage/StageList/Stage_03.tres" id="6_710j4"]
+[ext_resource type="Resource" uid="uid://ctfjucihlylov" path="res://Game/World/Stage/StageList/Stage_04.tres" id="7_4m5b0"]
+[ext_resource type="Resource" uid="uid://bs8hddgwcav86" path="res://Game/World/Stage/StageList/Stage_05.tres" id="8_wu77i"]
 [ext_resource type="Resource" uid="uid://cwm171j50b15s" path="res://Game/World/Stage/StageList/Stage_06.tres" id="9_ljms0"]
 [ext_resource type="Resource" uid="uid://cshyo3f20nbgu" path="res://Game/World/Stage/StageList/Stage_Phantasm.tres" id="11_bx8q4"]
 
 [sub_resource type="Resource" id="Resource_0jurv"]
 script = ExtResource("2_3c01v")
-stages = Array[ExtResource("3_i4frk")]([ExtResource("9_ljms0")])
+stages = Array[ExtResource("3_i4frk")]([ExtResource("4_mdjjh"), ExtResource("5_4xm3j"), ExtResource("6_710j4"), ExtResource("7_4m5b0"), ExtResource("8_wu77i"), ExtResource("9_ljms0")])
 
 [sub_resource type="Resource" id="Resource_0dret"]
 script = ExtResource("2_3c01v")

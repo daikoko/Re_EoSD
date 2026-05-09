@@ -10,12 +10,12 @@ const START_HEIGHT_MAX := 180.0
 const START_HUE_MIN := 0.75
 const START_HUE_MAX := 0.33
 
-const ARC_LENGTH := 60.0
+const ARC_LENGTH := 40.0
 
 var A_Shooter:Shooter_Sine
 var A_Bullets:Array[RowData_Column]
-const A_LAYOUT_SPAWNER_COUNT := 7
-const A_LAYOUT_SHOT_RANGE := 60.0
+const A_LAYOUT_SPAWNER_COUNT := 5
+const A_LAYOUT_SHOT_RANGE := 40.0
 const A_FIRE_COUNT := 24
 const A_FIRE_DURATION := 0.8
 const A_BULLET_SPEED := 800.0
@@ -32,7 +32,7 @@ const B_FIRE_DURATION := 0.0
 const B_BULLET_SPEED := 300.0
 const B_SPAWN_STACK_COUNT := 4
 const B_SPAWN_STACK_SPEED := 60.0
-const B_SHOOTER_ROUND_COUNT := 12
+const B_SHOOTER_ROUND_COUNT := 10
 const B_SHOOTER_ROUND_DURATION := 1.2
 
 var RNG:RandomNumberGenerator

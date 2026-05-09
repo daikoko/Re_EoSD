@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_dqbmh"]
 [ext_resource type="Texture2D" uid="uid://cyv7ijxpgqiyj" path="res://Game/Objects/Bullets/BulletResources/Bullet_LargeCyan.png" id="2_6fdjf"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_okspl"]
-radius = 28.0
+[ext_resource type="Shape2D" uid="uid://dhexc5q45866y" path="res://Game/Objects/Bullets/BulletResources/Shape_Large.tres" id="2_ki56r"]
 
 [resource]
 script = ExtResource("1_dqbmh")
 texture = ExtResource("2_6fdjf")
-shape = SubResource("CircleShape2D_okspl")
+shape = ExtResource("2_ki56r")
 color_option = 4
 color_custom = Color(0, 0, 0, 1)
 visibility = Rect2(-40, -40, 80, 80)

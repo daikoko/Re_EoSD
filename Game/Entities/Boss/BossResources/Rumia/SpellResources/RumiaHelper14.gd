@@ -13,7 +13,7 @@ const ARROW_LENGTH := 160
 const ARROW_WIDTH := 120
 
 const LAYOUT_SPAWNER_COUNT_01 := 48
-const LAYOUT_SPAWNER_COUNT_02 := 36
+const LAYOUT_SPAWNER_COUNT_02 := 28
 const TWEEN_TIME := 3.6
 
 var RNG:RandomNumberGenerator

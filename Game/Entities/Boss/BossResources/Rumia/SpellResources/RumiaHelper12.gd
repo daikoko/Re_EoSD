@@ -12,7 +12,7 @@ const TIME_END := 0.2
 const ROUND_COUNT := 8
 const FIRE_COUNT := 8
 
-const LAYOUT_SPAWNER_COUNT := 4
+const LAYOUT_SPAWNER_COUNT := 3
 const LAYOUT_SHOT_RANGE := 60.0
 const BULLET_SPEED := 0
 const LINEAR_DELAY := 1.2
@@ -110,6 +110,7 @@ func fire():
 	SweepTween.tween_property(%Line, "rotation", deg_to_rad(ARC_LENGTH / 2) * direction, TIME_TOTAL)
 	await SweepTween.finished
 	
+	%Collider.disable()
 	%FireTimer.stop()
 	
 	direction *= -1

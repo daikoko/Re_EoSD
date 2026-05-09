@@ -17,11 +17,11 @@ boss = true
 [resource]
 script = ExtResource("2_scub8")
 A_layout_spawner_count = 6
-A_fire_count = 36
+A_fire_count = 24
 B1_layout_spawner_count = 6
 B2_layout_spawner_count = 5
 B_fire_count = 3
-health = 24000.0
+health = 20000.0
 time = 60.0
 base_points = 600000.0
 bonus_points = 1.8e+06

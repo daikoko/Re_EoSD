@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="BossData_Single" load_steps=20 format=3 uid="uid://fgt3smdp1od1"]
+
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossEvent.gd" id="1_3pg25"]
+[ext_resource type="Script" path="res://Game/Entities/Boss/BossScripts/BossData_Single.gd" id="2_trig1"]
+[ext_resource type="Resource" uid="uid://dr0inbrcbgjs2" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/DialogueList/StagePhantasm_Boss_DialogueA.tres" id="3_iogjo"]
+[ext_resource type="Resource" uid="uid://uwa1umy32p8f" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_NonC1_Phantasm.tres" id="4_i3rwr"]
+[ext_resource type="Resource" uid="uid://bicsh6evag5yu" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellE_Phantasm.tres" id="5_nyixr"]
+[ext_resource type="Resource" uid="uid://mofcpyal4l7y" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_NonC2_Phantasm.tres" id="6_dki3w"]
+[ext_resource type="Resource" uid="uid://n5jc2pv48441" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellF_Phantasm.tres" id="7_bbu2f"]
+[ext_resource type="Resource" uid="uid://mvqxq57sopwx" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_NonC3_Phantasm.tres" id="8_oqalc"]
+[ext_resource type="Resource" uid="uid://btkg8lglamttf" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellG_Phantasm.tres" id="9_fe00t"]
+[ext_resource type="Resource" uid="uid://dj20hhdt3bb4" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellH_Phantasm.tres" id="10_f35lo"]
+[ext_resource type="Resource" uid="uid://dennx3wt1jj8c" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_NonC4_Phantasm.tres" id="11_av78q"]
+[ext_resource type="Resource" uid="uid://ddb3gnbooq01c" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellI_Phantasm.tres" id="12_tbf8q"]
+[ext_resource type="Resource" uid="uid://crvoe5dn0x8tw" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellJ_Phantasm.tres" id="13_cnf42"]
+[ext_resource type="Resource" uid="uid://b2ppor8flnk0" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellK_Phantasm.tres" id="14_b44yf"]
+[ext_resource type="Resource" uid="uid://blv3ulx0tpq0c" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_NonC5_Phantasm.tres" id="15_h2vr7"]
+[ext_resource type="Resource" uid="uid://cqsjt523uhkmq" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellL_Phantasm.tres" id="16_weoj2"]
+[ext_resource type="Resource" uid="uid://dr1xvk480ygdl" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellM_Phantasm.tres" id="17_ahe67"]
+[ext_resource type="Resource" uid="uid://bk2bq34mytcht" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/SpellList/Phantasm/Rumia_SpellN_Phantasm.tres" id="18_fmgnn"]
+[ext_resource type="Resource" uid="uid://c62kknxx2d0kc" path="res://Game/Entities/Boss/BossList/StagePhantasm_Boss/DialogueList/StagePhantasm_Boss_DialogueB.tres" id="19_m00rt"]
+
+[resource]
+script = ExtResource("2_trig1")
+single = Array[ExtResource("1_3pg25")]([ExtResource("3_iogjo"), ExtResource("4_i3rwr"), ExtResource("5_nyixr"), ExtResource("6_dki3w"), ExtResource("7_bbu2f"), ExtResource("8_oqalc"), ExtResource("9_fe00t"), ExtResource("10_f35lo"), ExtResource("11_av78q"), ExtResource("12_tbf8q"), ExtResource("13_cnf42"), ExtResource("14_b44yf"), ExtResource("15_h2vr7"), ExtResource("16_weoj2"), ExtResource("17_ahe67"), ExtResource("18_fmgnn"), ExtResource("19_m00rt")])
+easy = Array[ExtResource("1_3pg25")]([])
+normal = Array[ExtResource("1_3pg25")]([])
+hard = Array[ExtResource("1_3pg25")]([])
+lunatic = Array[ExtResource("1_3pg25")]([])

@@ -40,6 +40,7 @@ func _ready():
 	query.collide_with_areas = true
 	query.collision_mask = 1
 	query.set_shape(data.shape)
+	point = (Time.get_ticks_msec() % 4) == 0
 	
 	activate()
 
@@ -55,7 +56,7 @@ func _process(delta):
 		stagger -= 1
 		return
 	else:
-		stagger = 1
+		stagger = 2
 	
 	if GlobalStage.is_current_stage_clear_plain():
 		deactivate()

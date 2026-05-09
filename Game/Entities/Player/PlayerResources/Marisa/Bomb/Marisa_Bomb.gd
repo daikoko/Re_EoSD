@@ -10,7 +10,7 @@ const SPELL_PORTRAIT := preload("res://Game/Objects/Portrait/SpellPortrait.tscn"
 const SPELL_PORTRAIT_DATA := preload("res://Game/Entities/Player/PlayerResources/Marisa/Sprite/SpellPortrait_PlayerMarisa.tres")
 
 const SPEED := 2.0
-const DAMAGE := 12000.0
+const DAMAGE := 16000.0
 const DURATION := 3.0
 
 const ROTATION_SPEED := 90

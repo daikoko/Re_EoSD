@@ -11,7 +11,7 @@ const SPELL_PORTRAIT := preload("res://Game/Objects/Portrait/SpellPortrait.tscn"
 const SPELL_PORTRAIT_DATA := preload("res://Game/Entities/Player/PlayerResources/Reimu/Sprite/SpellPortrait_PlayerReimu.tres")
 
 const SPAWNER_COUNT := 8
-const DAMAGE := 1800.0
+const DAMAGE := 1600.0
 const SPEED := 600.0
 
 const ROTATION_SPEED := -120

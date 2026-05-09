@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" path="res://Game/Objects/Bullets/BulletScripts/BulletData.gd" id="1_t38vy"]
 [ext_resource type="Texture2D" uid="uid://b28l8dckbkpxu" path="res://Game/Objects/Bullets/BulletResources/Bullet_KunaiMagenta.png" id="2_fjspd"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_o20p4"]
-radius = 6.0
+[ext_resource type="Shape2D" uid="uid://duw52flrebyfh" path="res://Game/Objects/Bullets/BulletResources/Shape_Kunai.tres" id="2_vp05k"]
 
 [resource]
 script = ExtResource("1_t38vy")
 texture = ExtResource("2_fjspd")
-shape = SubResource("CircleShape2D_o20p4")
+shape = ExtResource("2_vp05k")
 color_option = 6
 color_custom = Color(0, 0, 0, 1)
 visibility = Rect2(-14, -8, 28, 16)

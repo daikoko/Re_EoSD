@@ -81,6 +81,7 @@ position = Vector2(500, 0)
 texture = ExtResource("3_i2sjx")
 
 [node name="Collider" parent="Pointer/Line/Beam" instance=ExtResource("4_q5um0")]
+unique_name_in_owner = true
 position = Vector2(80, 0)
 shape = SubResource("RectangleShape2D_lge8w")
 

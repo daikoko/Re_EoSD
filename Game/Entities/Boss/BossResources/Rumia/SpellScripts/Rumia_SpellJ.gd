@@ -32,7 +32,7 @@ var B_Bullets:Array[RowData_Column]
 const B_LAYOUT_SPAWNER_COUNT := 3
 const B_LAYOUT_COLUMN_COUNT := 2
 const B_LAYOUT_COLUMN_RANGE := 30.0
-const B_FIRE_COUNT := 16
+const B_FIRE_COUNT := 14
 const B_FIRE_DURATION := 0.8
 const B_BULLET_SPEED := 80.0
 const B_LINEAR_DELAY := 0.4
