@@ -11,12 +11,12 @@ const REIMU_SIDE     := preload("res://Game/Entities/Player/PlayerResources/Reim
 const MAIN_BASE_FIRE_TIME := 0.1
 const MAIN_BASE_SPEED := 1000.0
 const MAIN_BASE_DAMAGE := 80
-const MAIN_BASE_EXTRA := 40
+const MAIN_BASE_EXTRA := 20
 const MAIN_BASE_DECAY := 20
 
 const MAIN_FOCUS_FIRE_TIME := 0.05
 const MAIN_FOCUS_SPEED := 1200.0
-const MAIN_FOCUS_DAMAGE := 80
+const MAIN_FOCUS_DAMAGE := 120 / (MAIN_BASE_FIRE_TIME / MAIN_FOCUS_FIRE_TIME)
 
 const SIDE_BASE_FIRE_TIME := 0.4
 const SIDE_BASE_SPEED := 600.0

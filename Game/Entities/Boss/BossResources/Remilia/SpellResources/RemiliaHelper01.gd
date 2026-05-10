@@ -75,6 +75,8 @@ func fire(
 		)
 		await %FireTimer.timeout
 	
+	disable()
+	
 	await self.create_tween().tween_interval(DELAY).finished
 	
 	finished_round.emit()

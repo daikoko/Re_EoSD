@@ -17,13 +17,11 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 position = Vector2(280, 0)
 rotation = 0.418879
-scale = Vector2(1, 1)
 
 [node name="Laser03" parent="SecondaryLasers" instance=ExtResource("2_16ow0")]
 unique_name_in_owner = true
 position = Vector2(280, 0)
 rotation = -0.418879
-scale = Vector2(1, 1)
 
 [node name="Laser04" parent="SecondaryLasers" instance=ExtResource("2_16ow0")]
 unique_name_in_owner = true
