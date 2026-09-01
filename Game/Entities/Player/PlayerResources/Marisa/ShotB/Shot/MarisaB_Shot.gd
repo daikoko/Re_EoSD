@@ -9,13 +9,13 @@ const MARISA_SIDE     := preload("res://Game/Entities/Player/PlayerResources/Mar
 
 const MAIN_BASE_FIRE_TIME := 0.1
 const MAIN_BASE_SPEED := 1000.0
-const MAIN_BASE_DAMAGE := 120
-const MAIN_BASE_EXTRA := 40
-const MAIN_BASE_DECAY := 60
+const MAIN_BASE_DAMAGE := 100
+const MAIN_BASE_EXTRA := 20
+const MAIN_BASE_DECAY := 40
 
 const MAIN_FOCUS_FIRE_TIME := 0.05
 const MAIN_FOCUS_SPEED := 1200.0
-const MAIN_FOCUS_DAMAGE := 120
+const MAIN_FOCUS_DAMAGE := 160 / (MAIN_BASE_FIRE_TIME / MAIN_FOCUS_FIRE_TIME)
 
 const SIDE_BASE_DAMAGE := 8
 const SIDE_BASE_EXTRA := 12
@@ -50,15 +50,15 @@ func _ready():
 	
 	const ZERO_SET    = Transform2D(deg_to_rad(-90), Vector2.ZERO)
 	
-	const MAIN_SET_01 = Transform2D(deg_to_rad(-90), Vector2( 12, -24))
-	const MAIN_SET_02 = Transform2D(deg_to_rad(-90), Vector2(-12, -24))
+	const MAIN_SET_01 = Transform2D(deg_to_rad(-90),      Vector2( 12, -24))
+	const MAIN_SET_02 = Transform2D(deg_to_rad(-90),      Vector2(-12, -24))
 	const MAIN_SET_03 = Transform2D(deg_to_rad(-90 + 16), Vector2( 30, -12))
 	const MAIN_SET_04 = Transform2D(deg_to_rad(-90 - 16), Vector2(-30, -12))
 	const MAIN_SET_05 = Transform2D(deg_to_rad(-90 + 16), Vector2( 54, -28))
 	const MAIN_SET_06 = Transform2D(deg_to_rad(-90 - 16), Vector2(-54, -28))
 	
-	const MAIN_FOCUS_SET_01 = Transform2D(deg_to_rad(-90), Vector2( 12, -24))
-	const MAIN_FOCUS_SET_02 = Transform2D(deg_to_rad(-90), Vector2(-12, -24))
+	const MAIN_FOCUS_SET_01 = Transform2D(deg_to_rad(-90),      Vector2( 12, -24))
+	const MAIN_FOCUS_SET_02 = Transform2D(deg_to_rad(-90),      Vector2(-12, -24))
 	const MAIN_FOCUS_SET_03 = Transform2D(deg_to_rad(-90 + 10), Vector2( 30, -12))
 	const MAIN_FOCUS_SET_04 = Transform2D(deg_to_rad(-90 - 10), Vector2(-30, -12))
 	const MAIN_FOCUS_SET_05 = Transform2D(deg_to_rad(-90 + 10), Vector2( 54, -28))
@@ -312,11 +312,11 @@ func _ready():
 			},
 			2: {
 				side_01: {
-					"transform": Transform2D(deg_to_rad(0), Vector2(20, 50)),
+					"transform": Transform2D(deg_to_rad(0), Vector2(25, 50)),
 					"activated": true
 				},
 				side_02: {
-					"transform": Transform2D(deg_to_rad(0), Vector2(-20, 50)),
+					"transform": Transform2D(deg_to_rad(0), Vector2(-25, 50)),
 					"activated": true
 				},
 				side_03: {

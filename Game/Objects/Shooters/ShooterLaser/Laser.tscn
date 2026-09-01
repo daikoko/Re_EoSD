@@ -8,10 +8,10 @@
 [ext_resource type="Material" uid="uid://cxj4kfols0avd" path="res://Game/Objects/Shooters/ShooterLaser/LaserParticlesBeam.tres" id="6_wk24n"]
 [ext_resource type="Material" uid="uid://lf5ks041dppa" path="res://Game/Objects/Shooters/ShooterLaser/LaserParticlesEnd.tres" id="7_d3vr7"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fqp0e"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xu8fb"]
 resource_local_to_scene = true
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qak3w"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sm2e"]
 resource_local_to_scene = true
 
 [node name="Laser" type="Node2D"]
@@ -24,14 +24,14 @@ unique_name_in_owner = true
 collision_layer = 0
 monitorable = false
 identity = "Laser"
-shape = SubResource("RectangleShape2D_fqp0e")
+shape = SubResource("RectangleShape2D_xu8fb")
 
 [node name="GrazeCollider" parent="." instance=ExtResource("2_lrsth")]
 unique_name_in_owner = true
 collision_layer = 0
 monitorable = false
 identity = "Laser"
-shape = SubResource("RectangleShape2D_qak3w")
+shape = SubResource("RectangleShape2D_4sm2e")
 
 [node name="GrazeTimer" type="Timer" parent="GrazeCollider"]
 unique_name_in_owner = true

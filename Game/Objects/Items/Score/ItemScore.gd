@@ -20,6 +20,7 @@ var LabelTween:Tween
 
 func _ready():
 	visible = false
+	set_process(false)
 
 
 func _process(_delta):

@@ -181,7 +181,10 @@ func game_finish() -> void:
 	Debug.hide_all()
 	
 	pause(false)
-	if save.game_mode == GlobalSettings.MODE.CASUAL:
+	if (
+		save.game_mode == GlobalSettings.MODE.FREE or 
+		save.game_mode == GlobalSettings.MODE.CASUAL
+	):
 		%EndingPlayer.start(save)
 		await %EndingPlayer.ending_finished
 		
@@ -299,7 +302,9 @@ func _on_Menu_resume() -> void:
 func _on_Menu_restart() -> void:
 	resume()
 	
-	if save.game_mode == GlobalSettings.MODE.CASUAL:
+	if save.game_mode == GlobalSettings.MODE.FREE:
+		reset_game()
+	elif save.game_mode == GlobalSettings.MODE.CASUAL:
 		reset_stage()
 	elif save.game_mode == GlobalSettings.MODE.ARCADE:
 		reset_game()

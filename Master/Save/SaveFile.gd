@@ -59,8 +59,8 @@ func set_save_file(
 		self.power              = 0
 		self.spells_passed      = 0
 		self.spells_captured    = 0
-		self.start_player_lives = player.start_lives + GlobalSettings.get_additional_lives()
-		self.start_player_bombs = player.start_bombs + GlobalSettings.get_additional_bombs()
+		self.start_player_lives = player.start_lives # + GlobalSettings.get_additional_lives()
+		self.start_player_bombs = player.start_bombs # + GlobalSettings.get_additional_bombs()
 		self.start_continues    = GlobalSettings.STARTING_CONTINUES_MAIN
 		
 		self.additional_start_lives = clampi(

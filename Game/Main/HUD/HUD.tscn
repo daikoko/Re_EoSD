@@ -450,6 +450,25 @@ text = "0/0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Death" type="VBoxContainer" parent="Main/Information"]
+layout_mode = 2
+
+[node name="DeathsBox" type="HBoxContainer" parent="Main/Information/Death"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="DeathsLabel" type="Label" parent="Main/Information/Death/DeathsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Deaths: "
+
+[node name="Deaths" type="Label" parent="Main/Information/Death/DeathsBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "000000000"
+horizontal_alignment = 2
+
 [node name="Side" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -482,9 +501,9 @@ modulate = Color(1, 1, 1, 0)
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1035.0
-offset_top = 560.0
+offset_top = 600.0
 offset_right = 1035.0
-offset_bottom = 560.0
+offset_bottom = 600.0
 theme = SubResource("Theme_hhgps")
 
 [node name="Sprite_01" type="Sprite2D" parent="Icon"]
@@ -500,47 +519,52 @@ texture = ExtResource("14_dpsxy")
 
 [node name="Label_01" type="Label" parent="Icon"]
 layout_mode = 0
+offset_left = 52.0
 offset_top = -112.0
-offset_right = 60.0
+offset_right = 112.0
 offset_bottom = -51.0
 text = "東"
 
 [node name="Label_02" type="Label" parent="Icon"]
 layout_mode = 0
+offset_left = 78.0
 offset_top = -47.0
-offset_right = 60.0
+offset_right = 138.0
 offset_bottom = 14.0
 text = "方"
 
 [node name="Label_03" type="Label" parent="Icon"]
 layout_mode = 0
+offset_left = -140.0
 offset_top = -15.0
-offset_right = 60.0
+offset_right = -80.0
 offset_bottom = 46.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "紅"
 
 [node name="Label_04" type="Label" parent="Icon"]
 layout_mode = 0
+offset_left = -117.0
 offset_top = 46.0
-offset_right = 60.0
+offset_right = -57.0
 offset_bottom = 107.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "魔"
 
 [node name="Label_05" type="Label" parent="Icon"]
 layout_mode = 0
+offset_left = -52.0
 offset_top = 85.0
-offset_right = 60.0
+offset_right = 8.0
 offset_bottom = 146.0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "郷"
 
 [node name="Label_06" type="RichTextLabel" parent="Icon"]
 layout_mode = 0
-offset_left = 17.0
+offset_left = -133.0
 offset_top = -127.0
-offset_right = 230.0
+offset_right = 80.0
 offset_bottom = -16.0
 bbcode_enabled = true
 text = "
@@ -549,9 +573,9 @@ text = "
 
 [node name="Label_07" type="RichTextLabel" parent="Icon"]
 layout_mode = 0
-offset_left = -131.0
+offset_left = 19.0
 offset_top = 14.0
-offset_right = 64.0
+offset_right = 214.0
 offset_bottom = 128.0
 bbcode_enabled = true
 text = "
@@ -570,6 +594,63 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme = ExtResource("15_5empl")
+
+[node name="FreeMode" type="Control" parent="Overlay"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CenterContainer" type="CenterContainer" parent="Overlay/FreeMode"]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 132.0
+offset_right = 1255.0
+offset_bottom = 157.0
+
+[node name="ColorRect" type="ColorRect" parent="Overlay/FreeMode/CenterContainer"]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="Label" type="Label" parent="Overlay/FreeMode/CenterContainer"]
+layout_mode = 2
+text = "Disabled
+"
+
+[node name="CenterContainer2" type="CenterContainer" parent="Overlay/FreeMode"]
+layout_mode = 0
+offset_left = 1055.0
+offset_top = 166.0
+offset_right = 1255.0
+offset_bottom = 191.0
+
+[node name="ColorRect" type="ColorRect" parent="Overlay/FreeMode/CenterContainer2"]
+custom_minimum_size = Vector2(200, 25)
+layout_mode = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="Label" type="Label" parent="Overlay/FreeMode/CenterContainer2"]
+layout_mode = 2
+text = "Disabled
+"
+
+[node name="CenterContainer3" type="CenterContainer" parent="Overlay/FreeMode"]
+offset_left = 980.0
+offset_top = 220.0
+offset_right = 1244.0
+offset_bottom = 260.0
+
+[node name="ColorRect" type="ColorRect" parent="Overlay/FreeMode/CenterContainer3"]
+custom_minimum_size = Vector2(264, 40)
+layout_mode = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="Label" type="Label" parent="Overlay/FreeMode/CenterContainer3"]
+layout_mode = 2
+text = "Disabled
+"
 
 [node name="CasualMode" type="Control" parent="Overlay"]
 unique_name_in_owner = true

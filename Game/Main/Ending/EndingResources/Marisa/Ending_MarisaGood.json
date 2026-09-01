@@ -58,20 +58,20 @@
 		"type": "text",
 		"name": "Marisa",
 		"text": 
-			"Oh it's the butler."
+			"Oh, it's the butler."
 	},
 	"013": {
 		"type": "text",
 		"name": "Sakuya",
 		"text": 
-			"I've been told there are some books missing 
+			"I've been told there are some books missing
 			from Miss Patchouli's library."
 	},
 	"014": {
 		"type": "text",
 		"name": "Marisa",
 		"text": 
-			"... I had no idea. Send her my condolences."
+			"... Oh my, that's terrible. Send her my condolences."
 	},
 	"015": {
 		"type": "text",

@@ -7,6 +7,8 @@ const HELPER_02 = preload("res://Game/Entities/Boss/BossResources/Remilia/SpellR
 const SECONDAY_LASER_DURATION := 1.0
 const DELAY := 3.0
 
+var disabled:bool = false
+
 signal finished_round
 
 
@@ -46,6 +48,10 @@ func fire(
 		secondary_delay:float
 	):
 	
+	if disabled: return
+	
+	self.show()
+	
 	var secondary_laser_duration = SECONDAY_LASER_DURATION
 	var primary_laser_duration = SECONDAY_LASER_DURATION + secondary_delay + primary_fire_duration
 	
@@ -59,9 +65,12 @@ func fire(
 			primary_laser,
 			primary_laser_duration
 		)
+		
 		await %FireTimer.timeout
 	
-	await self.create_tween().tween_interval(secondary_delay).finished
+	%DelayTimer.wait_time = secondary_delay
+	%DelayTimer.start()
+	await %DelayTimer.timeout
 	
 	var secondary_time = secondary_fire_duration / lasers.size()
 	%FireTimer.wait_time = secondary_time
@@ -75,23 +84,33 @@ func fire(
 		)
 		await %FireTimer.timeout
 	
-	disable()
+	%DelayTimer.wait_time = DELAY
+	%DelayTimer.start()
+	await %DelayTimer.timeout
 	
-	await self.create_tween().tween_interval(DELAY).finished
+	self.hide()
+	for laser in lasers:
+		laser.disable()
 	
 	finished_round.emit()
 
 
 func disable():
-	self.hide()
+	disabled = true
 	
+	self.hide()
 	for laser in lasers:
 		laser.disable()
+	
+	%FireTimer.stop()
+	%DelayTimer.stop()
 
 
 
 
 func play_sound():
 	await create_tween().tween_interval(1.0).finished
+	
+	if disabled: return
 	
 	%FireSound.play()

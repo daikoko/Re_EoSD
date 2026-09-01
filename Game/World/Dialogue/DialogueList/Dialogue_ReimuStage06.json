@@ -128,38 +128,6 @@
 		"text":          
 			"..."
 	},
-	"018": {
-		"type":          "dialogue",
-		"identity":      "remi",
-		"expression":    "BossRemilia05",
-		"name":          "Remilia",
-		"text":          
-			"..."
-	},
-	"019": {
-		"type":          "dialogue",
-		"identity":      "remi",
-		"expression":    "BossRemilia05",
-		"name":          "Remilia",
-		"text":          
-			"*******"
-	},
-	"020": {
-		"type":          "dialogue",
-		"identity":      "reimu",
-		"expression":    "PlayerReimu01",
-		"name":          "Reimu",
-		"text":          
-			"You can't speak the language here, can you?"
-	},
-	"021": {
-		"type":          "dialogue",
-		"identity":      "remi",
-		"expression":    "BossRemilia05",
-		"name":          "Remilia",
-		"text":          
-			"..."
-	},
 	"022": {
 		"type":          "dialogue",
 		"identity":      "reimu",

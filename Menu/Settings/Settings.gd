@@ -95,7 +95,7 @@ func load_in() -> void:
 	await %Animator.animation_finished
 	
 	toggle_buttons(true)
-	%LivesDecoy.grab_focus()
+	%SoundSlider.grab_focus()
 
 
 func load_out() -> void:

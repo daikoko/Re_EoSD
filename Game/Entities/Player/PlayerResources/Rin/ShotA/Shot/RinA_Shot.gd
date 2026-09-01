@@ -7,8 +7,8 @@ const RIN_FLOWER   := preload("res://Game/Entities/Player/PlayerResources/Rin/Sh
 
 const RIN_SIDE     := preload("res://Game/Entities/Player/PlayerResources/Rin/ShotA/Shot/Side_RinFlower.tscn")
 
-const DISTANCE       := 70.0
-const DISTANCE_FOCUS := 50.0
+const DISTANCE       := 100.0
+const DISTANCE_FOCUS := 70.0
 const ANGLES := [
 	0,
 	TAU * (1/4.0),
@@ -18,14 +18,14 @@ const ANGLES := [
 
 const MAIN_BASE_FIRE_TIME := 0.1
 const MAIN_BASE_SPEED := 1000.0
-const MAIN_BASE_DAMAGE := 40
-const MAIN_BASE_EXTRA := 160
+const MAIN_BASE_DAMAGE := 100
+const MAIN_BASE_EXTRA := 140
 const MAIN_BASE_DECAY := 10
 
 const SIDE_BASE_FIRE_TIME := 0.2
 const SIDE_BASE_SPEED := 600.0
 const SIDE_BASE_DAMAGE := 0
-const SIDE_BASE_EXTRA := 120
+const SIDE_BASE_EXTRA := 160
 const SIDE_BASE_DECAY := 0
 
 const ROTATION_SPEED := 120.0

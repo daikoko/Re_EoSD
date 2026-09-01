@@ -28,8 +28,8 @@ func show_menu(save:SaveFile) -> void:
 	else:
 		spellcard_ratio = float(save.spells_captured) / float(save.spells_passed)
 	
-	var add_lives    = save.additional_start_lives * GlobalSettings.ADDITIONAL_LIVES_PENALTY
-	var add_bombs    = save.additional_start_bombs * GlobalSettings.ADDITIONAL_BOMBS_PENALTY
+	var add_lives    = 0 #save.additional_start_lives * GlobalSettings.ADDITIONAL_LIVES_PENALTY
+	var add_bombs    = 0 #save.additional_start_bombs * GlobalSettings.ADDITIONAL_BOMBS_PENALTY
 	var add_captures = spellcard_ratio * GlobalStage.BONUS["spellcards_captured"]
 	
 	var score_base = save.score

@@ -107,6 +107,10 @@ func get_player_description(section:int) -> String:
 	return ""
 
 
+func get_player_manual() -> String:
+	return GlobalSettings.get_player_text(id, "manual")
+
+
 func get_shot_type(shot_index:int) -> String:
 	return shots[shot_index].get_shot_type()
 

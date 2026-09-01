@@ -40,19 +40,19 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Casual:position")
+tracks/2/path = NodePath("FreeControl:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(460, 220), Vector2(220, 220)]
+"values": [Vector2(640, 460), Vector2(240, 460)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Casual:modulate")
+tracks/3/path = NodePath("FreeControl:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -64,19 +64,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Arcade:position")
+tracks/4/path = NodePath("CausalControl:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(460, 220), Vector2(700, 220)]
+"values": [Vector2(640, 460), Vector2(640, 460)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Arcade:modulate")
+tracks/5/path = NodePath("CausalControl:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -88,17 +88,116 @@ tracks/5/keys = {
 tracks/6/type = "value"
 tracks/6/imported = false
 tracks/6/enabled = true
-tracks/6/path = NodePath("Animator:reset_on_save")
+tracks/6/path = NodePath("ArcadeControl:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 460), Vector2(1040, 460)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ArcadeControl:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ckdk4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FreeControl:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(240, 460)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FreeControl:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CausalControl:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(640, 460)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CausalControl:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ArcadeControl:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1040, 460)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ArcadeControl:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Title:modulate")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_2im05"]
+[sub_resource type="Animation" id="Animation_uc0ne"]
 resource_name = "Load_In_Back"
 length = 0.2
 step = 0.2
@@ -129,19 +228,19 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Casual:position")
+tracks/2/path = NodePath("FreeControl:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(460, 220), Vector2(220, 220)]
+"values": [Vector2(640, 460), Vector2(240, 460)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Casual:modulate")
+tracks/3/path = NodePath("FreeControl:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -153,19 +252,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Arcade:position")
+tracks/4/path = NodePath("CausalControl:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(460, 220), Vector2(700, 220)]
+"values": [Vector2(640, 460), Vector2(640, 460)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Arcade:modulate")
+tracks/5/path = NodePath("CausalControl:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -174,8 +273,32 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ArcadeControl:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(640, 460), Vector2(1040, 460)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ArcadeControl:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
-[sub_resource type="Animation" id="Animation_e1p27"]
+[sub_resource type="Animation" id="Animation_hc2li"]
 resource_name = "Load_Out"
 length = 0.2
 step = 0.2
@@ -206,19 +329,19 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Casual:position")
+tracks/2/path = NodePath("FreeControl:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(220, 220), Vector2(460, 220)]
+"values": [Vector2(240, 460), Vector2(640, 460)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Casual:modulate")
+tracks/3/path = NodePath("FreeControl:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -230,19 +353,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Arcade:position")
+tracks/4/path = NodePath("CausalControl:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(700, 220), Vector2(460, 220)]
+"values": [Vector2(640, 460), Vector2(640, 460)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Arcade:modulate")
+tracks/5/path = NodePath("CausalControl:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -251,8 +374,32 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ArcadeControl:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1040, 460), Vector2(640, 460)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ArcadeControl:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
 
-[sub_resource type="Animation" id="Animation_8fwaf"]
+[sub_resource type="Animation" id="Animation_3o87u"]
 resource_name = "Load_Out_Next"
 length = 0.4
 step = 0.2
@@ -283,19 +430,19 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Casual:position")
+tracks/2/path = NodePath("FreeControl:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(220, 220), Vector2(460, 220)]
+"values": [Vector2(240, 460), Vector2(640, 460)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Casual:modulate")
+tracks/3/path = NodePath("FreeControl:modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -307,19 +454,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Arcade:position")
+tracks/4/path = NodePath("CausalControl:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(700, 220), Vector2(460, 220)]
+"values": [Vector2(640, 460), Vector2(640, 460)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Arcade:modulate")
+tracks/5/path = NodePath("CausalControl:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -328,28 +475,37 @@ tracks/5/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
-
-[sub_resource type="Animation" id="Animation_ckdk4"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Animator:reset_on_save")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ArcadeControl:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1040, 460), Vector2(640, 460)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ArcadeControl:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sws7a"]
 _data = {
 "Load_In": SubResource("Animation_o7w1c"),
-"Load_In_Back": SubResource("Animation_2im05"),
-"Load_Out": SubResource("Animation_e1p27"),
-"Load_Out_Next": SubResource("Animation_8fwaf"),
+"Load_In_Back": SubResource("Animation_uc0ne"),
+"Load_Out": SubResource("Animation_hc2li"),
+"Load_Out_Next": SubResource("Animation_3o87u"),
 "RESET": SubResource("Animation_ckdk4")
 }
 
@@ -365,8 +521,8 @@ script = ExtResource("2_4k7ji")
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(1280, 180)
 layout_mode = 0
-offset_top = -180.0
 offset_right = 1280.0
+offset_bottom = 180.0
 
 [node name="Title" type="Label" parent="Title"]
 unique_name_in_owner = true
@@ -374,26 +530,33 @@ layout_mode = 2
 theme_type_variation = &"Label_SubMenu"
 text = "Select Game Mode"
 
-[node name="Casual" type="TextureButton" parent="."]
-unique_name_in_owner = true
+[node name="FreeControl" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 240.0
+offset_top = 460.0
+offset_right = 240.0
+offset_bottom = 460.0
+
+[node name="Free" type="TextureButton" parent="FreeControl"]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 460.0
-offset_top = 220.0
-offset_right = 820.0
-offset_bottom = 700.0
+offset_left = -180.0
+offset_top = -240.0
+offset_right = 180.0
+offset_bottom = 240.0
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath(".")
-focus_neighbor_right = NodePath("../Arcade")
+focus_neighbor_right = NodePath("../../CausalControl/Casual")
 focus_neighbor_bottom = NodePath(".")
-focus_next = NodePath("../Arcade")
-focus_previous = NodePath("../Arcade")
+focus_next = NodePath("../../CausalControl/Casual")
+focus_previous = NodePath("../../ArcadeControl/Arcade")
 mouse_filter = 2
 texture_normal = ExtResource("3_oc7bq")
 texture_pressed = ExtResource("4_5iw81")
 texture_focused = ExtResource("5_lb5cy")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="Casual"]
+[node name="HBoxContainer" type="VBoxContainer" parent="FreeControl/Free"]
 custom_minimum_size = Vector2(320, 240)
 layout_mode = 0
 offset_left = 20.0
@@ -401,14 +564,14 @@ offset_top = 160.0
 offset_right = 340.0
 offset_bottom = 400.0
 
-[node name="CasualName" type="Label" parent="Casual/HBoxContainer"]
+[node name="FreeName" type="Label" parent="FreeControl/Free/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"Label_ExtraLarge"
 text = "Casual"
 horizontal_alignment = 1
 
-[node name="CasualDescription" type="Label" parent="Casual/HBoxContainer"]
+[node name="FreeDescription" type="Label" parent="FreeControl/Free/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 200)
 layout_mode = 2
@@ -416,26 +579,33 @@ text = "Able to stop and restart at every stage, but disables scoring and the le
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="Arcade" type="TextureButton" parent="."]
-unique_name_in_owner = true
+[node name="CausalControl" type="Control" parent="."]
 modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 640.0
+offset_top = 460.0
+offset_right = 640.0
+offset_bottom = 460.0
+
+[node name="Casual" type="TextureButton" parent="CausalControl"]
+unique_name_in_owner = true
 layout_mode = 0
-offset_left = 460.0
-offset_top = 220.0
-offset_right = 820.0
-offset_bottom = 700.0
-focus_neighbor_left = NodePath("../Casual")
+offset_left = -180.0
+offset_top = -240.0
+offset_right = 180.0
+offset_bottom = 240.0
+focus_neighbor_left = NodePath("../../FreeControl/Free")
 focus_neighbor_top = NodePath(".")
-focus_neighbor_right = NodePath(".")
+focus_neighbor_right = NodePath("../../ArcadeControl/Arcade")
 focus_neighbor_bottom = NodePath(".")
-focus_next = NodePath("../Casual")
-focus_previous = NodePath("../Casual")
+focus_next = NodePath("../../ArcadeControl/Arcade")
+focus_previous = NodePath("../../FreeControl/Free")
 mouse_filter = 2
 texture_normal = ExtResource("3_oc7bq")
 texture_pressed = ExtResource("4_5iw81")
 texture_focused = ExtResource("5_lb5cy")
 
-[node name="HBoxContainer" type="VBoxContainer" parent="Arcade"]
+[node name="HBoxContainer" type="VBoxContainer" parent="CausalControl/Casual"]
 custom_minimum_size = Vector2(320, 240)
 layout_mode = 0
 offset_left = 20.0
@@ -443,14 +613,63 @@ offset_top = 160.0
 offset_right = 340.0
 offset_bottom = 400.0
 
-[node name="ArcadeName" type="Label" parent="Arcade/HBoxContainer"]
+[node name="CasualName" type="Label" parent="CausalControl/Casual/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"Label_ExtraLarge"
+text = "Casual"
+horizontal_alignment = 1
+
+[node name="CasualDescription" type="Label" parent="CausalControl/Casual/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 200)
+layout_mode = 2
+text = "Able to stop and restart at every stage, but disables scoring and the leaderboard"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ArcadeControl" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 0
+offset_left = 1040.0
+offset_top = 460.0
+offset_right = 1040.0
+offset_bottom = 460.0
+
+[node name="Arcade" type="TextureButton" parent="ArcadeControl"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -180.0
+offset_top = -240.0
+offset_right = 180.0
+offset_bottom = 240.0
+focus_neighbor_left = NodePath("../../CausalControl/Casual")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../../FreeControl/Free")
+focus_previous = NodePath("../../CausalControl/Casual")
+mouse_filter = 2
+texture_normal = ExtResource("3_oc7bq")
+texture_pressed = ExtResource("4_5iw81")
+texture_focused = ExtResource("5_lb5cy")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="ArcadeControl/Arcade"]
+custom_minimum_size = Vector2(320, 240)
+layout_mode = 0
+offset_left = 20.0
+offset_top = 160.0
+offset_right = 340.0
+offset_bottom = 400.0
+
+[node name="ArcadeName" type="Label" parent="ArcadeControl/Arcade/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"Label_ExtraLarge"
 text = "Arcade"
 horizontal_alignment = 1
 
-[node name="ArcadeDescription" type="Label" parent="Arcade/HBoxContainer"]
+[node name="ArcadeDescription" type="Label" parent="ArcadeControl/Arcade/HBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 200)
 layout_mode = 2
@@ -472,9 +691,12 @@ libraries = {
 "": SubResource("AnimationLibrary_sws7a")
 }
 
-[connection signal="focus_entered" from="Casual" to="." method="_on_Casual_focus_entered"]
-[connection signal="focus_exited" from="Casual" to="." method="_on_Casual_focus_exited"]
-[connection signal="pressed" from="Casual" to="." method="_on_Casual_pressed"]
-[connection signal="focus_entered" from="Arcade" to="." method="_on_Arcade_focus_entered"]
-[connection signal="focus_exited" from="Arcade" to="." method="_on_Arcade_focus_exited"]
-[connection signal="pressed" from="Arcade" to="." method="_on_Arcade_pressed"]
+[connection signal="focus_entered" from="FreeControl/Free" to="." method="_on_Free_focus_entered"]
+[connection signal="focus_exited" from="FreeControl/Free" to="." method="_on_Free_focus_exited"]
+[connection signal="pressed" from="FreeControl/Free" to="." method="_on_Free_pressed"]
+[connection signal="focus_entered" from="CausalControl/Casual" to="." method="_on_Casual_focus_entered"]
+[connection signal="focus_exited" from="CausalControl/Casual" to="." method="_on_Casual_focus_exited"]
+[connection signal="pressed" from="CausalControl/Casual" to="." method="_on_Casual_pressed"]
+[connection signal="focus_entered" from="ArcadeControl/Arcade" to="." method="_on_Arcade_focus_entered"]
+[connection signal="focus_exited" from="ArcadeControl/Arcade" to="." method="_on_Arcade_focus_exited"]
+[connection signal="pressed" from="ArcadeControl/Arcade" to="." method="_on_Arcade_pressed"]

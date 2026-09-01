@@ -126,12 +126,14 @@ func load_player(index:int=-1, target_portrait:Sprite2D=null) -> void:
 		%PlayerName.text =        "Not Avaliable"
 		%PlayerTitle.text =       " "
 		%PlayerDescription.text = " "
+		%PlayerManual.text      = " "
 	
 	else:
 		var player:PlayerData   = valid_players[index]
 		%PlayerName.text        = player.get_player_name()
 		%PlayerTitle.text       = player.get_player_title()
 		%PlayerDescription.text = player.get_player_description(section).replace("\n", " ")
+		%PlayerManual.text      = player.get_player_manual().replace("\n", " ")
 		target_portrait.texture = player.selection_portrait
 
 

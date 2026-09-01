@@ -22,6 +22,7 @@ enum SECTION {
 
 ## Enumeration for game mode
 enum MODE {
+	FREE,
 	CASUAL,
 	ARCADE,
 	PRACTICE
@@ -324,8 +325,6 @@ func get_music_text(music_id:int) -> String:
 
 
 func flag_check(flag:String) -> bool:
-	return true
-	
 	if Debug.debug_mode:
 		return true
 	

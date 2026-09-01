@@ -75,12 +75,35 @@ func place_text() -> void:
 	var text_dict:Dictionary = GlobalSystem.get_json_dict(TEXT_FILE)
 	
 	%Title.text             = text_dict["mode"]["title_01"]
-	%CasualName.text        = text_dict["mode"]["option_01"]
-	%ArcadeName.text        = text_dict["mode"]["option_02"]
-	%CasualDescription.text = text_dict["mode"]["text_01"].replace("\n", " ")
-	%ArcadeDescription.text = text_dict["mode"]["text_02"].replace("\n", " ")
+	%FreeName.text          = text_dict["mode"]["option_01"]
+	%CasualName.text        = text_dict["mode"]["option_02"]
+	%ArcadeName.text        = text_dict["mode"]["option_03"]
+	%FreeDescription.text   = text_dict["mode"]["text_01"].replace("\n", " ")
+	%CasualDescription.text = text_dict["mode"]["text_02"].replace("\n", " ")
+	%ArcadeDescription.text = text_dict["mode"]["text_03"].replace("\n", " ")
 
 
+
+
+func _on_Free_pressed() -> void:
+	FocusTargetDefault = %Free
+	
+	selected.emit(GlobalSettings.MODE.FREE)
+	%Sound_Select02.play()
+
+
+func _on_Free_focus_entered() -> void:
+	%FreeName.add_theme_color_override(
+		"font_outline_color", 
+		Color(1, 0, 0, 1)
+	)
+
+
+func _on_Free_focus_exited() -> void:
+	%FreeName.add_theme_color_override(
+		"font_outline_color", 
+		Color(0, 0, 0, 1)
+	)
 
 
 func _on_Casual_pressed() -> void:

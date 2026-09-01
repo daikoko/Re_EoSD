@@ -25,7 +25,7 @@ func hide_menu() -> void:
 func show_menu(mode:int) -> void:
 	self.visible = true
 	
-	if mode == GlobalSettings.MODE.CASUAL:
+	if mode == GlobalSettings.MODE.CASUAL or mode == GlobalSettings.MODE.FREE:
 		
 		%MenuPause_Resume.focus_neighbor_top     = %MenuPause_Resume.get_path_to(%MenuPause_Resume)
 		%MenuPause_Resume.focus_neighbor_bottom  = %MenuPause_Resume.get_path_to(%MenuPause_Restart)

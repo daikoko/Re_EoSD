@@ -19,9 +19,6 @@ func _ready():
 	SelfTween.tween_property(%Sprite, "modulate:a", 1,           0.4)
 	SelfTween.tween_property(%Sprite, "scale",      Vector2.ONE, 0.4)
 	SelfTween.tween_property(%Sprite, "rotation",   TAU,         0.4)
-	
-	GlobalPlayer.player_used_bomb.connect(_on_GlobalPlayer_player_bomb_used)
-	GlobalPlayer.player_used_bomb_stop.connect(_on_GlobalPlayer_player_bomb_used_stop)
 
 
 
@@ -73,13 +70,3 @@ func disable():
 func _on_Enemy_collider_entered(_other, other_identity:) -> void:
 	if other_identity == "PlayerHitbox":
 		GlobalPlayer.player_hit.emit()
-
-
-func _on_GlobalPlayer_player_bomb_used(_spellname):
-	var SelfTween = self.create_tween().set_parallel(true)
-	SelfTween.tween_property(%BallSprite, "modulate:a", 0.4, 0.4)
-
-
-func _on_GlobalPlayer_player_bomb_used_stop():
-	var SelfTween = self.create_tween().set_parallel(true)
-	SelfTween.tween_property(%BallSprite, "modulate:a", 1.0, 0.4)

@@ -10,6 +10,10 @@ script = ExtResource("1_1gmw4")
 [node name="FireTimer" type="Timer" parent="."]
 unique_name_in_owner = true
 
+[node name="DelayTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+one_shot = true
+
 [node name="FireSound" parent="." instance=ExtResource("2_hoshn")]
 unique_name_in_owner = true
 stream = ExtResource("3_5nq0v")

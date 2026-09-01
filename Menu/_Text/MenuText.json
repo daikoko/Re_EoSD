@@ -17,12 +17,16 @@
 	},
 	"mode": {
 		"title_01":  "Select Game Mode",
-		"option_01": "Casual",
-		"option_02": "Arcade",
+		"option_01": "Free",
+		"option_02": "Casual",
+		"option_03": "Arcade",
 		"text_01":   
+			"Play with infinite lives and a death counter. 
+			For people who just want to have fun",
+		"text_02":   
 			"Able to stop and restart at every stage,
 			but disables scoring and the leaderboard",
-		"text_02":   
+		"text_03":   
 			"Complete the game in one go! Don't be
 			afraid to use Continue!",
 	},

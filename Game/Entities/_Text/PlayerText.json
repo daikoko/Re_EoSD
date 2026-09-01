@@ -9,34 +9,45 @@
 		"title":             "Shrine Maiden of Paradise",
 		"description":       
 			"A scarlet mist hangs over Gensokyo. While Reimu would usually
-			enjoy the change from the hot Summer weather, the lack of Sun is
+			enjoy the change from the hot Summer weather, the lack of sun is
 			concerning for both humans and youkai alike. This lazy girl must
 			now set out to fix this anomaly.",
 		"description_extra": 
 			"The skies have been cleared. While Reimu would usually start 
 			lazing about after a hard day's work, it appears the mistress
-			of the mansion believes there are some property damages that 
+			of the mansion believes there are some property damages that
 			need to be paid for. To avoid another temper tantrum from starting,
 			Reimu heads to the manor's basement for a new incident.",
 		"description_phantasm": 
-			"A great darkness reemerges over Gensokyo...",
+			"An aura of evil permeates the land; the sky darkens and the sun
+			turns a menacing and unnatural shade. Reimu equips her most powerful
+			tools and talismans to defeat whatever demon has invaded Gensokyo...",
+		"manual":
+			"Reimu is an all rounder character good for beginners with average
+			damage shots guaranteed to hit their target."
 	},
 	"02": {
 		"name":              "Marisa Kirisame",
 		"title":             "Ordinary Witch of the Woods",
 		"description":       
 			"A scarlet mist hangs over Gensokyo. The Forest of Magic is
-			more dark and forboding than ever, and on top of that, the air 
+			more dark and forboding than ever, and on top of that, the air
 			is hard to breathe. To fix this situation developing outside her
 			house, Marisa goes out to solve the incident.",
 		"description_extra": 
 			"The skies have been cleared. Marisa is happy to continue her
 			daily routine of whichcraft without breathing problems, but
 			the resident magician appears indignant over 'stolen property'.
-			She is however, willing to forgive the rookie theif, but for 
+			She is however, willing to forgive the rookie theif, but for
 			a price. Marisa heads down to the basement to negotiate.",
 		"description_phantasm": 
-			"A great darkness reemerges over Gensokyo...",
+			"On a routine ingredient gathering trip, the world goes dark
+			around the ordinary magician. Realizing that something serious 
+			and unseen has occured near her home, Marisa drops her bags
+			of herbs and mushrooms to investigate the anomaly.",
+		"manual":
+			"Marisa is a fast and high damage fighter good for skilled players,
+			though she requires close range to take advantage of abilities."
 	},
 	"03": {
 		"name":              "Rin Satsuki",
@@ -44,17 +55,23 @@
 		"description":       
 			"A scarlet mist hangs over Gensokyo. With the schoolhouse closed
 			due to the strange weather and the children sent home, Rin is left
-			with nothing to do. While out of her league and job desciption,
+			with nothing to do. While out of her league and job description,
 			she ventures out to resolve the situation herself.",
 		"description_extra": 
-			"The skies have been cleared. Rin looks forward to the village's  
+			"The skies have been cleared. Rin looks forward to the village's
 			days to return to normal and is even happy to greet her new foreign
-			neighbors despite previous misgivings. However, during the 
+			neighbors despite previous misgivings. However, during the
 			introductions, it appears the mistress of the manor believes that 
 			Rin's work at the school apparently qualifies her to work as an
-			inpromptu babysitter. With a hefty paycheck, Rin is sent down 
-			to the basement",
+			inpromptu babysitter. With a hefty paycheck, Rin is sent down
+			to the basement.",
 		"description_phantasm": 
-			"A great darkness reemerges over Gensokyo...",
+			"When the sky turned an unnatural shade of black for the second time
+			in days, the whole village went into lockdown. Vilage heads and commoners
+			alike huddle in their homes; Rin, riding high from her recent adventure
+			in the manor, goes out resolve this new incident.",
+		"manual":
+			"Rin is a slow paced character without a focus shot and instead builds
+			up power over time to augment a wide shot range."
 	}
 }

@@ -16,7 +16,7 @@
 
 [sub_resource type="Animation" id="Animation_3jxso"]
 resource_name = "MenuGame_In"
-length = 1.8
+length = 1.4
 step = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -121,7 +121,7 @@ tracks/8/path = NodePath("View/View/MenuGame/Main/Modifiers/SpellBox:modulate")
 tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
-"times": PackedFloat32Array(1.2, 1.4),
+"times": PackedFloat32Array(0.8, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -133,7 +133,7 @@ tracks/9/path = NodePath("View/View/MenuGame/Main/Modifiers/TotalBox:modulate")
 tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
-"times": PackedFloat32Array(1.4, 1.6),
+"times": PackedFloat32Array(1, 1.2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(1, 1, 1, 1)]
@@ -145,7 +145,7 @@ tracks/10/path = NodePath("View/View/MenuGame/Main/Options:modulate")
 tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
-"times": PackedFloat32Array(1.6, 1.8),
+"times": PackedFloat32Array(1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
@@ -1931,10 +1931,11 @@ theme = ExtResource("3_l325q")
 script = ExtResource("4_pfr0j")
 
 [node name="Main" type="VBoxContainer" parent="View/View/MenuPause"]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 20.0
+offset_left = -40.0
 offset_top = 260.0
-offset_right = 230.0
+offset_right = 170.0
 offset_bottom = 506.0
 
 [node name="Title" type="VBoxContainer" parent="View/View/MenuPause/Main"]
@@ -1951,10 +1952,10 @@ layout_mode = 2
 
 [node name="MenuPause_ResumeBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_ResumeBox"]
-custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
 [node name="MenuPause_Resume" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_ResumeBox"]
@@ -1971,10 +1972,10 @@ text = "Resume"
 
 [node name="MenuPause_RestartBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
 unique_name_in_owner = true
+modulate = Color(0, 0, 0, 0)
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_RestartBox"]
-custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 
 [node name="MenuPause_Restart" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_RestartBox"]
@@ -1991,10 +1992,10 @@ text = "Restart"
 
 [node name="MenuPause_QuitBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_QuitBox"]
-custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 
 [node name="MenuPause_Quit" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_QuitBox"]
@@ -2012,10 +2013,10 @@ text = "Quit
 
 [node name="MenuPause_ExitBox" type="HBoxContainer" parent="View/View/MenuPause/Main/Options"]
 unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
 [node name="Filler" type="Label" parent="View/View/MenuPause/Main/Options/MenuPause_ExitBox"]
-custom_minimum_size = Vector2(160, 0)
 layout_mode = 2
 
 [node name="MenuPause_Exit" type="Button" parent="View/View/MenuPause/Main/Options/MenuPause_ExitBox"]
@@ -2344,6 +2345,7 @@ text = "000000000"
 horizontal_alignment = 2
 
 [node name="LivesBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
@@ -2360,6 +2362,7 @@ text = "000000000"
 horizontal_alignment = 2
 
 [node name="BombsBox" type="HBoxContainer" parent="View/View/MenuGame/Main/Modifiers"]
+visible = false
 modulate = Color(0, 0, 0, 1)
 layout_mode = 2
 

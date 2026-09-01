@@ -117,8 +117,8 @@ unique_name_in_owner = true
 bullet_stagger = 4
 bullet_gravity = 2000
 bullet_linear = 2000
-bullet_tween = 1000
-bullet_sine = 1000
+bullet_tween = 2000
+bullet_sine = 2000
 
 [node name="GameCamera" type="Camera2D" parent="MainGameWorld/GameWindowContainer/GameWindow"]
 unique_name_in_owner = true

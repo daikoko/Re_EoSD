@@ -2,7 +2,8 @@ extends CanvasLayer
 
 const TEXT := "res://Game/_Text/HUDText.json"
 
-var practice_mode:bool = false
+var game_mode:int
+
 var game_running:bool = false
 var slow_effect_running:bool = false
 var stop_effect_running:bool = false
@@ -74,6 +75,8 @@ func set_hud(save:SaveFile) -> void:
 	var player:PlayerData = save.get_player_data()
 	var stage:StageData = save.get_stage_data()
 	
+	game_mode = save.game_mode
+	
 	hiscore =      GlobalSettings.get_highscore(save.section)
 	hiscore_true = hiscore
 	score =        save.score
@@ -102,17 +105,27 @@ func set_hud(save:SaveFile) -> void:
 	)
 	%HiScore.text =     str(hiscore)
 	%Score.text =       str(score)
-	%Lives.value =      save.lives
+	if game_mode == GlobalSettings.MODE.FREE:
+		%Lives.value = 0
+	else:
+		%Lives.value = save.lives
 	%Bombs.value =      save.bombs
 	%Power.value =      save.power
 	%Power.max_value =  player.power_max
 	%Graze.value =      0
 	%Graze.max_value =  player.graze_max
+	%Deaths.text =      str(lives_lost)     
 	
 	%StageProgress.value = 0
 	
-	if save.game_mode == GlobalSettings.MODE.CASUAL:
+	if save.game_mode == GlobalSettings.MODE.FREE:
+		%FreeMode.show()
+		%DeathsBox.show()
+	
+	elif save.game_mode == GlobalSettings.MODE.CASUAL:
 		%CasualMode.show()
+		%DeathsBox.hide()
+		
 		match save.get_stage_id():
 			1:
 				%Power.value = player.power_max * 0
@@ -126,11 +139,14 @@ func set_hud(save:SaveFile) -> void:
 				%Power.value = player.power_max * 0.6
 			6:
 				%Power.value = player.power_max * 0.8
+	
 	elif save.game_mode == GlobalSettings.MODE.ARCADE:
 		%ArcadeMode.show()
+		%DeathsBox.hide()
 	
 	if save.game_mode == GlobalSettings.MODE.PRACTICE:
 		%PracticeMode.show()
+		%DeathsBox.hide()
 	
 	await get_tree().process_frame
 	
@@ -195,7 +211,12 @@ func update_score_true(value:int=0) -> void:
 		hiscore_true = score_true
 
 
+func update_deaths() -> void:
+	%Deaths.text = str(lives_lost)
+
+
 func update_lives(value:int=0) -> void:
+	if game_mode == GlobalSettings.MODE.FREE: return
 	%Lives.value += value
 
 
@@ -257,13 +278,19 @@ func _on_GlobalPlayer_player_hit():
 	update_power(-power_loss)
 	
 	%Sound_Death.play()
-	if %Lives.value == 0:
-		GlobalPlayer.player_over.emit()
-	else:
+	if game_mode == GlobalSettings.MODE.FREE:
 		GlobalPlayer.player_death.emit()
-		update_lives(-1)
-		update_bomb(1)
 		lives_lost += 1
+		update_deaths()
+		update_bomb(1)
+	else:
+		if %Lives.value == 0:
+			GlobalPlayer.player_over.emit()
+		else:
+			GlobalPlayer.player_death.emit()
+			update_lives(-1)
+			update_bomb(1)
+			lives_lost += 1
 
 
 func _on_GlobalPlayer_player_graze():

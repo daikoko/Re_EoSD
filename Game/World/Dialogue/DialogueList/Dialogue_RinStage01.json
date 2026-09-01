@@ -57,7 +57,7 @@
 		"expression":    "BossRumia01",
 		"name":          "???",
 		"text":          
-			"Pretty girls such as yourself should learn to enjoy the view"
+			"Pretty girls such as yourself should learn to enjoy the view."
 	},
 	"009": {
 		"type":          "dialogue",
@@ -80,7 +80,7 @@
 		"expression":    "BossRumia01",
 		"name":          "Lumia",
 		"text":          
-			"Where are my manners, I am Rumia, a youkai."
+			"Where are my manners, I am Lumia, a youkai."
 	},
 	"012": {
 		"type":          "dialogue",
@@ -96,7 +96,7 @@
 		"expression":    "PlayerRin02",
 		"name":          "Rin",
 		"text":          
-			"It's uh, nice to meet you Miss Rumia. What are you
+			"It's uh, nice to meet you Miss Lumia. What are you
 			doing out here? It's especially dangerous oustside now."
 	},
 	"014": {
