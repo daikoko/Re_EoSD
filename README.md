@@ -15,6 +15,9 @@ This project is made in Godot 4.3 and you will need that version of the engine t
 
 ## License
 This code is under the MIT License
+
 The MIT License overrides any other license or copyright note I may or may not have forgotten to remove from other versions of the code
+
 All art and music assets were made by me
+
 Please explicitly credit me when possible
